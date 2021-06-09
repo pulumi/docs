@@ -724,7 +724,7 @@ The CatalogTable resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#partitionindices_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Indices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablepartitionindex">[]Catalog<wbr>Table<wbr>Partition<wbr>Index</a></span>
+        <span class="property-type"><a href="#catalogtablepartitionindex">[]Catalog<wbr>Table<wbr>Partition<wbr>Index<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for a maximum of 3 partition indexes. See `partition_index` below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -733,7 +733,7 @@ The CatalogTable resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#partitionkeys_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablepartitionkey">[]Catalog<wbr>Table<wbr>Partition<wbr>Key</a></span>
+        <span class="property-type"><a href="#catalogtablepartitionkey">[]Catalog<wbr>Table<wbr>Partition<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of columns by which the table is partitioned. Only primitive types are supported as partition keys. See `partition_keys` below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -751,7 +751,7 @@ The CatalogTable resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#storagedescriptor_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Descriptor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptor">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor</a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptor">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for information about the physical storage of this table. For more information, refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables. html#aws-glue-api-catalog-tables-StorageDescriptor). See `storage_descriptor` below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -769,7 +769,7 @@ The CatalogTable resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#targettable_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtabletargettable">Catalog<wbr>Table<wbr>Target<wbr>Table</a></span>
+        <span class="property-type"><a href="#catalogtabletargettable">Catalog<wbr>Table<wbr>Target<wbr>Table<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of a target table for resource linking. See `target_table` below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1493,7 +1493,7 @@ The following state arguments are supported:
 <a href="#state_partitionindices_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Indices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablepartitionindex">[]Catalog<wbr>Table<wbr>Partition<wbr>Index</a></span>
+        <span class="property-type"><a href="#catalogtablepartitionindex">[]Catalog<wbr>Table<wbr>Partition<wbr>Index<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for a maximum of 3 partition indexes. See `partition_index` below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1502,7 +1502,7 @@ The following state arguments are supported:
 <a href="#state_partitionkeys_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablepartitionkey">[]Catalog<wbr>Table<wbr>Partition<wbr>Key</a></span>
+        <span class="property-type"><a href="#catalogtablepartitionkey">[]Catalog<wbr>Table<wbr>Partition<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of columns by which the table is partitioned. Only primitive types are supported as partition keys. See `partition_keys` below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1520,7 +1520,7 @@ The following state arguments are supported:
 <a href="#state_storagedescriptor_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Descriptor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptor">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor</a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptor">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for information about the physical storage of this table. For more information, refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables. html#aws-glue-api-catalog-tables-StorageDescriptor). See `storage_descriptor` below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1538,7 +1538,7 @@ The following state arguments are supported:
 <a href="#state_targettable_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtabletargettable">Catalog<wbr>Table<wbr>Target<wbr>Table</a></span>
+        <span class="property-type"><a href="#catalogtabletargettable">Catalog<wbr>Table<wbr>Target<wbr>Table<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of a target table for resource linking. See `target_table` below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2115,7 +2115,7 @@ The following state arguments are supported:
 <a href="#columns_csharp" style="color: inherit; text-decoration: inherit;">Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptorcolumn">List&lt;Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Column<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptorcolumn">List&lt;Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Column&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for columns in the table. See `columns` below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2178,7 +2178,7 @@ The following state arguments are supported:
 <a href="#schemareference_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptorschemareference">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Schema<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptorschemareference">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Schema<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Object that references a schema stored in the AWS Glue Schema Registry. When creating a table, you can pass an empty list of columns for the schema, and instead use a schema reference. See Schema Reference below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2187,7 +2187,7 @@ The following state arguments are supported:
 <a href="#serdeinfo_csharp" style="color: inherit; text-decoration: inherit;">Ser<wbr>De<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptorserdeinfo">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Ser<wbr>De<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptorserdeinfo">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Ser<wbr>De<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for serialization and deserialization ("SerDe") information. See `ser_de_info` below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2196,7 +2196,7 @@ The following state arguments are supported:
 <a href="#skewedinfo_csharp" style="color: inherit; text-decoration: inherit;">Skewed<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptorskewedinfo">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Skewed<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptorskewedinfo">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Skewed<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with information about values that appear very frequently in a column (skewed values). See `skewed_info` below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2205,7 +2205,7 @@ The following state arguments are supported:
 <a href="#sortcolumns_csharp" style="color: inherit; text-decoration: inherit;">Sort<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptorsortcolumn">List&lt;Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Sort<wbr>Column<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptorsortcolumn">List&lt;Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Sort<wbr>Column&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the sort order of each bucket in the table. See `sort_columns` below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2357,7 +2357,7 @@ The following state arguments are supported:
 <a href="#columns_nodejs" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptorcolumn">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Column<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptorcolumn">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Column[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for columns in the table. See `columns` below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2420,7 +2420,7 @@ The following state arguments are supported:
 <a href="#schemareference_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptorschemareference">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Schema<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptorschemareference">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Schema<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Object that references a schema stored in the AWS Glue Schema Registry. When creating a table, you can pass an empty list of columns for the schema, and instead use a schema reference. See Schema Reference below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2429,7 +2429,7 @@ The following state arguments are supported:
 <a href="#serdeinfo_nodejs" style="color: inherit; text-decoration: inherit;">ser<wbr>De<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptorserdeinfo">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Ser<wbr>De<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptorserdeinfo">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Ser<wbr>De<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for serialization and deserialization ("SerDe") information. See `ser_de_info` below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2438,7 +2438,7 @@ The following state arguments are supported:
 <a href="#skewedinfo_nodejs" style="color: inherit; text-decoration: inherit;">skewed<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptorskewedinfo">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Skewed<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptorskewedinfo">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Skewed<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with information about values that appear very frequently in a column (skewed values). See `skewed_info` below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2447,7 +2447,7 @@ The following state arguments are supported:
 <a href="#sortcolumns_nodejs" style="color: inherit; text-decoration: inherit;">sort<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptorsortcolumn">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Sort<wbr>Column<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptorsortcolumn">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Sort<wbr>Column[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the sort order of each bucket in the table. See `sort_columns` below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2478,7 +2478,7 @@ The following state arguments are supported:
 <a href="#columns_python" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptorcolumn">Sequence[Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Column<wbr>Args]</a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptorcolumn">Sequence[Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Column]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for columns in the table. See `columns` below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2541,7 +2541,7 @@ The following state arguments are supported:
 <a href="#schema_reference_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptorschemareference">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Schema<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptorschemareference">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Schema<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Object that references a schema stored in the AWS Glue Schema Registry. When creating a table, you can pass an empty list of columns for the schema, and instead use a schema reference. See Schema Reference below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2550,7 +2550,7 @@ The following state arguments are supported:
 <a href="#ser_de_info_python" style="color: inherit; text-decoration: inherit;">ser_<wbr>de_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptorserdeinfo">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Ser<wbr>De<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptorserdeinfo">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Ser<wbr>De<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for serialization and deserialization ("SerDe") information. See `ser_de_info` below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2559,7 +2559,7 @@ The following state arguments are supported:
 <a href="#skewed_info_python" style="color: inherit; text-decoration: inherit;">skewed_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptorskewedinfo">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Skewed<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptorskewedinfo">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Skewed<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with information about values that appear very frequently in a column (skewed values). See `skewed_info` below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2568,7 +2568,7 @@ The following state arguments are supported:
 <a href="#sort_columns_python" style="color: inherit; text-decoration: inherit;">sort_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptorsortcolumn">Sequence[Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Sort<wbr>Column<wbr>Args]</a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptorsortcolumn">Sequence[Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Sort<wbr>Column]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the sort order of each bucket in the table. See `sort_columns` below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2763,7 +2763,7 @@ The following state arguments are supported:
 <a href="#schemaid_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptorschemareferenceschemaid">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Schema<wbr>Reference<wbr>Schema<wbr>Id<wbr>Args</a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptorschemareferenceschemaid">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Schema<wbr>Reference<wbr>Schema<wbr>Id</a></span>
     </dt>
     <dd>{{% md %}}Configuration block that contains schema identity fields. Either this or the `schema_version_id` has to be provided. See `schema_id` below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2825,7 +2825,7 @@ The following state arguments are supported:
 <a href="#schemaid_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptorschemareferenceschemaid">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Schema<wbr>Reference<wbr>Schema<wbr>Id<wbr>Args</a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptorschemareferenceschemaid">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Schema<wbr>Reference<wbr>Schema<wbr>Id</a></span>
     </dt>
     <dd>{{% md %}}Configuration block that contains schema identity fields. Either this or the `schema_version_id` has to be provided. See `schema_id` below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2856,7 +2856,7 @@ The following state arguments are supported:
 <a href="#schema_id_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptorschemareferenceschemaid">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Schema<wbr>Reference<wbr>Schema<wbr>Id<wbr>Args</a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptorschemareferenceschemaid">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Schema<wbr>Reference<wbr>Schema<wbr>Id</a></span>
     </dt>
     <dd>{{% md %}}Configuration block that contains schema identity fields. Either this or the `schema_version_id` has to be provided. See `schema_id` below.
 {{% /md %}}</dd><dt class="property-optional"

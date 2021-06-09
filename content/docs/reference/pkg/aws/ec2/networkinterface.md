@@ -405,7 +405,7 @@ The NetworkInterface resource accepts the following [input]({{< relref "/docs/in
 <a href="#attachments_go" style="color: inherit; text-decoration: inherit;">Attachments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceattachment">[]Network<wbr>Interface<wbr>Attachment<wbr>Type</a></span>
+        <span class="property-type"><a href="#networkinterfaceattachment">[]Network<wbr>Interface<wbr>Attachment<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Block to define the attachment of the ENI. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1202,7 +1202,7 @@ The following state arguments are supported:
 <a href="#state_attachments_go" style="color: inherit; text-decoration: inherit;">Attachments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceattachment">[]Network<wbr>Interface<wbr>Attachment<wbr>Type</a></span>
+        <span class="property-type"><a href="#networkinterfaceattachment">[]Network<wbr>Interface<wbr>Attachment<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Block to define the attachment of the ENI. Documented below.
 {{% /md %}}</dd><dt class="property-optional"

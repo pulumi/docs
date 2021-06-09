@@ -496,7 +496,7 @@ The Canary resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#canaryschedule">Canary<wbr>Schedule</a></span>
+        <span class="property-type"><a href="#canaryschedule">Canary<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block providing how often the canary is to run and when these test runs are to stop. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -523,7 +523,7 @@ The Canary resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#runconfig_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#canaryrunconfig">Canary<wbr>Run<wbr>Config</a></span>
+        <span class="property-type"><a href="#canaryrunconfig">Canary<wbr>Run<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for individual canary runs. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -595,7 +595,7 @@ The Canary resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#vpcconfig_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#canaryvpcconfig">Canary<wbr>Vpc<wbr>Config</a></span>
+        <span class="property-type"><a href="#canaryvpcconfig">Canary<wbr>Vpc<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1578,7 +1578,7 @@ The following state arguments are supported:
 <a href="#state_runconfig_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#canaryrunconfig">Canary<wbr>Run<wbr>Config</a></span>
+        <span class="property-type"><a href="#canaryrunconfig">Canary<wbr>Run<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for individual canary runs. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1623,7 +1623,7 @@ The following state arguments are supported:
 <a href="#state_schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#canaryschedule">Canary<wbr>Schedule</a></span>
+        <span class="property-type"><a href="#canaryschedule">Canary<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block providing how often the canary is to run and when these test runs are to stop. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1686,7 +1686,7 @@ The following state arguments are supported:
 <a href="#state_timelines_go" style="color: inherit; text-decoration: inherit;">Timelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#canarytimeline">[]Canary<wbr>Timeline</a></span>
+        <span class="property-type"><a href="#canarytimeline">[]Canary<wbr>Timeline<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Structure that contains information about when the canary was created, modified, and most recently run. see Timeline.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1695,7 +1695,7 @@ The following state arguments are supported:
 <a href="#state_vpcconfig_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#canaryvpcconfig">Canary<wbr>Vpc<wbr>Config</a></span>
+        <span class="property-type"><a href="#canaryvpcconfig">Canary<wbr>Vpc<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"

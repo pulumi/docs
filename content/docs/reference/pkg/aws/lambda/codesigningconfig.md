@@ -330,7 +330,7 @@ The CodeSigningConfig resource accepts the following [input]({{< relref "/docs/i
 <a href="#allowedpublishers_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Publishers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#codesigningconfigallowedpublishers">Code<wbr>Signing<wbr>Config<wbr>Allowed<wbr>Publishers</a></span>
+        <span class="property-type"><a href="#codesigningconfigallowedpublishers">Code<wbr>Signing<wbr>Config<wbr>Allowed<wbr>Publishers<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block of allowed publishers as signing profiles for this code signing configuration. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -348,7 +348,7 @@ The CodeSigningConfig resource accepts the following [input]({{< relref "/docs/i
 <a href="#policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#codesigningconfigpolicies">Code<wbr>Signing<wbr>Config<wbr>Policies</a></span>
+        <span class="property-type"><a href="#codesigningconfigpolicies">Code<wbr>Signing<wbr>Config<wbr>Policies<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block of code signing policies that define the actions to take if the validation checks fail. Detailed below.
 {{% /md %}}</dd></dl>
@@ -775,7 +775,7 @@ The following state arguments are supported:
 <a href="#state_allowedpublishers_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Publishers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#codesigningconfigallowedpublishers">Code<wbr>Signing<wbr>Config<wbr>Allowed<wbr>Publishers</a></span>
+        <span class="property-type"><a href="#codesigningconfigallowedpublishers">Code<wbr>Signing<wbr>Config<wbr>Allowed<wbr>Publishers<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block of allowed publishers as signing profiles for this code signing configuration. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -820,7 +820,7 @@ The following state arguments are supported:
 <a href="#state_policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#codesigningconfigpolicies">Code<wbr>Signing<wbr>Config<wbr>Policies</a></span>
+        <span class="property-type"><a href="#codesigningconfigpolicies">Code<wbr>Signing<wbr>Config<wbr>Policies<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block of code signing policies that define the actions to take if the validation checks fail. Detailed below.
 {{% /md %}}</dd></dl>

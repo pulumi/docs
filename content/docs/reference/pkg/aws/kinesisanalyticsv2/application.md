@@ -1260,7 +1260,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#applicationconfiguration_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfiguration">Application<wbr>Application<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The application's configuration
 {{% /md %}}</dd><dt class="property-optional"
@@ -1269,7 +1269,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#cloudwatchloggingoptions_go" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Logging<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationcloudwatchloggingoptions">Application<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
+        <span class="property-type"><a href="#applicationcloudwatchloggingoptions">Application<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A CloudWatch log stream to monitor application configuration errors.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2030,7 +2030,7 @@ The following state arguments are supported:
 <a href="#state_applicationconfiguration_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfiguration">Application<wbr>Application<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The application's configuration
 {{% /md %}}</dd><dt class="property-optional"
@@ -2048,7 +2048,7 @@ The following state arguments are supported:
 <a href="#state_cloudwatchloggingoptions_go" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Logging<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationcloudwatchloggingoptions">Application<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
+        <span class="property-type"><a href="#applicationcloudwatchloggingoptions">Application<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A CloudWatch log stream to monitor application configuration errors.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2452,7 +2452,7 @@ The following state arguments are supported:
 <a href="#applicationcodeconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Code<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationapplicationcodeconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Code<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationapplicationcodeconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Code<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The code location and type parameters for the application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2461,7 +2461,7 @@ The following state arguments are supported:
 <a href="#applicationsnapshotconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Snapshot<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationapplicationsnapshotconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Snapshot<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationapplicationsnapshotconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Snapshot<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Describes whether snapshots are enabled for a Flink-based application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2470,7 +2470,7 @@ The following state arguments are supported:
 <a href="#environmentproperties_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationenvironmentproperties">Application<wbr>Application<wbr>Configuration<wbr>Environment<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationenvironmentproperties">Application<wbr>Application<wbr>Configuration<wbr>Environment<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Describes execution properties for a Flink-based application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2479,7 +2479,7 @@ The following state arguments are supported:
 <a href="#flinkapplicationconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Flink<wbr>Application<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationflinkapplicationconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationflinkapplicationconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The configuration of a Flink-based application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2488,7 +2488,7 @@ The following state arguments are supported:
 <a href="#runconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationrunconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Run<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationrunconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Run<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Describes the starting properties for a Flink-based application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2497,7 +2497,7 @@ The following state arguments are supported:
 <a href="#sqlapplicationconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Application<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The configuration of a SQL-based application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2506,7 +2506,7 @@ The following state arguments are supported:
 <a href="#vpcconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationvpcconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Vpc<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationvpcconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Vpc<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The VPC configuration of a Flink-based application.
 {{% /md %}}</dd></dl>
@@ -2586,7 +2586,7 @@ The following state arguments are supported:
 <a href="#applicationcodeconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Code<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationapplicationcodeconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Code<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationapplicationcodeconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Code<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The code location and type parameters for the application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2595,7 +2595,7 @@ The following state arguments are supported:
 <a href="#applicationsnapshotconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Snapshot<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationapplicationsnapshotconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Snapshot<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationapplicationsnapshotconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Snapshot<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Describes whether snapshots are enabled for a Flink-based application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2604,7 +2604,7 @@ The following state arguments are supported:
 <a href="#environmentproperties_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationenvironmentproperties">Application<wbr>Application<wbr>Configuration<wbr>Environment<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationenvironmentproperties">Application<wbr>Application<wbr>Configuration<wbr>Environment<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Describes execution properties for a Flink-based application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2613,7 +2613,7 @@ The following state arguments are supported:
 <a href="#flinkapplicationconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">flink<wbr>Application<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationflinkapplicationconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationflinkapplicationconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The configuration of a Flink-based application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2622,7 +2622,7 @@ The following state arguments are supported:
 <a href="#runconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationrunconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Run<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationrunconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Run<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Describes the starting properties for a Flink-based application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2631,7 +2631,7 @@ The following state arguments are supported:
 <a href="#sqlapplicationconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Application<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The configuration of a SQL-based application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2640,7 +2640,7 @@ The following state arguments are supported:
 <a href="#vpcconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationvpcconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Vpc<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationvpcconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Vpc<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The VPC configuration of a Flink-based application.
 {{% /md %}}</dd></dl>
@@ -2653,7 +2653,7 @@ The following state arguments are supported:
 <a href="#application_code_configuration_python" style="color: inherit; text-decoration: inherit;">application_<wbr>code_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationapplicationcodeconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Code<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationapplicationcodeconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Code<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The code location and type parameters for the application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2662,7 +2662,7 @@ The following state arguments are supported:
 <a href="#application_snapshot_configuration_python" style="color: inherit; text-decoration: inherit;">application_<wbr>snapshot_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationapplicationsnapshotconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Snapshot<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationapplicationsnapshotconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Snapshot<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Describes whether snapshots are enabled for a Flink-based application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2671,7 +2671,7 @@ The following state arguments are supported:
 <a href="#environment_properties_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationenvironmentproperties">Application<wbr>Application<wbr>Configuration<wbr>Environment<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationenvironmentproperties">Application<wbr>Application<wbr>Configuration<wbr>Environment<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Describes execution properties for a Flink-based application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2680,7 +2680,7 @@ The following state arguments are supported:
 <a href="#flink_application_configuration_python" style="color: inherit; text-decoration: inherit;">flink_<wbr>application_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationflinkapplicationconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationflinkapplicationconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The configuration of a Flink-based application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2689,7 +2689,7 @@ The following state arguments are supported:
 <a href="#run_configuration_python" style="color: inherit; text-decoration: inherit;">run_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationrunconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Run<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationrunconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Run<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Describes the starting properties for a Flink-based application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2698,7 +2698,7 @@ The following state arguments are supported:
 <a href="#sql_application_configuration_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>application_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The configuration of a SQL-based application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2707,7 +2707,7 @@ The following state arguments are supported:
 <a href="#vpc_configuration_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationvpcconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Vpc<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationvpcconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Vpc<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The VPC configuration of a Flink-based application.
 {{% /md %}}</dd></dl>
@@ -2731,7 +2731,7 @@ The following state arguments are supported:
 <a href="#codecontent_csharp" style="color: inherit; text-decoration: inherit;">Code<wbr>Content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationapplicationcodeconfigurationcodecontent">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Code<wbr>Configuration<wbr>Code<wbr>Content<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationapplicationcodeconfigurationcodecontent">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Code<wbr>Configuration<wbr>Code<wbr>Content</a></span>
     </dt>
     <dd>{{% md %}}The location and type of the application code.
 {{% /md %}}</dd></dl>
@@ -2775,7 +2775,7 @@ The following state arguments are supported:
 <a href="#codecontent_nodejs" style="color: inherit; text-decoration: inherit;">code<wbr>Content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationapplicationcodeconfigurationcodecontent">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Code<wbr>Configuration<wbr>Code<wbr>Content<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationapplicationcodeconfigurationcodecontent">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Code<wbr>Configuration<wbr>Code<wbr>Content</a></span>
     </dt>
     <dd>{{% md %}}The location and type of the application code.
 {{% /md %}}</dd></dl>
@@ -2797,7 +2797,7 @@ The following state arguments are supported:
 <a href="#code_content_python" style="color: inherit; text-decoration: inherit;">code_<wbr>content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationapplicationcodeconfigurationcodecontent">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Code<wbr>Configuration<wbr>Code<wbr>Content<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationapplicationcodeconfigurationcodecontent">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Code<wbr>Configuration<wbr>Code<wbr>Content</a></span>
     </dt>
     <dd>{{% md %}}The location and type of the application code.
 {{% /md %}}</dd></dl>
@@ -2812,7 +2812,7 @@ The following state arguments are supported:
 <a href="#s3contentlocation_csharp" style="color: inherit; text-decoration: inherit;">S3Content<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationapplicationcodeconfigurationcodecontents3contentlocation">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Code<wbr>Configuration<wbr>Code<wbr>Content<wbr>S3Content<wbr>Location<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationapplicationcodeconfigurationcodecontents3contentlocation">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Code<wbr>Configuration<wbr>Code<wbr>Content<wbr>S3Content<wbr>Location</a></span>
     </dt>
     <dd>{{% md %}}Information about the Amazon S3 bucket containing the application code.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2856,7 +2856,7 @@ The following state arguments are supported:
 <a href="#s3contentlocation_nodejs" style="color: inherit; text-decoration: inherit;">s3Content<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationapplicationcodeconfigurationcodecontents3contentlocation">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Code<wbr>Configuration<wbr>Code<wbr>Content<wbr>S3Content<wbr>Location<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationapplicationcodeconfigurationcodecontents3contentlocation">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Code<wbr>Configuration<wbr>Code<wbr>Content<wbr>S3Content<wbr>Location</a></span>
     </dt>
     <dd>{{% md %}}Information about the Amazon S3 bucket containing the application code.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2878,7 +2878,7 @@ The following state arguments are supported:
 <a href="#s3_content_location_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>content_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationapplicationcodeconfigurationcodecontents3contentlocation">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Code<wbr>Configuration<wbr>Code<wbr>Content<wbr>S3Content<wbr>Location<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationapplicationcodeconfigurationcodecontents3contentlocation">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Code<wbr>Configuration<wbr>Code<wbr>Content<wbr>S3Content<wbr>Location</a></span>
     </dt>
     <dd>{{% md %}}Information about the Amazon S3 bucket containing the application code.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3082,7 +3082,7 @@ The following state arguments are supported:
 <a href="#propertygroups_csharp" style="color: inherit; text-decoration: inherit;">Property<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationenvironmentpropertiespropertygroup">List&lt;Application<wbr>Application<wbr>Configuration<wbr>Environment<wbr>Properties<wbr>Property<wbr>Group<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationenvironmentpropertiespropertygroup">List&lt;Application<wbr>Application<wbr>Configuration<wbr>Environment<wbr>Properties<wbr>Property<wbr>Group&gt;</a></span>
     </dt>
     <dd>{{% md %}}Describes the execution property groups.
 {{% /md %}}</dd></dl>
@@ -3108,7 +3108,7 @@ The following state arguments are supported:
 <a href="#propertygroups_nodejs" style="color: inherit; text-decoration: inherit;">property<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationenvironmentpropertiespropertygroup">Application<wbr>Application<wbr>Configuration<wbr>Environment<wbr>Properties<wbr>Property<wbr>Group<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationenvironmentpropertiespropertygroup">Application<wbr>Application<wbr>Configuration<wbr>Environment<wbr>Properties<wbr>Property<wbr>Group[]</a></span>
     </dt>
     <dd>{{% md %}}Describes the execution property groups.
 {{% /md %}}</dd></dl>
@@ -3121,7 +3121,7 @@ The following state arguments are supported:
 <a href="#property_groups_python" style="color: inherit; text-decoration: inherit;">property_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationenvironmentpropertiespropertygroup">Sequence[Application<wbr>Application<wbr>Configuration<wbr>Environment<wbr>Properties<wbr>Property<wbr>Group<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationenvironmentpropertiespropertygroup">Sequence[Application<wbr>Application<wbr>Configuration<wbr>Environment<wbr>Properties<wbr>Property<wbr>Group]</a></span>
     </dt>
     <dd>{{% md %}}Describes the execution property groups.
 {{% /md %}}</dd></dl>
@@ -3226,7 +3226,7 @@ The following state arguments are supported:
 <a href="#checkpointconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Checkpoint<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationflinkapplicationconfigurationcheckpointconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration<wbr>Checkpoint<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationflinkapplicationconfigurationcheckpointconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration<wbr>Checkpoint<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Describes an application's checkpointing configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3235,7 +3235,7 @@ The following state arguments are supported:
 <a href="#monitoringconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationflinkapplicationconfigurationmonitoringconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration<wbr>Monitoring<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationflinkapplicationconfigurationmonitoringconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration<wbr>Monitoring<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Describes configuration parameters for CloudWatch logging for an application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3244,7 +3244,7 @@ The following state arguments are supported:
 <a href="#parallelismconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Parallelism<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationflinkapplicationconfigurationparallelismconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration<wbr>Parallelism<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationflinkapplicationconfigurationparallelismconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration<wbr>Parallelism<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Describes parameters for how an application executes multiple tasks simultaneously.
 {{% /md %}}</dd></dl>
@@ -3288,7 +3288,7 @@ The following state arguments are supported:
 <a href="#checkpointconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">checkpoint<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationflinkapplicationconfigurationcheckpointconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration<wbr>Checkpoint<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationflinkapplicationconfigurationcheckpointconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration<wbr>Checkpoint<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Describes an application's checkpointing configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3297,7 +3297,7 @@ The following state arguments are supported:
 <a href="#monitoringconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationflinkapplicationconfigurationmonitoringconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration<wbr>Monitoring<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationflinkapplicationconfigurationmonitoringconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration<wbr>Monitoring<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Describes configuration parameters for CloudWatch logging for an application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3306,7 +3306,7 @@ The following state arguments are supported:
 <a href="#parallelismconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">parallelism<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationflinkapplicationconfigurationparallelismconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration<wbr>Parallelism<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationflinkapplicationconfigurationparallelismconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration<wbr>Parallelism<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Describes parameters for how an application executes multiple tasks simultaneously.
 {{% /md %}}</dd></dl>
@@ -3319,7 +3319,7 @@ The following state arguments are supported:
 <a href="#checkpoint_configuration_python" style="color: inherit; text-decoration: inherit;">checkpoint_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationflinkapplicationconfigurationcheckpointconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration<wbr>Checkpoint<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationflinkapplicationconfigurationcheckpointconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration<wbr>Checkpoint<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Describes an application's checkpointing configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3328,7 +3328,7 @@ The following state arguments are supported:
 <a href="#monitoring_configuration_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationflinkapplicationconfigurationmonitoringconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration<wbr>Monitoring<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationflinkapplicationconfigurationmonitoringconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration<wbr>Monitoring<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Describes configuration parameters for CloudWatch logging for an application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3337,7 +3337,7 @@ The following state arguments are supported:
 <a href="#parallelism_configuration_python" style="color: inherit; text-decoration: inherit;">parallelism_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationflinkapplicationconfigurationparallelismconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration<wbr>Parallelism<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationflinkapplicationconfigurationparallelismconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration<wbr>Parallelism<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Describes parameters for how an application executes multiple tasks simultaneously.
 {{% /md %}}</dd></dl>
@@ -3814,7 +3814,7 @@ The following state arguments are supported:
 <a href="#applicationrestoreconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Restore<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationrunconfigurationapplicationrestoreconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Run<wbr>Configuration<wbr>Application<wbr>Restore<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationrunconfigurationapplicationrestoreconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Run<wbr>Configuration<wbr>Application<wbr>Restore<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The restore behavior of a restarting application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3823,7 +3823,7 @@ The following state arguments are supported:
 <a href="#flinkrunconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Flink<wbr>Run<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationrunconfigurationflinkrunconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Run<wbr>Configuration<wbr>Flink<wbr>Run<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationrunconfigurationflinkrunconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Run<wbr>Configuration<wbr>Flink<wbr>Run<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The starting parameters for a Flink-based Kinesis Data Analytics application.
 {{% /md %}}</dd></dl>
@@ -3858,7 +3858,7 @@ The following state arguments are supported:
 <a href="#applicationrestoreconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Restore<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationrunconfigurationapplicationrestoreconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Run<wbr>Configuration<wbr>Application<wbr>Restore<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationrunconfigurationapplicationrestoreconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Run<wbr>Configuration<wbr>Application<wbr>Restore<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The restore behavior of a restarting application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3867,7 +3867,7 @@ The following state arguments are supported:
 <a href="#flinkrunconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">flink<wbr>Run<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationrunconfigurationflinkrunconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Run<wbr>Configuration<wbr>Flink<wbr>Run<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationrunconfigurationflinkrunconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Run<wbr>Configuration<wbr>Flink<wbr>Run<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The starting parameters for a Flink-based Kinesis Data Analytics application.
 {{% /md %}}</dd></dl>
@@ -3880,7 +3880,7 @@ The following state arguments are supported:
 <a href="#application_restore_configuration_python" style="color: inherit; text-decoration: inherit;">application_<wbr>restore_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationrunconfigurationapplicationrestoreconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Run<wbr>Configuration<wbr>Application<wbr>Restore<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationrunconfigurationapplicationrestoreconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Run<wbr>Configuration<wbr>Application<wbr>Restore<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The restore behavior of a restarting application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3889,7 +3889,7 @@ The following state arguments are supported:
 <a href="#flink_run_configuration_python" style="color: inherit; text-decoration: inherit;">flink_<wbr>run_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationrunconfigurationflinkrunconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Run<wbr>Configuration<wbr>Flink<wbr>Run<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationrunconfigurationflinkrunconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Run<wbr>Configuration<wbr>Flink<wbr>Run<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The starting parameters for a Flink-based Kinesis Data Analytics application.
 {{% /md %}}</dd></dl>
@@ -4048,7 +4048,7 @@ The following state arguments are supported:
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}The input stream used by the application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4057,7 +4057,7 @@ The following state arguments are supported:
 <a href="#outputs_csharp" style="color: inherit; text-decoration: inherit;">Outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutput">List&lt;Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutput">List&lt;Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output&gt;</a></span>
     </dt>
     <dd>{{% md %}}The destination streams used by the application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4066,7 +4066,7 @@ The following state arguments are supported:
 <a href="#referencedatasource_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Data<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasource">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasource">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}The reference data source used by the application.
 {{% /md %}}</dd></dl>
@@ -4110,7 +4110,7 @@ The following state arguments are supported:
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}The input stream used by the application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4119,7 +4119,7 @@ The following state arguments are supported:
 <a href="#outputs_nodejs" style="color: inherit; text-decoration: inherit;">outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output[]</a></span>
     </dt>
     <dd>{{% md %}}The destination streams used by the application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4128,7 +4128,7 @@ The following state arguments are supported:
 <a href="#referencedatasource_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Data<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasource">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasource">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}The reference data source used by the application.
 {{% /md %}}</dd></dl>
@@ -4141,7 +4141,7 @@ The following state arguments are supported:
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}The input stream used by the application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4150,7 +4150,7 @@ The following state arguments are supported:
 <a href="#outputs_python" style="color: inherit; text-decoration: inherit;">outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutput">Sequence[Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutput">Sequence[Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output]</a></span>
     </dt>
     <dd>{{% md %}}The destination streams used by the application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4159,7 +4159,7 @@ The following state arguments are supported:
 <a href="#reference_data_source_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>data_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasource">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasource">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}The reference data source used by the application.
 {{% /md %}}</dd></dl>
@@ -4174,7 +4174,7 @@ The following state arguments are supported:
 <a href="#inputschema_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschema">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschema">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema</a></span>
     </dt>
     <dd>{{% md %}}Describes the format of the data in the streaming source, and how each data element maps to corresponding columns in the in-application stream that is being created.
 {{% /md %}}</dd><dt class="property-required"
@@ -4208,7 +4208,7 @@ The following state arguments are supported:
 <a href="#inputparallelism_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Parallelism</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputparallelism">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Parallelism<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputparallelism">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Parallelism</a></span>
     </dt>
     <dd>{{% md %}}Describes the number of in-application streams to create.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4217,7 +4217,7 @@ The following state arguments are supported:
 <a href="#inputprocessingconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Processing<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputprocessingconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Processing<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputprocessingconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Processing<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The input processing configuration for the input.
 An input processor transforms records as they are received from the stream, before the application's SQL code executes.
@@ -4227,7 +4227,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#inputstartingpositionconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Starting<wbr>Position<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputstartingpositionconfiguration">List&lt;Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Starting<wbr>Position<wbr>Configuration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputstartingpositionconfiguration">List&lt;Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Starting<wbr>Position<wbr>Configuration&gt;</a></span>
     </dt>
     <dd>{{% md %}}The point at which the application starts processing records from the streaming source.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4236,7 +4236,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#kinesisfirehoseinput_csharp" style="color: inherit; text-decoration: inherit;">Kinesis<wbr>Firehose<wbr>Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputkinesisfirehoseinput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Kinesis<wbr>Firehose<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputkinesisfirehoseinput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Kinesis<wbr>Firehose<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}If the streaming source is a Kinesis Data Firehose delivery stream, identifies the delivery stream's ARN.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4245,7 +4245,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#kinesisstreamsinput_csharp" style="color: inherit; text-decoration: inherit;">Kinesis<wbr>Streams<wbr>Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputkinesisstreamsinput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Kinesis<wbr>Streams<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputkinesisstreamsinput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Kinesis<wbr>Streams<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}If the streaming source is a Kinesis data stream, identifies the stream's Amazon Resource Name (ARN).
 {{% /md %}}</dd></dl>
@@ -4342,7 +4342,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#inputschema_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschema">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschema">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema</a></span>
     </dt>
     <dd>{{% md %}}Describes the format of the data in the streaming source, and how each data element maps to corresponding columns in the in-application stream that is being created.
 {{% /md %}}</dd><dt class="property-required"
@@ -4376,7 +4376,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#inputparallelism_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Parallelism</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputparallelism">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Parallelism<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputparallelism">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Parallelism</a></span>
     </dt>
     <dd>{{% md %}}Describes the number of in-application streams to create.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4385,7 +4385,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#inputprocessingconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Processing<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputprocessingconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Processing<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputprocessingconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Processing<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The input processing configuration for the input.
 An input processor transforms records as they are received from the stream, before the application's SQL code executes.
@@ -4395,7 +4395,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#inputstartingpositionconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Starting<wbr>Position<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputstartingpositionconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Starting<wbr>Position<wbr>Configuration<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputstartingpositionconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Starting<wbr>Position<wbr>Configuration[]</a></span>
     </dt>
     <dd>{{% md %}}The point at which the application starts processing records from the streaming source.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4404,7 +4404,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#kinesisfirehoseinput_nodejs" style="color: inherit; text-decoration: inherit;">kinesis<wbr>Firehose<wbr>Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputkinesisfirehoseinput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Kinesis<wbr>Firehose<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputkinesisfirehoseinput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Kinesis<wbr>Firehose<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}If the streaming source is a Kinesis Data Firehose delivery stream, identifies the delivery stream's ARN.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4413,7 +4413,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#kinesisstreamsinput_nodejs" style="color: inherit; text-decoration: inherit;">kinesis<wbr>Streams<wbr>Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputkinesisstreamsinput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Kinesis<wbr>Streams<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputkinesisstreamsinput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Kinesis<wbr>Streams<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}If the streaming source is a Kinesis data stream, identifies the stream's Amazon Resource Name (ARN).
 {{% /md %}}</dd></dl>
@@ -4426,7 +4426,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#input_schema_python" style="color: inherit; text-decoration: inherit;">input_<wbr>schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschema">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschema">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema</a></span>
     </dt>
     <dd>{{% md %}}Describes the format of the data in the streaming source, and how each data element maps to corresponding columns in the in-application stream that is being created.
 {{% /md %}}</dd><dt class="property-required"
@@ -4460,7 +4460,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#input_parallelism_python" style="color: inherit; text-decoration: inherit;">input_<wbr>parallelism</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputparallelism">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Parallelism<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputparallelism">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Parallelism</a></span>
     </dt>
     <dd>{{% md %}}Describes the number of in-application streams to create.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4469,7 +4469,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#input_processing_configuration_python" style="color: inherit; text-decoration: inherit;">input_<wbr>processing_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputprocessingconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Processing<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputprocessingconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Processing<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The input processing configuration for the input.
 An input processor transforms records as they are received from the stream, before the application's SQL code executes.
@@ -4479,7 +4479,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#input_starting_position_configurations_python" style="color: inherit; text-decoration: inherit;">input_<wbr>starting_<wbr>position_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputstartingpositionconfiguration">Sequence[Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Starting<wbr>Position<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputstartingpositionconfiguration">Sequence[Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Starting<wbr>Position<wbr>Configuration]</a></span>
     </dt>
     <dd>{{% md %}}The point at which the application starts processing records from the streaming source.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4488,7 +4488,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#kinesis_firehose_input_python" style="color: inherit; text-decoration: inherit;">kinesis_<wbr>firehose_<wbr>input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputkinesisfirehoseinput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Kinesis<wbr>Firehose<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputkinesisfirehoseinput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Kinesis<wbr>Firehose<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}If the streaming source is a Kinesis Data Firehose delivery stream, identifies the delivery stream's ARN.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4497,7 +4497,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#kinesis_streams_input_python" style="color: inherit; text-decoration: inherit;">kinesis_<wbr>streams_<wbr>input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputkinesisstreamsinput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Kinesis<wbr>Streams<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputkinesisstreamsinput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Kinesis<wbr>Streams<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}If the streaming source is a Kinesis data stream, identifies the stream's Amazon Resource Name (ARN).
 {{% /md %}}</dd></dl>
@@ -4566,7 +4566,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#inputlambdaprocessor_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Lambda<wbr>Processor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputprocessingconfigurationinputlambdaprocessor">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Processing<wbr>Configuration<wbr>Input<wbr>Lambda<wbr>Processor<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputprocessingconfigurationinputlambdaprocessor">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Processing<wbr>Configuration<wbr>Input<wbr>Lambda<wbr>Processor</a></span>
     </dt>
     <dd>{{% md %}}Describes the Lambda function that is used to preprocess the records in the stream before being processed by your application code.
 {{% /md %}}</dd></dl>
@@ -4592,7 +4592,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#inputlambdaprocessor_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Lambda<wbr>Processor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputprocessingconfigurationinputlambdaprocessor">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Processing<wbr>Configuration<wbr>Input<wbr>Lambda<wbr>Processor<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputprocessingconfigurationinputlambdaprocessor">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Processing<wbr>Configuration<wbr>Input<wbr>Lambda<wbr>Processor</a></span>
     </dt>
     <dd>{{% md %}}Describes the Lambda function that is used to preprocess the records in the stream before being processed by your application code.
 {{% /md %}}</dd></dl>
@@ -4605,7 +4605,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#input_lambda_processor_python" style="color: inherit; text-decoration: inherit;">input_<wbr>lambda_<wbr>processor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputprocessingconfigurationinputlambdaprocessor">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Processing<wbr>Configuration<wbr>Input<wbr>Lambda<wbr>Processor<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputprocessingconfigurationinputlambdaprocessor">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Processing<wbr>Configuration<wbr>Input<wbr>Lambda<wbr>Processor</a></span>
     </dt>
     <dd>{{% md %}}Describes the Lambda function that is used to preprocess the records in the stream before being processed by your application code.
 {{% /md %}}</dd></dl>
@@ -4674,7 +4674,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#recordcolumns_csharp" style="color: inherit; text-decoration: inherit;">Record<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordcolumn">List&lt;Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Column<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordcolumn">List&lt;Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Column&gt;</a></span>
     </dt>
     <dd>{{% md %}}Describes the mapping of each data element in the streaming source to the corresponding column in the in-application stream.
 {{% /md %}}</dd><dt class="property-required"
@@ -4683,7 +4683,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#recordformat_csharp" style="color: inherit; text-decoration: inherit;">Record<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformat">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformat">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Specifies the format of the records on the streaming source.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4736,7 +4736,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#recordcolumns_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordcolumn">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Column<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordcolumn">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Column[]</a></span>
     </dt>
     <dd>{{% md %}}Describes the mapping of each data element in the streaming source to the corresponding column in the in-application stream.
 {{% /md %}}</dd><dt class="property-required"
@@ -4745,7 +4745,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#recordformat_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformat">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformat">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Specifies the format of the records on the streaming source.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4767,7 +4767,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#record_columns_python" style="color: inherit; text-decoration: inherit;">record_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordcolumn">Sequence[Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Column<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordcolumn">Sequence[Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Column]</a></span>
     </dt>
     <dd>{{% md %}}Describes the mapping of each data element in the streaming source to the corresponding column in the in-application stream.
 {{% /md %}}</dd><dt class="property-required"
@@ -4776,7 +4776,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#record_format_python" style="color: inherit; text-decoration: inherit;">record_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformat">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformat">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Specifies the format of the records on the streaming source.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4926,7 +4926,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#mappingparameters_csharp" style="color: inherit; text-decoration: inherit;">Mapping<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformatmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformatmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Provides additional mapping information specific to the record format (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
 {{% /md %}}</dd><dt class="property-required"
@@ -4970,7 +4970,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#mappingparameters_nodejs" style="color: inherit; text-decoration: inherit;">mapping<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformatmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformatmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Provides additional mapping information specific to the record format (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
 {{% /md %}}</dd><dt class="property-required"
@@ -4992,7 +4992,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#mapping_parameters_python" style="color: inherit; text-decoration: inherit;">mapping_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformatmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformatmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Provides additional mapping information specific to the record format (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
 {{% /md %}}</dd><dt class="property-required"
@@ -5016,7 +5016,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#csvmappingparameters_csharp" style="color: inherit; text-decoration: inherit;">Csv<wbr>Mapping<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformatmappingparameterscsvmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv<wbr>Mapping<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformatmappingparameterscsvmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv<wbr>Mapping<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Provides additional mapping information when the record format uses delimiters (for example, CSV).
 {{% /md %}}</dd><dt class="property-optional"
@@ -5025,7 +5025,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#jsonmappingparameters_csharp" style="color: inherit; text-decoration: inherit;">Json<wbr>Mapping<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformatmappingparametersjsonmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json<wbr>Mapping<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformatmappingparametersjsonmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json<wbr>Mapping<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Provides additional mapping information when JSON is the record format on the streaming source.
 {{% /md %}}</dd></dl>
@@ -5060,7 +5060,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#csvmappingparameters_nodejs" style="color: inherit; text-decoration: inherit;">csv<wbr>Mapping<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformatmappingparameterscsvmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv<wbr>Mapping<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformatmappingparameterscsvmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv<wbr>Mapping<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Provides additional mapping information when the record format uses delimiters (for example, CSV).
 {{% /md %}}</dd><dt class="property-optional"
@@ -5069,7 +5069,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#jsonmappingparameters_nodejs" style="color: inherit; text-decoration: inherit;">json<wbr>Mapping<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformatmappingparametersjsonmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json<wbr>Mapping<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformatmappingparametersjsonmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json<wbr>Mapping<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Provides additional mapping information when JSON is the record format on the streaming source.
 {{% /md %}}</dd></dl>
@@ -5082,7 +5082,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#csv_mapping_parameters_python" style="color: inherit; text-decoration: inherit;">csv_<wbr>mapping_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformatmappingparameterscsvmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv<wbr>Mapping<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformatmappingparameterscsvmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv<wbr>Mapping<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Provides additional mapping information when the record format uses delimiters (for example, CSV).
 {{% /md %}}</dd><dt class="property-optional"
@@ -5091,7 +5091,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#json_mapping_parameters_python" style="color: inherit; text-decoration: inherit;">json_<wbr>mapping_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformatmappingparametersjsonmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json<wbr>Mapping<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformatmappingparametersjsonmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json<wbr>Mapping<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Provides additional mapping information when JSON is the record format on the streaming source.
 {{% /md %}}</dd></dl>
@@ -5412,7 +5412,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#destinationschema_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputdestinationschema">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Destination<wbr>Schema<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputdestinationschema">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Destination<wbr>Schema</a></span>
     </dt>
     <dd>{{% md %}}Describes the data format when records are written to the destination.
 {{% /md %}}</dd><dt class="property-required"
@@ -5430,7 +5430,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#kinesisfirehoseoutput_csharp" style="color: inherit; text-decoration: inherit;">Kinesis<wbr>Firehose<wbr>Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputkinesisfirehoseoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Kinesis<wbr>Firehose<wbr>Output<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputkinesisfirehoseoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Kinesis<wbr>Firehose<wbr>Output</a></span>
     </dt>
     <dd>{{% md %}}Identifies a Kinesis Data Firehose delivery stream as the destination.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5439,7 +5439,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#kinesisstreamsoutput_csharp" style="color: inherit; text-decoration: inherit;">Kinesis<wbr>Streams<wbr>Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputkinesisstreamsoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Kinesis<wbr>Streams<wbr>Output<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputkinesisstreamsoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Kinesis<wbr>Streams<wbr>Output</a></span>
     </dt>
     <dd>{{% md %}}Identifies a Kinesis data stream as the destination.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5448,7 +5448,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#lambdaoutput_csharp" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputlambdaoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Lambda<wbr>Output<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputlambdaoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Lambda<wbr>Output</a></span>
     </dt>
     <dd>{{% md %}}Identifies a Lambda function as the destination.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5526,7 +5526,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#destinationschema_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputdestinationschema">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Destination<wbr>Schema<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputdestinationschema">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Destination<wbr>Schema</a></span>
     </dt>
     <dd>{{% md %}}Describes the data format when records are written to the destination.
 {{% /md %}}</dd><dt class="property-required"
@@ -5544,7 +5544,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#kinesisfirehoseoutput_nodejs" style="color: inherit; text-decoration: inherit;">kinesis<wbr>Firehose<wbr>Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputkinesisfirehoseoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Kinesis<wbr>Firehose<wbr>Output<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputkinesisfirehoseoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Kinesis<wbr>Firehose<wbr>Output</a></span>
     </dt>
     <dd>{{% md %}}Identifies a Kinesis Data Firehose delivery stream as the destination.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5553,7 +5553,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#kinesisstreamsoutput_nodejs" style="color: inherit; text-decoration: inherit;">kinesis<wbr>Streams<wbr>Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputkinesisstreamsoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Kinesis<wbr>Streams<wbr>Output<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputkinesisstreamsoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Kinesis<wbr>Streams<wbr>Output</a></span>
     </dt>
     <dd>{{% md %}}Identifies a Kinesis data stream as the destination.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5562,7 +5562,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#lambdaoutput_nodejs" style="color: inherit; text-decoration: inherit;">lambda<wbr>Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputlambdaoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Lambda<wbr>Output<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputlambdaoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Lambda<wbr>Output</a></span>
     </dt>
     <dd>{{% md %}}Identifies a Lambda function as the destination.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5583,7 +5583,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#destination_schema_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputdestinationschema">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Destination<wbr>Schema<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputdestinationschema">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Destination<wbr>Schema</a></span>
     </dt>
     <dd>{{% md %}}Describes the data format when records are written to the destination.
 {{% /md %}}</dd><dt class="property-required"
@@ -5601,7 +5601,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#kinesis_firehose_output_python" style="color: inherit; text-decoration: inherit;">kinesis_<wbr>firehose_<wbr>output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputkinesisfirehoseoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Kinesis<wbr>Firehose<wbr>Output<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputkinesisfirehoseoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Kinesis<wbr>Firehose<wbr>Output</a></span>
     </dt>
     <dd>{{% md %}}Identifies a Kinesis Data Firehose delivery stream as the destination.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5610,7 +5610,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#kinesis_streams_output_python" style="color: inherit; text-decoration: inherit;">kinesis_<wbr>streams_<wbr>output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputkinesisstreamsoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Kinesis<wbr>Streams<wbr>Output<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputkinesisstreamsoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Kinesis<wbr>Streams<wbr>Output</a></span>
     </dt>
     <dd>{{% md %}}Identifies a Kinesis data stream as the destination.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5619,7 +5619,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#lambda_output_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputlambdaoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Lambda<wbr>Output<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationoutputlambdaoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Lambda<wbr>Output</a></span>
     </dt>
     <dd>{{% md %}}Identifies a Lambda function as the destination.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5858,7 +5858,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#referenceschema_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschema">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschema">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema</a></span>
     </dt>
     <dd>{{% md %}}Describes the format of the data in the streaming source, and how each data element maps to corresponding columns created in the in-application stream.
 {{% /md %}}</dd><dt class="property-required"
@@ -5867,7 +5867,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#s3referencedatasource_csharp" style="color: inherit; text-decoration: inherit;">S3Reference<wbr>Data<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasources3referencedatasource">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>S3Reference<wbr>Data<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasources3referencedatasource">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>S3Reference<wbr>Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Identifies the S3 bucket and object that contains the reference data.
 {{% /md %}}</dd><dt class="property-required"
@@ -5936,7 +5936,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#referenceschema_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschema">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschema">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema</a></span>
     </dt>
     <dd>{{% md %}}Describes the format of the data in the streaming source, and how each data element maps to corresponding columns created in the in-application stream.
 {{% /md %}}</dd><dt class="property-required"
@@ -5945,7 +5945,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#s3referencedatasource_nodejs" style="color: inherit; text-decoration: inherit;">s3Reference<wbr>Data<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasources3referencedatasource">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>S3Reference<wbr>Data<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasources3referencedatasource">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>S3Reference<wbr>Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Identifies the S3 bucket and object that contains the reference data.
 {{% /md %}}</dd><dt class="property-required"
@@ -5975,7 +5975,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#reference_schema_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschema">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschema">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema</a></span>
     </dt>
     <dd>{{% md %}}Describes the format of the data in the streaming source, and how each data element maps to corresponding columns created in the in-application stream.
 {{% /md %}}</dd><dt class="property-required"
@@ -5984,7 +5984,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#s3_reference_data_source_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>reference_<wbr>data_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasources3referencedatasource">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>S3Reference<wbr>Data<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasources3referencedatasource">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>S3Reference<wbr>Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Identifies the S3 bucket and object that contains the reference data.
 {{% /md %}}</dd><dt class="property-required"
@@ -6016,7 +6016,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#recordcolumns_csharp" style="color: inherit; text-decoration: inherit;">Record<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordcolumn">List&lt;Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Column<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordcolumn">List&lt;Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Column&gt;</a></span>
     </dt>
     <dd>{{% md %}}Describes the mapping of each data element in the streaming source to the corresponding column in the in-application stream.
 {{% /md %}}</dd><dt class="property-required"
@@ -6025,7 +6025,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#recordformat_csharp" style="color: inherit; text-decoration: inherit;">Record<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformat">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformat">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Specifies the format of the records on the streaming source.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6078,7 +6078,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#recordcolumns_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordcolumn">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Column<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordcolumn">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Column[]</a></span>
     </dt>
     <dd>{{% md %}}Describes the mapping of each data element in the streaming source to the corresponding column in the in-application stream.
 {{% /md %}}</dd><dt class="property-required"
@@ -6087,7 +6087,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#recordformat_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformat">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformat">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Specifies the format of the records on the streaming source.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6109,7 +6109,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#record_columns_python" style="color: inherit; text-decoration: inherit;">record_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordcolumn">Sequence[Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Column<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordcolumn">Sequence[Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Column]</a></span>
     </dt>
     <dd>{{% md %}}Describes the mapping of each data element in the streaming source to the corresponding column in the in-application stream.
 {{% /md %}}</dd><dt class="property-required"
@@ -6118,7 +6118,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#record_format_python" style="color: inherit; text-decoration: inherit;">record_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformat">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformat">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Specifies the format of the records on the streaming source.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6268,7 +6268,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#mappingparameters_csharp" style="color: inherit; text-decoration: inherit;">Mapping<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformatmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformatmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Provides additional mapping information specific to the record format (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
 {{% /md %}}</dd><dt class="property-required"
@@ -6312,7 +6312,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#mappingparameters_nodejs" style="color: inherit; text-decoration: inherit;">mapping<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformatmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformatmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Provides additional mapping information specific to the record format (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
 {{% /md %}}</dd><dt class="property-required"
@@ -6334,7 +6334,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#mapping_parameters_python" style="color: inherit; text-decoration: inherit;">mapping_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformatmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformatmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Provides additional mapping information specific to the record format (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
 {{% /md %}}</dd><dt class="property-required"
@@ -6358,7 +6358,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#csvmappingparameters_csharp" style="color: inherit; text-decoration: inherit;">Csv<wbr>Mapping<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformatmappingparameterscsvmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv<wbr>Mapping<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformatmappingparameterscsvmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv<wbr>Mapping<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Provides additional mapping information when the record format uses delimiters (for example, CSV).
 {{% /md %}}</dd><dt class="property-optional"
@@ -6367,7 +6367,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#jsonmappingparameters_csharp" style="color: inherit; text-decoration: inherit;">Json<wbr>Mapping<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformatmappingparametersjsonmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json<wbr>Mapping<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformatmappingparametersjsonmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json<wbr>Mapping<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Provides additional mapping information when JSON is the record format on the streaming source.
 {{% /md %}}</dd></dl>
@@ -6402,7 +6402,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#csvmappingparameters_nodejs" style="color: inherit; text-decoration: inherit;">csv<wbr>Mapping<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformatmappingparameterscsvmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv<wbr>Mapping<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformatmappingparameterscsvmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv<wbr>Mapping<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Provides additional mapping information when the record format uses delimiters (for example, CSV).
 {{% /md %}}</dd><dt class="property-optional"
@@ -6411,7 +6411,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#jsonmappingparameters_nodejs" style="color: inherit; text-decoration: inherit;">json<wbr>Mapping<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformatmappingparametersjsonmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json<wbr>Mapping<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformatmappingparametersjsonmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json<wbr>Mapping<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Provides additional mapping information when JSON is the record format on the streaming source.
 {{% /md %}}</dd></dl>
@@ -6424,7 +6424,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#csv_mapping_parameters_python" style="color: inherit; text-decoration: inherit;">csv_<wbr>mapping_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformatmappingparameterscsvmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv<wbr>Mapping<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformatmappingparameterscsvmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv<wbr>Mapping<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Provides additional mapping information when the record format uses delimiters (for example, CSV).
 {{% /md %}}</dd><dt class="property-optional"
@@ -6433,7 +6433,7 @@ An input processor transforms records as they are received from the stream, befo
 <a href="#json_mapping_parameters_python" style="color: inherit; text-decoration: inherit;">json_<wbr>mapping_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformatmappingparametersjsonmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json<wbr>Mapping<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformatmappingparametersjsonmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json<wbr>Mapping<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Provides additional mapping information when JSON is the record format on the streaming source.
 {{% /md %}}</dd></dl>

@@ -343,7 +343,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#defaultcapacityproviderstrategies_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Capacity<wbr>Provider<wbr>Strategies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterdefaultcapacityproviderstrategy">[]Cluster<wbr>Default<wbr>Capacity<wbr>Provider<wbr>Strategy</a></span>
+        <span class="property-type"><a href="#clusterdefaultcapacityproviderstrategy">[]Cluster<wbr>Default<wbr>Capacity<wbr>Provider<wbr>Strategy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for capacity provider strategy to use by default for the cluster. Can be one or more. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -361,7 +361,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustersetting">[]Cluster<wbr>Setting</a></span>
+        <span class="property-type"><a href="#clustersetting">[]Cluster<wbr>Setting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -808,7 +808,7 @@ The following state arguments are supported:
 <a href="#state_defaultcapacityproviderstrategies_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Capacity<wbr>Provider<wbr>Strategies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterdefaultcapacityproviderstrategy">[]Cluster<wbr>Default<wbr>Capacity<wbr>Provider<wbr>Strategy</a></span>
+        <span class="property-type"><a href="#clusterdefaultcapacityproviderstrategy">[]Cluster<wbr>Default<wbr>Capacity<wbr>Provider<wbr>Strategy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for capacity provider strategy to use by default for the cluster. Can be one or more. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -826,7 +826,7 @@ The following state arguments are supported:
 <a href="#state_settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustersetting">[]Cluster<wbr>Setting</a></span>
+        <span class="property-type"><a href="#clustersetting">[]Cluster<wbr>Setting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"

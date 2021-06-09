@@ -2572,7 +2572,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#bootstrapactions_go" style="color: inherit; text-decoration: inherit;">Bootstrap<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterbootstrapaction">[]Cluster<wbr>Bootstrap<wbr>Action</a></span>
+        <span class="property-type"><a href="#clusterbootstrapaction">[]Cluster<wbr>Bootstrap<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Ordered list of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2599,7 +2599,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#coreinstancefleet_go" style="color: inherit; text-decoration: inherit;">Core<wbr>Instance<wbr>Fleet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancefleet">Cluster<wbr>Core<wbr>Instance<wbr>Fleet</a></span>
+        <span class="property-type"><a href="#clustercoreinstancefleet">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to use an [Instance Fleet](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-fleet.html) for the core node type. Cannot be specified if any `core_instance_group` configuration blocks are set. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2608,7 +2608,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#coreinstancegroup_go" style="color: inherit; text-decoration: inherit;">Core<wbr>Instance<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancegroup">Cluster<wbr>Core<wbr>Instance<wbr>Group</a></span>
+        <span class="property-type"><a href="#clustercoreinstancegroup">Cluster<wbr>Core<wbr>Instance<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [core node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-core).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2635,7 +2635,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#ec2attributes_go" style="color: inherit; text-decoration: inherit;">Ec2Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterec2attributes">Cluster<wbr>Ec2Attributes</a></span>
+        <span class="property-type"><a href="#clusterec2attributes">Cluster<wbr>Ec2Attributes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Attributes for the EC2 instances running the job flow. Defined below
 {{% /md %}}</dd><dt class="property-optional"
@@ -2653,7 +2653,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#kerberosattributes_go" style="color: inherit; text-decoration: inherit;">Kerberos<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterkerberosattributes">Cluster<wbr>Kerberos<wbr>Attributes</a></span>
+        <span class="property-type"><a href="#clusterkerberosattributes">Cluster<wbr>Kerberos<wbr>Attributes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kerberos configuration for the cluster. Defined below
 {{% /md %}}</dd><dt class="property-optional"
@@ -2671,7 +2671,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#masterinstancefleet_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Instance<wbr>Fleet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancefleet">Cluster<wbr>Master<wbr>Instance<wbr>Fleet</a></span>
+        <span class="property-type"><a href="#clustermasterinstancefleet">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to use an [Instance Fleet](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-fleet.html) for the master node type. Cannot be specified if any `master_instance_group` configuration blocks are set. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2680,7 +2680,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#masterinstancegroup_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Instance<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancegroup">Cluster<wbr>Master<wbr>Instance<wbr>Group</a></span>
+        <span class="property-type"><a href="#clustermasterinstancegroup">Cluster<wbr>Master<wbr>Instance<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [master node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-master).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2725,7 +2725,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#steps_go" style="color: inherit; text-decoration: inherit;">Steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterstep">[]Cluster<wbr>Step</a></span>
+        <span class="property-type"><a href="#clusterstep">[]Cluster<wbr>Step<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of steps to run when creating the cluster. Defined below. It is highly recommended to utilize [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) if other steps are being managed outside of this provider.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3882,7 +3882,7 @@ The following state arguments are supported:
 <a href="#state_bootstrapactions_go" style="color: inherit; text-decoration: inherit;">Bootstrap<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterbootstrapaction">[]Cluster<wbr>Bootstrap<wbr>Action</a></span>
+        <span class="property-type"><a href="#clusterbootstrapaction">[]Cluster<wbr>Bootstrap<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Ordered list of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3917,7 +3917,7 @@ The following state arguments are supported:
 <a href="#state_coreinstancefleet_go" style="color: inherit; text-decoration: inherit;">Core<wbr>Instance<wbr>Fleet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancefleet">Cluster<wbr>Core<wbr>Instance<wbr>Fleet</a></span>
+        <span class="property-type"><a href="#clustercoreinstancefleet">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to use an [Instance Fleet](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-fleet.html) for the core node type. Cannot be specified if any `core_instance_group` configuration blocks are set. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3926,7 +3926,7 @@ The following state arguments are supported:
 <a href="#state_coreinstancegroup_go" style="color: inherit; text-decoration: inherit;">Core<wbr>Instance<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancegroup">Cluster<wbr>Core<wbr>Instance<wbr>Group</a></span>
+        <span class="property-type"><a href="#clustercoreinstancegroup">Cluster<wbr>Core<wbr>Instance<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [core node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-core).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3953,7 +3953,7 @@ The following state arguments are supported:
 <a href="#state_ec2attributes_go" style="color: inherit; text-decoration: inherit;">Ec2Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterec2attributes">Cluster<wbr>Ec2Attributes</a></span>
+        <span class="property-type"><a href="#clusterec2attributes">Cluster<wbr>Ec2Attributes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Attributes for the EC2 instances running the job flow. Defined below
 {{% /md %}}</dd><dt class="property-optional"
@@ -3971,7 +3971,7 @@ The following state arguments are supported:
 <a href="#state_kerberosattributes_go" style="color: inherit; text-decoration: inherit;">Kerberos<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterkerberosattributes">Cluster<wbr>Kerberos<wbr>Attributes</a></span>
+        <span class="property-type"><a href="#clusterkerberosattributes">Cluster<wbr>Kerberos<wbr>Attributes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kerberos configuration for the cluster. Defined below
 {{% /md %}}</dd><dt class="property-optional"
@@ -3989,7 +3989,7 @@ The following state arguments are supported:
 <a href="#state_masterinstancefleet_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Instance<wbr>Fleet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancefleet">Cluster<wbr>Master<wbr>Instance<wbr>Fleet</a></span>
+        <span class="property-type"><a href="#clustermasterinstancefleet">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to use an [Instance Fleet](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-fleet.html) for the master node type. Cannot be specified if any `master_instance_group` configuration blocks are set. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3998,7 +3998,7 @@ The following state arguments are supported:
 <a href="#state_masterinstancegroup_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Instance<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancegroup">Cluster<wbr>Master<wbr>Instance<wbr>Group</a></span>
+        <span class="property-type"><a href="#clustermasterinstancegroup">Cluster<wbr>Master<wbr>Instance<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [master node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-master).
 {{% /md %}}</dd><dt class="property-optional"
@@ -4071,7 +4071,7 @@ The following state arguments are supported:
 <a href="#state_steps_go" style="color: inherit; text-decoration: inherit;">Steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterstep">[]Cluster<wbr>Step</a></span>
+        <span class="property-type"><a href="#clusterstep">[]Cluster<wbr>Step<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of steps to run when creating the cluster. Defined below. It is highly recommended to utilize [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) if other steps are being managed outside of this provider.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4806,7 +4806,7 @@ The following state arguments are supported:
 <a href="#instancetypeconfigs_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancefleetinstancetypeconfig">List&lt;Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetinstancetypeconfig">List&lt;Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for instance fleet
 {{% /md %}}</dd><dt class="property-optional"
@@ -4815,7 +4815,7 @@ The following state arguments are supported:
 <a href="#launchspecifications_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancefleetlaunchspecifications">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetlaunchspecifications">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for launch specification
 {{% /md %}}</dd><dt class="property-optional"
@@ -4954,7 +4954,7 @@ The following state arguments are supported:
 <a href="#instancetypeconfigs_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancefleetinstancetypeconfig">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetinstancetypeconfig">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for instance fleet
 {{% /md %}}</dd><dt class="property-optional"
@@ -4963,7 +4963,7 @@ The following state arguments are supported:
 <a href="#launchspecifications_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancefleetlaunchspecifications">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetlaunchspecifications">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for launch specification
 {{% /md %}}</dd><dt class="property-optional"
@@ -5028,7 +5028,7 @@ The following state arguments are supported:
 <a href="#instance_type_configs_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancefleetinstancetypeconfig">Sequence[Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetinstancetypeconfig">Sequence[Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for instance fleet
 {{% /md %}}</dd><dt class="property-optional"
@@ -5037,7 +5037,7 @@ The following state arguments are supported:
 <a href="#launch_specifications_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancefleetlaunchspecifications">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetlaunchspecifications">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for launch specification
 {{% /md %}}</dd><dt class="property-optional"
@@ -5122,7 +5122,7 @@ The following state arguments are supported:
 <a href="#configurations_csharp" style="color: inherit; text-decoration: inherit;">Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancefleetinstancetypeconfigconfiguration">List&lt;Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Configuration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetinstancetypeconfigconfiguration">List&lt;Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Configuration&gt;</a></span>
     </dt>
     <dd>{{% md %}}A configuration classification that applies when provisioning cluster instances, which can include configurations for applications and software that run on the cluster. List of `configuration` blocks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5131,7 +5131,7 @@ The following state arguments are supported:
 <a href="#ebsconfigs_csharp" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancefleetinstancetypeconfigebsconfig">List&lt;Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Ebs<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetinstancetypeconfigebsconfig">List&lt;Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Ebs<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5238,7 +5238,7 @@ The following state arguments are supported:
 <a href="#configurations_nodejs" style="color: inherit; text-decoration: inherit;">configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancefleetinstancetypeconfigconfiguration">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Configuration<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetinstancetypeconfigconfiguration">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Configuration[]</a></span>
     </dt>
     <dd>{{% md %}}A configuration classification that applies when provisioning cluster instances, which can include configurations for applications and software that run on the cluster. List of `configuration` blocks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5247,7 +5247,7 @@ The following state arguments are supported:
 <a href="#ebsconfigs_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancefleetinstancetypeconfigebsconfig">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Ebs<wbr>Config<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetinstancetypeconfigebsconfig">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Ebs<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5296,7 +5296,7 @@ The following state arguments are supported:
 <a href="#configurations_python" style="color: inherit; text-decoration: inherit;">configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancefleetinstancetypeconfigconfiguration">Sequence[Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetinstancetypeconfigconfiguration">Sequence[Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Configuration]</a></span>
     </dt>
     <dd>{{% md %}}A configuration classification that applies when provisioning cluster instances, which can include configurations for applications and software that run on the cluster. List of `configuration` blocks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5305,7 +5305,7 @@ The following state arguments are supported:
 <a href="#ebs_configs_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancefleetinstancetypeconfigebsconfig">Sequence[Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Ebs<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetinstancetypeconfigebsconfig">Sequence[Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Ebs<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5581,7 +5581,7 @@ The following state arguments are supported:
 <a href="#ondemandspecifications_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Demand<wbr>Specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancefleetlaunchspecificationsondemandspecification">List&lt;Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>On<wbr>Demand<wbr>Specification<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetlaunchspecificationsondemandspecification">List&lt;Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>On<wbr>Demand<wbr>Specification&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for on demand instances launch specifications
 {{% /md %}}</dd><dt class="property-optional"
@@ -5590,7 +5590,7 @@ The following state arguments are supported:
 <a href="#spotspecifications_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancefleetlaunchspecificationsspotspecification">List&lt;Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Spot<wbr>Specification<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetlaunchspecificationsspotspecification">List&lt;Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Spot<wbr>Specification&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for spot instances launch specifications
 {{% /md %}}</dd></dl>
@@ -5625,7 +5625,7 @@ The following state arguments are supported:
 <a href="#ondemandspecifications_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Demand<wbr>Specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancefleetlaunchspecificationsondemandspecification">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>On<wbr>Demand<wbr>Specification<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetlaunchspecificationsondemandspecification">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>On<wbr>Demand<wbr>Specification[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for on demand instances launch specifications
 {{% /md %}}</dd><dt class="property-optional"
@@ -5634,7 +5634,7 @@ The following state arguments are supported:
 <a href="#spotspecifications_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancefleetlaunchspecificationsspotspecification">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Spot<wbr>Specification<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetlaunchspecificationsspotspecification">Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Spot<wbr>Specification[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for spot instances launch specifications
 {{% /md %}}</dd></dl>
@@ -5647,7 +5647,7 @@ The following state arguments are supported:
 <a href="#on_demand_specifications_python" style="color: inherit; text-decoration: inherit;">on_<wbr>demand_<wbr>specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancefleetlaunchspecificationsondemandspecification">Sequence[Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>On<wbr>Demand<wbr>Specification<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetlaunchspecificationsondemandspecification">Sequence[Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>On<wbr>Demand<wbr>Specification]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for on demand instances launch specifications
 {{% /md %}}</dd><dt class="property-optional"
@@ -5656,7 +5656,7 @@ The following state arguments are supported:
 <a href="#spot_specifications_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancefleetlaunchspecificationsspotspecification">Sequence[Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Spot<wbr>Specification<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clustercoreinstancefleetlaunchspecificationsspotspecification">Sequence[Cluster<wbr>Core<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Spot<wbr>Specification]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for spot instances launch specifications
 {{% /md %}}</dd></dl>
@@ -5914,7 +5914,7 @@ The following state arguments are supported:
 <a href="#ebsconfigs_csharp" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancegroupebsconfig">List&lt;Cluster<wbr>Core<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#clustercoreinstancegroupebsconfig">List&lt;Cluster<wbr>Core<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6048,7 +6048,7 @@ The following state arguments are supported:
 <a href="#ebsconfigs_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancegroupebsconfig">Cluster<wbr>Core<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#clustercoreinstancegroupebsconfig">Cluster<wbr>Core<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6115,7 +6115,7 @@ The following state arguments are supported:
 <a href="#ebs_configs_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancegroupebsconfig">Sequence[Cluster<wbr>Core<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clustercoreinstancegroupebsconfig">Sequence[Cluster<wbr>Core<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6868,7 +6868,7 @@ The following state arguments are supported:
 <a href="#instancetypeconfigs_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancefleetinstancetypeconfig">List&lt;Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetinstancetypeconfig">List&lt;Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for instance fleet
 {{% /md %}}</dd><dt class="property-optional"
@@ -6877,7 +6877,7 @@ The following state arguments are supported:
 <a href="#launchspecifications_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancefleetlaunchspecifications">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetlaunchspecifications">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for launch specification
 {{% /md %}}</dd><dt class="property-optional"
@@ -7016,7 +7016,7 @@ The following state arguments are supported:
 <a href="#instancetypeconfigs_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancefleetinstancetypeconfig">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetinstancetypeconfig">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for instance fleet
 {{% /md %}}</dd><dt class="property-optional"
@@ -7025,7 +7025,7 @@ The following state arguments are supported:
 <a href="#launchspecifications_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancefleetlaunchspecifications">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetlaunchspecifications">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for launch specification
 {{% /md %}}</dd><dt class="property-optional"
@@ -7090,7 +7090,7 @@ The following state arguments are supported:
 <a href="#instance_type_configs_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancefleetinstancetypeconfig">Sequence[Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetinstancetypeconfig">Sequence[Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for instance fleet
 {{% /md %}}</dd><dt class="property-optional"
@@ -7099,7 +7099,7 @@ The following state arguments are supported:
 <a href="#launch_specifications_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancefleetlaunchspecifications">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetlaunchspecifications">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for launch specification
 {{% /md %}}</dd><dt class="property-optional"
@@ -7184,7 +7184,7 @@ The following state arguments are supported:
 <a href="#configurations_csharp" style="color: inherit; text-decoration: inherit;">Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancefleetinstancetypeconfigconfiguration">List&lt;Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Configuration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetinstancetypeconfigconfiguration">List&lt;Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Configuration&gt;</a></span>
     </dt>
     <dd>{{% md %}}A configuration classification that applies when provisioning cluster instances, which can include configurations for applications and software that run on the cluster. List of `configuration` blocks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7193,7 +7193,7 @@ The following state arguments are supported:
 <a href="#ebsconfigs_csharp" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancefleetinstancetypeconfigebsconfig">List&lt;Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Ebs<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetinstancetypeconfigebsconfig">List&lt;Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Ebs<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7300,7 +7300,7 @@ The following state arguments are supported:
 <a href="#configurations_nodejs" style="color: inherit; text-decoration: inherit;">configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancefleetinstancetypeconfigconfiguration">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Configuration<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetinstancetypeconfigconfiguration">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Configuration[]</a></span>
     </dt>
     <dd>{{% md %}}A configuration classification that applies when provisioning cluster instances, which can include configurations for applications and software that run on the cluster. List of `configuration` blocks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7309,7 +7309,7 @@ The following state arguments are supported:
 <a href="#ebsconfigs_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancefleetinstancetypeconfigebsconfig">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Ebs<wbr>Config<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetinstancetypeconfigebsconfig">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Ebs<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7358,7 +7358,7 @@ The following state arguments are supported:
 <a href="#configurations_python" style="color: inherit; text-decoration: inherit;">configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancefleetinstancetypeconfigconfiguration">Sequence[Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetinstancetypeconfigconfiguration">Sequence[Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Configuration]</a></span>
     </dt>
     <dd>{{% md %}}A configuration classification that applies when provisioning cluster instances, which can include configurations for applications and software that run on the cluster. List of `configuration` blocks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7367,7 +7367,7 @@ The following state arguments are supported:
 <a href="#ebs_configs_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancefleetinstancetypeconfigebsconfig">Sequence[Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Ebs<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetinstancetypeconfigebsconfig">Sequence[Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Instance<wbr>Type<wbr>Config<wbr>Ebs<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7643,7 +7643,7 @@ The following state arguments are supported:
 <a href="#ondemandspecifications_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Demand<wbr>Specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancefleetlaunchspecificationsondemandspecification">List&lt;Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>On<wbr>Demand<wbr>Specification<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetlaunchspecificationsondemandspecification">List&lt;Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>On<wbr>Demand<wbr>Specification&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for on demand instances launch specifications
 {{% /md %}}</dd><dt class="property-optional"
@@ -7652,7 +7652,7 @@ The following state arguments are supported:
 <a href="#spotspecifications_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancefleetlaunchspecificationsspotspecification">List&lt;Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Spot<wbr>Specification<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetlaunchspecificationsspotspecification">List&lt;Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Spot<wbr>Specification&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for spot instances launch specifications
 {{% /md %}}</dd></dl>
@@ -7687,7 +7687,7 @@ The following state arguments are supported:
 <a href="#ondemandspecifications_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Demand<wbr>Specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancefleetlaunchspecificationsondemandspecification">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>On<wbr>Demand<wbr>Specification<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetlaunchspecificationsondemandspecification">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>On<wbr>Demand<wbr>Specification[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for on demand instances launch specifications
 {{% /md %}}</dd><dt class="property-optional"
@@ -7696,7 +7696,7 @@ The following state arguments are supported:
 <a href="#spotspecifications_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancefleetlaunchspecificationsspotspecification">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Spot<wbr>Specification<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetlaunchspecificationsspotspecification">Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Spot<wbr>Specification[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for spot instances launch specifications
 {{% /md %}}</dd></dl>
@@ -7709,7 +7709,7 @@ The following state arguments are supported:
 <a href="#on_demand_specifications_python" style="color: inherit; text-decoration: inherit;">on_<wbr>demand_<wbr>specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancefleetlaunchspecificationsondemandspecification">Sequence[Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>On<wbr>Demand<wbr>Specification<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetlaunchspecificationsondemandspecification">Sequence[Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>On<wbr>Demand<wbr>Specification]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for on demand instances launch specifications
 {{% /md %}}</dd><dt class="property-optional"
@@ -7718,7 +7718,7 @@ The following state arguments are supported:
 <a href="#spot_specifications_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancefleetlaunchspecificationsspotspecification">Sequence[Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Spot<wbr>Specification<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clustermasterinstancefleetlaunchspecificationsspotspecification">Sequence[Cluster<wbr>Master<wbr>Instance<wbr>Fleet<wbr>Launch<wbr>Specifications<wbr>Spot<wbr>Specification]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for spot instances launch specifications
 {{% /md %}}</dd></dl>
@@ -7967,7 +7967,7 @@ The following state arguments are supported:
 <a href="#ebsconfigs_csharp" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancegroupebsconfig">List&lt;Cluster<wbr>Master<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#clustermasterinstancegroupebsconfig">List&lt;Cluster<wbr>Master<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8083,7 +8083,7 @@ The following state arguments are supported:
 <a href="#ebsconfigs_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancegroupebsconfig">Cluster<wbr>Master<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#clustermasterinstancegroupebsconfig">Cluster<wbr>Master<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8141,7 +8141,7 @@ The following state arguments are supported:
 <a href="#ebs_configs_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancegroupebsconfig">Sequence[Cluster<wbr>Master<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clustermasterinstancegroupebsconfig">Sequence[Cluster<wbr>Master<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8354,7 +8354,7 @@ The following state arguments are supported:
 <a href="#hadoopjarstep_csharp" style="color: inherit; text-decoration: inherit;">Hadoop<wbr>Jar<wbr>Step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterstephadoopjarstep">Cluster<wbr>Step<wbr>Hadoop<wbr>Jar<wbr>Step<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterstephadoopjarstep">Cluster<wbr>Step<wbr>Hadoop<wbr>Jar<wbr>Step</a></span>
     </dt>
     <dd>{{% md %}}The JAR file used for the step. Defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -8416,7 +8416,7 @@ The following state arguments are supported:
 <a href="#hadoopjarstep_nodejs" style="color: inherit; text-decoration: inherit;">hadoop<wbr>Jar<wbr>Step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterstephadoopjarstep">Cluster<wbr>Step<wbr>Hadoop<wbr>Jar<wbr>Step<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterstephadoopjarstep">Cluster<wbr>Step<wbr>Hadoop<wbr>Jar<wbr>Step</a></span>
     </dt>
     <dd>{{% md %}}The JAR file used for the step. Defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -8447,7 +8447,7 @@ The following state arguments are supported:
 <a href="#hadoop_jar_step_python" style="color: inherit; text-decoration: inherit;">hadoop_<wbr>jar_<wbr>step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterstephadoopjarstep">Cluster<wbr>Step<wbr>Hadoop<wbr>Jar<wbr>Step<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterstephadoopjarstep">Cluster<wbr>Step<wbr>Hadoop<wbr>Jar<wbr>Step</a></span>
     </dt>
     <dd>{{% md %}}The JAR file used for the step. Defined below.
 {{% /md %}}</dd><dt class="property-required"

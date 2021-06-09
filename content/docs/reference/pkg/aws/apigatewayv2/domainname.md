@@ -343,7 +343,7 @@ The DomainName resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#domainnameconfiguration_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainnamedomainnameconfiguration">Domain<wbr>Name<wbr>Domain<wbr>Name<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#domainnamedomainnameconfiguration">Domain<wbr>Name<wbr>Domain<wbr>Name<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The domain name configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -352,7 +352,7 @@ The DomainName resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#mutualtlsauthentication_go" style="color: inherit; text-decoration: inherit;">Mutual<wbr>Tls<wbr>Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainnamemutualtlsauthentication">Domain<wbr>Name<wbr>Mutual<wbr>Tls<wbr>Authentication</a></span>
+        <span class="property-type"><a href="#domainnamemutualtlsauthentication">Domain<wbr>Name<wbr>Mutual<wbr>Tls<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mutual TLS authentication configuration for the domain name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -834,7 +834,7 @@ The following state arguments are supported:
 <a href="#state_domainnameconfiguration_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainnamedomainnameconfiguration">Domain<wbr>Name<wbr>Domain<wbr>Name<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#domainnamedomainnameconfiguration">Domain<wbr>Name<wbr>Domain<wbr>Name<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The domain name configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -843,7 +843,7 @@ The following state arguments are supported:
 <a href="#state_mutualtlsauthentication_go" style="color: inherit; text-decoration: inherit;">Mutual<wbr>Tls<wbr>Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainnamemutualtlsauthentication">Domain<wbr>Name<wbr>Mutual<wbr>Tls<wbr>Authentication</a></span>
+        <span class="property-type"><a href="#domainnamemutualtlsauthentication">Domain<wbr>Name<wbr>Mutual<wbr>Tls<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mutual TLS authentication configuration for the domain name.
 {{% /md %}}</dd><dt class="property-optional"

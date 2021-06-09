@@ -340,7 +340,7 @@ The BotAlias resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#conversationlogs_go" style="color: inherit; text-decoration: inherit;">Conversation<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#botaliasconversationlogs">Bot<wbr>Alias<wbr>Conversation<wbr>Logs</a></span>
+        <span class="property-type"><a href="#botaliasconversationlogs">Bot<wbr>Alias<wbr>Conversation<wbr>Logs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings that determine how Amazon Lex uses conversation logs for the alias. Attributes are documented under conversation_logs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -923,7 +923,7 @@ The following state arguments are supported:
 <a href="#state_conversationlogs_go" style="color: inherit; text-decoration: inherit;">Conversation<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#botaliasconversationlogs">Bot<wbr>Alias<wbr>Conversation<wbr>Logs</a></span>
+        <span class="property-type"><a href="#botaliasconversationlogs">Bot<wbr>Alias<wbr>Conversation<wbr>Logs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings that determine how Amazon Lex uses conversation logs for the alias. Attributes are documented under conversation_logs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1162,7 +1162,7 @@ The following state arguments are supported:
 <a href="#logsettings_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#botaliasconversationlogslogsetting">List&lt;Bot<wbr>Alias<wbr>Conversation<wbr>Logs<wbr>Log<wbr>Setting<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#botaliasconversationlogslogsetting">List&lt;Bot<wbr>Alias<wbr>Conversation<wbr>Logs<wbr>Log<wbr>Setting&gt;</a></span>
     </dt>
     <dd>{{% md %}}The settings for your conversation logs. You can log text, audio, or both. Attributes are documented under log_settings.
 {{% /md %}}</dd></dl>
@@ -1206,7 +1206,7 @@ The following state arguments are supported:
 <a href="#logsettings_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#botaliasconversationlogslogsetting">Bot<wbr>Alias<wbr>Conversation<wbr>Logs<wbr>Log<wbr>Setting<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#botaliasconversationlogslogsetting">Bot<wbr>Alias<wbr>Conversation<wbr>Logs<wbr>Log<wbr>Setting[]</a></span>
     </dt>
     <dd>{{% md %}}The settings for your conversation logs. You can log text, audio, or both. Attributes are documented under log_settings.
 {{% /md %}}</dd></dl>
@@ -1228,7 +1228,7 @@ The following state arguments are supported:
 <a href="#log_settings_python" style="color: inherit; text-decoration: inherit;">log_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#botaliasconversationlogslogsetting">Sequence[Bot<wbr>Alias<wbr>Conversation<wbr>Logs<wbr>Log<wbr>Setting<wbr>Args]</a></span>
+        <span class="property-type"><a href="#botaliasconversationlogslogsetting">Sequence[Bot<wbr>Alias<wbr>Conversation<wbr>Logs<wbr>Log<wbr>Setting]</a></span>
     </dt>
     <dd>{{% md %}}The settings for your conversation logs. You can log text, audio, or both. Attributes are documented under log_settings.
 {{% /md %}}</dd></dl>

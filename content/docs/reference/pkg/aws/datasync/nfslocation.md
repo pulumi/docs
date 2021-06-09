@@ -333,7 +333,7 @@ The NfsLocation resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#onpremconfig_go" style="color: inherit; text-decoration: inherit;">On<wbr>Prem<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfslocationonpremconfig">Nfs<wbr>Location<wbr>On<wbr>Prem<wbr>Config</a></span>
+        <span class="property-type"><a href="#nfslocationonpremconfig">Nfs<wbr>Location<wbr>On<wbr>Prem<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing information for connecting to the NFS File System.
 {{% /md %}}</dd><dt class="property-required"
@@ -810,7 +810,7 @@ The following state arguments are supported:
 <a href="#state_onpremconfig_go" style="color: inherit; text-decoration: inherit;">On<wbr>Prem<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfslocationonpremconfig">Nfs<wbr>Location<wbr>On<wbr>Prem<wbr>Config</a></span>
+        <span class="property-type"><a href="#nfslocationonpremconfig">Nfs<wbr>Location<wbr>On<wbr>Prem<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing information for connecting to the NFS File System.
 {{% /md %}}</dd><dt class="property-optional"

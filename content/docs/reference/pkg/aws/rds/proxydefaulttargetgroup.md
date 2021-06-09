@@ -363,7 +363,7 @@ The ProxyDefaultTargetGroup resource accepts the following [input]({{< relref "/
 <a href="#connectionpoolconfig_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Pool<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#proxydefaulttargetgroupconnectionpoolconfig">Proxy<wbr>Default<wbr>Target<wbr>Group<wbr>Connection<wbr>Pool<wbr>Config</a></span>
+        <span class="property-type"><a href="#proxydefaulttargetgroupconnectionpoolconfig">Proxy<wbr>Default<wbr>Target<wbr>Group<wbr>Connection<wbr>Pool<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings that determine the size and behavior of the connection pool for the target group.
 {{% /md %}}</dd></dl>
@@ -725,7 +725,7 @@ The following state arguments are supported:
 <a href="#state_connectionpoolconfig_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Pool<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#proxydefaulttargetgroupconnectionpoolconfig">Proxy<wbr>Default<wbr>Target<wbr>Group<wbr>Connection<wbr>Pool<wbr>Config</a></span>
+        <span class="property-type"><a href="#proxydefaulttargetgroupconnectionpoolconfig">Proxy<wbr>Default<wbr>Target<wbr>Group<wbr>Connection<wbr>Pool<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings that determine the size and behavior of the connection pool for the target group.
 {{% /md %}}</dd><dt class="property-optional"

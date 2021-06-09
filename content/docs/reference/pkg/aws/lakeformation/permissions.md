@@ -461,7 +461,7 @@ The Permissions resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#datalocation_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#permissionsdatalocation">Permissions<wbr>Data<wbr>Location</a></span>
+        <span class="property-type"><a href="#permissionsdatalocation">Permissions<wbr>Data<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for a data location resource. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -470,7 +470,7 @@ The Permissions resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#database_go" style="color: inherit; text-decoration: inherit;">Database</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#permissionsdatabase">Permissions<wbr>Database</a></span>
+        <span class="property-type"><a href="#permissionsdatabase">Permissions<wbr>Database<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for a database resource. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -488,7 +488,7 @@ The Permissions resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#table_go" style="color: inherit; text-decoration: inherit;">Table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#permissionstable">Permissions<wbr>Table</a></span>
+        <span class="property-type"><a href="#permissionstable">Permissions<wbr>Table<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for a table resource. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -497,7 +497,7 @@ The Permissions resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tablewithcolumns_go" style="color: inherit; text-decoration: inherit;">Table<wbr>With<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#permissionstablewithcolumns">Permissions<wbr>Table<wbr>With<wbr>Columns</a></span>
+        <span class="property-type"><a href="#permissionstablewithcolumns">Permissions<wbr>Table<wbr>With<wbr>Columns<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for a table with columns resource. Detailed below.
 {{% /md %}}</dd></dl>
@@ -972,7 +972,7 @@ The following state arguments are supported:
 <a href="#state_datalocation_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#permissionsdatalocation">Permissions<wbr>Data<wbr>Location</a></span>
+        <span class="property-type"><a href="#permissionsdatalocation">Permissions<wbr>Data<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for a data location resource. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -981,7 +981,7 @@ The following state arguments are supported:
 <a href="#state_database_go" style="color: inherit; text-decoration: inherit;">Database</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#permissionsdatabase">Permissions<wbr>Database</a></span>
+        <span class="property-type"><a href="#permissionsdatabase">Permissions<wbr>Database<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for a database resource. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1017,7 +1017,7 @@ The following state arguments are supported:
 <a href="#state_table_go" style="color: inherit; text-decoration: inherit;">Table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#permissionstable">Permissions<wbr>Table</a></span>
+        <span class="property-type"><a href="#permissionstable">Permissions<wbr>Table<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for a table resource. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1026,7 +1026,7 @@ The following state arguments are supported:
 <a href="#state_tablewithcolumns_go" style="color: inherit; text-decoration: inherit;">Table<wbr>With<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#permissionstablewithcolumns">Permissions<wbr>Table<wbr>With<wbr>Columns</a></span>
+        <span class="property-type"><a href="#permissionstablewithcolumns">Permissions<wbr>Table<wbr>With<wbr>Columns<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for a table with columns resource. Detailed below.
 {{% /md %}}</dd></dl>

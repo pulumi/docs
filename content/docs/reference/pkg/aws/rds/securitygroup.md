@@ -325,7 +325,7 @@ The SecurityGroup resource accepts the following [input]({{< relref "/docs/intro
 <a href="#ingress_go" style="color: inherit; text-decoration: inherit;">Ingress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitygroupingress">[]Security<wbr>Group<wbr>Ingress</a></span>
+        <span class="property-type"><a href="#securitygroupingress">[]Security<wbr>Group<wbr>Ingress<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of ingress rules.
 {{% /md %}}</dd><dt class="property-optional"
@@ -770,7 +770,7 @@ The following state arguments are supported:
 <a href="#state_ingress_go" style="color: inherit; text-decoration: inherit;">Ingress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitygroupingress">[]Security<wbr>Group<wbr>Ingress</a></span>
+        <span class="property-type"><a href="#securitygroupingress">[]Security<wbr>Group<wbr>Ingress<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of ingress rules.
 {{% /md %}}</dd><dt class="property-optional"

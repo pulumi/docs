@@ -408,7 +408,7 @@ The Proxy resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#auths_go" style="color: inherit; text-decoration: inherit;">Auths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#proxyauth">[]Proxy<wbr>Auth</a></span>
+        <span class="property-type"><a href="#proxyauth">[]Proxy<wbr>Auth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with authorization mechanisms to connect to the associated instances or clusters. Described below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1112,7 +1112,7 @@ The following state arguments are supported:
 <a href="#state_auths_go" style="color: inherit; text-decoration: inherit;">Auths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#proxyauth">[]Proxy<wbr>Auth</a></span>
+        <span class="property-type"><a href="#proxyauth">[]Proxy<wbr>Auth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with authorization mechanisms to connect to the associated instances or clusters. Described below.
 {{% /md %}}</dd><dt class="property-optional"

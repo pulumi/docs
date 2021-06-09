@@ -858,7 +858,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#endpointdetails_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointdetails">Server<wbr>Endpoint<wbr>Details</a></span>
+        <span class="property-type"><a href="#serverendpointdetails">Server<wbr>Endpoint<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual private cloud (VPC) endpoint settings that you want to configure for your SFTP server. Fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1695,7 +1695,7 @@ The following state arguments are supported:
 <a href="#state_endpointdetails_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointdetails">Server<wbr>Endpoint<wbr>Details</a></span>
+        <span class="property-type"><a href="#serverendpointdetails">Server<wbr>Endpoint<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual private cloud (VPC) endpoint settings that you want to configure for your SFTP server. Fields documented below.
 {{% /md %}}</dd><dt class="property-optional"

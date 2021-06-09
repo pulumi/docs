@@ -737,7 +737,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#accountrecoverysetting_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Recovery<wbr>Setting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolaccountrecoverysetting">User<wbr>Pool<wbr>Account<wbr>Recovery<wbr>Setting</a></span>
+        <span class="property-type"><a href="#userpoolaccountrecoverysetting">User<wbr>Pool<wbr>Account<wbr>Recovery<wbr>Setting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to define which verified available method a user can use to recover their forgotten password. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -746,7 +746,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#admincreateuserconfig_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Create<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpooladmincreateuserconfig">User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#userpooladmincreateuserconfig">User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for creating a new user profile. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -773,7 +773,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#deviceconfiguration_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpooldeviceconfiguration">User<wbr>Pool<wbr>Device<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#userpooldeviceconfiguration">User<wbr>Pool<wbr>Device<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the user pool's device tracking. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -782,7 +782,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#emailconfiguration_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolemailconfiguration">User<wbr>Pool<wbr>Email<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#userpoolemailconfiguration">User<wbr>Pool<wbr>Email<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for configuring email. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -809,7 +809,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#lambdaconfig_go" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoollambdaconfig">User<wbr>Pool<wbr>Lambda<wbr>Config</a></span>
+        <span class="property-type"><a href="#userpoollambdaconfig">User<wbr>Pool<wbr>Lambda<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the AWS Lambda triggers associated with the user pool. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -836,7 +836,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#passwordpolicy_go" style="color: inherit; text-decoration: inherit;">Password<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolpasswordpolicy">User<wbr>Pool<wbr>Password<wbr>Policy</a></span>
+        <span class="property-type"><a href="#userpoolpasswordpolicy">User<wbr>Pool<wbr>Password<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration blocked for information about the user pool password policy. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -845,7 +845,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#schemas_go" style="color: inherit; text-decoration: inherit;">Schemas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolschema">[]User<wbr>Pool<wbr>Schema</a></span>
+        <span class="property-type"><a href="#userpoolschema">[]User<wbr>Pool<wbr>Schema<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the schema attributes of a user pool. Detailed below. Schema attributes from the [standard attribute set](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html#cognito-user-pools-standard-attributes) only need to be specified if they are different from the default configuration. Attributes can be added, but not modified or removed. Maximum of 50 attributes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -863,7 +863,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#smsconfiguration_go" style="color: inherit; text-decoration: inherit;">Sms<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolsmsconfiguration">User<wbr>Pool<wbr>Sms<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#userpoolsmsconfiguration">User<wbr>Pool<wbr>Sms<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for Short Message Service (SMS) settings. Detailed below. These settings apply to SMS user verification and SMS Multi-Factor Authentication (MFA). Due to Cognito API restrictions, the SMS configuration cannot be removed without recreating the Cognito User Pool. For user data safety, this resource will ignore the removal of this configuration by disabling drift detection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -881,7 +881,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#softwaretokenmfaconfiguration_go" style="color: inherit; text-decoration: inherit;">Software<wbr>Token<wbr>Mfa<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolsoftwaretokenmfaconfiguration">User<wbr>Pool<wbr>Software<wbr>Token<wbr>Mfa<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#userpoolsoftwaretokenmfaconfiguration">User<wbr>Pool<wbr>Software<wbr>Token<wbr>Mfa<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for software token Mult-Factor Authentication (MFA) settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -908,7 +908,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#userpooladdons_go" style="color: inherit; text-decoration: inherit;">User<wbr>Pool<wbr>Add<wbr>Ons</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpooluserpooladdons">User<wbr>Pool<wbr>User<wbr>Pool<wbr>Add<wbr>Ons</a></span>
+        <span class="property-type"><a href="#userpooluserpooladdons">User<wbr>Pool<wbr>User<wbr>Pool<wbr>Add<wbr>Ons<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for user pool add-ons to enable user pool advanced security mode features. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -926,7 +926,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#usernameconfiguration_go" style="color: inherit; text-decoration: inherit;">Username<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolusernameconfiguration">User<wbr>Pool<wbr>Username<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#userpoolusernameconfiguration">User<wbr>Pool<wbr>Username<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for username configuration. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -935,7 +935,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#verificationmessagetemplate_go" style="color: inherit; text-decoration: inherit;">Verification<wbr>Message<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolverificationmessagetemplate">User<wbr>Pool<wbr>Verification<wbr>Message<wbr>Template</a></span>
+        <span class="property-type"><a href="#userpoolverificationmessagetemplate">User<wbr>Pool<wbr>Verification<wbr>Message<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for verification message templates. Detailed below.
 {{% /md %}}</dd></dl>
@@ -1968,7 +1968,7 @@ The following state arguments are supported:
 <a href="#state_accountrecoverysetting_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Recovery<wbr>Setting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolaccountrecoverysetting">User<wbr>Pool<wbr>Account<wbr>Recovery<wbr>Setting</a></span>
+        <span class="property-type"><a href="#userpoolaccountrecoverysetting">User<wbr>Pool<wbr>Account<wbr>Recovery<wbr>Setting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to define which verified available method a user can use to recover their forgotten password. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1977,7 +1977,7 @@ The following state arguments are supported:
 <a href="#state_admincreateuserconfig_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Create<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpooladmincreateuserconfig">User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config</a></span>
+        <span class="property-type"><a href="#userpooladmincreateuserconfig">User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for creating a new user profile. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2022,7 +2022,7 @@ The following state arguments are supported:
 <a href="#state_deviceconfiguration_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpooldeviceconfiguration">User<wbr>Pool<wbr>Device<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#userpooldeviceconfiguration">User<wbr>Pool<wbr>Device<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the user pool's device tracking. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2031,7 +2031,7 @@ The following state arguments are supported:
 <a href="#state_emailconfiguration_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolemailconfiguration">User<wbr>Pool<wbr>Email<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#userpoolemailconfiguration">User<wbr>Pool<wbr>Email<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for configuring email. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2067,7 +2067,7 @@ The following state arguments are supported:
 <a href="#state_lambdaconfig_go" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoollambdaconfig">User<wbr>Pool<wbr>Lambda<wbr>Config</a></span>
+        <span class="property-type"><a href="#userpoollambdaconfig">User<wbr>Pool<wbr>Lambda<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the AWS Lambda triggers associated with the user pool. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2103,7 +2103,7 @@ The following state arguments are supported:
 <a href="#state_passwordpolicy_go" style="color: inherit; text-decoration: inherit;">Password<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolpasswordpolicy">User<wbr>Pool<wbr>Password<wbr>Policy</a></span>
+        <span class="property-type"><a href="#userpoolpasswordpolicy">User<wbr>Pool<wbr>Password<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration blocked for information about the user pool password policy. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2112,7 +2112,7 @@ The following state arguments are supported:
 <a href="#state_schemas_go" style="color: inherit; text-decoration: inherit;">Schemas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolschema">[]User<wbr>Pool<wbr>Schema</a></span>
+        <span class="property-type"><a href="#userpoolschema">[]User<wbr>Pool<wbr>Schema<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the schema attributes of a user pool. Detailed below. Schema attributes from the [standard attribute set](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html#cognito-user-pools-standard-attributes) only need to be specified if they are different from the default configuration. Attributes can be added, but not modified or removed. Maximum of 50 attributes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2130,7 +2130,7 @@ The following state arguments are supported:
 <a href="#state_smsconfiguration_go" style="color: inherit; text-decoration: inherit;">Sms<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolsmsconfiguration">User<wbr>Pool<wbr>Sms<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#userpoolsmsconfiguration">User<wbr>Pool<wbr>Sms<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for Short Message Service (SMS) settings. Detailed below. These settings apply to SMS user verification and SMS Multi-Factor Authentication (MFA). Due to Cognito API restrictions, the SMS configuration cannot be removed without recreating the Cognito User Pool. For user data safety, this resource will ignore the removal of this configuration by disabling drift detection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2148,7 +2148,7 @@ The following state arguments are supported:
 <a href="#state_softwaretokenmfaconfiguration_go" style="color: inherit; text-decoration: inherit;">Software<wbr>Token<wbr>Mfa<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolsoftwaretokenmfaconfiguration">User<wbr>Pool<wbr>Software<wbr>Token<wbr>Mfa<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#userpoolsoftwaretokenmfaconfiguration">User<wbr>Pool<wbr>Software<wbr>Token<wbr>Mfa<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for software token Mult-Factor Authentication (MFA) settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2175,7 +2175,7 @@ The following state arguments are supported:
 <a href="#state_userpooladdons_go" style="color: inherit; text-decoration: inherit;">User<wbr>Pool<wbr>Add<wbr>Ons</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpooluserpooladdons">User<wbr>Pool<wbr>User<wbr>Pool<wbr>Add<wbr>Ons</a></span>
+        <span class="property-type"><a href="#userpooluserpooladdons">User<wbr>Pool<wbr>User<wbr>Pool<wbr>Add<wbr>Ons<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for user pool add-ons to enable user pool advanced security mode features. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2193,7 +2193,7 @@ The following state arguments are supported:
 <a href="#state_usernameconfiguration_go" style="color: inherit; text-decoration: inherit;">Username<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolusernameconfiguration">User<wbr>Pool<wbr>Username<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#userpoolusernameconfiguration">User<wbr>Pool<wbr>Username<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for username configuration. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2202,7 +2202,7 @@ The following state arguments are supported:
 <a href="#state_verificationmessagetemplate_go" style="color: inherit; text-decoration: inherit;">Verification<wbr>Message<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolverificationmessagetemplate">User<wbr>Pool<wbr>Verification<wbr>Message<wbr>Template</a></span>
+        <span class="property-type"><a href="#userpoolverificationmessagetemplate">User<wbr>Pool<wbr>Verification<wbr>Message<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for verification message templates. Detailed below.
 {{% /md %}}</dd></dl>
@@ -2720,7 +2720,7 @@ The following state arguments are supported:
 <a href="#recoverymechanisms_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Mechanisms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolaccountrecoverysettingrecoverymechanism">List&lt;User<wbr>Pool<wbr>Account<wbr>Recovery<wbr>Setting<wbr>Recovery<wbr>Mechanism<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#userpoolaccountrecoverysettingrecoverymechanism">List&lt;User<wbr>Pool<wbr>Account<wbr>Recovery<wbr>Setting<wbr>Recovery<wbr>Mechanism&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of Account Recovery Options of the following structure:
 {{% /md %}}</dd></dl>
@@ -2746,7 +2746,7 @@ The following state arguments are supported:
 <a href="#recoverymechanisms_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Mechanisms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolaccountrecoverysettingrecoverymechanism">User<wbr>Pool<wbr>Account<wbr>Recovery<wbr>Setting<wbr>Recovery<wbr>Mechanism<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#userpoolaccountrecoverysettingrecoverymechanism">User<wbr>Pool<wbr>Account<wbr>Recovery<wbr>Setting<wbr>Recovery<wbr>Mechanism[]</a></span>
     </dt>
     <dd>{{% md %}}List of Account Recovery Options of the following structure:
 {{% /md %}}</dd></dl>
@@ -2759,7 +2759,7 @@ The following state arguments are supported:
 <a href="#recovery_mechanisms_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>mechanisms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolaccountrecoverysettingrecoverymechanism">Sequence[User<wbr>Pool<wbr>Account<wbr>Recovery<wbr>Setting<wbr>Recovery<wbr>Mechanism<wbr>Args]</a></span>
+        <span class="property-type"><a href="#userpoolaccountrecoverysettingrecoverymechanism">Sequence[User<wbr>Pool<wbr>Account<wbr>Recovery<wbr>Setting<wbr>Recovery<wbr>Mechanism]</a></span>
     </dt>
     <dd>{{% md %}}List of Account Recovery Options of the following structure:
 {{% /md %}}</dd></dl>
@@ -2873,7 +2873,7 @@ The following state arguments are supported:
 <a href="#invitemessagetemplate_csharp" style="color: inherit; text-decoration: inherit;">Invite<wbr>Message<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpooladmincreateuserconfiginvitemessagetemplate">User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config<wbr>Invite<wbr>Message<wbr>Template<wbr>Args</a></span>
+        <span class="property-type"><a href="#userpooladmincreateuserconfiginvitemessagetemplate">User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config<wbr>Invite<wbr>Message<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}Invite message template structure. Detailed below.
 {{% /md %}}</dd></dl>
@@ -2917,7 +2917,7 @@ The following state arguments are supported:
 <a href="#invitemessagetemplate_nodejs" style="color: inherit; text-decoration: inherit;">invite<wbr>Message<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpooladmincreateuserconfiginvitemessagetemplate">User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config<wbr>Invite<wbr>Message<wbr>Template<wbr>Args</a></span>
+        <span class="property-type"><a href="#userpooladmincreateuserconfiginvitemessagetemplate">User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config<wbr>Invite<wbr>Message<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}Invite message template structure. Detailed below.
 {{% /md %}}</dd></dl>
@@ -2939,7 +2939,7 @@ The following state arguments are supported:
 <a href="#invite_message_template_python" style="color: inherit; text-decoration: inherit;">invite_<wbr>message_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpooladmincreateuserconfiginvitemessagetemplate">User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config<wbr>Invite<wbr>Message<wbr>Template<wbr>Args</a></span>
+        <span class="property-type"><a href="#userpooladmincreateuserconfiginvitemessagetemplate">User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config<wbr>Invite<wbr>Message<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}Invite message template structure. Detailed below.
 {{% /md %}}</dd></dl>
@@ -4016,7 +4016,7 @@ The following state arguments are supported:
 <a href="#numberattributeconstraints_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Attribute<wbr>Constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolschemanumberattributeconstraints">User<wbr>Pool<wbr>Schema<wbr>Number<wbr>Attribute<wbr>Constraints<wbr>Args</a></span>
+        <span class="property-type"><a href="#userpoolschemanumberattributeconstraints">User<wbr>Pool<wbr>Schema<wbr>Number<wbr>Attribute<wbr>Constraints</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the constraints for an attribute of the number type. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4034,7 +4034,7 @@ The following state arguments are supported:
 <a href="#stringattributeconstraints_csharp" style="color: inherit; text-decoration: inherit;">String<wbr>Attribute<wbr>Constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolschemastringattributeconstraints">User<wbr>Pool<wbr>Schema<wbr>String<wbr>Attribute<wbr>Constraints<wbr>Args</a></span>
+        <span class="property-type"><a href="#userpoolschemastringattributeconstraints">User<wbr>Pool<wbr>Schema<wbr>String<wbr>Attribute<wbr>Constraints</a></span>
     </dt>
     <dd>{{% md %}}Constraints for an attribute of the string type. Detailed below.
 {{% /md %}}</dd></dl>
@@ -4150,7 +4150,7 @@ The following state arguments are supported:
 <a href="#numberattributeconstraints_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Attribute<wbr>Constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolschemanumberattributeconstraints">User<wbr>Pool<wbr>Schema<wbr>Number<wbr>Attribute<wbr>Constraints<wbr>Args</a></span>
+        <span class="property-type"><a href="#userpoolschemanumberattributeconstraints">User<wbr>Pool<wbr>Schema<wbr>Number<wbr>Attribute<wbr>Constraints</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the constraints for an attribute of the number type. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4168,7 +4168,7 @@ The following state arguments are supported:
 <a href="#stringattributeconstraints_nodejs" style="color: inherit; text-decoration: inherit;">string<wbr>Attribute<wbr>Constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolschemastringattributeconstraints">User<wbr>Pool<wbr>Schema<wbr>String<wbr>Attribute<wbr>Constraints<wbr>Args</a></span>
+        <span class="property-type"><a href="#userpoolschemastringattributeconstraints">User<wbr>Pool<wbr>Schema<wbr>String<wbr>Attribute<wbr>Constraints</a></span>
     </dt>
     <dd>{{% md %}}Constraints for an attribute of the string type. Detailed below.
 {{% /md %}}</dd></dl>
@@ -4217,7 +4217,7 @@ The following state arguments are supported:
 <a href="#number_attribute_constraints_python" style="color: inherit; text-decoration: inherit;">number_<wbr>attribute_<wbr>constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolschemanumberattributeconstraints">User<wbr>Pool<wbr>Schema<wbr>Number<wbr>Attribute<wbr>Constraints<wbr>Args</a></span>
+        <span class="property-type"><a href="#userpoolschemanumberattributeconstraints">User<wbr>Pool<wbr>Schema<wbr>Number<wbr>Attribute<wbr>Constraints</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the constraints for an attribute of the number type. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4235,7 +4235,7 @@ The following state arguments are supported:
 <a href="#string_attribute_constraints_python" style="color: inherit; text-decoration: inherit;">string_<wbr>attribute_<wbr>constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolschemastringattributeconstraints">User<wbr>Pool<wbr>Schema<wbr>String<wbr>Attribute<wbr>Constraints<wbr>Args</a></span>
+        <span class="property-type"><a href="#userpoolschemastringattributeconstraints">User<wbr>Pool<wbr>Schema<wbr>String<wbr>Attribute<wbr>Constraints</a></span>
     </dt>
     <dd>{{% md %}}Constraints for an attribute of the string type. Detailed below.
 {{% /md %}}</dd></dl>

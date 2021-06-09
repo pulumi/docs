@@ -842,7 +842,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#networkconfiguration_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentnetworkconfiguration">Environment<wbr>Network<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#environmentnetworkconfiguration">Environment<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the network configuration for your Apache Airflow Environment. This includes two private subnets as well as security groups for the Airflow environment. Each subnet requires internet connection, otherwise the deployment will fail. See Network configuration below for details.
 {{% /md %}}</dd><dt class="property-required"
@@ -896,7 +896,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#loggingconfiguration_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentloggingconfiguration">Environment<wbr>Logging<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#environmentloggingconfiguration">Environment<wbr>Logging<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Apache Airflow logs you want to send to Amazon CloudWatch Logs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2109,7 +2109,7 @@ The following state arguments are supported:
 <a href="#state_lastupdateds_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Updateds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentlastupdated">[]Environment<wbr>Last<wbr>Updated</a></span>
+        <span class="property-type"><a href="#environmentlastupdated">[]Environment<wbr>Last<wbr>Updated<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2117,7 +2117,7 @@ The following state arguments are supported:
 <a href="#state_loggingconfiguration_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentloggingconfiguration">Environment<wbr>Logging<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#environmentloggingconfiguration">Environment<wbr>Logging<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Apache Airflow logs you want to send to Amazon CloudWatch Logs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2153,7 +2153,7 @@ The following state arguments are supported:
 <a href="#state_networkconfiguration_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentnetworkconfiguration">Environment<wbr>Network<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#environmentnetworkconfiguration">Environment<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the network configuration for your Apache Airflow Environment. This includes two private subnets as well as security groups for the Airflow environment. Each subnet requires internet connection, otherwise the deployment will fail. See Network configuration below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2771,7 +2771,7 @@ The following state arguments are supported:
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentlastupdatederror">List&lt;Environment<wbr>Last<wbr>Updated<wbr>Error<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#environmentlastupdatederror">List&lt;Environment<wbr>Last<wbr>Updated<wbr>Error&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2833,7 +2833,7 @@ The following state arguments are supported:
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentlastupdatederror">Environment<wbr>Last<wbr>Updated<wbr>Error<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#environmentlastupdatederror">Environment<wbr>Last<wbr>Updated<wbr>Error[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2864,7 +2864,7 @@ The following state arguments are supported:
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentlastupdatederror">Sequence[Environment<wbr>Last<wbr>Updated<wbr>Error<wbr>Args]</a></span>
+        <span class="property-type"><a href="#environmentlastupdatederror">Sequence[Environment<wbr>Last<wbr>Updated<wbr>Error]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2969,7 +2969,7 @@ The following state arguments are supported:
 <a href="#dagprocessinglogs_csharp" style="color: inherit; text-decoration: inherit;">Dag<wbr>Processing<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentloggingconfigurationdagprocessinglogs">Environment<wbr>Logging<wbr>Configuration<wbr>Dag<wbr>Processing<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentloggingconfigurationdagprocessinglogs">Environment<wbr>Logging<wbr>Configuration<wbr>Dag<wbr>Processing<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Log configuration options for processing DAGs. See Module logging configuration for more information. Disabled by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2978,7 +2978,7 @@ The following state arguments are supported:
 <a href="#schedulerlogs_csharp" style="color: inherit; text-decoration: inherit;">Scheduler<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentloggingconfigurationschedulerlogs">Environment<wbr>Logging<wbr>Configuration<wbr>Scheduler<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentloggingconfigurationschedulerlogs">Environment<wbr>Logging<wbr>Configuration<wbr>Scheduler<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}Log configuration options for the schedulers. See Module logging configuration for more information. Disabled by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2987,7 +2987,7 @@ The following state arguments are supported:
 <a href="#tasklogs_csharp" style="color: inherit; text-decoration: inherit;">Task<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentloggingconfigurationtasklogs">Environment<wbr>Logging<wbr>Configuration<wbr>Task<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentloggingconfigurationtasklogs">Environment<wbr>Logging<wbr>Configuration<wbr>Task<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}Log configuration options for DAG tasks. See Module logging configuration for more information. Enabled by default with `INFO` log level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2996,7 +2996,7 @@ The following state arguments are supported:
 <a href="#webserverlogs_csharp" style="color: inherit; text-decoration: inherit;">Webserver<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentloggingconfigurationwebserverlogs">Environment<wbr>Logging<wbr>Configuration<wbr>Webserver<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentloggingconfigurationwebserverlogs">Environment<wbr>Logging<wbr>Configuration<wbr>Webserver<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}Log configuration options for the webservers. See Module logging configuration for more information. Disabled by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3005,7 +3005,7 @@ The following state arguments are supported:
 <a href="#workerlogs_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentloggingconfigurationworkerlogs">Environment<wbr>Logging<wbr>Configuration<wbr>Worker<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentloggingconfigurationworkerlogs">Environment<wbr>Logging<wbr>Configuration<wbr>Worker<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}Log configuration options for the workers. See Module logging configuration for more information. Disabled by default.
 {{% /md %}}</dd></dl>
@@ -3067,7 +3067,7 @@ The following state arguments are supported:
 <a href="#dagprocessinglogs_nodejs" style="color: inherit; text-decoration: inherit;">dag<wbr>Processing<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentloggingconfigurationdagprocessinglogs">Environment<wbr>Logging<wbr>Configuration<wbr>Dag<wbr>Processing<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentloggingconfigurationdagprocessinglogs">Environment<wbr>Logging<wbr>Configuration<wbr>Dag<wbr>Processing<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Log configuration options for processing DAGs. See Module logging configuration for more information. Disabled by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3076,7 +3076,7 @@ The following state arguments are supported:
 <a href="#schedulerlogs_nodejs" style="color: inherit; text-decoration: inherit;">scheduler<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentloggingconfigurationschedulerlogs">Environment<wbr>Logging<wbr>Configuration<wbr>Scheduler<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentloggingconfigurationschedulerlogs">Environment<wbr>Logging<wbr>Configuration<wbr>Scheduler<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}Log configuration options for the schedulers. See Module logging configuration for more information. Disabled by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3085,7 +3085,7 @@ The following state arguments are supported:
 <a href="#tasklogs_nodejs" style="color: inherit; text-decoration: inherit;">task<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentloggingconfigurationtasklogs">Environment<wbr>Logging<wbr>Configuration<wbr>Task<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentloggingconfigurationtasklogs">Environment<wbr>Logging<wbr>Configuration<wbr>Task<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}Log configuration options for DAG tasks. See Module logging configuration for more information. Enabled by default with `INFO` log level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3094,7 +3094,7 @@ The following state arguments are supported:
 <a href="#webserverlogs_nodejs" style="color: inherit; text-decoration: inherit;">webserver<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentloggingconfigurationwebserverlogs">Environment<wbr>Logging<wbr>Configuration<wbr>Webserver<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentloggingconfigurationwebserverlogs">Environment<wbr>Logging<wbr>Configuration<wbr>Webserver<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}Log configuration options for the webservers. See Module logging configuration for more information. Disabled by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3103,7 +3103,7 @@ The following state arguments are supported:
 <a href="#workerlogs_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentloggingconfigurationworkerlogs">Environment<wbr>Logging<wbr>Configuration<wbr>Worker<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentloggingconfigurationworkerlogs">Environment<wbr>Logging<wbr>Configuration<wbr>Worker<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}Log configuration options for the workers. See Module logging configuration for more information. Disabled by default.
 {{% /md %}}</dd></dl>
@@ -3116,7 +3116,7 @@ The following state arguments are supported:
 <a href="#dag_processing_logs_python" style="color: inherit; text-decoration: inherit;">dag_<wbr>processing_<wbr>logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentloggingconfigurationdagprocessinglogs">Environment<wbr>Logging<wbr>Configuration<wbr>Dag<wbr>Processing<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentloggingconfigurationdagprocessinglogs">Environment<wbr>Logging<wbr>Configuration<wbr>Dag<wbr>Processing<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Log configuration options for processing DAGs. See Module logging configuration for more information. Disabled by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3125,7 +3125,7 @@ The following state arguments are supported:
 <a href="#scheduler_logs_python" style="color: inherit; text-decoration: inherit;">scheduler_<wbr>logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentloggingconfigurationschedulerlogs">Environment<wbr>Logging<wbr>Configuration<wbr>Scheduler<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentloggingconfigurationschedulerlogs">Environment<wbr>Logging<wbr>Configuration<wbr>Scheduler<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}Log configuration options for the schedulers. See Module logging configuration for more information. Disabled by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3134,7 +3134,7 @@ The following state arguments are supported:
 <a href="#task_logs_python" style="color: inherit; text-decoration: inherit;">task_<wbr>logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentloggingconfigurationtasklogs">Environment<wbr>Logging<wbr>Configuration<wbr>Task<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentloggingconfigurationtasklogs">Environment<wbr>Logging<wbr>Configuration<wbr>Task<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}Log configuration options for DAG tasks. See Module logging configuration for more information. Enabled by default with `INFO` log level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3143,7 +3143,7 @@ The following state arguments are supported:
 <a href="#webserver_logs_python" style="color: inherit; text-decoration: inherit;">webserver_<wbr>logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentloggingconfigurationwebserverlogs">Environment<wbr>Logging<wbr>Configuration<wbr>Webserver<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentloggingconfigurationwebserverlogs">Environment<wbr>Logging<wbr>Configuration<wbr>Webserver<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}Log configuration options for the webservers. See Module logging configuration for more information. Disabled by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3152,7 +3152,7 @@ The following state arguments are supported:
 <a href="#worker_logs_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentloggingconfigurationworkerlogs">Environment<wbr>Logging<wbr>Configuration<wbr>Worker<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentloggingconfigurationworkerlogs">Environment<wbr>Logging<wbr>Configuration<wbr>Worker<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}Log configuration options for the workers. See Module logging configuration for more information. Disabled by default.
 {{% /md %}}</dd></dl>

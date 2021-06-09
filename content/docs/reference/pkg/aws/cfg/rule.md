@@ -645,7 +645,7 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesource">Rule<wbr>Source</a></span>
+        <span class="property-type"><a href="#rulesource">Rule<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Source specifies the rule owner, the rule identifier, and the notifications that cause the function to evaluate your AWS resources as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -690,7 +690,7 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulescope">Rule<wbr>Scope</a></span>
+        <span class="property-type"><a href="#rulescope">Rule<wbr>Scope<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Scope defines which resources can trigger an evaluation for the rule as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1283,7 +1283,7 @@ The following state arguments are supported:
 <a href="#state_scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulescope">Rule<wbr>Scope</a></span>
+        <span class="property-type"><a href="#rulescope">Rule<wbr>Scope<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Scope defines which resources can trigger an evaluation for the rule as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1292,7 +1292,7 @@ The following state arguments are supported:
 <a href="#state_source_go" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesource">Rule<wbr>Source</a></span>
+        <span class="property-type"><a href="#rulesource">Rule<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Source specifies the rule owner, the rule identifier, and the notifications that cause the function to evaluate your AWS resources as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1702,7 +1702,7 @@ The following state arguments are supported:
 <a href="#sourcedetails_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesourcesourcedetail">List&lt;Rule<wbr>Source<wbr>Source<wbr>Detail<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#rulesourcesourcedetail">List&lt;Rule<wbr>Source<wbr>Source<wbr>Detail&gt;</a></span>
     </dt>
     <dd>{{% md %}}Provides the source and type of the event that causes AWS Config to evaluate your AWS resources. Only valid if `owner` is `CUSTOM_LAMBDA`.
 {{% /md %}}</dd></dl>
@@ -1764,7 +1764,7 @@ The following state arguments are supported:
 <a href="#sourcedetails_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesourcesourcedetail">Rule<wbr>Source<wbr>Source<wbr>Detail<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#rulesourcesourcedetail">Rule<wbr>Source<wbr>Source<wbr>Detail[]</a></span>
     </dt>
     <dd>{{% md %}}Provides the source and type of the event that causes AWS Config to evaluate your AWS resources. Only valid if `owner` is `CUSTOM_LAMBDA`.
 {{% /md %}}</dd></dl>
@@ -1795,7 +1795,7 @@ The following state arguments are supported:
 <a href="#source_details_python" style="color: inherit; text-decoration: inherit;">source_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesourcesourcedetail">Sequence[Rule<wbr>Source<wbr>Source<wbr>Detail<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulesourcesourcedetail">Sequence[Rule<wbr>Source<wbr>Source<wbr>Detail]</a></span>
     </dt>
     <dd>{{% md %}}Provides the source and type of the event that causes AWS Config to evaluate your AWS resources. Only valid if `owner` is `CUSTOM_LAMBDA`.
 {{% /md %}}</dd></dl>

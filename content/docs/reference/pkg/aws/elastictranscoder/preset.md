@@ -584,7 +584,7 @@ The Preset resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#audio_go" style="color: inherit; text-decoration: inherit;">Audio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetaudio">Preset<wbr>Audio</a></span>
+        <span class="property-type"><a href="#presetaudio">Preset<wbr>Audio<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Audio parameters object (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -593,7 +593,7 @@ The Preset resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#audiocodecoptions_go" style="color: inherit; text-decoration: inherit;">Audio<wbr>Codec<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetaudiocodecoptions">Preset<wbr>Audio<wbr>Codec<wbr>Options</a></span>
+        <span class="property-type"><a href="#presetaudiocodecoptions">Preset<wbr>Audio<wbr>Codec<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Codec options for the audio parameters (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -620,7 +620,7 @@ The Preset resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#thumbnails_go" style="color: inherit; text-decoration: inherit;">Thumbnails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetthumbnails">Preset<wbr>Thumbnails</a></span>
+        <span class="property-type"><a href="#presetthumbnails">Preset<wbr>Thumbnails<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Thumbnail parameters object (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -637,7 +637,7 @@ The Preset resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#video_go" style="color: inherit; text-decoration: inherit;">Video</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetvideo">Preset<wbr>Video</a></span>
+        <span class="property-type"><a href="#presetvideo">Preset<wbr>Video<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Video parameters object (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -655,7 +655,7 @@ The Preset resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#videowatermarks_go" style="color: inherit; text-decoration: inherit;">Video<wbr>Watermarks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetvideowatermark">[]Preset<wbr>Video<wbr>Watermark</a></span>
+        <span class="property-type"><a href="#presetvideowatermark">[]Preset<wbr>Video<wbr>Watermark<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Watermark parameters for the video parameters (documented below)
 {{% /md %}}</dd></dl>
@@ -1192,7 +1192,7 @@ The following state arguments are supported:
 <a href="#state_audio_go" style="color: inherit; text-decoration: inherit;">Audio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetaudio">Preset<wbr>Audio</a></span>
+        <span class="property-type"><a href="#presetaudio">Preset<wbr>Audio<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Audio parameters object (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1201,7 +1201,7 @@ The following state arguments are supported:
 <a href="#state_audiocodecoptions_go" style="color: inherit; text-decoration: inherit;">Audio<wbr>Codec<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetaudiocodecoptions">Preset<wbr>Audio<wbr>Codec<wbr>Options</a></span>
+        <span class="property-type"><a href="#presetaudiocodecoptions">Preset<wbr>Audio<wbr>Codec<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Codec options for the audio parameters (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1237,7 +1237,7 @@ The following state arguments are supported:
 <a href="#state_thumbnails_go" style="color: inherit; text-decoration: inherit;">Thumbnails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetthumbnails">Preset<wbr>Thumbnails</a></span>
+        <span class="property-type"><a href="#presetthumbnails">Preset<wbr>Thumbnails<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Thumbnail parameters object (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1254,7 +1254,7 @@ The following state arguments are supported:
 <a href="#state_video_go" style="color: inherit; text-decoration: inherit;">Video</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetvideo">Preset<wbr>Video</a></span>
+        <span class="property-type"><a href="#presetvideo">Preset<wbr>Video<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Video parameters object (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1272,7 +1272,7 @@ The following state arguments are supported:
 <a href="#state_videowatermarks_go" style="color: inherit; text-decoration: inherit;">Video<wbr>Watermarks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetvideowatermark">[]Preset<wbr>Video<wbr>Watermark</a></span>
+        <span class="property-type"><a href="#presetvideowatermark">[]Preset<wbr>Video<wbr>Watermark<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Watermark parameters for the video parameters (documented below)
 {{% /md %}}</dd></dl>

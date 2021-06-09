@@ -611,7 +611,7 @@ will have by default.
 <a href="#customcookbookssources_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Cookbooks<wbr>Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stackcustomcookbookssource">[]Stack<wbr>Custom<wbr>Cookbooks<wbr>Source</a></span>
+        <span class="property-type"><a href="#stackcustomcookbookssource">[]Stack<wbr>Custom<wbr>Cookbooks<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When `use_custom_cookbooks` is set, provide this sub-object as
 described below.
@@ -1748,7 +1748,7 @@ security groups apply to created instances.
 <a href="#state_customcookbookssources_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Cookbooks<wbr>Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stackcustomcookbookssource">[]Stack<wbr>Custom<wbr>Cookbooks<wbr>Source</a></span>
+        <span class="property-type"><a href="#stackcustomcookbookssource">[]Stack<wbr>Custom<wbr>Cookbooks<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When `use_custom_cookbooks` is set, provide this sub-object as
 described below.

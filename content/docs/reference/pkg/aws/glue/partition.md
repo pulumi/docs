@@ -321,7 +321,7 @@ The Partition resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#storagedescriptor_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Descriptor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#partitionstoragedescriptor">Partition<wbr>Storage<wbr>Descriptor</a></span>
+        <span class="property-type"><a href="#partitionstoragedescriptor">Partition<wbr>Storage<wbr>Descriptor<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A storage descriptor object containing information about the physical storage of this table. You can refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor) for a full explanation of this object.
 {{% /md %}}</dd></dl>
@@ -892,7 +892,7 @@ The following state arguments are supported:
 <a href="#state_storagedescriptor_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Descriptor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#partitionstoragedescriptor">Partition<wbr>Storage<wbr>Descriptor</a></span>
+        <span class="property-type"><a href="#partitionstoragedescriptor">Partition<wbr>Storage<wbr>Descriptor<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A storage descriptor object containing information about the physical storage of this table. You can refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor) for a full explanation of this object.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1101,7 +1101,7 @@ The following state arguments are supported:
 <a href="#columns_csharp" style="color: inherit; text-decoration: inherit;">Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#partitionstoragedescriptorcolumn">List&lt;Partition<wbr>Storage<wbr>Descriptor<wbr>Column<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#partitionstoragedescriptorcolumn">List&lt;Partition<wbr>Storage<wbr>Descriptor<wbr>Column&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of the Columns in the table.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1164,7 +1164,7 @@ The following state arguments are supported:
 <a href="#serdeinfo_csharp" style="color: inherit; text-decoration: inherit;">Ser<wbr>De<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#partitionstoragedescriptorserdeinfo">Partition<wbr>Storage<wbr>Descriptor<wbr>Ser<wbr>De<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#partitionstoragedescriptorserdeinfo">Partition<wbr>Storage<wbr>Descriptor<wbr>Ser<wbr>De<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Serialization/deserialization (SerDe) information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1173,7 +1173,7 @@ The following state arguments are supported:
 <a href="#skewedinfo_csharp" style="color: inherit; text-decoration: inherit;">Skewed<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#partitionstoragedescriptorskewedinfo">Partition<wbr>Storage<wbr>Descriptor<wbr>Skewed<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#partitionstoragedescriptorskewedinfo">Partition<wbr>Storage<wbr>Descriptor<wbr>Skewed<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information about values that appear very frequently in a column (skewed values).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1182,7 +1182,7 @@ The following state arguments are supported:
 <a href="#sortcolumns_csharp" style="color: inherit; text-decoration: inherit;">Sort<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#partitionstoragedescriptorsortcolumn">List&lt;Partition<wbr>Storage<wbr>Descriptor<wbr>Sort<wbr>Column<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#partitionstoragedescriptorsortcolumn">List&lt;Partition<wbr>Storage<wbr>Descriptor<wbr>Sort<wbr>Column&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of Order objects specifying the sort order of each bucket in the table.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1325,7 +1325,7 @@ The following state arguments are supported:
 <a href="#columns_nodejs" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#partitionstoragedescriptorcolumn">Partition<wbr>Storage<wbr>Descriptor<wbr>Column<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#partitionstoragedescriptorcolumn">Partition<wbr>Storage<wbr>Descriptor<wbr>Column[]</a></span>
     </dt>
     <dd>{{% md %}}A list of the Columns in the table.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1388,7 +1388,7 @@ The following state arguments are supported:
 <a href="#serdeinfo_nodejs" style="color: inherit; text-decoration: inherit;">ser<wbr>De<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#partitionstoragedescriptorserdeinfo">Partition<wbr>Storage<wbr>Descriptor<wbr>Ser<wbr>De<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#partitionstoragedescriptorserdeinfo">Partition<wbr>Storage<wbr>Descriptor<wbr>Ser<wbr>De<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Serialization/deserialization (SerDe) information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1397,7 +1397,7 @@ The following state arguments are supported:
 <a href="#skewedinfo_nodejs" style="color: inherit; text-decoration: inherit;">skewed<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#partitionstoragedescriptorskewedinfo">Partition<wbr>Storage<wbr>Descriptor<wbr>Skewed<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#partitionstoragedescriptorskewedinfo">Partition<wbr>Storage<wbr>Descriptor<wbr>Skewed<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information about values that appear very frequently in a column (skewed values).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1406,7 +1406,7 @@ The following state arguments are supported:
 <a href="#sortcolumns_nodejs" style="color: inherit; text-decoration: inherit;">sort<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#partitionstoragedescriptorsortcolumn">Partition<wbr>Storage<wbr>Descriptor<wbr>Sort<wbr>Column<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#partitionstoragedescriptorsortcolumn">Partition<wbr>Storage<wbr>Descriptor<wbr>Sort<wbr>Column[]</a></span>
     </dt>
     <dd>{{% md %}}A list of Order objects specifying the sort order of each bucket in the table.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1437,7 +1437,7 @@ The following state arguments are supported:
 <a href="#columns_python" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#partitionstoragedescriptorcolumn">Sequence[Partition<wbr>Storage<wbr>Descriptor<wbr>Column<wbr>Args]</a></span>
+        <span class="property-type"><a href="#partitionstoragedescriptorcolumn">Sequence[Partition<wbr>Storage<wbr>Descriptor<wbr>Column]</a></span>
     </dt>
     <dd>{{% md %}}A list of the Columns in the table.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1500,7 +1500,7 @@ The following state arguments are supported:
 <a href="#ser_de_info_python" style="color: inherit; text-decoration: inherit;">ser_<wbr>de_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#partitionstoragedescriptorserdeinfo">Partition<wbr>Storage<wbr>Descriptor<wbr>Ser<wbr>De<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#partitionstoragedescriptorserdeinfo">Partition<wbr>Storage<wbr>Descriptor<wbr>Ser<wbr>De<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Serialization/deserialization (SerDe) information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1509,7 +1509,7 @@ The following state arguments are supported:
 <a href="#skewed_info_python" style="color: inherit; text-decoration: inherit;">skewed_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#partitionstoragedescriptorskewedinfo">Partition<wbr>Storage<wbr>Descriptor<wbr>Skewed<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#partitionstoragedescriptorskewedinfo">Partition<wbr>Storage<wbr>Descriptor<wbr>Skewed<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information about values that appear very frequently in a column (skewed values).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1518,7 +1518,7 @@ The following state arguments are supported:
 <a href="#sort_columns_python" style="color: inherit; text-decoration: inherit;">sort_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#partitionstoragedescriptorsortcolumn">Sequence[Partition<wbr>Storage<wbr>Descriptor<wbr>Sort<wbr>Column<wbr>Args]</a></span>
+        <span class="property-type"><a href="#partitionstoragedescriptorsortcolumn">Sequence[Partition<wbr>Storage<wbr>Descriptor<wbr>Sort<wbr>Column]</a></span>
     </dt>
     <dd>{{% md %}}A list of Order objects specifying the sort order of each bucket in the table.
 {{% /md %}}</dd><dt class="property-optional"

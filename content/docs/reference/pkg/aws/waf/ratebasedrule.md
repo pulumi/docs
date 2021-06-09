@@ -440,7 +440,7 @@ The RateBasedRule resource accepts the following [input]({{< relref "/docs/intro
 <a href="#predicates_go" style="color: inherit; text-decoration: inherit;">Predicates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ratebasedrulepredicate">[]Rate<wbr>Based<wbr>Rule<wbr>Predicate</a></span>
+        <span class="property-type"><a href="#ratebasedrulepredicate">[]Rate<wbr>Based<wbr>Rule<wbr>Predicate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The objects to include in a rule (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -932,7 +932,7 @@ The following state arguments are supported:
 <a href="#state_predicates_go" style="color: inherit; text-decoration: inherit;">Predicates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ratebasedrulepredicate">[]Rate<wbr>Based<wbr>Rule<wbr>Predicate</a></span>
+        <span class="property-type"><a href="#ratebasedrulepredicate">[]Rate<wbr>Based<wbr>Rule<wbr>Predicate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The objects to include in a rule (documented below).
 {{% /md %}}</dd><dt class="property-optional"

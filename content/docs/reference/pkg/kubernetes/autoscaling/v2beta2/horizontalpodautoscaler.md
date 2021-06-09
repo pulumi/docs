@@ -182,7 +182,7 @@ The HorizontalPodAutoscaler resource accepts the following [input]({{< relref "/
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta</a></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}metadata is the standard object metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -190,7 +190,7 @@ The HorizontalPodAutoscaler resource accepts the following [input]({{< relref "/
 <a href="#spec_go" style="color: inherit; text-decoration: inherit;">Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#horizontalpodautoscalerspec">Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Spec</a></span>
+        <span class="property-type"><a href="#horizontalpodautoscalerspec">Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}spec is the specification for the behaviour of the autoscaler. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -357,7 +357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metrictarget">Metric<wbr>Target<wbr>Args</a></span>
+        <span class="property-type"><a href="#metrictarget">Metric<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}target specifies the target value for the given metric{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -413,7 +413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metrictarget">Metric<wbr>Target<wbr>Args</a></span>
+        <span class="property-type"><a href="#metrictarget">Metric<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}target specifies the target value for the given metric{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -441,7 +441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metrictarget">Metric<wbr>Target<wbr>Args</a></span>
+        <span class="property-type"><a href="#metrictarget">Metric<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}target specifies the target value for the given metric{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -463,7 +463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#current_csharp" style="color: inherit; text-decoration: inherit;">Current</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricvaluestatus">Metric<wbr>Value<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricvaluestatus">Metric<wbr>Value<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}current contains the current value for the given metric{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -519,7 +519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#current_nodejs" style="color: inherit; text-decoration: inherit;">current</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricvaluestatus">Metric<wbr>Value<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricvaluestatus">Metric<wbr>Value<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}current contains the current value for the given metric{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -547,7 +547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#current_python" style="color: inherit; text-decoration: inherit;">current</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricvaluestatus">Metric<wbr>Value<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricvaluestatus">Metric<wbr>Value<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}current contains the current value for the given metric{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -683,7 +683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metric_csharp" style="color: inherit; text-decoration: inherit;">Metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricidentifier">Metric<wbr>Identifier<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricidentifier">Metric<wbr>Identifier</a></span>
     </dt>
     <dd>{{% md %}}metric identifies the target metric by name and selector{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -691,7 +691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metrictarget">Metric<wbr>Target<wbr>Args</a></span>
+        <span class="property-type"><a href="#metrictarget">Metric<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}target specifies the target value for the given metric{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -723,7 +723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metric_nodejs" style="color: inherit; text-decoration: inherit;">metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricidentifier">Metric<wbr>Identifier<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricidentifier">Metric<wbr>Identifier</a></span>
     </dt>
     <dd>{{% md %}}metric identifies the target metric by name and selector{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -731,7 +731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metrictarget">Metric<wbr>Target<wbr>Args</a></span>
+        <span class="property-type"><a href="#metrictarget">Metric<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}target specifies the target value for the given metric{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -743,7 +743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metric_python" style="color: inherit; text-decoration: inherit;">metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricidentifier">Metric<wbr>Identifier<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricidentifier">Metric<wbr>Identifier</a></span>
     </dt>
     <dd>{{% md %}}metric identifies the target metric by name and selector{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -751,7 +751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metrictarget">Metric<wbr>Target<wbr>Args</a></span>
+        <span class="property-type"><a href="#metrictarget">Metric<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}target specifies the target value for the given metric{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -765,7 +765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#current_csharp" style="color: inherit; text-decoration: inherit;">Current</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricvaluestatus">Metric<wbr>Value<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricvaluestatus">Metric<wbr>Value<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}current contains the current value for the given metric{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -773,7 +773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metric_csharp" style="color: inherit; text-decoration: inherit;">Metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricidentifier">Metric<wbr>Identifier<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricidentifier">Metric<wbr>Identifier</a></span>
     </dt>
     <dd>{{% md %}}metric identifies the target metric by name and selector{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -805,7 +805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#current_nodejs" style="color: inherit; text-decoration: inherit;">current</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricvaluestatus">Metric<wbr>Value<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricvaluestatus">Metric<wbr>Value<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}current contains the current value for the given metric{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -813,7 +813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metric_nodejs" style="color: inherit; text-decoration: inherit;">metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricidentifier">Metric<wbr>Identifier<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricidentifier">Metric<wbr>Identifier</a></span>
     </dt>
     <dd>{{% md %}}metric identifies the target metric by name and selector{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -825,7 +825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#current_python" style="color: inherit; text-decoration: inherit;">current</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricvaluestatus">Metric<wbr>Value<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricvaluestatus">Metric<wbr>Value<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}current contains the current value for the given metric{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -833,7 +833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metric_python" style="color: inherit; text-decoration: inherit;">metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricidentifier">Metric<wbr>Identifier<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricidentifier">Metric<wbr>Identifier</a></span>
     </dt>
     <dd>{{% md %}}metric identifies the target metric by name and selector{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -961,7 +961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hpascalingpolicy">List&lt;HPAScaling<wbr>Policy<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#hpascalingpolicy">List&lt;HPAScaling<wbr>Policy&gt;</a></span>
     </dt>
     <dd>{{% md %}}policies is a list of potential scaling polices which can be used during scaling. At least one policy must be specified, otherwise the HPAScalingRules will be discarded as invalid{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1017,7 +1017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hpascalingpolicy">HPAScaling<wbr>Policy<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#hpascalingpolicy">HPAScaling<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}policies is a list of potential scaling polices which can be used during scaling. At least one policy must be specified, otherwise the HPAScalingRules will be discarded as invalid{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1045,7 +1045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hpascalingpolicy">HPAScaling<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#hpascalingpolicy">HPAScaling<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}policies is a list of potential scaling polices which can be used during scaling. At least one policy must be specified, otherwise the HPAScalingRules will be discarded as invalid{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1075,7 +1075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scaledown_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Down</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hpascalingrules">HPAScaling<wbr>Rules<wbr>Args</a></span>
+        <span class="property-type"><a href="#hpascalingrules">HPAScaling<wbr>Rules</a></span>
     </dt>
     <dd>{{% md %}}scaleDown is scaling policy for scaling Down. If not set, the default value is to allow to scale down to minReplicas pods, with a 300 second stabilization window (i.e., the highest recommendation for the last 300sec is used).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1083,7 +1083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scaleup_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Up</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hpascalingrules">HPAScaling<wbr>Rules<wbr>Args</a></span>
+        <span class="property-type"><a href="#hpascalingrules">HPAScaling<wbr>Rules</a></span>
     </dt>
     <dd>{{% md %}}scaleUp is scaling policy for scaling Up. If not set, the default value is the higher of:
   * increase no more than 4 pods per 60 seconds
@@ -1121,7 +1121,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#scaledown_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Down</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hpascalingrules">HPAScaling<wbr>Rules<wbr>Args</a></span>
+        <span class="property-type"><a href="#hpascalingrules">HPAScaling<wbr>Rules</a></span>
     </dt>
     <dd>{{% md %}}scaleDown is scaling policy for scaling Down. If not set, the default value is to allow to scale down to minReplicas pods, with a 300 second stabilization window (i.e., the highest recommendation for the last 300sec is used).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1129,7 +1129,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#scaleup_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Up</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hpascalingrules">HPAScaling<wbr>Rules<wbr>Args</a></span>
+        <span class="property-type"><a href="#hpascalingrules">HPAScaling<wbr>Rules</a></span>
     </dt>
     <dd>{{% md %}}scaleUp is scaling policy for scaling Up. If not set, the default value is the higher of:
   * increase no more than 4 pods per 60 seconds
@@ -1144,7 +1144,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#scale_down_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>down</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hpascalingrules">HPAScaling<wbr>Rules<wbr>Args</a></span>
+        <span class="property-type"><a href="#hpascalingrules">HPAScaling<wbr>Rules</a></span>
     </dt>
     <dd>{{% md %}}scaleDown is scaling policy for scaling Down. If not set, the default value is to allow to scale down to minReplicas pods, with a 300 second stabilization window (i.e., the highest recommendation for the last 300sec is used).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1152,7 +1152,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#scale_up_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>up</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hpascalingrules">HPAScaling<wbr>Rules<wbr>Args</a></span>
+        <span class="property-type"><a href="#hpascalingrules">HPAScaling<wbr>Rules</a></span>
     </dt>
     <dd>{{% md %}}scaleUp is scaling policy for scaling Up. If not set, the default value is the higher of:
   * increase no more than 4 pods per 60 seconds
@@ -1355,7 +1355,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#scaletargetref_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Target<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crossversionobjectreference">Cross<wbr>Version<wbr>Object<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#crossversionobjectreference">Cross<wbr>Version<wbr>Object<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}scaleTargetRef points to the target resource to scale, and is used to the pods for which metrics should be collected, as well as to actually change the replica count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1363,7 +1363,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#behavior_csharp" style="color: inherit; text-decoration: inherit;">Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#horizontalpodautoscalerbehavior">Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Behavior<wbr>Args</a></span>
+        <span class="property-type"><a href="#horizontalpodautoscalerbehavior">Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Behavior</a></span>
     </dt>
     <dd>{{% md %}}behavior configures the scaling behavior of the target in both Up and Down directions (scaleUp and scaleDown fields respectively). If not set, the default HPAScalingRules for scale up and scale down are used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1371,7 +1371,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#metrics_csharp" style="color: inherit; text-decoration: inherit;">Metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricspec">List&lt;Metric<wbr>Spec<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#metricspec">List&lt;Metric<wbr>Spec&gt;</a></span>
     </dt>
     <dd>{{% md %}}metrics contains the specifications for which to use to calculate the desired replica count (the maximum replica count across all metrics will be used).  The desired replica count is calculated multiplying the ratio between the target value and the current value by the current number of pods.  Ergo, metrics used must decrease as the pod count is increased, and vice-versa.  See the individual metric source types for more information about how each type of metric must respond. If not set, the default metric will be set to 80% average CPU utilization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1443,7 +1443,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#scaletargetref_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Target<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crossversionobjectreference">Cross<wbr>Version<wbr>Object<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#crossversionobjectreference">Cross<wbr>Version<wbr>Object<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}scaleTargetRef points to the target resource to scale, and is used to the pods for which metrics should be collected, as well as to actually change the replica count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1451,7 +1451,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#behavior_nodejs" style="color: inherit; text-decoration: inherit;">behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#horizontalpodautoscalerbehavior">Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Behavior<wbr>Args</a></span>
+        <span class="property-type"><a href="#horizontalpodautoscalerbehavior">Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Behavior</a></span>
     </dt>
     <dd>{{% md %}}behavior configures the scaling behavior of the target in both Up and Down directions (scaleUp and scaleDown fields respectively). If not set, the default HPAScalingRules for scale up and scale down are used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1459,7 +1459,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#metrics_nodejs" style="color: inherit; text-decoration: inherit;">metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricspec">Metric<wbr>Spec<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#metricspec">Metric<wbr>Spec[]</a></span>
     </dt>
     <dd>{{% md %}}metrics contains the specifications for which to use to calculate the desired replica count (the maximum replica count across all metrics will be used).  The desired replica count is calculated multiplying the ratio between the target value and the current value by the current number of pods.  Ergo, metrics used must decrease as the pod count is increased, and vice-versa.  See the individual metric source types for more information about how each type of metric must respond. If not set, the default metric will be set to 80% average CPU utilization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1487,7 +1487,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#scale_target_ref_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>target_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crossversionobjectreference">Cross<wbr>Version<wbr>Object<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#crossversionobjectreference">Cross<wbr>Version<wbr>Object<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}scaleTargetRef points to the target resource to scale, and is used to the pods for which metrics should be collected, as well as to actually change the replica count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1495,7 +1495,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#behavior_python" style="color: inherit; text-decoration: inherit;">behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#horizontalpodautoscalerbehavior">Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Behavior<wbr>Args</a></span>
+        <span class="property-type"><a href="#horizontalpodautoscalerbehavior">Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Behavior</a></span>
     </dt>
     <dd>{{% md %}}behavior configures the scaling behavior of the target in both Up and Down directions (scaleUp and scaleDown fields respectively). If not set, the default HPAScalingRules for scale up and scale down are used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1503,7 +1503,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#metrics_python" style="color: inherit; text-decoration: inherit;">metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricspec">Metric<wbr>Spec<wbr>Args]</a></span>
+        <span class="property-type"><a href="#metricspec">Metric<wbr>Spec]</a></span>
     </dt>
     <dd>{{% md %}}metrics contains the specifications for which to use to calculate the desired replica count (the maximum replica count across all metrics will be used).  The desired replica count is calculated multiplying the ratio between the target value and the current value by the current number of pods.  Ergo, metrics used must decrease as the pod count is increased, and vice-versa.  See the individual metric source types for more information about how each type of metric must respond. If not set, the default metric will be set to 80% average CPU utilization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1525,7 +1525,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#horizontalpodautoscalercondition">List&lt;Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Condition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#horizontalpodautoscalercondition">List&lt;Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Condition&gt;</a></span>
     </dt>
     <dd>{{% md %}}conditions is the set of conditions required for this autoscaler to scale its target, and indicates whether or not those conditions are met.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1549,7 +1549,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#currentmetrics_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricstatus">List&lt;Metric<wbr>Status<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#metricstatus">List&lt;Metric<wbr>Status&gt;</a></span>
     </dt>
     <dd>{{% md %}}currentMetrics is the last read state of the metrics used by this autoscaler.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1629,7 +1629,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#horizontalpodautoscalercondition">Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Condition<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#horizontalpodautoscalercondition">Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}conditions is the set of conditions required for this autoscaler to scale its target, and indicates whether or not those conditions are met.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1653,7 +1653,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#currentmetrics_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricstatus">Metric<wbr>Status<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#metricstatus">Metric<wbr>Status[]</a></span>
     </dt>
     <dd>{{% md %}}currentMetrics is the last read state of the metrics used by this autoscaler.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1681,7 +1681,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#horizontalpodautoscalercondition">Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#horizontalpodautoscalercondition">Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Condition]</a></span>
     </dt>
     <dd>{{% md %}}conditions is the set of conditions required for this autoscaler to scale its target, and indicates whether or not those conditions are met.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1705,7 +1705,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#current_metrics_python" style="color: inherit; text-decoration: inherit;">current_<wbr>metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricstatus">Metric<wbr>Status<wbr>Args]</a></span>
+        <span class="property-type"><a href="#metricstatus">Metric<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}currentMetrics is the last read state of the metrics used by this autoscaler.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1735,7 +1735,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#matchexpressions_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Expressions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelselectorrequirement">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Label<wbr>Selector<wbr>Requirement<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#labelselectorrequirement">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Label<wbr>Selector<wbr>Requirement&gt;</a></span>
     </dt>
     <dd>{{% md %}}matchExpressions is a list of label selector requirements. The requirements are ANDed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1775,7 +1775,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#matchexpressions_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Expressions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelselectorrequirement">meta.v1.<wbr>Label<wbr>Selector<wbr>Requirement<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#labelselectorrequirement">meta.v1.<wbr>Label<wbr>Selector<wbr>Requirement[]</a></span>
     </dt>
     <dd>{{% md %}}matchExpressions is a list of label selector requirements. The requirements are ANDed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1795,7 +1795,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#match_expressions_python" style="color: inherit; text-decoration: inherit;">match_<wbr>expressions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelselectorrequirement">Label<wbr>Selector<wbr>Requirement<wbr>Args]</a></span>
+        <span class="property-type"><a href="#labelselectorrequirement">Label<wbr>Selector<wbr>Requirement]</a></span>
     </dt>
     <dd>{{% md %}}matchExpressions is a list of label selector requirements. The requirements are ANDed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2149,7 +2149,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#selector_csharp" style="color: inherit; text-decoration: inherit;">Selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelselector">Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Label<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#labelselector">Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Label<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}selector is the string-encoded form of a standard kubernetes label selector for the given metric When set, it is passed as an additional parameter to the metrics server for more specific metrics scoping. When unset, just the metricName will be used to gather metrics.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2189,7 +2189,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#selector_nodejs" style="color: inherit; text-decoration: inherit;">selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelselector">meta.v1.<wbr>Label<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#labelselector">meta.v1.<wbr>Label<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}selector is the string-encoded form of a standard kubernetes label selector for the given metric When set, it is passed as an additional parameter to the metrics server for more specific metrics scoping. When unset, just the metricName will be used to gather metrics.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2209,7 +2209,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelselector">Label<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#labelselector">Label<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}selector is the string-encoded form of a standard kubernetes label selector for the given metric When set, it is passed as an additional parameter to the metrics server for more specific metrics scoping. When unset, just the metricName will be used to gather metrics.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2231,7 +2231,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#containerresource_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerresourcemetricsource">Container<wbr>Resource<wbr>Metric<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerresourcemetricsource">Container<wbr>Resource<wbr>Metric<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}container resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing a single container in each pod of the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source. This is an alpha feature and can be enabled by the HPAContainerMetrics feature flag.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2239,7 +2239,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#external_csharp" style="color: inherit; text-decoration: inherit;">External</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#externalmetricsource">External<wbr>Metric<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#externalmetricsource">External<wbr>Metric<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}external refers to a global metric that is not associated with any Kubernetes object. It allows autoscaling based on information coming from components running outside of cluster (for example length of queue in cloud messaging service, or QPS from loadbalancer running outside of cluster).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2247,7 +2247,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#object_csharp" style="color: inherit; text-decoration: inherit;">Object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmetricsource">Object<wbr>Metric<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectmetricsource">Object<wbr>Metric<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}object refers to a metric describing a single kubernetes object (for example, hits-per-second on an Ingress object).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2255,7 +2255,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#pods_csharp" style="color: inherit; text-decoration: inherit;">Pods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsmetricsource">Pods<wbr>Metric<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#podsmetricsource">Pods<wbr>Metric<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}pods refers to a metric describing each pod in the current scale target (for example, transactions-processed-per-second).  The values will be averaged together before being compared to the target value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2263,7 +2263,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#resource_csharp" style="color: inherit; text-decoration: inherit;">Resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcemetricsource">Resource<wbr>Metric<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcemetricsource">Resource<wbr>Metric<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2335,7 +2335,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#containerresource_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerresourcemetricsource">Container<wbr>Resource<wbr>Metric<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerresourcemetricsource">Container<wbr>Resource<wbr>Metric<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}container resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing a single container in each pod of the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source. This is an alpha feature and can be enabled by the HPAContainerMetrics feature flag.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2343,7 +2343,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#external_nodejs" style="color: inherit; text-decoration: inherit;">external</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#externalmetricsource">External<wbr>Metric<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#externalmetricsource">External<wbr>Metric<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}external refers to a global metric that is not associated with any Kubernetes object. It allows autoscaling based on information coming from components running outside of cluster (for example length of queue in cloud messaging service, or QPS from loadbalancer running outside of cluster).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2351,7 +2351,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#object_nodejs" style="color: inherit; text-decoration: inherit;">object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmetricsource">Object<wbr>Metric<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectmetricsource">Object<wbr>Metric<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}object refers to a metric describing a single kubernetes object (for example, hits-per-second on an Ingress object).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2359,7 +2359,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#pods_nodejs" style="color: inherit; text-decoration: inherit;">pods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsmetricsource">Pods<wbr>Metric<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#podsmetricsource">Pods<wbr>Metric<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}pods refers to a metric describing each pod in the current scale target (for example, transactions-processed-per-second).  The values will be averaged together before being compared to the target value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2367,7 +2367,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#resource_nodejs" style="color: inherit; text-decoration: inherit;">resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcemetricsource">Resource<wbr>Metric<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcemetricsource">Resource<wbr>Metric<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2387,7 +2387,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#container_resource_python" style="color: inherit; text-decoration: inherit;">container_<wbr>resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerresourcemetricsource">Container<wbr>Resource<wbr>Metric<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerresourcemetricsource">Container<wbr>Resource<wbr>Metric<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}container resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing a single container in each pod of the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source. This is an alpha feature and can be enabled by the HPAContainerMetrics feature flag.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2395,7 +2395,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#external_python" style="color: inherit; text-decoration: inherit;">external</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#externalmetricsource">External<wbr>Metric<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#externalmetricsource">External<wbr>Metric<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}external refers to a global metric that is not associated with any Kubernetes object. It allows autoscaling based on information coming from components running outside of cluster (for example length of queue in cloud messaging service, or QPS from loadbalancer running outside of cluster).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2403,7 +2403,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#object_python" style="color: inherit; text-decoration: inherit;">object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmetricsource">Object<wbr>Metric<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectmetricsource">Object<wbr>Metric<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}object refers to a metric describing a single kubernetes object (for example, hits-per-second on an Ingress object).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2411,7 +2411,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#pods_python" style="color: inherit; text-decoration: inherit;">pods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsmetricsource">Pods<wbr>Metric<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#podsmetricsource">Pods<wbr>Metric<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}pods refers to a metric describing each pod in the current scale target (for example, transactions-processed-per-second).  The values will be averaged together before being compared to the target value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2419,7 +2419,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#resource_python" style="color: inherit; text-decoration: inherit;">resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcemetricsource">Resource<wbr>Metric<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcemetricsource">Resource<wbr>Metric<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2441,7 +2441,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#containerresource_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerresourcemetricstatus">Container<wbr>Resource<wbr>Metric<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerresourcemetricstatus">Container<wbr>Resource<wbr>Metric<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}container resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing a single container in each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2449,7 +2449,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#external_csharp" style="color: inherit; text-decoration: inherit;">External</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#externalmetricstatus">External<wbr>Metric<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#externalmetricstatus">External<wbr>Metric<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}external refers to a global metric that is not associated with any Kubernetes object. It allows autoscaling based on information coming from components running outside of cluster (for example length of queue in cloud messaging service, or QPS from loadbalancer running outside of cluster).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2457,7 +2457,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#object_csharp" style="color: inherit; text-decoration: inherit;">Object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmetricstatus">Object<wbr>Metric<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectmetricstatus">Object<wbr>Metric<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}object refers to a metric describing a single kubernetes object (for example, hits-per-second on an Ingress object).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2465,7 +2465,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#pods_csharp" style="color: inherit; text-decoration: inherit;">Pods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsmetricstatus">Pods<wbr>Metric<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#podsmetricstatus">Pods<wbr>Metric<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}pods refers to a metric describing each pod in the current scale target (for example, transactions-processed-per-second).  The values will be averaged together before being compared to the target value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2473,7 +2473,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#resource_csharp" style="color: inherit; text-decoration: inherit;">Resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcemetricstatus">Resource<wbr>Metric<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcemetricstatus">Resource<wbr>Metric<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2545,7 +2545,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#containerresource_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerresourcemetricstatus">Container<wbr>Resource<wbr>Metric<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerresourcemetricstatus">Container<wbr>Resource<wbr>Metric<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}container resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing a single container in each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2553,7 +2553,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#external_nodejs" style="color: inherit; text-decoration: inherit;">external</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#externalmetricstatus">External<wbr>Metric<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#externalmetricstatus">External<wbr>Metric<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}external refers to a global metric that is not associated with any Kubernetes object. It allows autoscaling based on information coming from components running outside of cluster (for example length of queue in cloud messaging service, or QPS from loadbalancer running outside of cluster).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2561,7 +2561,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#object_nodejs" style="color: inherit; text-decoration: inherit;">object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmetricstatus">Object<wbr>Metric<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectmetricstatus">Object<wbr>Metric<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}object refers to a metric describing a single kubernetes object (for example, hits-per-second on an Ingress object).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2569,7 +2569,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#pods_nodejs" style="color: inherit; text-decoration: inherit;">pods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsmetricstatus">Pods<wbr>Metric<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#podsmetricstatus">Pods<wbr>Metric<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}pods refers to a metric describing each pod in the current scale target (for example, transactions-processed-per-second).  The values will be averaged together before being compared to the target value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2577,7 +2577,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#resource_nodejs" style="color: inherit; text-decoration: inherit;">resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcemetricstatus">Resource<wbr>Metric<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcemetricstatus">Resource<wbr>Metric<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2597,7 +2597,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#container_resource_python" style="color: inherit; text-decoration: inherit;">container_<wbr>resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerresourcemetricstatus">Container<wbr>Resource<wbr>Metric<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerresourcemetricstatus">Container<wbr>Resource<wbr>Metric<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}container resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing a single container in each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2605,7 +2605,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#external_python" style="color: inherit; text-decoration: inherit;">external</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#externalmetricstatus">External<wbr>Metric<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#externalmetricstatus">External<wbr>Metric<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}external refers to a global metric that is not associated with any Kubernetes object. It allows autoscaling based on information coming from components running outside of cluster (for example length of queue in cloud messaging service, or QPS from loadbalancer running outside of cluster).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2613,7 +2613,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#object_python" style="color: inherit; text-decoration: inherit;">object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmetricstatus">Object<wbr>Metric<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectmetricstatus">Object<wbr>Metric<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}object refers to a metric describing a single kubernetes object (for example, hits-per-second on an Ingress object).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2621,7 +2621,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#pods_python" style="color: inherit; text-decoration: inherit;">pods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsmetricstatus">Pods<wbr>Metric<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#podsmetricstatus">Pods<wbr>Metric<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}pods refers to a metric describing each pod in the current scale target (for example, transactions-processed-per-second).  The values will be averaged together before being compared to the target value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2629,7 +2629,7 @@ No stabilization is used.{{% /md %}}</dd></dl>
 <a href="#resource_python" style="color: inherit; text-decoration: inherit;">resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcemetricstatus">Resource<wbr>Metric<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcemetricstatus">Resource<wbr>Metric<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2983,7 +2983,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#managedfields_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedfieldsentry">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Managed<wbr>Fields<wbr>Entry<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managedfieldsentry">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Managed<wbr>Fields<wbr>Entry&gt;</a></span>
     </dt>
     <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3009,7 +3009,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 <a href="#ownerreferences_csharp" style="color: inherit; text-decoration: inherit;">Owner<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ownerreference">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Owner<wbr>Reference<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ownerreference">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Owner<wbr>Reference&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3279,7 +3279,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#managedfields_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedfieldsentry">meta.v1.<wbr>Managed<wbr>Fields<wbr>Entry<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#managedfieldsentry">meta.v1.<wbr>Managed<wbr>Fields<wbr>Entry[]</a></span>
     </dt>
     <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3305,7 +3305,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 <a href="#ownerreferences_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ownerreference">meta.v1.<wbr>Owner<wbr>Reference<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#ownerreference">meta.v1.<wbr>Owner<wbr>Reference[]</a></span>
     </dt>
     <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3427,7 +3427,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#managed_fields_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedfieldsentry">Managed<wbr>Fields<wbr>Entry<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedfieldsentry">Managed<wbr>Fields<wbr>Entry]</a></span>
     </dt>
     <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3453,7 +3453,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 <a href="#owner_references_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>references</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ownerreference">Owner<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ownerreference">Owner<wbr>Reference]</a></span>
     </dt>
     <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3497,7 +3497,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#describedobject_csharp" style="color: inherit; text-decoration: inherit;">Described<wbr>Object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crossversionobjectreference">Cross<wbr>Version<wbr>Object<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#crossversionobjectreference">Cross<wbr>Version<wbr>Object<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3505,7 +3505,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#metric_csharp" style="color: inherit; text-decoration: inherit;">Metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricidentifier">Metric<wbr>Identifier<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricidentifier">Metric<wbr>Identifier</a></span>
     </dt>
     <dd>{{% md %}}metric identifies the target metric by name and selector{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3513,7 +3513,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metrictarget">Metric<wbr>Target<wbr>Args</a></span>
+        <span class="property-type"><a href="#metrictarget">Metric<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}target specifies the target value for the given metric{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3553,7 +3553,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#describedobject_nodejs" style="color: inherit; text-decoration: inherit;">described<wbr>Object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crossversionobjectreference">Cross<wbr>Version<wbr>Object<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#crossversionobjectreference">Cross<wbr>Version<wbr>Object<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3561,7 +3561,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#metric_nodejs" style="color: inherit; text-decoration: inherit;">metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricidentifier">Metric<wbr>Identifier<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricidentifier">Metric<wbr>Identifier</a></span>
     </dt>
     <dd>{{% md %}}metric identifies the target metric by name and selector{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3569,7 +3569,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metrictarget">Metric<wbr>Target<wbr>Args</a></span>
+        <span class="property-type"><a href="#metrictarget">Metric<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}target specifies the target value for the given metric{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3581,7 +3581,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#described_object_python" style="color: inherit; text-decoration: inherit;">described_<wbr>object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crossversionobjectreference">Cross<wbr>Version<wbr>Object<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#crossversionobjectreference">Cross<wbr>Version<wbr>Object<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3589,7 +3589,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#metric_python" style="color: inherit; text-decoration: inherit;">metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricidentifier">Metric<wbr>Identifier<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricidentifier">Metric<wbr>Identifier</a></span>
     </dt>
     <dd>{{% md %}}metric identifies the target metric by name and selector{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3597,7 +3597,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metrictarget">Metric<wbr>Target<wbr>Args</a></span>
+        <span class="property-type"><a href="#metrictarget">Metric<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}target specifies the target value for the given metric{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3611,7 +3611,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#current_csharp" style="color: inherit; text-decoration: inherit;">Current</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricvaluestatus">Metric<wbr>Value<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricvaluestatus">Metric<wbr>Value<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}current contains the current value for the given metric{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3619,7 +3619,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#describedobject_csharp" style="color: inherit; text-decoration: inherit;">Described<wbr>Object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crossversionobjectreference">Cross<wbr>Version<wbr>Object<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#crossversionobjectreference">Cross<wbr>Version<wbr>Object<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3627,7 +3627,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#metric_csharp" style="color: inherit; text-decoration: inherit;">Metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricidentifier">Metric<wbr>Identifier<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricidentifier">Metric<wbr>Identifier</a></span>
     </dt>
     <dd>{{% md %}}metric identifies the target metric by name and selector{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3667,7 +3667,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#current_nodejs" style="color: inherit; text-decoration: inherit;">current</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricvaluestatus">Metric<wbr>Value<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricvaluestatus">Metric<wbr>Value<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}current contains the current value for the given metric{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3675,7 +3675,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#describedobject_nodejs" style="color: inherit; text-decoration: inherit;">described<wbr>Object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crossversionobjectreference">Cross<wbr>Version<wbr>Object<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#crossversionobjectreference">Cross<wbr>Version<wbr>Object<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3683,7 +3683,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#metric_nodejs" style="color: inherit; text-decoration: inherit;">metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricidentifier">Metric<wbr>Identifier<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricidentifier">Metric<wbr>Identifier</a></span>
     </dt>
     <dd>{{% md %}}metric identifies the target metric by name and selector{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3695,7 +3695,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#current_python" style="color: inherit; text-decoration: inherit;">current</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricvaluestatus">Metric<wbr>Value<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricvaluestatus">Metric<wbr>Value<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}current contains the current value for the given metric{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3703,7 +3703,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#described_object_python" style="color: inherit; text-decoration: inherit;">described_<wbr>object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crossversionobjectreference">Cross<wbr>Version<wbr>Object<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#crossversionobjectreference">Cross<wbr>Version<wbr>Object<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3711,7 +3711,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#metric_python" style="color: inherit; text-decoration: inherit;">metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricidentifier">Metric<wbr>Identifier<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricidentifier">Metric<wbr>Identifier</a></span>
     </dt>
     <dd>{{% md %}}metric identifies the target metric by name and selector{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3935,7 +3935,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#metric_csharp" style="color: inherit; text-decoration: inherit;">Metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricidentifier">Metric<wbr>Identifier<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricidentifier">Metric<wbr>Identifier</a></span>
     </dt>
     <dd>{{% md %}}metric identifies the target metric by name and selector{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3943,7 +3943,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metrictarget">Metric<wbr>Target<wbr>Args</a></span>
+        <span class="property-type"><a href="#metrictarget">Metric<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}target specifies the target value for the given metric{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3975,7 +3975,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#metric_nodejs" style="color: inherit; text-decoration: inherit;">metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricidentifier">Metric<wbr>Identifier<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricidentifier">Metric<wbr>Identifier</a></span>
     </dt>
     <dd>{{% md %}}metric identifies the target metric by name and selector{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3983,7 +3983,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metrictarget">Metric<wbr>Target<wbr>Args</a></span>
+        <span class="property-type"><a href="#metrictarget">Metric<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}target specifies the target value for the given metric{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3995,7 +3995,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#metric_python" style="color: inherit; text-decoration: inherit;">metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricidentifier">Metric<wbr>Identifier<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricidentifier">Metric<wbr>Identifier</a></span>
     </dt>
     <dd>{{% md %}}metric identifies the target metric by name and selector{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4003,7 +4003,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metrictarget">Metric<wbr>Target<wbr>Args</a></span>
+        <span class="property-type"><a href="#metrictarget">Metric<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}target specifies the target value for the given metric{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4017,7 +4017,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#current_csharp" style="color: inherit; text-decoration: inherit;">Current</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricvaluestatus">Metric<wbr>Value<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricvaluestatus">Metric<wbr>Value<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}current contains the current value for the given metric{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4025,7 +4025,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#metric_csharp" style="color: inherit; text-decoration: inherit;">Metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricidentifier">Metric<wbr>Identifier<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricidentifier">Metric<wbr>Identifier</a></span>
     </dt>
     <dd>{{% md %}}metric identifies the target metric by name and selector{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4057,7 +4057,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#current_nodejs" style="color: inherit; text-decoration: inherit;">current</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricvaluestatus">Metric<wbr>Value<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricvaluestatus">Metric<wbr>Value<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}current contains the current value for the given metric{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4065,7 +4065,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#metric_nodejs" style="color: inherit; text-decoration: inherit;">metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricidentifier">Metric<wbr>Identifier<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricidentifier">Metric<wbr>Identifier</a></span>
     </dt>
     <dd>{{% md %}}metric identifies the target metric by name and selector{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4077,7 +4077,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#current_python" style="color: inherit; text-decoration: inherit;">current</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricvaluestatus">Metric<wbr>Value<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricvaluestatus">Metric<wbr>Value<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}current contains the current value for the given metric{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4085,7 +4085,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#metric_python" style="color: inherit; text-decoration: inherit;">metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricidentifier">Metric<wbr>Identifier<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricidentifier">Metric<wbr>Identifier</a></span>
     </dt>
     <dd>{{% md %}}metric identifies the target metric by name and selector{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4107,7 +4107,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metrictarget">Metric<wbr>Target<wbr>Args</a></span>
+        <span class="property-type"><a href="#metrictarget">Metric<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}target specifies the target value for the given metric{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4147,7 +4147,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metrictarget">Metric<wbr>Target<wbr>Args</a></span>
+        <span class="property-type"><a href="#metrictarget">Metric<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}target specifies the target value for the given metric{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4167,7 +4167,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metrictarget">Metric<wbr>Target<wbr>Args</a></span>
+        <span class="property-type"><a href="#metrictarget">Metric<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}target specifies the target value for the given metric{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4181,7 +4181,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#current_csharp" style="color: inherit; text-decoration: inherit;">Current</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricvaluestatus">Metric<wbr>Value<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricvaluestatus">Metric<wbr>Value<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}current contains the current value for the given metric{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4221,7 +4221,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#current_nodejs" style="color: inherit; text-decoration: inherit;">current</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricvaluestatus">Metric<wbr>Value<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricvaluestatus">Metric<wbr>Value<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}current contains the current value for the given metric{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4241,7 +4241,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#current_python" style="color: inherit; text-decoration: inherit;">current</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricvaluestatus">Metric<wbr>Value<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricvaluestatus">Metric<wbr>Value<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}current contains the current value for the given metric{{% /md %}}</dd><dt class="property-required"
             title="Required">

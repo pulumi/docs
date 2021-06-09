@@ -655,7 +655,7 @@ The TargetGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#healthcheck_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetgrouphealthcheck">Target<wbr>Group<wbr>Health<wbr>Check</a></span>
+        <span class="property-type"><a href="#targetgrouphealthcheck">Target<wbr>Group<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Health Check configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -754,7 +754,7 @@ The TargetGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#stickiness_go" style="color: inherit; text-decoration: inherit;">Stickiness</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetgroupstickiness">Target<wbr>Group<wbr>Stickiness</a></span>
+        <span class="property-type"><a href="#targetgroupstickiness">Target<wbr>Group<wbr>Stickiness<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Stickiness configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1590,7 +1590,7 @@ The following state arguments are supported:
 <a href="#state_healthcheck_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetgrouphealthcheck">Target<wbr>Group<wbr>Health<wbr>Check</a></span>
+        <span class="property-type"><a href="#targetgrouphealthcheck">Target<wbr>Group<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Health Check configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1689,7 +1689,7 @@ The following state arguments are supported:
 <a href="#state_stickiness_go" style="color: inherit; text-decoration: inherit;">Stickiness</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetgroupstickiness">Target<wbr>Group<wbr>Stickiness</a></span>
+        <span class="property-type"><a href="#targetgroupstickiness">Target<wbr>Group<wbr>Stickiness<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Stickiness configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"

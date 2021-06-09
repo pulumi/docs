@@ -594,7 +594,7 @@ For `JWT` authorizers the single entry specifies where to extract the JSON Web T
 <a href="#jwtconfiguration_go" style="color: inherit; text-decoration: inherit;">Jwt<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorizerjwtconfiguration">Authorizer<wbr>Jwt<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#authorizerjwtconfiguration">Authorizer<wbr>Jwt<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of a JWT authorizer. Required for the `JWT` authorizer type.
 Supported only for HTTP APIs.
@@ -1208,7 +1208,7 @@ For `JWT` authorizers the single entry specifies where to extract the JSON Web T
 <a href="#state_jwtconfiguration_go" style="color: inherit; text-decoration: inherit;">Jwt<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorizerjwtconfiguration">Authorizer<wbr>Jwt<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#authorizerjwtconfiguration">Authorizer<wbr>Jwt<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of a JWT authorizer. Required for the `JWT` authorizer type.
 Supported only for HTTP APIs.

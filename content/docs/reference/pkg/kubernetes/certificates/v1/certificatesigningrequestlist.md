@@ -182,7 +182,7 @@ The CertificateSigningRequestList resource accepts the following [input]({{< rel
 <a href="#items_go" style="color: inherit; text-decoration: inherit;">Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatesigningrequest">[]Certificate<wbr>Signing<wbr>Request<wbr>Type</a></span>
+        <span class="property-type"><a href="#certificatesigningrequest">[]Certificate<wbr>Signing<wbr>Request<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}items is a collection of CertificateSigningRequest objects{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -190,7 +190,7 @@ The CertificateSigningRequestList resource accepts the following [input]({{< rel
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listmeta">List<wbr>Meta</a></span>
+        <span class="property-type"><a href="#listmeta">List<wbr>Meta<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -309,7 +309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spec_csharp" style="color: inherit; text-decoration: inherit;">Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatesigningrequestspec">Certificate<wbr>Signing<wbr>Request<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatesigningrequestspec">Certificate<wbr>Signing<wbr>Request<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}spec contains the certificate request, and is immutable after creation. Only the request, signerName, and usages fields can be set on creation. Other fields are derived by Kubernetes and cannot be modified by users.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -317,7 +317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Object<wbr>Meta<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectmeta">Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Object<wbr>Meta</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -325,7 +325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatesigningrequeststatus">Certificate<wbr>Signing<wbr>Request<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatesigningrequeststatus">Certificate<wbr>Signing<wbr>Request<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}status contains information about whether the request is approved or denied, and the certificate issued by the signer, or the failure condition indicating signer failure.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -365,7 +365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spec_nodejs" style="color: inherit; text-decoration: inherit;">spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatesigningrequestspec">Certificate<wbr>Signing<wbr>Request<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatesigningrequestspec">Certificate<wbr>Signing<wbr>Request<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}spec contains the certificate request, and is immutable after creation. Only the request, signerName, and usages fields can be set on creation. Other fields are derived by Kubernetes and cannot be modified by users.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -373,7 +373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">meta.v1.<wbr>Object<wbr>Meta<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectmeta">meta.v1.<wbr>Object<wbr>Meta</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -381,7 +381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatesigningrequeststatus">Certificate<wbr>Signing<wbr>Request<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatesigningrequeststatus">Certificate<wbr>Signing<wbr>Request<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}status contains information about whether the request is approved or denied, and the certificate issued by the signer, or the failure condition indicating signer failure.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -393,7 +393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatesigningrequestspec">Certificate<wbr>Signing<wbr>Request<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatesigningrequestspec">Certificate<wbr>Signing<wbr>Request<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}spec contains the certificate request, and is immutable after creation. Only the request, signerName, and usages fields can be set on creation. Other fields are derived by Kubernetes and cannot be modified by users.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -401,7 +401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -409,7 +409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatesigningrequeststatus">Certificate<wbr>Signing<wbr>Request<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatesigningrequeststatus">Certificate<wbr>Signing<wbr>Request<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}status contains information about whether the request is approved or denied, and the certificate issued by the signer, or the failure condition indicating signer failure.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1076,7 +1076,7 @@ When serialized as JSON or YAML, the data is additionally base64-encoded, so it 
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatesigningrequestcondition">List&lt;Certificate<wbr>Signing<wbr>Request<wbr>Condition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#certificatesigningrequestcondition">List&lt;Certificate<wbr>Signing<wbr>Request<wbr>Condition&gt;</a></span>
     </dt>
     <dd>{{% md %}}conditions applied to the request. Known conditions are "Approved", "Denied", and "Failed".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1158,7 +1158,7 @@ When serialized as JSON or YAML, the data is additionally base64-encoded, so it 
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatesigningrequestcondition">Certificate<wbr>Signing<wbr>Request<wbr>Condition<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#certificatesigningrequestcondition">Certificate<wbr>Signing<wbr>Request<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}conditions applied to the request. Known conditions are "Approved", "Denied", and "Failed".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1199,7 +1199,7 @@ When serialized as JSON or YAML, the data is additionally base64-encoded, so it 
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatesigningrequestcondition">Certificate<wbr>Signing<wbr>Request<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#certificatesigningrequestcondition">Certificate<wbr>Signing<wbr>Request<wbr>Condition]</a></span>
     </dt>
     <dd>{{% md %}}conditions applied to the request. Known conditions are "Approved", "Denied", and "Failed".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1657,7 +1657,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#managedfields_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedfieldsentry">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Managed<wbr>Fields<wbr>Entry<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managedfieldsentry">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Managed<wbr>Fields<wbr>Entry&gt;</a></span>
     </dt>
     <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1683,7 +1683,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 <a href="#ownerreferences_csharp" style="color: inherit; text-decoration: inherit;">Owner<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ownerreference">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Owner<wbr>Reference<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ownerreference">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Owner<wbr>Reference&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1953,7 +1953,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#managedfields_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedfieldsentry">meta.v1.<wbr>Managed<wbr>Fields<wbr>Entry<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#managedfieldsentry">meta.v1.<wbr>Managed<wbr>Fields<wbr>Entry[]</a></span>
     </dt>
     <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1979,7 +1979,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 <a href="#ownerreferences_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ownerreference">meta.v1.<wbr>Owner<wbr>Reference<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#ownerreference">meta.v1.<wbr>Owner<wbr>Reference[]</a></span>
     </dt>
     <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2101,7 +2101,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#managed_fields_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedfieldsentry">Managed<wbr>Fields<wbr>Entry<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedfieldsentry">Managed<wbr>Fields<wbr>Entry]</a></span>
     </dt>
     <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2127,7 +2127,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 <a href="#owner_references_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>references</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ownerreference">Owner<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ownerreference">Owner<wbr>Reference]</a></span>
     </dt>
     <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

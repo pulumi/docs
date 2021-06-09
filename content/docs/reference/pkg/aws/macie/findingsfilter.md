@@ -372,7 +372,7 @@ The FindingsFilter resource accepts the following [input]({{< relref "/docs/intr
 <a href="#findingcriteria_go" style="color: inherit; text-decoration: inherit;">Finding<wbr>Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#findingsfilterfindingcriteria">Findings<wbr>Filter<wbr>Finding<wbr>Criteria</a></span>
+        <span class="property-type"><a href="#findingsfilterfindingcriteria">Findings<wbr>Filter<wbr>Finding<wbr>Criteria<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The criteria to use to filter findings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -920,7 +920,7 @@ The following state arguments are supported:
 <a href="#state_findingcriteria_go" style="color: inherit; text-decoration: inherit;">Finding<wbr>Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#findingsfilterfindingcriteria">Findings<wbr>Filter<wbr>Finding<wbr>Criteria</a></span>
+        <span class="property-type"><a href="#findingsfilterfindingcriteria">Findings<wbr>Filter<wbr>Finding<wbr>Criteria<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The criteria to use to filter findings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1153,7 +1153,7 @@ The following state arguments are supported:
 <a href="#criterions_csharp" style="color: inherit; text-decoration: inherit;">Criterions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#findingsfilterfindingcriteriacriterion">List&lt;Findings<wbr>Filter<wbr>Finding<wbr>Criteria<wbr>Criterion<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#findingsfilterfindingcriteriacriterion">List&lt;Findings<wbr>Filter<wbr>Finding<wbr>Criteria<wbr>Criterion&gt;</a></span>
     </dt>
     <dd>{{% md %}}A condition that specifies the property, operator, and one or more values to use to filter the results.  (documented below)
 {{% /md %}}</dd></dl>
@@ -1179,7 +1179,7 @@ The following state arguments are supported:
 <a href="#criterions_nodejs" style="color: inherit; text-decoration: inherit;">criterions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#findingsfilterfindingcriteriacriterion">Findings<wbr>Filter<wbr>Finding<wbr>Criteria<wbr>Criterion<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#findingsfilterfindingcriteriacriterion">Findings<wbr>Filter<wbr>Finding<wbr>Criteria<wbr>Criterion[]</a></span>
     </dt>
     <dd>{{% md %}}A condition that specifies the property, operator, and one or more values to use to filter the results.  (documented below)
 {{% /md %}}</dd></dl>
@@ -1192,7 +1192,7 @@ The following state arguments are supported:
 <a href="#criterions_python" style="color: inherit; text-decoration: inherit;">criterions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#findingsfilterfindingcriteriacriterion">Sequence[Findings<wbr>Filter<wbr>Finding<wbr>Criteria<wbr>Criterion<wbr>Args]</a></span>
+        <span class="property-type"><a href="#findingsfilterfindingcriteriacriterion">Sequence[Findings<wbr>Filter<wbr>Finding<wbr>Criteria<wbr>Criterion]</a></span>
     </dt>
     <dd>{{% md %}}A condition that specifies the property, operator, and one or more values to use to filter the results.  (documented below)
 {{% /md %}}</dd></dl>

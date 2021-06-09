@@ -373,7 +373,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#imagetestsconfiguration_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Tests<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageimagetestsconfiguration">Image<wbr>Image<wbr>Tests<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#imageimagetestsconfiguration">Image<wbr>Image<wbr>Tests<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with image tests configuration. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1159,7 +1159,7 @@ The following state arguments are supported:
 <a href="#state_imagetestsconfiguration_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Tests<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageimagetestsconfiguration">Image<wbr>Image<wbr>Tests<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#imageimagetestsconfiguration">Image<wbr>Image<wbr>Tests<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with image tests configuration. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1195,7 +1195,7 @@ The following state arguments are supported:
 <a href="#state_outputresources_go" style="color: inherit; text-decoration: inherit;">Output<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageoutputresource">[]Image<wbr>Output<wbr>Resource</a></span>
+        <span class="property-type"><a href="#imageoutputresource">[]Image<wbr>Output<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of objects with resources created by the image.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1605,7 +1605,7 @@ The following state arguments are supported:
 <a href="#amis_csharp" style="color: inherit; text-decoration: inherit;">Amis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageoutputresourceami">List&lt;Image<wbr>Output<wbr>Resource<wbr>Ami<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#imageoutputresourceami">List&lt;Image<wbr>Output<wbr>Resource<wbr>Ami&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of objects with each Amazon Machine Image (AMI) created.
 {{% /md %}}</dd></dl>
@@ -1631,7 +1631,7 @@ The following state arguments are supported:
 <a href="#amis_nodejs" style="color: inherit; text-decoration: inherit;">amis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageoutputresourceami">Image<wbr>Output<wbr>Resource<wbr>Ami<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#imageoutputresourceami">Image<wbr>Output<wbr>Resource<wbr>Ami[]</a></span>
     </dt>
     <dd>{{% md %}}Set of objects with each Amazon Machine Image (AMI) created.
 {{% /md %}}</dd></dl>
@@ -1644,7 +1644,7 @@ The following state arguments are supported:
 <a href="#amis_python" style="color: inherit; text-decoration: inherit;">amis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageoutputresourceami">Sequence[Image<wbr>Output<wbr>Resource<wbr>Ami<wbr>Args]</a></span>
+        <span class="property-type"><a href="#imageoutputresourceami">Sequence[Image<wbr>Output<wbr>Resource<wbr>Ami]</a></span>
     </dt>
     <dd>{{% md %}}Set of objects with each Amazon Machine Image (AMI) created.
 {{% /md %}}</dd></dl>

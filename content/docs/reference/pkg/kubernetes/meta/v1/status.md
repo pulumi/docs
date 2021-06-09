@@ -217,7 +217,7 @@ The Status resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#details_go" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statusdetails">Status<wbr>Details</a></span>
+        <span class="property-type"><a href="#statusdetails">Status<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended data associated with the reason.  Each reason may define its own extended details. This field is optional and the data returned is not guaranteed to conform to any schema except that defined by the reason type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -233,7 +233,7 @@ The Status resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listmeta">List<wbr>Meta</a></span>
+        <span class="property-type"><a href="#listmeta">List<wbr>Meta<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -724,7 +724,7 @@ Examples:
 <a href="#causes_csharp" style="color: inherit; text-decoration: inherit;">Causes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statuscause">List&lt;Status<wbr>Cause<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#statuscause">List&lt;Status<wbr>Cause&gt;</a></span>
     </dt>
     <dd>{{% md %}}The Causes array includes more details associated with the StatusReason failure. Not all StatusReasons may provide detailed causes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -828,7 +828,7 @@ Examples:
 <a href="#causes_nodejs" style="color: inherit; text-decoration: inherit;">causes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statuscause">Status<wbr>Cause<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#statuscause">Status<wbr>Cause[]</a></span>
     </dt>
     <dd>{{% md %}}The Causes array includes more details associated with the StatusReason failure. Not all StatusReasons may provide detailed causes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -880,7 +880,7 @@ Examples:
 <a href="#causes_python" style="color: inherit; text-decoration: inherit;">causes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statuscause">Status<wbr>Cause<wbr>Args]</a></span>
+        <span class="property-type"><a href="#statuscause">Status<wbr>Cause]</a></span>
     </dt>
     <dd>{{% md %}}The Causes array includes more details associated with the StatusReason failure. Not all StatusReasons may provide detailed causes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

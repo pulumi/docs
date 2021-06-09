@@ -588,7 +588,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sourceconfiguration_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesourceconfiguration">Service<wbr>Source<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#servicesourceconfiguration">Service<wbr>Source<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The source to deploy to the App Runner service. Can be a code or an image repository. See Source Configuration below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -606,7 +606,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#encryptionconfiguration_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceencryptionconfiguration">Service<wbr>Encryption<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#serviceencryptionconfiguration">Service<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it maintains and your service logs. By default, App Runner uses an AWS managed CMK. See Encryption Configuration below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -615,7 +615,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#healthcheckconfiguration_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehealthcheckconfiguration">Service<wbr>Health<wbr>Check<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#servicehealthcheckconfiguration">Service<wbr>Health<wbr>Check<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings of the health check that AWS App Runner performs to monitor the health of your service. See Health Check Configuration below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -624,7 +624,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#instanceconfiguration_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceinstanceconfiguration">Service<wbr>Instance<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#serviceinstanceconfiguration">Service<wbr>Instance<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The runtime configuration of instances (scaling units) of the App Runner service. See Instance Configuration below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1273,7 +1273,7 @@ The following state arguments are supported:
 <a href="#state_encryptionconfiguration_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceencryptionconfiguration">Service<wbr>Encryption<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#serviceencryptionconfiguration">Service<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it maintains and your service logs. By default, App Runner uses an AWS managed CMK. See Encryption Configuration below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1282,7 +1282,7 @@ The following state arguments are supported:
 <a href="#state_healthcheckconfiguration_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehealthcheckconfiguration">Service<wbr>Health<wbr>Check<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#servicehealthcheckconfiguration">Service<wbr>Health<wbr>Check<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings of the health check that AWS App Runner performs to monitor the health of your service. See Health Check Configuration below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1291,7 +1291,7 @@ The following state arguments are supported:
 <a href="#state_instanceconfiguration_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceinstanceconfiguration">Service<wbr>Instance<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#serviceinstanceconfiguration">Service<wbr>Instance<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The runtime configuration of instances (scaling units) of the App Runner service. See Instance Configuration below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1327,7 +1327,7 @@ The following state arguments are supported:
 <a href="#state_sourceconfiguration_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesourceconfiguration">Service<wbr>Source<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#servicesourceconfiguration">Service<wbr>Source<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The source to deploy to the App Runner service. Can be a code or an image repository. See Source Configuration below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2016,7 +2016,7 @@ The following state arguments are supported:
 <a href="#authenticationconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesourceconfigurationauthenticationconfiguration">Service<wbr>Source<wbr>Configuration<wbr>Authentication<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicesourceconfigurationauthenticationconfiguration">Service<wbr>Source<wbr>Configuration<wbr>Authentication<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Describes resources needed to authenticate access to some source repositories. See Authentication Configuration below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2034,7 +2034,7 @@ The following state arguments are supported:
 <a href="#coderepository_csharp" style="color: inherit; text-decoration: inherit;">Code<wbr>Repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesourceconfigurationcoderepository">Service<wbr>Source<wbr>Configuration<wbr>Code<wbr>Repository<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicesourceconfigurationcoderepository">Service<wbr>Source<wbr>Configuration<wbr>Code<wbr>Repository</a></span>
     </dt>
     <dd>{{% md %}}Description of a source code repository. See Code Repository below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2043,7 +2043,7 @@ The following state arguments are supported:
 <a href="#imagerepository_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesourceconfigurationimagerepository">Service<wbr>Source<wbr>Configuration<wbr>Image<wbr>Repository<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicesourceconfigurationimagerepository">Service<wbr>Source<wbr>Configuration<wbr>Image<wbr>Repository</a></span>
     </dt>
     <dd>{{% md %}}Description of a source image repository. See Image Repository below for more details.
 {{% /md %}}</dd></dl>
@@ -2096,7 +2096,7 @@ The following state arguments are supported:
 <a href="#authenticationconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesourceconfigurationauthenticationconfiguration">Service<wbr>Source<wbr>Configuration<wbr>Authentication<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicesourceconfigurationauthenticationconfiguration">Service<wbr>Source<wbr>Configuration<wbr>Authentication<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Describes resources needed to authenticate access to some source repositories. See Authentication Configuration below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2114,7 +2114,7 @@ The following state arguments are supported:
 <a href="#coderepository_nodejs" style="color: inherit; text-decoration: inherit;">code<wbr>Repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesourceconfigurationcoderepository">Service<wbr>Source<wbr>Configuration<wbr>Code<wbr>Repository<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicesourceconfigurationcoderepository">Service<wbr>Source<wbr>Configuration<wbr>Code<wbr>Repository</a></span>
     </dt>
     <dd>{{% md %}}Description of a source code repository. See Code Repository below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2123,7 +2123,7 @@ The following state arguments are supported:
 <a href="#imagerepository_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesourceconfigurationimagerepository">Service<wbr>Source<wbr>Configuration<wbr>Image<wbr>Repository<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicesourceconfigurationimagerepository">Service<wbr>Source<wbr>Configuration<wbr>Image<wbr>Repository</a></span>
     </dt>
     <dd>{{% md %}}Description of a source image repository. See Image Repository below for more details.
 {{% /md %}}</dd></dl>
@@ -2136,7 +2136,7 @@ The following state arguments are supported:
 <a href="#authentication_configuration_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesourceconfigurationauthenticationconfiguration">Service<wbr>Source<wbr>Configuration<wbr>Authentication<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicesourceconfigurationauthenticationconfiguration">Service<wbr>Source<wbr>Configuration<wbr>Authentication<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Describes resources needed to authenticate access to some source repositories. See Authentication Configuration below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2154,7 +2154,7 @@ The following state arguments are supported:
 <a href="#code_repository_python" style="color: inherit; text-decoration: inherit;">code_<wbr>repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesourceconfigurationcoderepository">Service<wbr>Source<wbr>Configuration<wbr>Code<wbr>Repository<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicesourceconfigurationcoderepository">Service<wbr>Source<wbr>Configuration<wbr>Code<wbr>Repository</a></span>
     </dt>
     <dd>{{% md %}}Description of a source code repository. See Code Repository below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2163,7 +2163,7 @@ The following state arguments are supported:
 <a href="#image_repository_python" style="color: inherit; text-decoration: inherit;">image_<wbr>repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesourceconfigurationimagerepository">Service<wbr>Source<wbr>Configuration<wbr>Image<wbr>Repository<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicesourceconfigurationimagerepository">Service<wbr>Source<wbr>Configuration<wbr>Image<wbr>Repository</a></span>
     </dt>
     <dd>{{% md %}}Description of a source image repository. See Image Repository below for more details.
 {{% /md %}}</dd></dl>
@@ -2277,7 +2277,7 @@ The following state arguments are supported:
 <a href="#sourcecodeversion_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Code<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesourceconfigurationcoderepositorysourcecodeversion">Service<wbr>Source<wbr>Configuration<wbr>Code<wbr>Repository<wbr>Source<wbr>Code<wbr>Version<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicesourceconfigurationcoderepositorysourcecodeversion">Service<wbr>Source<wbr>Configuration<wbr>Code<wbr>Repository<wbr>Source<wbr>Code<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}The version that should be used within the source code repository. See Source Code Version below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2286,7 +2286,7 @@ The following state arguments are supported:
 <a href="#codeconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Code<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesourceconfigurationcoderepositorycodeconfiguration">Service<wbr>Source<wbr>Configuration<wbr>Code<wbr>Repository<wbr>Code<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicesourceconfigurationcoderepositorycodeconfiguration">Service<wbr>Source<wbr>Configuration<wbr>Code<wbr>Repository<wbr>Code<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration for building and running the service from a source code repository. See Code Configuration below for more details.
 {{% /md %}}</dd></dl>
@@ -2339,7 +2339,7 @@ The following state arguments are supported:
 <a href="#sourcecodeversion_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Code<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesourceconfigurationcoderepositorysourcecodeversion">Service<wbr>Source<wbr>Configuration<wbr>Code<wbr>Repository<wbr>Source<wbr>Code<wbr>Version<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicesourceconfigurationcoderepositorysourcecodeversion">Service<wbr>Source<wbr>Configuration<wbr>Code<wbr>Repository<wbr>Source<wbr>Code<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}The version that should be used within the source code repository. See Source Code Version below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2348,7 +2348,7 @@ The following state arguments are supported:
 <a href="#codeconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">code<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesourceconfigurationcoderepositorycodeconfiguration">Service<wbr>Source<wbr>Configuration<wbr>Code<wbr>Repository<wbr>Code<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicesourceconfigurationcoderepositorycodeconfiguration">Service<wbr>Source<wbr>Configuration<wbr>Code<wbr>Repository<wbr>Code<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration for building and running the service from a source code repository. See Code Configuration below for more details.
 {{% /md %}}</dd></dl>
@@ -2370,7 +2370,7 @@ The following state arguments are supported:
 <a href="#source_code_version_python" style="color: inherit; text-decoration: inherit;">source_<wbr>code_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesourceconfigurationcoderepositorysourcecodeversion">Service<wbr>Source<wbr>Configuration<wbr>Code<wbr>Repository<wbr>Source<wbr>Code<wbr>Version<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicesourceconfigurationcoderepositorysourcecodeversion">Service<wbr>Source<wbr>Configuration<wbr>Code<wbr>Repository<wbr>Source<wbr>Code<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}The version that should be used within the source code repository. See Source Code Version below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2379,7 +2379,7 @@ The following state arguments are supported:
 <a href="#code_configuration_python" style="color: inherit; text-decoration: inherit;">code_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesourceconfigurationcoderepositorycodeconfiguration">Service<wbr>Source<wbr>Configuration<wbr>Code<wbr>Repository<wbr>Code<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicesourceconfigurationcoderepositorycodeconfiguration">Service<wbr>Source<wbr>Configuration<wbr>Code<wbr>Repository<wbr>Code<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration for building and running the service from a source code repository. See Code Configuration below for more details.
 {{% /md %}}</dd></dl>
@@ -2403,7 +2403,7 @@ The following state arguments are supported:
 <a href="#codeconfigurationvalues_csharp" style="color: inherit; text-decoration: inherit;">Code<wbr>Configuration<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesourceconfigurationcoderepositorycodeconfigurationcodeconfigurationvalues">Service<wbr>Source<wbr>Configuration<wbr>Code<wbr>Repository<wbr>Code<wbr>Configuration<wbr>Code<wbr>Configuration<wbr>Values<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicesourceconfigurationcoderepositorycodeconfigurationcodeconfigurationvalues">Service<wbr>Source<wbr>Configuration<wbr>Code<wbr>Repository<wbr>Code<wbr>Configuration<wbr>Code<wbr>Configuration<wbr>Values</a></span>
     </dt>
     <dd>{{% md %}}Basic configuration for building and running the App Runner service. Use this parameter to quickly launch an App Runner service without providing an apprunner.yaml file in the source code repository (or ignoring the file if it exists). See Code Configuration Values below for more details.
 {{% /md %}}</dd></dl>
@@ -2447,7 +2447,7 @@ The following state arguments are supported:
 <a href="#codeconfigurationvalues_nodejs" style="color: inherit; text-decoration: inherit;">code<wbr>Configuration<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesourceconfigurationcoderepositorycodeconfigurationcodeconfigurationvalues">Service<wbr>Source<wbr>Configuration<wbr>Code<wbr>Repository<wbr>Code<wbr>Configuration<wbr>Code<wbr>Configuration<wbr>Values<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicesourceconfigurationcoderepositorycodeconfigurationcodeconfigurationvalues">Service<wbr>Source<wbr>Configuration<wbr>Code<wbr>Repository<wbr>Code<wbr>Configuration<wbr>Code<wbr>Configuration<wbr>Values</a></span>
     </dt>
     <dd>{{% md %}}Basic configuration for building and running the App Runner service. Use this parameter to quickly launch an App Runner service without providing an apprunner.yaml file in the source code repository (or ignoring the file if it exists). See Code Configuration Values below for more details.
 {{% /md %}}</dd></dl>
@@ -2469,7 +2469,7 @@ The following state arguments are supported:
 <a href="#code_configuration_values_python" style="color: inherit; text-decoration: inherit;">code_<wbr>configuration_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesourceconfigurationcoderepositorycodeconfigurationcodeconfigurationvalues">Service<wbr>Source<wbr>Configuration<wbr>Code<wbr>Repository<wbr>Code<wbr>Configuration<wbr>Code<wbr>Configuration<wbr>Values<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicesourceconfigurationcoderepositorycodeconfigurationcodeconfigurationvalues">Service<wbr>Source<wbr>Configuration<wbr>Code<wbr>Repository<wbr>Code<wbr>Configuration<wbr>Code<wbr>Configuration<wbr>Values</a></span>
     </dt>
     <dd>{{% md %}}Basic configuration for building and running the App Runner service. Use this parameter to quickly launch an App Runner service without providing an apprunner.yaml file in the source code repository (or ignoring the file if it exists). See Code Configuration Values below for more details.
 {{% /md %}}</dd></dl>
@@ -2791,7 +2791,7 @@ image name format, see Pulling an image in the Amazon ECR User Guide.
 <a href="#imageconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesourceconfigurationimagerepositoryimageconfiguration">Service<wbr>Source<wbr>Configuration<wbr>Image<wbr>Repository<wbr>Image<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicesourceconfigurationimagerepositoryimageconfiguration">Service<wbr>Source<wbr>Configuration<wbr>Image<wbr>Repository<wbr>Image<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration for running the identified image. See Image Configuration below for more details.
 {{% /md %}}</dd></dl>
@@ -2855,7 +2855,7 @@ image name format, see Pulling an image in the Amazon ECR User Guide.
 <a href="#imageconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesourceconfigurationimagerepositoryimageconfiguration">Service<wbr>Source<wbr>Configuration<wbr>Image<wbr>Repository<wbr>Image<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicesourceconfigurationimagerepositoryimageconfiguration">Service<wbr>Source<wbr>Configuration<wbr>Image<wbr>Repository<wbr>Image<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration for running the identified image. See Image Configuration below for more details.
 {{% /md %}}</dd></dl>
@@ -2887,7 +2887,7 @@ image name format, see Pulling an image in the Amazon ECR User Guide.
 <a href="#image_configuration_python" style="color: inherit; text-decoration: inherit;">image_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesourceconfigurationimagerepositoryimageconfiguration">Service<wbr>Source<wbr>Configuration<wbr>Image<wbr>Repository<wbr>Image<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicesourceconfigurationimagerepositoryimageconfiguration">Service<wbr>Source<wbr>Configuration<wbr>Image<wbr>Repository<wbr>Image<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration for running the identified image. See Image Configuration below for more details.
 {{% /md %}}</dd></dl>

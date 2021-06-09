@@ -516,7 +516,7 @@ group scaling. These have the following structure:
 <a href="#predictivescalingconfiguration_go" style="color: inherit; text-decoration: inherit;">Predictive<wbr>Scaling<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policypredictivescalingconfiguration">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#policypredictivescalingconfiguration">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The predictive scaling policy configuration to use with Amazon EC2 Auto Scaling.
 {{% /md %}}</dd><dt class="property-optional"
@@ -536,7 +536,7 @@ up. A negative value scales down.
 <a href="#stepadjustments_go" style="color: inherit; text-decoration: inherit;">Step<wbr>Adjustments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policystepadjustment">[]Policy<wbr>Step<wbr>Adjustment</a></span>
+        <span class="property-type"><a href="#policystepadjustment">[]Policy<wbr>Step<wbr>Adjustment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A set of adjustments that manage
 group scaling. These have the following structure:
@@ -546,7 +546,7 @@ group scaling. These have the following structure:
 <a href="#targettrackingconfiguration_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Tracking<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#policytargettrackingconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A target tracking policy. These have the following structure:
 {{% /md %}}</dd></dl>
@@ -1223,7 +1223,7 @@ group scaling. These have the following structure:
 <a href="#state_predictivescalingconfiguration_go" style="color: inherit; text-decoration: inherit;">Predictive<wbr>Scaling<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policypredictivescalingconfiguration">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#policypredictivescalingconfiguration">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The predictive scaling policy configuration to use with Amazon EC2 Auto Scaling.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1243,7 +1243,7 @@ up. A negative value scales down.
 <a href="#state_stepadjustments_go" style="color: inherit; text-decoration: inherit;">Step<wbr>Adjustments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policystepadjustment">[]Policy<wbr>Step<wbr>Adjustment</a></span>
+        <span class="property-type"><a href="#policystepadjustment">[]Policy<wbr>Step<wbr>Adjustment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A set of adjustments that manage
 group scaling. These have the following structure:
@@ -1253,7 +1253,7 @@ group scaling. These have the following structure:
 <a href="#state_targettrackingconfiguration_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Tracking<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#policytargettrackingconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A target tracking policy. These have the following structure:
 {{% /md %}}</dd></dl>
@@ -1525,7 +1525,7 @@ group scaling. These have the following structure:
 <a href="#metricspecification_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policypredictivescalingconfigurationmetricspecification">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration<wbr>Metric<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#policypredictivescalingconfigurationmetricspecification">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration<wbr>Metric<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}This structure includes the metrics and target utilization to use for predictive scaling.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1623,7 +1623,7 @@ group scaling. These have the following structure:
 <a href="#metricspecification_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policypredictivescalingconfigurationmetricspecification">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration<wbr>Metric<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#policypredictivescalingconfigurationmetricspecification">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration<wbr>Metric<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}This structure includes the metrics and target utilization to use for predictive scaling.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1672,7 +1672,7 @@ group scaling. These have the following structure:
 <a href="#metric_specification_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policypredictivescalingconfigurationmetricspecification">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration<wbr>Metric<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#policypredictivescalingconfigurationmetricspecification">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration<wbr>Metric<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}This structure includes the metrics and target utilization to use for predictive scaling.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1732,7 +1732,7 @@ group scaling. These have the following structure:
 <a href="#predefinedloadmetricspecification_csharp" style="color: inherit; text-decoration: inherit;">Predefined<wbr>Load<wbr>Metric<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policypredictivescalingconfigurationmetricspecificationpredefinedloadmetricspecification">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration<wbr>Metric<wbr>Specification<wbr>Predefined<wbr>Load<wbr>Metric<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#policypredictivescalingconfigurationmetricspecificationpredefinedloadmetricspecification">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration<wbr>Metric<wbr>Specification<wbr>Predefined<wbr>Load<wbr>Metric<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}The load metric specification.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1741,7 +1741,7 @@ group scaling. These have the following structure:
 <a href="#predefinedmetricpairspecification_csharp" style="color: inherit; text-decoration: inherit;">Predefined<wbr>Metric<wbr>Pair<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policypredictivescalingconfigurationmetricspecificationpredefinedmetricpairspecification">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration<wbr>Metric<wbr>Specification<wbr>Predefined<wbr>Metric<wbr>Pair<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#policypredictivescalingconfigurationmetricspecificationpredefinedmetricpairspecification">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration<wbr>Metric<wbr>Specification<wbr>Predefined<wbr>Metric<wbr>Pair<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}The metric pair specification from which Amazon EC2 Auto Scaling determines the appropriate scaling metric and load metric to use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1750,7 +1750,7 @@ group scaling. These have the following structure:
 <a href="#predefinedscalingmetricspecification_csharp" style="color: inherit; text-decoration: inherit;">Predefined<wbr>Scaling<wbr>Metric<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policypredictivescalingconfigurationmetricspecificationpredefinedscalingmetricspecification">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration<wbr>Metric<wbr>Specification<wbr>Predefined<wbr>Scaling<wbr>Metric<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#policypredictivescalingconfigurationmetricspecificationpredefinedscalingmetricspecification">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration<wbr>Metric<wbr>Specification<wbr>Predefined<wbr>Scaling<wbr>Metric<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}The scaling metric specification.
 {{% /md %}}</dd></dl>
@@ -1812,7 +1812,7 @@ group scaling. These have the following structure:
 <a href="#predefinedloadmetricspecification_nodejs" style="color: inherit; text-decoration: inherit;">predefined<wbr>Load<wbr>Metric<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policypredictivescalingconfigurationmetricspecificationpredefinedloadmetricspecification">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration<wbr>Metric<wbr>Specification<wbr>Predefined<wbr>Load<wbr>Metric<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#policypredictivescalingconfigurationmetricspecificationpredefinedloadmetricspecification">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration<wbr>Metric<wbr>Specification<wbr>Predefined<wbr>Load<wbr>Metric<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}The load metric specification.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1821,7 +1821,7 @@ group scaling. These have the following structure:
 <a href="#predefinedmetricpairspecification_nodejs" style="color: inherit; text-decoration: inherit;">predefined<wbr>Metric<wbr>Pair<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policypredictivescalingconfigurationmetricspecificationpredefinedmetricpairspecification">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration<wbr>Metric<wbr>Specification<wbr>Predefined<wbr>Metric<wbr>Pair<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#policypredictivescalingconfigurationmetricspecificationpredefinedmetricpairspecification">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration<wbr>Metric<wbr>Specification<wbr>Predefined<wbr>Metric<wbr>Pair<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}The metric pair specification from which Amazon EC2 Auto Scaling determines the appropriate scaling metric and load metric to use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1830,7 +1830,7 @@ group scaling. These have the following structure:
 <a href="#predefinedscalingmetricspecification_nodejs" style="color: inherit; text-decoration: inherit;">predefined<wbr>Scaling<wbr>Metric<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policypredictivescalingconfigurationmetricspecificationpredefinedscalingmetricspecification">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration<wbr>Metric<wbr>Specification<wbr>Predefined<wbr>Scaling<wbr>Metric<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#policypredictivescalingconfigurationmetricspecificationpredefinedscalingmetricspecification">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration<wbr>Metric<wbr>Specification<wbr>Predefined<wbr>Scaling<wbr>Metric<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}The scaling metric specification.
 {{% /md %}}</dd></dl>
@@ -1852,7 +1852,7 @@ group scaling. These have the following structure:
 <a href="#predefined_load_metric_specification_python" style="color: inherit; text-decoration: inherit;">predefined_<wbr>load_<wbr>metric_<wbr>specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policypredictivescalingconfigurationmetricspecificationpredefinedloadmetricspecification">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration<wbr>Metric<wbr>Specification<wbr>Predefined<wbr>Load<wbr>Metric<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#policypredictivescalingconfigurationmetricspecificationpredefinedloadmetricspecification">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration<wbr>Metric<wbr>Specification<wbr>Predefined<wbr>Load<wbr>Metric<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}The load metric specification.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1861,7 +1861,7 @@ group scaling. These have the following structure:
 <a href="#predefined_metric_pair_specification_python" style="color: inherit; text-decoration: inherit;">predefined_<wbr>metric_<wbr>pair_<wbr>specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policypredictivescalingconfigurationmetricspecificationpredefinedmetricpairspecification">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration<wbr>Metric<wbr>Specification<wbr>Predefined<wbr>Metric<wbr>Pair<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#policypredictivescalingconfigurationmetricspecificationpredefinedmetricpairspecification">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration<wbr>Metric<wbr>Specification<wbr>Predefined<wbr>Metric<wbr>Pair<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}The metric pair specification from which Amazon EC2 Auto Scaling determines the appropriate scaling metric and load metric to use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1870,7 +1870,7 @@ group scaling. These have the following structure:
 <a href="#predefined_scaling_metric_specification_python" style="color: inherit; text-decoration: inherit;">predefined_<wbr>scaling_<wbr>metric_<wbr>specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policypredictivescalingconfigurationmetricspecificationpredefinedscalingmetricspecification">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration<wbr>Metric<wbr>Specification<wbr>Predefined<wbr>Scaling<wbr>Metric<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#policypredictivescalingconfigurationmetricspecificationpredefinedscalingmetricspecification">Policy<wbr>Predictive<wbr>Scaling<wbr>Configuration<wbr>Metric<wbr>Specification<wbr>Predefined<wbr>Scaling<wbr>Metric<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}The scaling metric specification.
 {{% /md %}}</dd></dl>
@@ -2318,7 +2318,7 @@ must be greater than the lower bound.
 <a href="#customizedmetricspecification_csharp" style="color: inherit; text-decoration: inherit;">Customized<wbr>Metric<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingconfigurationcustomizedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#policytargettrackingconfigurationcustomizedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}A customized metric. Conflicts with `predefined_metric_specification`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2336,7 +2336,7 @@ must be greater than the lower bound.
 <a href="#predefinedmetricspecification_csharp" style="color: inherit; text-decoration: inherit;">Predefined<wbr>Metric<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingconfigurationpredefinedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Predefined<wbr>Metric<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#policytargettrackingconfigurationpredefinedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Predefined<wbr>Metric<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}A predefined metric. Conflicts with `customized_metric_specification`.
 {{% /md %}}</dd></dl>
@@ -2398,7 +2398,7 @@ must be greater than the lower bound.
 <a href="#customizedmetricspecification_nodejs" style="color: inherit; text-decoration: inherit;">customized<wbr>Metric<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingconfigurationcustomizedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#policytargettrackingconfigurationcustomizedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}A customized metric. Conflicts with `predefined_metric_specification`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2416,7 +2416,7 @@ must be greater than the lower bound.
 <a href="#predefinedmetricspecification_nodejs" style="color: inherit; text-decoration: inherit;">predefined<wbr>Metric<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingconfigurationpredefinedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Predefined<wbr>Metric<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#policytargettrackingconfigurationpredefinedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Predefined<wbr>Metric<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}A predefined metric. Conflicts with `customized_metric_specification`.
 {{% /md %}}</dd></dl>
@@ -2438,7 +2438,7 @@ must be greater than the lower bound.
 <a href="#customized_metric_specification_python" style="color: inherit; text-decoration: inherit;">customized_<wbr>metric_<wbr>specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingconfigurationcustomizedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#policytargettrackingconfigurationcustomizedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}A customized metric. Conflicts with `predefined_metric_specification`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2456,7 +2456,7 @@ must be greater than the lower bound.
 <a href="#predefined_metric_specification_python" style="color: inherit; text-decoration: inherit;">predefined_<wbr>metric_<wbr>specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingconfigurationpredefinedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Predefined<wbr>Metric<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#policytargettrackingconfigurationpredefinedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Predefined<wbr>Metric<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}A predefined metric. Conflicts with `customized_metric_specification`.
 {{% /md %}}</dd></dl>
@@ -2498,7 +2498,7 @@ must be greater than the lower bound.
 <a href="#metricdimensions_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingconfigurationcustomizedmetricspecificationmetricdimension">List&lt;Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Metric<wbr>Dimension<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#policytargettrackingconfigurationcustomizedmetricspecificationmetricdimension">List&lt;Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Metric<wbr>Dimension&gt;</a></span>
     </dt>
     <dd>{{% md %}}The dimensions of the metric.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2596,7 +2596,7 @@ must be greater than the lower bound.
 <a href="#metricdimensions_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingconfigurationcustomizedmetricspecificationmetricdimension">Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Metric<wbr>Dimension<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#policytargettrackingconfigurationcustomizedmetricspecificationmetricdimension">Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Metric<wbr>Dimension[]</a></span>
     </dt>
     <dd>{{% md %}}The dimensions of the metric.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2645,7 +2645,7 @@ must be greater than the lower bound.
 <a href="#metric_dimensions_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingconfigurationcustomizedmetricspecificationmetricdimension">Sequence[Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Metric<wbr>Dimension<wbr>Args]</a></span>
+        <span class="property-type"><a href="#policytargettrackingconfigurationcustomizedmetricspecificationmetricdimension">Sequence[Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Metric<wbr>Dimension]</a></span>
     </dt>
     <dd>{{% md %}}The dimensions of the metric.
 {{% /md %}}</dd><dt class="property-optional"

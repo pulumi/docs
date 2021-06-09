@@ -687,7 +687,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#command_go" style="color: inherit; text-decoration: inherit;">Command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcommand">Job<wbr>Command</a></span>
+        <span class="property-type"><a href="#jobcommand">Job<wbr>Command<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The command of the job. Defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -732,7 +732,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#executionproperty_go" style="color: inherit; text-decoration: inherit;">Execution<wbr>Property</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobexecutionproperty">Job<wbr>Execution<wbr>Property</a></span>
+        <span class="property-type"><a href="#jobexecutionproperty">Job<wbr>Execution<wbr>Property<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Execution property of the job. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -786,7 +786,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#notificationproperty_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Property</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobnotificationproperty">Job<wbr>Notification<wbr>Property</a></span>
+        <span class="property-type"><a href="#jobnotificationproperty">Job<wbr>Notification<wbr>Property<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Notification property of the job. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1600,7 +1600,7 @@ The following state arguments are supported:
 <a href="#state_command_go" style="color: inherit; text-decoration: inherit;">Command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcommand">Job<wbr>Command</a></span>
+        <span class="property-type"><a href="#jobcommand">Job<wbr>Command<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The command of the job. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1636,7 +1636,7 @@ The following state arguments are supported:
 <a href="#state_executionproperty_go" style="color: inherit; text-decoration: inherit;">Execution<wbr>Property</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobexecutionproperty">Job<wbr>Execution<wbr>Property</a></span>
+        <span class="property-type"><a href="#jobexecutionproperty">Job<wbr>Execution<wbr>Property<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Execution property of the job. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1690,7 +1690,7 @@ The following state arguments are supported:
 <a href="#state_notificationproperty_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Property</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobnotificationproperty">Job<wbr>Notification<wbr>Property</a></span>
+        <span class="property-type"><a href="#jobnotificationproperty">Job<wbr>Notification<wbr>Property<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Notification property of the job. Defined below.
 {{% /md %}}</dd><dt class="property-optional"

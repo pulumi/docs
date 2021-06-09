@@ -445,7 +445,7 @@ backend and the Cognito service to communicate about the developer provider.
 <a href="#cognitoidentityproviders_go" style="color: inherit; text-decoration: inherit;">Cognito<wbr>Identity<wbr>Providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolcognitoidentityprovider">[]Identity<wbr>Pool<wbr>Cognito<wbr>Identity<wbr>Provider</a></span>
+        <span class="property-type"><a href="#identitypoolcognitoidentityprovider">[]Identity<wbr>Pool<wbr>Cognito<wbr>Identity<wbr>Provider<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An array of Amazon Cognito Identity user pools and their client IDs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1061,7 +1061,7 @@ backend and the Cognito service to communicate about the developer provider.
 <a href="#state_cognitoidentityproviders_go" style="color: inherit; text-decoration: inherit;">Cognito<wbr>Identity<wbr>Providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolcognitoidentityprovider">[]Identity<wbr>Pool<wbr>Cognito<wbr>Identity<wbr>Provider</a></span>
+        <span class="property-type"><a href="#identitypoolcognitoidentityprovider">[]Identity<wbr>Pool<wbr>Cognito<wbr>Identity<wbr>Provider<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An array of Amazon Cognito Identity user pools and their client IDs.
 {{% /md %}}</dd><dt class="property-optional"

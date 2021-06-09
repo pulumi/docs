@@ -859,7 +859,7 @@ The following state arguments are supported:
 <a href="#state_clustercertificates_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclustercertificate">[]Cluster<wbr>Cluster<wbr>Certificate</a></span>
+        <span class="property-type"><a href="#clusterclustercertificate">[]Cluster<wbr>Cluster<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of cluster certificates.
 * `cluster_certificates.0.cluster_certificate` - The cluster certificate issued (signed) by the issuing certificate authority (CA) of the cluster's owner.

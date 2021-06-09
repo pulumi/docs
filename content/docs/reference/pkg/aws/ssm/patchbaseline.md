@@ -397,7 +397,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
 <a href="#approvalrules_go" style="color: inherit; text-decoration: inherit;">Approval<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchbaselineapprovalrule">[]Patch<wbr>Baseline<wbr>Approval<wbr>Rule</a></span>
+        <span class="property-type"><a href="#patchbaselineapprovalrule">[]Patch<wbr>Baseline<wbr>Approval<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A set of rules used to include patches in the baseline. up to 10 approval rules can be specified. Each approval_rule block requires the fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -442,7 +442,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
 <a href="#globalfilters_go" style="color: inherit; text-decoration: inherit;">Global<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchbaselineglobalfilter">[]Patch<wbr>Baseline<wbr>Global<wbr>Filter</a></span>
+        <span class="property-type"><a href="#patchbaselineglobalfilter">[]Patch<wbr>Baseline<wbr>Global<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A set of global filters used to exclude patches from the baseline. Up to 4 global filters can be specified using Key/Value pairs. Valid Keys are `PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -487,7 +487,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
 <a href="#sources_go" style="color: inherit; text-decoration: inherit;">Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchbaselinesource">[]Patch<wbr>Baseline<wbr>Source</a></span>
+        <span class="property-type"><a href="#patchbaselinesource">[]Patch<wbr>Baseline<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with alternate sources for patches. Applies to Linux instances only. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1120,7 +1120,7 @@ The following state arguments are supported:
 <a href="#state_approvalrules_go" style="color: inherit; text-decoration: inherit;">Approval<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchbaselineapprovalrule">[]Patch<wbr>Baseline<wbr>Approval<wbr>Rule</a></span>
+        <span class="property-type"><a href="#patchbaselineapprovalrule">[]Patch<wbr>Baseline<wbr>Approval<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A set of rules used to include patches in the baseline. up to 10 approval rules can be specified. Each approval_rule block requires the fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1174,7 +1174,7 @@ The following state arguments are supported:
 <a href="#state_globalfilters_go" style="color: inherit; text-decoration: inherit;">Global<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchbaselineglobalfilter">[]Patch<wbr>Baseline<wbr>Global<wbr>Filter</a></span>
+        <span class="property-type"><a href="#patchbaselineglobalfilter">[]Patch<wbr>Baseline<wbr>Global<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A set of global filters used to exclude patches from the baseline. Up to 4 global filters can be specified using Key/Value pairs. Valid Keys are `PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1219,7 +1219,7 @@ The following state arguments are supported:
 <a href="#state_sources_go" style="color: inherit; text-decoration: inherit;">Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchbaselinesource">[]Patch<wbr>Baseline<wbr>Source</a></span>
+        <span class="property-type"><a href="#patchbaselinesource">[]Patch<wbr>Baseline<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with alternate sources for patches. Applies to Linux instances only. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1521,7 +1521,7 @@ The following state arguments are supported:
 <a href="#patchfilters_csharp" style="color: inherit; text-decoration: inherit;">Patch<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchbaselineapprovalrulepatchfilter">List&lt;Patch<wbr>Baseline<wbr>Approval<wbr>Rule<wbr>Patch<wbr>Filter<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#patchbaselineapprovalrulepatchfilter">List&lt;Patch<wbr>Baseline<wbr>Approval<wbr>Rule<wbr>Patch<wbr>Filter&gt;</a></span>
     </dt>
     <dd>{{% md %}}The patch filter group that defines the criteria for the rule. Up to 5 patch filters can be specified per approval rule using Key/Value pairs. Valid Keys are `PATCH_SET | PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`. Valid combinations of these Keys and the `operating_system` value can be found in the [SSM DescribePatchProperties API Reference](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_DescribePatchProperties.html). Valid Values are exact values for the patch property given as the key, or a wildcard `*`, which matches all values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1619,7 +1619,7 @@ The following state arguments are supported:
 <a href="#patchfilters_nodejs" style="color: inherit; text-decoration: inherit;">patch<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchbaselineapprovalrulepatchfilter">Patch<wbr>Baseline<wbr>Approval<wbr>Rule<wbr>Patch<wbr>Filter<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#patchbaselineapprovalrulepatchfilter">Patch<wbr>Baseline<wbr>Approval<wbr>Rule<wbr>Patch<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}The patch filter group that defines the criteria for the rule. Up to 5 patch filters can be specified per approval rule using Key/Value pairs. Valid Keys are `PATCH_SET | PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`. Valid combinations of these Keys and the `operating_system` value can be found in the [SSM DescribePatchProperties API Reference](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_DescribePatchProperties.html). Valid Values are exact values for the patch property given as the key, or a wildcard `*`, which matches all values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1668,7 +1668,7 @@ The following state arguments are supported:
 <a href="#patch_filters_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchbaselineapprovalrulepatchfilter">Sequence[Patch<wbr>Baseline<wbr>Approval<wbr>Rule<wbr>Patch<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#patchbaselineapprovalrulepatchfilter">Sequence[Patch<wbr>Baseline<wbr>Approval<wbr>Rule<wbr>Patch<wbr>Filter]</a></span>
     </dt>
     <dd>{{% md %}}The patch filter group that defines the criteria for the rule. Up to 5 patch filters can be specified per approval rule using Key/Value pairs. Valid Keys are `PATCH_SET | PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`. Valid combinations of these Keys and the `operating_system` value can be found in the [SSM DescribePatchProperties API Reference](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_DescribePatchProperties.html). Valid Values are exact values for the patch property given as the key, or a wildcard `*`, which matches all values.
 {{% /md %}}</dd><dt class="property-optional"

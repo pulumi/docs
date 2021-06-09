@@ -1014,7 +1014,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
 <a href="#responseparameters_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationresponseparameter">[]Integration<wbr>Response<wbr>Parameter</a></span>
+        <span class="property-type"><a href="#integrationresponseparameter">[]Integration<wbr>Response<wbr>Parameter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Mappings to transform the HTTP response from a backend integration before returning the response to clients. Supported only for HTTP APIs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1043,7 +1043,7 @@ this provider will only perform drift detection of its value when present in a c
 <a href="#tlsconfig_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationtlsconfig">Integration<wbr>Tls<wbr>Config</a></span>
+        <span class="property-type"><a href="#integrationtlsconfig">Integration<wbr>Tls<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The TLS configuration for a private integration. Supported only for HTTP APIs.
 {{% /md %}}</dd></dl>
@@ -1963,7 +1963,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
 <a href="#state_responseparameters_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationresponseparameter">[]Integration<wbr>Response<wbr>Parameter</a></span>
+        <span class="property-type"><a href="#integrationresponseparameter">[]Integration<wbr>Response<wbr>Parameter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Mappings to transform the HTTP response from a backend integration before returning the response to clients. Supported only for HTTP APIs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1992,7 +1992,7 @@ this provider will only perform drift detection of its value when present in a c
 <a href="#state_tlsconfig_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationtlsconfig">Integration<wbr>Tls<wbr>Config</a></span>
+        <span class="property-type"><a href="#integrationtlsconfig">Integration<wbr>Tls<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The TLS configuration for a private integration. Supported only for HTTP APIs.
 {{% /md %}}</dd></dl>

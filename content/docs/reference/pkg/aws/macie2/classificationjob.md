@@ -442,7 +442,7 @@ The ClassificationJob resource accepts the following [input]({{< relref "/docs/i
 <a href="#s3jobdefinition_go" style="color: inherit; text-decoration: inherit;">S3Job<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classificationjobs3jobdefinition">Classification<wbr>Job<wbr>S3Job<wbr>Definition</a></span>
+        <span class="property-type"><a href="#classificationjobs3jobdefinition">Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The S3 buckets that contain the objects to analyze, and the scope of that analysis. (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -513,7 +513,7 @@ The ClassificationJob resource accepts the following [input]({{< relref "/docs/i
 <a href="#schedulefrequency_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classificationjobschedulefrequency">Classification<wbr>Job<wbr>Schedule<wbr>Frequency</a></span>
+        <span class="property-type"><a href="#classificationjobschedulefrequency">Classification<wbr>Job<wbr>Schedule<wbr>Frequency<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The recurrence pattern for running the job. To run the job only once, don't specify a value for this property and set the value for the `job_type` property to `ONE_TIME`. (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1326,7 +1326,7 @@ The following state arguments are supported:
 <a href="#state_s3jobdefinition_go" style="color: inherit; text-decoration: inherit;">S3Job<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classificationjobs3jobdefinition">Classification<wbr>Job<wbr>S3Job<wbr>Definition</a></span>
+        <span class="property-type"><a href="#classificationjobs3jobdefinition">Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The S3 buckets that contain the objects to analyze, and the scope of that analysis. (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1344,7 +1344,7 @@ The following state arguments are supported:
 <a href="#state_schedulefrequency_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classificationjobschedulefrequency">Classification<wbr>Job<wbr>Schedule<wbr>Frequency</a></span>
+        <span class="property-type"><a href="#classificationjobschedulefrequency">Classification<wbr>Job<wbr>Schedule<wbr>Frequency<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The recurrence pattern for running the job. To run the job only once, don't specify a value for this property and set the value for the `job_type` property to `ONE_TIME`. (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1370,7 +1370,7 @@ The following state arguments are supported:
 <a href="#state_userpauseddetails_go" style="color: inherit; text-decoration: inherit;">User<wbr>Paused<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classificationjobuserpauseddetail">[]Classification<wbr>Job<wbr>User<wbr>Paused<wbr>Detail</a></span>
+        <span class="property-type"><a href="#classificationjobuserpauseddetail">[]Classification<wbr>Job<wbr>User<wbr>Paused<wbr>Detail<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the current status of the job is `USER_PAUSED`, specifies when the job was paused and when the job or job run will expire and be cancelled if it isn't resumed. This value is present only if the value for `job-status` is `USER_PAUSED`.
 {{% /md %}}</dd></dl>
@@ -1682,7 +1682,7 @@ The following state arguments are supported:
 <a href="#bucketdefinitions_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classificationjobs3jobdefinitionbucketdefinition">List&lt;Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Bucket<wbr>Definition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#classificationjobs3jobdefinitionbucketdefinition">List&lt;Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Bucket<wbr>Definition&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of objects, one for each AWS account that owns buckets to analyze. Each object specifies the account ID for an account and one or more buckets to analyze for the account. (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1691,7 +1691,7 @@ The following state arguments are supported:
 <a href="#scoping_csharp" style="color: inherit; text-decoration: inherit;">Scoping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classificationjobs3jobdefinitionscoping">Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Args</a></span>
+        <span class="property-type"><a href="#classificationjobs3jobdefinitionscoping">Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping</a></span>
     </dt>
     <dd>{{% md %}}The property- and tag-based conditions that determine which objects to include or exclude from the analysis. (documented below)
 {{% /md %}}</dd></dl>
@@ -1726,7 +1726,7 @@ The following state arguments are supported:
 <a href="#bucketdefinitions_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classificationjobs3jobdefinitionbucketdefinition">Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Bucket<wbr>Definition<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#classificationjobs3jobdefinitionbucketdefinition">Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Bucket<wbr>Definition[]</a></span>
     </dt>
     <dd>{{% md %}}An array of objects, one for each AWS account that owns buckets to analyze. Each object specifies the account ID for an account and one or more buckets to analyze for the account. (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1735,7 +1735,7 @@ The following state arguments are supported:
 <a href="#scoping_nodejs" style="color: inherit; text-decoration: inherit;">scoping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classificationjobs3jobdefinitionscoping">Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Args</a></span>
+        <span class="property-type"><a href="#classificationjobs3jobdefinitionscoping">Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping</a></span>
     </dt>
     <dd>{{% md %}}The property- and tag-based conditions that determine which objects to include or exclude from the analysis. (documented below)
 {{% /md %}}</dd></dl>
@@ -1748,7 +1748,7 @@ The following state arguments are supported:
 <a href="#bucket_definitions_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classificationjobs3jobdefinitionbucketdefinition">Sequence[Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Bucket<wbr>Definition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#classificationjobs3jobdefinitionbucketdefinition">Sequence[Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Bucket<wbr>Definition]</a></span>
     </dt>
     <dd>{{% md %}}An array of objects, one for each AWS account that owns buckets to analyze. Each object specifies the account ID for an account and one or more buckets to analyze for the account. (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1757,7 +1757,7 @@ The following state arguments are supported:
 <a href="#scoping_python" style="color: inherit; text-decoration: inherit;">scoping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classificationjobs3jobdefinitionscoping">Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Args</a></span>
+        <span class="property-type"><a href="#classificationjobs3jobdefinitionscoping">Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping</a></span>
     </dt>
     <dd>{{% md %}}The property- and tag-based conditions that determine which objects to include or exclude from the analysis. (documented below)
 {{% /md %}}</dd></dl>
@@ -1862,7 +1862,7 @@ The following state arguments are supported:
 <a href="#excludes_csharp" style="color: inherit; text-decoration: inherit;">Excludes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingexcludes">Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Excludes<wbr>Args</a></span>
+        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingexcludes">Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Excludes</a></span>
     </dt>
     <dd>{{% md %}}The property- or tag-based conditions that determine which objects to exclude from the analysis. (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1871,7 +1871,7 @@ The following state arguments are supported:
 <a href="#includes_csharp" style="color: inherit; text-decoration: inherit;">Includes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingincludes">Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Includes<wbr>Args</a></span>
+        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingincludes">Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Includes</a></span>
     </dt>
     <dd>{{% md %}}The property- or tag-based conditions that determine which objects to include in the analysis. (documented below)
 {{% /md %}}</dd></dl>
@@ -1906,7 +1906,7 @@ The following state arguments are supported:
 <a href="#excludes_nodejs" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingexcludes">Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Excludes<wbr>Args</a></span>
+        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingexcludes">Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Excludes</a></span>
     </dt>
     <dd>{{% md %}}The property- or tag-based conditions that determine which objects to exclude from the analysis. (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1915,7 +1915,7 @@ The following state arguments are supported:
 <a href="#includes_nodejs" style="color: inherit; text-decoration: inherit;">includes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingincludes">Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Includes<wbr>Args</a></span>
+        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingincludes">Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Includes</a></span>
     </dt>
     <dd>{{% md %}}The property- or tag-based conditions that determine which objects to include in the analysis. (documented below)
 {{% /md %}}</dd></dl>
@@ -1928,7 +1928,7 @@ The following state arguments are supported:
 <a href="#excludes_python" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingexcludes">Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Excludes<wbr>Args</a></span>
+        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingexcludes">Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Excludes</a></span>
     </dt>
     <dd>{{% md %}}The property- or tag-based conditions that determine which objects to exclude from the analysis. (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1937,7 +1937,7 @@ The following state arguments are supported:
 <a href="#includes_python" style="color: inherit; text-decoration: inherit;">includes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingincludes">Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Includes<wbr>Args</a></span>
+        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingincludes">Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Includes</a></span>
     </dt>
     <dd>{{% md %}}The property- or tag-based conditions that determine which objects to include in the analysis. (documented below)
 {{% /md %}}</dd></dl>
@@ -1952,7 +1952,7 @@ The following state arguments are supported:
 <a href="#ands_csharp" style="color: inherit; text-decoration: inherit;">Ands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingexcludesand">List&lt;Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Excludes<wbr>And<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingexcludesand">List&lt;Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Excludes<wbr>And&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of conditions, one for each condition that determines which objects to include or exclude from the job. (documented below)
 {{% /md %}}</dd></dl>
@@ -1978,7 +1978,7 @@ The following state arguments are supported:
 <a href="#ands_nodejs" style="color: inherit; text-decoration: inherit;">ands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingexcludesand">Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Excludes<wbr>And<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingexcludesand">Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Excludes<wbr>And[]</a></span>
     </dt>
     <dd>{{% md %}}An array of conditions, one for each condition that determines which objects to include or exclude from the job. (documented below)
 {{% /md %}}</dd></dl>
@@ -1991,7 +1991,7 @@ The following state arguments are supported:
 <a href="#ands_python" style="color: inherit; text-decoration: inherit;">ands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingexcludesand">Sequence[Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Excludes<wbr>And<wbr>Args]</a></span>
+        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingexcludesand">Sequence[Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Excludes<wbr>And]</a></span>
     </dt>
     <dd>{{% md %}}An array of conditions, one for each condition that determines which objects to include or exclude from the job. (documented below)
 {{% /md %}}</dd></dl>
@@ -2006,7 +2006,7 @@ The following state arguments are supported:
 <a href="#simplescopeterm_csharp" style="color: inherit; text-decoration: inherit;">Simple<wbr>Scope<wbr>Term</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingexcludesandsimplescopeterm">Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Excludes<wbr>And<wbr>Simple<wbr>Scope<wbr>Term<wbr>Args</a></span>
+        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingexcludesandsimplescopeterm">Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Excludes<wbr>And<wbr>Simple<wbr>Scope<wbr>Term</a></span>
     </dt>
     <dd>{{% md %}}A property-based condition that defines a property, operator, and one or more values for including or excluding an object from the job.  (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2015,7 +2015,7 @@ The following state arguments are supported:
 <a href="#tagscopeterm_csharp" style="color: inherit; text-decoration: inherit;">Tag<wbr>Scope<wbr>Term</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingexcludesandtagscopeterm">Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Excludes<wbr>And<wbr>Tag<wbr>Scope<wbr>Term<wbr>Args</a></span>
+        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingexcludesandtagscopeterm">Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Excludes<wbr>And<wbr>Tag<wbr>Scope<wbr>Term</a></span>
     </dt>
     <dd>{{% md %}}A tag-based condition that defines the operator and tag keys or tag key and value pairs for including or excluding an object from the job.  (documented below)
 {{% /md %}}</dd></dl>
@@ -2050,7 +2050,7 @@ The following state arguments are supported:
 <a href="#simplescopeterm_nodejs" style="color: inherit; text-decoration: inherit;">simple<wbr>Scope<wbr>Term</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingexcludesandsimplescopeterm">Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Excludes<wbr>And<wbr>Simple<wbr>Scope<wbr>Term<wbr>Args</a></span>
+        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingexcludesandsimplescopeterm">Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Excludes<wbr>And<wbr>Simple<wbr>Scope<wbr>Term</a></span>
     </dt>
     <dd>{{% md %}}A property-based condition that defines a property, operator, and one or more values for including or excluding an object from the job.  (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2059,7 +2059,7 @@ The following state arguments are supported:
 <a href="#tagscopeterm_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Scope<wbr>Term</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingexcludesandtagscopeterm">Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Excludes<wbr>And<wbr>Tag<wbr>Scope<wbr>Term<wbr>Args</a></span>
+        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingexcludesandtagscopeterm">Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Excludes<wbr>And<wbr>Tag<wbr>Scope<wbr>Term</a></span>
     </dt>
     <dd>{{% md %}}A tag-based condition that defines the operator and tag keys or tag key and value pairs for including or excluding an object from the job.  (documented below)
 {{% /md %}}</dd></dl>
@@ -2072,7 +2072,7 @@ The following state arguments are supported:
 <a href="#simple_scope_term_python" style="color: inherit; text-decoration: inherit;">simple_<wbr>scope_<wbr>term</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingexcludesandsimplescopeterm">Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Excludes<wbr>And<wbr>Simple<wbr>Scope<wbr>Term<wbr>Args</a></span>
+        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingexcludesandsimplescopeterm">Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Excludes<wbr>And<wbr>Simple<wbr>Scope<wbr>Term</a></span>
     </dt>
     <dd>{{% md %}}A property-based condition that defines a property, operator, and one or more values for including or excluding an object from the job.  (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2081,7 +2081,7 @@ The following state arguments are supported:
 <a href="#tag_scope_term_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>scope_<wbr>term</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingexcludesandtagscopeterm">Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Excludes<wbr>And<wbr>Tag<wbr>Scope<wbr>Term<wbr>Args</a></span>
+        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingexcludesandtagscopeterm">Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Excludes<wbr>And<wbr>Tag<wbr>Scope<wbr>Term</a></span>
     </dt>
     <dd>{{% md %}}A tag-based condition that defines the operator and tag keys or tag key and value pairs for including or excluding an object from the job.  (documented below)
 {{% /md %}}</dd></dl>
@@ -2240,7 +2240,7 @@ The following state arguments are supported:
 <a href="#tagvalues_csharp" style="color: inherit; text-decoration: inherit;">Tag<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingexcludesandtagscopetermtagvalue">List&lt;Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Excludes<wbr>And<wbr>Tag<wbr>Scope<wbr>Term<wbr>Tag<wbr>Value<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingexcludesandtagscopetermtagvalue">List&lt;Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Excludes<wbr>And<wbr>Tag<wbr>Scope<wbr>Term<wbr>Tag<wbr>Value&gt;</a></span>
     </dt>
     <dd>{{% md %}}The tag keys or tag key and value pairs to use in the condition.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2320,7 +2320,7 @@ The following state arguments are supported:
 <a href="#tagvalues_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingexcludesandtagscopetermtagvalue">Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Excludes<wbr>And<wbr>Tag<wbr>Scope<wbr>Term<wbr>Tag<wbr>Value<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingexcludesandtagscopetermtagvalue">Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Excludes<wbr>And<wbr>Tag<wbr>Scope<wbr>Term<wbr>Tag<wbr>Value[]</a></span>
     </dt>
     <dd>{{% md %}}The tag keys or tag key and value pairs to use in the condition.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2360,7 +2360,7 @@ The following state arguments are supported:
 <a href="#tag_values_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingexcludesandtagscopetermtagvalue">Sequence[Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Excludes<wbr>And<wbr>Tag<wbr>Scope<wbr>Term<wbr>Tag<wbr>Value<wbr>Args]</a></span>
+        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingexcludesandtagscopetermtagvalue">Sequence[Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Excludes<wbr>And<wbr>Tag<wbr>Scope<wbr>Term<wbr>Tag<wbr>Value]</a></span>
     </dt>
     <dd>{{% md %}}The tag keys or tag key and value pairs to use in the condition.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2470,7 +2470,7 @@ The following state arguments are supported:
 <a href="#ands_csharp" style="color: inherit; text-decoration: inherit;">Ands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingincludesand">List&lt;Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Includes<wbr>And<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingincludesand">List&lt;Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Includes<wbr>And&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of conditions, one for each condition that determines which objects to include or exclude from the job. (documented below)
 {{% /md %}}</dd></dl>
@@ -2496,7 +2496,7 @@ The following state arguments are supported:
 <a href="#ands_nodejs" style="color: inherit; text-decoration: inherit;">ands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingincludesand">Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Includes<wbr>And<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingincludesand">Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Includes<wbr>And[]</a></span>
     </dt>
     <dd>{{% md %}}An array of conditions, one for each condition that determines which objects to include or exclude from the job. (documented below)
 {{% /md %}}</dd></dl>
@@ -2509,7 +2509,7 @@ The following state arguments are supported:
 <a href="#ands_python" style="color: inherit; text-decoration: inherit;">ands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingincludesand">Sequence[Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Includes<wbr>And<wbr>Args]</a></span>
+        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingincludesand">Sequence[Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Includes<wbr>And]</a></span>
     </dt>
     <dd>{{% md %}}An array of conditions, one for each condition that determines which objects to include or exclude from the job. (documented below)
 {{% /md %}}</dd></dl>
@@ -2524,7 +2524,7 @@ The following state arguments are supported:
 <a href="#simplescopeterm_csharp" style="color: inherit; text-decoration: inherit;">Simple<wbr>Scope<wbr>Term</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingincludesandsimplescopeterm">Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Includes<wbr>And<wbr>Simple<wbr>Scope<wbr>Term<wbr>Args</a></span>
+        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingincludesandsimplescopeterm">Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Includes<wbr>And<wbr>Simple<wbr>Scope<wbr>Term</a></span>
     </dt>
     <dd>{{% md %}}A property-based condition that defines a property, operator, and one or more values for including or excluding an object from the job.  (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2533,7 +2533,7 @@ The following state arguments are supported:
 <a href="#tagscopeterm_csharp" style="color: inherit; text-decoration: inherit;">Tag<wbr>Scope<wbr>Term</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingincludesandtagscopeterm">Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Includes<wbr>And<wbr>Tag<wbr>Scope<wbr>Term<wbr>Args</a></span>
+        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingincludesandtagscopeterm">Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Includes<wbr>And<wbr>Tag<wbr>Scope<wbr>Term</a></span>
     </dt>
     <dd>{{% md %}}A tag-based condition that defines the operator and tag keys or tag key and value pairs for including or excluding an object from the job.  (documented below)
 {{% /md %}}</dd></dl>
@@ -2568,7 +2568,7 @@ The following state arguments are supported:
 <a href="#simplescopeterm_nodejs" style="color: inherit; text-decoration: inherit;">simple<wbr>Scope<wbr>Term</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingincludesandsimplescopeterm">Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Includes<wbr>And<wbr>Simple<wbr>Scope<wbr>Term<wbr>Args</a></span>
+        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingincludesandsimplescopeterm">Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Includes<wbr>And<wbr>Simple<wbr>Scope<wbr>Term</a></span>
     </dt>
     <dd>{{% md %}}A property-based condition that defines a property, operator, and one or more values for including or excluding an object from the job.  (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2577,7 +2577,7 @@ The following state arguments are supported:
 <a href="#tagscopeterm_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Scope<wbr>Term</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingincludesandtagscopeterm">Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Includes<wbr>And<wbr>Tag<wbr>Scope<wbr>Term<wbr>Args</a></span>
+        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingincludesandtagscopeterm">Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Includes<wbr>And<wbr>Tag<wbr>Scope<wbr>Term</a></span>
     </dt>
     <dd>{{% md %}}A tag-based condition that defines the operator and tag keys or tag key and value pairs for including or excluding an object from the job.  (documented below)
 {{% /md %}}</dd></dl>
@@ -2590,7 +2590,7 @@ The following state arguments are supported:
 <a href="#simple_scope_term_python" style="color: inherit; text-decoration: inherit;">simple_<wbr>scope_<wbr>term</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingincludesandsimplescopeterm">Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Includes<wbr>And<wbr>Simple<wbr>Scope<wbr>Term<wbr>Args</a></span>
+        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingincludesandsimplescopeterm">Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Includes<wbr>And<wbr>Simple<wbr>Scope<wbr>Term</a></span>
     </dt>
     <dd>{{% md %}}A property-based condition that defines a property, operator, and one or more values for including or excluding an object from the job.  (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2599,7 +2599,7 @@ The following state arguments are supported:
 <a href="#tag_scope_term_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>scope_<wbr>term</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingincludesandtagscopeterm">Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Includes<wbr>And<wbr>Tag<wbr>Scope<wbr>Term<wbr>Args</a></span>
+        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingincludesandtagscopeterm">Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Includes<wbr>And<wbr>Tag<wbr>Scope<wbr>Term</a></span>
     </dt>
     <dd>{{% md %}}A tag-based condition that defines the operator and tag keys or tag key and value pairs for including or excluding an object from the job.  (documented below)
 {{% /md %}}</dd></dl>
@@ -2758,7 +2758,7 @@ The following state arguments are supported:
 <a href="#tagvalues_csharp" style="color: inherit; text-decoration: inherit;">Tag<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingincludesandtagscopetermtagvalue">List&lt;Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Includes<wbr>And<wbr>Tag<wbr>Scope<wbr>Term<wbr>Tag<wbr>Value<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingincludesandtagscopetermtagvalue">List&lt;Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Includes<wbr>And<wbr>Tag<wbr>Scope<wbr>Term<wbr>Tag<wbr>Value&gt;</a></span>
     </dt>
     <dd>{{% md %}}The tag keys or tag key and value pairs to use in the condition.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2838,7 +2838,7 @@ The following state arguments are supported:
 <a href="#tagvalues_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingincludesandtagscopetermtagvalue">Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Includes<wbr>And<wbr>Tag<wbr>Scope<wbr>Term<wbr>Tag<wbr>Value<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingincludesandtagscopetermtagvalue">Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Includes<wbr>And<wbr>Tag<wbr>Scope<wbr>Term<wbr>Tag<wbr>Value[]</a></span>
     </dt>
     <dd>{{% md %}}The tag keys or tag key and value pairs to use in the condition.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2878,7 +2878,7 @@ The following state arguments are supported:
 <a href="#tag_values_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingincludesandtagscopetermtagvalue">Sequence[Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Includes<wbr>And<wbr>Tag<wbr>Scope<wbr>Term<wbr>Tag<wbr>Value<wbr>Args]</a></span>
+        <span class="property-type"><a href="#classificationjobs3jobdefinitionscopingincludesandtagscopetermtagvalue">Sequence[Classification<wbr>Job<wbr>S3Job<wbr>Definition<wbr>Scoping<wbr>Includes<wbr>And<wbr>Tag<wbr>Scope<wbr>Term<wbr>Tag<wbr>Value]</a></span>
     </dt>
     <dd>{{% md %}}The tag keys or tag key and value pairs to use in the condition.
 {{% /md %}}</dd><dt class="property-optional"

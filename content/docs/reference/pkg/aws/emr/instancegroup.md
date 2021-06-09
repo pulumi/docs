@@ -407,7 +407,7 @@ The InstanceGroup resource accepts the following [input]({{< relref "/docs/intro
 <a href="#ebsconfigs_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupebsconfig">[]Instance<wbr>Group<wbr>Ebs<wbr>Config</a></span>
+        <span class="property-type"><a href="#instancegroupebsconfig">[]Instance<wbr>Group<wbr>Ebs<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `ebs_config` blocks as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1009,7 +1009,7 @@ The following state arguments are supported:
 <a href="#state_ebsconfigs_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupebsconfig">[]Instance<wbr>Group<wbr>Ebs<wbr>Config</a></span>
+        <span class="property-type"><a href="#instancegroupebsconfig">[]Instance<wbr>Group<wbr>Ebs<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `ebs_config` blocks as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"

@@ -182,7 +182,7 @@ The NodeList resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#items_go" style="color: inherit; text-decoration: inherit;">Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#node">[]Node<wbr>Type</a></span>
+        <span class="property-type"><a href="#node">[]Node<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of nodes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -190,7 +190,7 @@ The NodeList resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listmeta">List<wbr>Meta</a></span>
+        <span class="property-type"><a href="#listmeta">List<wbr>Meta<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1065,7 +1065,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Object<wbr>Meta<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectmeta">Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Object<wbr>Meta</a></span>
     </dt>
     <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1073,7 +1073,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#spec_csharp" style="color: inherit; text-decoration: inherit;">Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodespec">Node<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodespec">Node<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}Spec defines the behavior of a node. https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1081,7 +1081,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodestatus">Node<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodestatus">Node<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Most recently observed status of the node. Populated by the system. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1121,7 +1121,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">meta.v1.<wbr>Object<wbr>Meta<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectmeta">meta.v1.<wbr>Object<wbr>Meta</a></span>
     </dt>
     <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1129,7 +1129,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#spec_nodejs" style="color: inherit; text-decoration: inherit;">spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodespec">Node<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodespec">Node<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}Spec defines the behavior of a node. https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1137,7 +1137,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodestatus">Node<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodestatus">Node<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Most recently observed status of the node. Populated by the system. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1149,7 +1149,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta</a></span>
     </dt>
     <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1157,7 +1157,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodespec">Node<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodespec">Node<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}Spec defines the behavior of a node. https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1165,7 +1165,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodestatus">Node<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodestatus">Node<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Most recently observed status of the node. Populated by the system. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1471,7 +1471,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#configmap_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>Map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configmapnodeconfigsource">Config<wbr>Map<wbr>Node<wbr>Config<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#configmapnodeconfigsource">Config<wbr>Map<wbr>Node<wbr>Config<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}ConfigMap is a reference to a Node's ConfigMap{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1495,7 +1495,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#configmap_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configmapnodeconfigsource">Config<wbr>Map<wbr>Node<wbr>Config<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#configmapnodeconfigsource">Config<wbr>Map<wbr>Node<wbr>Config<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}ConfigMap is a reference to a Node's ConfigMap{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1507,7 +1507,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#config_map_python" style="color: inherit; text-decoration: inherit;">config_<wbr>map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configmapnodeconfigsource">Config<wbr>Map<wbr>Node<wbr>Config<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#configmapnodeconfigsource">Config<wbr>Map<wbr>Node<wbr>Config<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}ConfigMap is a reference to a Node's ConfigMap{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1521,7 +1521,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#active_csharp" style="color: inherit; text-decoration: inherit;">Active</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeconfigsource">Node<wbr>Config<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodeconfigsource">Node<wbr>Config<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Active reports the checkpointed config the node is actively using. Active will represent either the current version of the Assigned config, or the current LastKnownGood config, depending on whether attempting to use the Assigned config results in an error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1529,7 +1529,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#assigned_csharp" style="color: inherit; text-decoration: inherit;">Assigned</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeconfigsource">Node<wbr>Config<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodeconfigsource">Node<wbr>Config<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Assigned reports the checkpointed config the node will try to use. When Node.Spec.ConfigSource is updated, the node checkpoints the associated config payload to local disk, along with a record indicating intended config. The node refers to this record to choose its config checkpoint, and reports this record in Assigned. Assigned only updates in the status after the record has been checkpointed to disk. When the Kubelet is restarted, it tries to make the Assigned config the Active config by loading and validating the checkpointed payload identified by Assigned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1545,7 +1545,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#lastknowngood_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Known<wbr>Good</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeconfigsource">Node<wbr>Config<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodeconfigsource">Node<wbr>Config<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}LastKnownGood reports the checkpointed config the node will fall back to when it encounters an error attempting to use the Assigned config. The Assigned config becomes the LastKnownGood config when the node determines that the Assigned config is stable and correct. This is currently implemented as a 10-minute soak period starting when the local record of Assigned config is updated. If the Assigned config is Active at the end of this period, it becomes the LastKnownGood. Note that if Spec.ConfigSource is reset to nil (use local defaults), the LastKnownGood is also immediately reset to nil, because the local default config is always assumed good. You should not make assumptions about the node's method of determining config stability and correctness, as this may change or become configurable in the future.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1593,7 +1593,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#active_nodejs" style="color: inherit; text-decoration: inherit;">active</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeconfigsource">Node<wbr>Config<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodeconfigsource">Node<wbr>Config<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Active reports the checkpointed config the node is actively using. Active will represent either the current version of the Assigned config, or the current LastKnownGood config, depending on whether attempting to use the Assigned config results in an error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1601,7 +1601,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#assigned_nodejs" style="color: inherit; text-decoration: inherit;">assigned</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeconfigsource">Node<wbr>Config<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodeconfigsource">Node<wbr>Config<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Assigned reports the checkpointed config the node will try to use. When Node.Spec.ConfigSource is updated, the node checkpoints the associated config payload to local disk, along with a record indicating intended config. The node refers to this record to choose its config checkpoint, and reports this record in Assigned. Assigned only updates in the status after the record has been checkpointed to disk. When the Kubelet is restarted, it tries to make the Assigned config the Active config by loading and validating the checkpointed payload identified by Assigned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1617,7 +1617,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#lastknowngood_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Known<wbr>Good</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeconfigsource">Node<wbr>Config<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodeconfigsource">Node<wbr>Config<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}LastKnownGood reports the checkpointed config the node will fall back to when it encounters an error attempting to use the Assigned config. The Assigned config becomes the LastKnownGood config when the node determines that the Assigned config is stable and correct. This is currently implemented as a 10-minute soak period starting when the local record of Assigned config is updated. If the Assigned config is Active at the end of this period, it becomes the LastKnownGood. Note that if Spec.ConfigSource is reset to nil (use local defaults), the LastKnownGood is also immediately reset to nil, because the local default config is always assumed good. You should not make assumptions about the node's method of determining config stability and correctness, as this may change or become configurable in the future.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1629,7 +1629,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#active_python" style="color: inherit; text-decoration: inherit;">active</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeconfigsource">Node<wbr>Config<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodeconfigsource">Node<wbr>Config<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Active reports the checkpointed config the node is actively using. Active will represent either the current version of the Assigned config, or the current LastKnownGood config, depending on whether attempting to use the Assigned config results in an error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1637,7 +1637,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#assigned_python" style="color: inherit; text-decoration: inherit;">assigned</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeconfigsource">Node<wbr>Config<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodeconfigsource">Node<wbr>Config<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Assigned reports the checkpointed config the node will try to use. When Node.Spec.ConfigSource is updated, the node checkpoints the associated config payload to local disk, along with a record indicating intended config. The node refers to this record to choose its config checkpoint, and reports this record in Assigned. Assigned only updates in the status after the record has been checkpointed to disk. When the Kubelet is restarted, it tries to make the Assigned config the Active config by loading and validating the checkpointed payload identified by Assigned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1653,7 +1653,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#last_known_good_python" style="color: inherit; text-decoration: inherit;">last_<wbr>known_<wbr>good</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeconfigsource">Node<wbr>Config<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodeconfigsource">Node<wbr>Config<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}LastKnownGood reports the checkpointed config the node will fall back to when it encounters an error attempting to use the Assigned config. The Assigned config becomes the LastKnownGood config when the node determines that the Assigned config is stable and correct. This is currently implemented as a 10-minute soak period starting when the local record of Assigned config is updated. If the Assigned config is Active at the end of this period, it becomes the LastKnownGood. Note that if Spec.ConfigSource is reset to nil (use local defaults), the LastKnownGood is also immediately reset to nil, because the local default config is always assumed good. You should not make assumptions about the node's method of determining config stability and correctness, as this may change or become configurable in the future.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1667,7 +1667,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#kubeletendpoint_csharp" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#daemonendpoint">Daemon<wbr>Endpoint<wbr>Args</a></span>
+        <span class="property-type"><a href="#daemonendpoint">Daemon<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}Endpoint on which Kubelet is listening.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1691,7 +1691,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#kubeletendpoint_nodejs" style="color: inherit; text-decoration: inherit;">kubelet<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#daemonendpoint">Daemon<wbr>Endpoint<wbr>Args</a></span>
+        <span class="property-type"><a href="#daemonendpoint">Daemon<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}Endpoint on which Kubelet is listening.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1703,7 +1703,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#kubelet_endpoint_python" style="color: inherit; text-decoration: inherit;">kubelet_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#daemonendpoint">Daemon<wbr>Endpoint<wbr>Args</a></span>
+        <span class="property-type"><a href="#daemonendpoint">Daemon<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}Endpoint on which Kubelet is listening.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1717,7 +1717,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#configsource_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeconfigsource">Node<wbr>Config<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodeconfigsource">Node<wbr>Config<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}If specified, the source to get node configuration from The DynamicKubeletConfig feature gate must be enabled for the Kubelet to use this field{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1757,7 +1757,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#taints_csharp" style="color: inherit; text-decoration: inherit;">Taints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taint">List&lt;Taint<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#taint">List&lt;Taint&gt;</a></span>
     </dt>
     <dd>{{% md %}}If specified, the node's taints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1837,7 +1837,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#configsource_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeconfigsource">Node<wbr>Config<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodeconfigsource">Node<wbr>Config<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}If specified, the source to get node configuration from The DynamicKubeletConfig feature gate must be enabled for the Kubelet to use this field{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1877,7 +1877,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#taints_nodejs" style="color: inherit; text-decoration: inherit;">taints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taint">Taint<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#taint">Taint[]</a></span>
     </dt>
     <dd>{{% md %}}If specified, the node's taints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1897,7 +1897,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#config_source_python" style="color: inherit; text-decoration: inherit;">config_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeconfigsource">Node<wbr>Config<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodeconfigsource">Node<wbr>Config<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}If specified, the source to get node configuration from The DynamicKubeletConfig feature gate must be enabled for the Kubelet to use this field{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1937,7 +1937,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#taints_python" style="color: inherit; text-decoration: inherit;">taints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taint">Taint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#taint">Taint]</a></span>
     </dt>
     <dd>{{% md %}}If specified, the node's taints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1959,7 +1959,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#addresses_csharp" style="color: inherit; text-decoration: inherit;">Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeaddress">List&lt;Node<wbr>Address<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#nodeaddress">List&lt;Node<wbr>Address&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of addresses reachable to the node. Queried from cloud provider, if available. More info: https://kubernetes.io/docs/concepts/nodes/node/#addresses Note: This field is declared as mergeable, but the merge key is not sufficiently unique, which can cause data corruption when it is merged. Callers should instead use a full-replacement patch. See http://pr.k8s.io/79391 for an example.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1983,7 +1983,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodecondition">List&lt;Node<wbr>Condition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#nodecondition">List&lt;Node<wbr>Condition&gt;</a></span>
     </dt>
     <dd>{{% md %}}Conditions is an array of current observed node conditions. More info: https://kubernetes.io/docs/concepts/nodes/node/#condition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1991,7 +1991,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#config_csharp" style="color: inherit; text-decoration: inherit;">Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeconfigstatus">Node<wbr>Config<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodeconfigstatus">Node<wbr>Config<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Status of the config assigned to the node via the dynamic Kubelet config feature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1999,7 +1999,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#daemonendpoints_csharp" style="color: inherit; text-decoration: inherit;">Daemon<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodedaemonendpoints">Node<wbr>Daemon<wbr>Endpoints<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodedaemonendpoints">Node<wbr>Daemon<wbr>Endpoints</a></span>
     </dt>
     <dd>{{% md %}}Endpoints of daemons running on the Node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2007,7 +2007,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#images_csharp" style="color: inherit; text-decoration: inherit;">Images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerimage">List&lt;Container<wbr>Image<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#containerimage">List&lt;Container<wbr>Image&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of container images on this node{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2015,7 +2015,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#nodeinfo_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodesysteminfo">Node<wbr>System<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodesysteminfo">Node<wbr>System<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Set of ids/uuids to uniquely identify the node. More info: https://kubernetes.io/docs/concepts/nodes/node/#info{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2031,7 +2031,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#volumesattached_csharp" style="color: inherit; text-decoration: inherit;">Volumes<wbr>Attached</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attachedvolume">List&lt;Attached<wbr>Volume<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#attachedvolume">List&lt;Attached<wbr>Volume&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of volumes that are attached to the node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2143,7 +2143,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#addresses_nodejs" style="color: inherit; text-decoration: inherit;">addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeaddress">Node<wbr>Address<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#nodeaddress">Node<wbr>Address[]</a></span>
     </dt>
     <dd>{{% md %}}List of addresses reachable to the node. Queried from cloud provider, if available. More info: https://kubernetes.io/docs/concepts/nodes/node/#addresses Note: This field is declared as mergeable, but the merge key is not sufficiently unique, which can cause data corruption when it is merged. Callers should instead use a full-replacement patch. See http://pr.k8s.io/79391 for an example.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2167,7 +2167,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodecondition">Node<wbr>Condition<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#nodecondition">Node<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}Conditions is an array of current observed node conditions. More info: https://kubernetes.io/docs/concepts/nodes/node/#condition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2175,7 +2175,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeconfigstatus">Node<wbr>Config<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodeconfigstatus">Node<wbr>Config<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Status of the config assigned to the node via the dynamic Kubelet config feature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2183,7 +2183,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#daemonendpoints_nodejs" style="color: inherit; text-decoration: inherit;">daemon<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodedaemonendpoints">Node<wbr>Daemon<wbr>Endpoints<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodedaemonendpoints">Node<wbr>Daemon<wbr>Endpoints</a></span>
     </dt>
     <dd>{{% md %}}Endpoints of daemons running on the Node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2191,7 +2191,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#images_nodejs" style="color: inherit; text-decoration: inherit;">images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerimage">Container<wbr>Image<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#containerimage">Container<wbr>Image[]</a></span>
     </dt>
     <dd>{{% md %}}List of container images on this node{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2199,7 +2199,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#nodeinfo_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodesysteminfo">Node<wbr>System<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodesysteminfo">Node<wbr>System<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Set of ids/uuids to uniquely identify the node. More info: https://kubernetes.io/docs/concepts/nodes/node/#info{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2215,7 +2215,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#volumesattached_nodejs" style="color: inherit; text-decoration: inherit;">volumes<wbr>Attached</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attachedvolume">Attached<wbr>Volume<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#attachedvolume">Attached<wbr>Volume[]</a></span>
     </dt>
     <dd>{{% md %}}List of volumes that are attached to the node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2235,7 +2235,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#addresses_python" style="color: inherit; text-decoration: inherit;">addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeaddress">Node<wbr>Address<wbr>Args]</a></span>
+        <span class="property-type"><a href="#nodeaddress">Node<wbr>Address]</a></span>
     </dt>
     <dd>{{% md %}}List of addresses reachable to the node. Queried from cloud provider, if available. More info: https://kubernetes.io/docs/concepts/nodes/node/#addresses Note: This field is declared as mergeable, but the merge key is not sufficiently unique, which can cause data corruption when it is merged. Callers should instead use a full-replacement patch. See http://pr.k8s.io/79391 for an example.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2259,7 +2259,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodecondition">Node<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#nodecondition">Node<wbr>Condition]</a></span>
     </dt>
     <dd>{{% md %}}Conditions is an array of current observed node conditions. More info: https://kubernetes.io/docs/concepts/nodes/node/#condition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2267,7 +2267,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeconfigstatus">Node<wbr>Config<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodeconfigstatus">Node<wbr>Config<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Status of the config assigned to the node via the dynamic Kubelet config feature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2275,7 +2275,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#daemon_endpoints_python" style="color: inherit; text-decoration: inherit;">daemon_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodedaemonendpoints">Node<wbr>Daemon<wbr>Endpoints<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodedaemonendpoints">Node<wbr>Daemon<wbr>Endpoints</a></span>
     </dt>
     <dd>{{% md %}}Endpoints of daemons running on the Node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2283,7 +2283,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#images_python" style="color: inherit; text-decoration: inherit;">images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerimage">Container<wbr>Image<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containerimage">Container<wbr>Image]</a></span>
     </dt>
     <dd>{{% md %}}List of container images on this node{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2291,7 +2291,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#node_info_python" style="color: inherit; text-decoration: inherit;">node_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodesysteminfo">Node<wbr>System<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodesysteminfo">Node<wbr>System<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Set of ids/uuids to uniquely identify the node. More info: https://kubernetes.io/docs/concepts/nodes/node/#info{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2307,7 +2307,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#volumes_attached_python" style="color: inherit; text-decoration: inherit;">volumes_<wbr>attached</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attachedvolume">Attached<wbr>Volume<wbr>Args]</a></span>
+        <span class="property-type"><a href="#attachedvolume">Attached<wbr>Volume]</a></span>
     </dt>
     <dd>{{% md %}}List of volumes that are attached to the node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2747,7 +2747,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#managedfields_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedfieldsentry">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Managed<wbr>Fields<wbr>Entry<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managedfieldsentry">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Managed<wbr>Fields<wbr>Entry&gt;</a></span>
     </dt>
     <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2773,7 +2773,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 <a href="#ownerreferences_csharp" style="color: inherit; text-decoration: inherit;">Owner<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ownerreference">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Owner<wbr>Reference<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ownerreference">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Owner<wbr>Reference&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3043,7 +3043,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#managedfields_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedfieldsentry">meta.v1.<wbr>Managed<wbr>Fields<wbr>Entry<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#managedfieldsentry">meta.v1.<wbr>Managed<wbr>Fields<wbr>Entry[]</a></span>
     </dt>
     <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3069,7 +3069,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 <a href="#ownerreferences_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ownerreference">meta.v1.<wbr>Owner<wbr>Reference<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#ownerreference">meta.v1.<wbr>Owner<wbr>Reference[]</a></span>
     </dt>
     <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3191,7 +3191,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#managed_fields_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedfieldsentry">Managed<wbr>Fields<wbr>Entry<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedfieldsentry">Managed<wbr>Fields<wbr>Entry]</a></span>
     </dt>
     <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3217,7 +3217,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 <a href="#owner_references_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>references</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ownerreference">Owner<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ownerreference">Owner<wbr>Reference]</a></span>
     </dt>
     <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

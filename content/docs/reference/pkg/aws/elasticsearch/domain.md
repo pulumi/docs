@@ -1092,7 +1092,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#advancedsecurityoptions_go" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Security<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainadvancedsecurityoptions">Domain<wbr>Advanced<wbr>Security<wbr>Options</a></span>
+        <span class="property-type"><a href="#domainadvancedsecurityoptions">Domain<wbr>Advanced<wbr>Security<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for [fine-grained access control](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/fgac.html). Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1101,7 +1101,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#clusterconfig_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainclusterconfig">Domain<wbr>Cluster<wbr>Config</a></span>
+        <span class="property-type"><a href="#domainclusterconfig">Domain<wbr>Cluster<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the cluster of the domain. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1110,7 +1110,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#cognitooptions_go" style="color: inherit; text-decoration: inherit;">Cognito<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaincognitooptions">Domain<wbr>Cognito<wbr>Options</a></span>
+        <span class="property-type"><a href="#domaincognitooptions">Domain<wbr>Cognito<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for authenticating Kibana with Cognito. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1119,7 +1119,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#domainendpointoptions_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Endpoint<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaindomainendpointoptions">Domain<wbr>Domain<wbr>Endpoint<wbr>Options</a></span>
+        <span class="property-type"><a href="#domaindomainendpointoptions">Domain<wbr>Domain<wbr>Endpoint<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for domain endpoint HTTP(S) related options. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1137,7 +1137,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#ebsoptions_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainebsoptions">Domain<wbr>Ebs<wbr>Options</a></span>
+        <span class="property-type"><a href="#domainebsoptions">Domain<wbr>Ebs<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for EBS related options, may be required based on chosen [instance size](https://aws.amazon.com/elasticsearch-service/pricing/). Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1155,7 +1155,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#encryptatrest_go" style="color: inherit; text-decoration: inherit;">Encrypt<wbr>At<wbr>Rest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainencryptatrest">Domain<wbr>Encrypt<wbr>At<wbr>Rest</a></span>
+        <span class="property-type"><a href="#domainencryptatrest">Domain<wbr>Encrypt<wbr>At<wbr>Rest<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for encrypt at rest options. Only available for [certain instance types](http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-supported-instance-types.html). Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1164,7 +1164,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#logpublishingoptions_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Publishing<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainlogpublishingoption">[]Domain<wbr>Log<wbr>Publishing<wbr>Option</a></span>
+        <span class="property-type"><a href="#domainlogpublishingoption">[]Domain<wbr>Log<wbr>Publishing<wbr>Option<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for publishing slow and application logs to CloudWatch Logs. This block can be declared multiple times, for each log_type, within the same resource. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1173,7 +1173,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#nodetonodeencryption_go" style="color: inherit; text-decoration: inherit;">Node<wbr>To<wbr>Node<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainnodetonodeencryption">Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption</a></span>
+        <span class="property-type"><a href="#domainnodetonodeencryption">Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for node-to-node encryption options. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1182,7 +1182,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#snapshotoptions_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainsnapshotoptions">Domain<wbr>Snapshot<wbr>Options</a></span>
+        <span class="property-type"><a href="#domainsnapshotoptions">Domain<wbr>Snapshot<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for snapshot related options. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1208,7 +1208,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#vpcoptions_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainvpcoptions">Domain<wbr>Vpc<wbr>Options</a></span>
+        <span class="property-type"><a href="#domainvpcoptions">Domain<wbr>Vpc<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for VPC related options. Adding or removing this configuration forces a new resource ([documentation](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-vpc.html#es-vpc-limitations)). Detailed below.
 {{% /md %}}</dd></dl>
@@ -2056,7 +2056,7 @@ The following state arguments are supported:
 <a href="#state_advancedsecurityoptions_go" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Security<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainadvancedsecurityoptions">Domain<wbr>Advanced<wbr>Security<wbr>Options</a></span>
+        <span class="property-type"><a href="#domainadvancedsecurityoptions">Domain<wbr>Advanced<wbr>Security<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for [fine-grained access control](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/fgac.html). Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2074,7 +2074,7 @@ The following state arguments are supported:
 <a href="#state_clusterconfig_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainclusterconfig">Domain<wbr>Cluster<wbr>Config</a></span>
+        <span class="property-type"><a href="#domainclusterconfig">Domain<wbr>Cluster<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the cluster of the domain. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2083,7 +2083,7 @@ The following state arguments are supported:
 <a href="#state_cognitooptions_go" style="color: inherit; text-decoration: inherit;">Cognito<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaincognitooptions">Domain<wbr>Cognito<wbr>Options</a></span>
+        <span class="property-type"><a href="#domaincognitooptions">Domain<wbr>Cognito<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for authenticating Kibana with Cognito. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2092,7 +2092,7 @@ The following state arguments are supported:
 <a href="#state_domainendpointoptions_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Endpoint<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaindomainendpointoptions">Domain<wbr>Domain<wbr>Endpoint<wbr>Options</a></span>
+        <span class="property-type"><a href="#domaindomainendpointoptions">Domain<wbr>Domain<wbr>Endpoint<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for domain endpoint HTTP(S) related options. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2119,7 +2119,7 @@ The following state arguments are supported:
 <a href="#state_ebsoptions_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainebsoptions">Domain<wbr>Ebs<wbr>Options</a></span>
+        <span class="property-type"><a href="#domainebsoptions">Domain<wbr>Ebs<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for EBS related options, may be required based on chosen [instance size](https://aws.amazon.com/elasticsearch-service/pricing/). Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2137,7 +2137,7 @@ The following state arguments are supported:
 <a href="#state_encryptatrest_go" style="color: inherit; text-decoration: inherit;">Encrypt<wbr>At<wbr>Rest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainencryptatrest">Domain<wbr>Encrypt<wbr>At<wbr>Rest</a></span>
+        <span class="property-type"><a href="#domainencryptatrest">Domain<wbr>Encrypt<wbr>At<wbr>Rest<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for encrypt at rest options. Only available for [certain instance types](http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-supported-instance-types.html). Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2164,7 +2164,7 @@ The following state arguments are supported:
 <a href="#state_logpublishingoptions_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Publishing<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainlogpublishingoption">[]Domain<wbr>Log<wbr>Publishing<wbr>Option</a></span>
+        <span class="property-type"><a href="#domainlogpublishingoption">[]Domain<wbr>Log<wbr>Publishing<wbr>Option<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for publishing slow and application logs to CloudWatch Logs. This block can be declared multiple times, for each log_type, within the same resource. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2173,7 +2173,7 @@ The following state arguments are supported:
 <a href="#state_nodetonodeencryption_go" style="color: inherit; text-decoration: inherit;">Node<wbr>To<wbr>Node<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainnodetonodeencryption">Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption</a></span>
+        <span class="property-type"><a href="#domainnodetonodeencryption">Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for node-to-node encryption options. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2182,7 +2182,7 @@ The following state arguments are supported:
 <a href="#state_snapshotoptions_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainsnapshotoptions">Domain<wbr>Snapshot<wbr>Options</a></span>
+        <span class="property-type"><a href="#domainsnapshotoptions">Domain<wbr>Snapshot<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for snapshot related options. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2208,7 +2208,7 @@ The following state arguments are supported:
 <a href="#state_vpcoptions_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainvpcoptions">Domain<wbr>Vpc<wbr>Options</a></span>
+        <span class="property-type"><a href="#domainvpcoptions">Domain<wbr>Vpc<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for VPC related options. Adding or removing this configuration forces a new resource ([documentation](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-vpc.html#es-vpc-limitations)). Detailed below.
 {{% /md %}}</dd></dl>
@@ -2614,7 +2614,7 @@ The following state arguments are supported:
 <a href="#masteruseroptions_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>User<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainadvancedsecurityoptionsmasteruseroptions">Domain<wbr>Advanced<wbr>Security<wbr>Options<wbr>Master<wbr>User<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#domainadvancedsecurityoptionsmasteruseroptions">Domain<wbr>Advanced<wbr>Security<wbr>Options<wbr>Master<wbr>User<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the main user. Detailed below.
 {{% /md %}}</dd></dl>
@@ -2676,7 +2676,7 @@ The following state arguments are supported:
 <a href="#masteruseroptions_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>User<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainadvancedsecurityoptionsmasteruseroptions">Domain<wbr>Advanced<wbr>Security<wbr>Options<wbr>Master<wbr>User<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#domainadvancedsecurityoptionsmasteruseroptions">Domain<wbr>Advanced<wbr>Security<wbr>Options<wbr>Master<wbr>User<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the main user. Detailed below.
 {{% /md %}}</dd></dl>
@@ -2707,7 +2707,7 @@ The following state arguments are supported:
 <a href="#master_user_options_python" style="color: inherit; text-decoration: inherit;">master_<wbr>user_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainadvancedsecurityoptionsmasteruseroptions">Domain<wbr>Advanced<wbr>Security<wbr>Options<wbr>Master<wbr>User<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#domainadvancedsecurityoptionsmasteruseroptions">Domain<wbr>Advanced<wbr>Security<wbr>Options<wbr>Master<wbr>User<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the main user. Detailed below.
 {{% /md %}}</dd></dl>
@@ -2920,7 +2920,7 @@ The following state arguments are supported:
 <a href="#zoneawarenessconfig_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Awareness<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainclusterconfigzoneawarenessconfig">Domain<wbr>Cluster<wbr>Config<wbr>Zone<wbr>Awareness<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#domainclusterconfigzoneawarenessconfig">Domain<wbr>Cluster<wbr>Config<wbr>Zone<wbr>Awareness<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing zone awareness settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3108,7 +3108,7 @@ The following state arguments are supported:
 <a href="#zoneawarenessconfig_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Awareness<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainclusterconfigzoneawarenessconfig">Domain<wbr>Cluster<wbr>Config<wbr>Zone<wbr>Awareness<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#domainclusterconfigzoneawarenessconfig">Domain<wbr>Cluster<wbr>Config<wbr>Zone<wbr>Awareness<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing zone awareness settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3202,7 +3202,7 @@ The following state arguments are supported:
 <a href="#zone_awareness_config_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>awareness_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainclusterconfigzoneawarenessconfig">Domain<wbr>Cluster<wbr>Config<wbr>Zone<wbr>Awareness<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#domainclusterconfigzoneawarenessconfig">Domain<wbr>Cluster<wbr>Config<wbr>Zone<wbr>Awareness<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing zone awareness settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"

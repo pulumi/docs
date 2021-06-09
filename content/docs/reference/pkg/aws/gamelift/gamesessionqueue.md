@@ -360,7 +360,7 @@ The GameSessionQueue resource accepts the following [input]({{< relref "/docs/in
 <a href="#playerlatencypolicies_go" style="color: inherit; text-decoration: inherit;">Player<wbr>Latency<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gamesessionqueueplayerlatencypolicy">[]Game<wbr>Session<wbr>Queue<wbr>Player<wbr>Latency<wbr>Policy</a></span>
+        <span class="property-type"><a href="#gamesessionqueueplayerlatencypolicy">[]Game<wbr>Session<wbr>Queue<wbr>Player<wbr>Latency<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more policies used to choose fleet based on player latency. See below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -833,7 +833,7 @@ The following state arguments are supported:
 <a href="#state_playerlatencypolicies_go" style="color: inherit; text-decoration: inherit;">Player<wbr>Latency<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gamesessionqueueplayerlatencypolicy">[]Game<wbr>Session<wbr>Queue<wbr>Player<wbr>Latency<wbr>Policy</a></span>
+        <span class="property-type"><a href="#gamesessionqueueplayerlatencypolicy">[]Game<wbr>Session<wbr>Queue<wbr>Player<wbr>Latency<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more policies used to choose fleet based on player latency. See below.
 {{% /md %}}</dd><dt class="property-optional"

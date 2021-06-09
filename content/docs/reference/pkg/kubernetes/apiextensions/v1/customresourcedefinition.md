@@ -182,7 +182,7 @@ The CustomResourceDefinition resource accepts the following [input]({{< relref "
 <a href="#spec_go" style="color: inherit; text-decoration: inherit;">Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcedefinitionspec">Custom<wbr>Resource<wbr>Definition<wbr>Spec</a></span>
+        <span class="property-type"><a href="#customresourcedefinitionspec">Custom<wbr>Resource<wbr>Definition<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}spec describes how the user wants the resources to appear{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -190,7 +190,7 @@ The CustomResourceDefinition resource accepts the following [input]({{< relref "
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta</a></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -560,7 +560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#webhook_csharp" style="color: inherit; text-decoration: inherit;">Webhook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookconversion">Webhook<wbr>Conversion<wbr>Args</a></span>
+        <span class="property-type"><a href="#webhookconversion">Webhook<wbr>Conversion</a></span>
     </dt>
     <dd>{{% md %}}webhook describes how to call the conversion webhook. Required when `strategy` is set to `Webhook`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -602,7 +602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#webhook_nodejs" style="color: inherit; text-decoration: inherit;">webhook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookconversion">Webhook<wbr>Conversion<wbr>Args</a></span>
+        <span class="property-type"><a href="#webhookconversion">Webhook<wbr>Conversion</a></span>
     </dt>
     <dd>{{% md %}}webhook describes how to call the conversion webhook. Required when `strategy` is set to `Webhook`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -623,7 +623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#webhook_python" style="color: inherit; text-decoration: inherit;">webhook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookconversion">Webhook<wbr>Conversion<wbr>Args</a></span>
+        <span class="property-type"><a href="#webhookconversion">Webhook<wbr>Conversion</a></span>
     </dt>
     <dd>{{% md %}}webhook describes how to call the conversion webhook. Required when `strategy` is set to `Webhook`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1033,7 +1033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcedefinitionnames">Custom<wbr>Resource<wbr>Definition<wbr>Names<wbr>Args</a></span>
+        <span class="property-type"><a href="#customresourcedefinitionnames">Custom<wbr>Resource<wbr>Definition<wbr>Names</a></span>
     </dt>
     <dd>{{% md %}}names specify the resource and kind names for the custom resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1049,7 +1049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#versions_csharp" style="color: inherit; text-decoration: inherit;">Versions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcedefinitionversion">List&lt;Custom<wbr>Resource<wbr>Definition<wbr>Version<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#customresourcedefinitionversion">List&lt;Custom<wbr>Resource<wbr>Definition<wbr>Version&gt;</a></span>
     </dt>
     <dd>{{% md %}}versions is the list of all API versions of the defined custom resource. Version names are used to compute the order in which served versions are listed in API discovery. If the version string is "kube-like", it will sort above non "kube-like" version strings, which are ordered lexicographically. "Kube-like" versions start with a "v", then are followed by a number (the major version), then optionally the string "alpha" or "beta" and another number (the minor version). These are sorted first by GA > beta > alpha (where GA is a version with no suffix such as beta or alpha), and then by comparing major version, then minor version. An example sorted list of versions: v10, v2, v1, v11beta2, v10beta3, v3beta1, v12alpha1, v11alpha2, foo1, foo10.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1057,7 +1057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conversion_csharp" style="color: inherit; text-decoration: inherit;">Conversion</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourceconversion">Custom<wbr>Resource<wbr>Conversion<wbr>Args</a></span>
+        <span class="property-type"><a href="#customresourceconversion">Custom<wbr>Resource<wbr>Conversion</a></span>
     </dt>
     <dd>{{% md %}}conversion defines conversion settings for the CRD.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1137,7 +1137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcedefinitionnames">Custom<wbr>Resource<wbr>Definition<wbr>Names<wbr>Args</a></span>
+        <span class="property-type"><a href="#customresourcedefinitionnames">Custom<wbr>Resource<wbr>Definition<wbr>Names</a></span>
     </dt>
     <dd>{{% md %}}names specify the resource and kind names for the custom resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1153,7 +1153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#versions_nodejs" style="color: inherit; text-decoration: inherit;">versions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcedefinitionversion">Custom<wbr>Resource<wbr>Definition<wbr>Version<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#customresourcedefinitionversion">Custom<wbr>Resource<wbr>Definition<wbr>Version[]</a></span>
     </dt>
     <dd>{{% md %}}versions is the list of all API versions of the defined custom resource. Version names are used to compute the order in which served versions are listed in API discovery. If the version string is "kube-like", it will sort above non "kube-like" version strings, which are ordered lexicographically. "Kube-like" versions start with a "v", then are followed by a number (the major version), then optionally the string "alpha" or "beta" and another number (the minor version). These are sorted first by GA > beta > alpha (where GA is a version with no suffix such as beta or alpha), and then by comparing major version, then minor version. An example sorted list of versions: v10, v2, v1, v11beta2, v10beta3, v3beta1, v12alpha1, v11alpha2, foo1, foo10.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1161,7 +1161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conversion_nodejs" style="color: inherit; text-decoration: inherit;">conversion</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourceconversion">Custom<wbr>Resource<wbr>Conversion<wbr>Args</a></span>
+        <span class="property-type"><a href="#customresourceconversion">Custom<wbr>Resource<wbr>Conversion</a></span>
     </dt>
     <dd>{{% md %}}conversion defines conversion settings for the CRD.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1189,7 +1189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcedefinitionnames">Custom<wbr>Resource<wbr>Definition<wbr>Names<wbr>Args</a></span>
+        <span class="property-type"><a href="#customresourcedefinitionnames">Custom<wbr>Resource<wbr>Definition<wbr>Names</a></span>
     </dt>
     <dd>{{% md %}}names specify the resource and kind names for the custom resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1205,7 +1205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#versions_python" style="color: inherit; text-decoration: inherit;">versions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcedefinitionversion">Custom<wbr>Resource<wbr>Definition<wbr>Version<wbr>Args]</a></span>
+        <span class="property-type"><a href="#customresourcedefinitionversion">Custom<wbr>Resource<wbr>Definition<wbr>Version]</a></span>
     </dt>
     <dd>{{% md %}}versions is the list of all API versions of the defined custom resource. Version names are used to compute the order in which served versions are listed in API discovery. If the version string is "kube-like", it will sort above non "kube-like" version strings, which are ordered lexicographically. "Kube-like" versions start with a "v", then are followed by a number (the major version), then optionally the string "alpha" or "beta" and another number (the minor version). These are sorted first by GA > beta > alpha (where GA is a version with no suffix such as beta or alpha), and then by comparing major version, then minor version. An example sorted list of versions: v10, v2, v1, v11beta2, v10beta3, v3beta1, v12alpha1, v11alpha2, foo1, foo10.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1213,7 +1213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conversion_python" style="color: inherit; text-decoration: inherit;">conversion</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourceconversion">Custom<wbr>Resource<wbr>Conversion<wbr>Args</a></span>
+        <span class="property-type"><a href="#customresourceconversion">Custom<wbr>Resource<wbr>Conversion</a></span>
     </dt>
     <dd>{{% md %}}conversion defines conversion settings for the CRD.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1235,7 +1235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acceptednames_csharp" style="color: inherit; text-decoration: inherit;">Accepted<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcedefinitionnames">Custom<wbr>Resource<wbr>Definition<wbr>Names<wbr>Args</a></span>
+        <span class="property-type"><a href="#customresourcedefinitionnames">Custom<wbr>Resource<wbr>Definition<wbr>Names</a></span>
     </dt>
     <dd>{{% md %}}acceptedNames are the names that are actually being used to serve discovery. They may be different than the names in spec.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1251,7 +1251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcedefinitioncondition">List&lt;Custom<wbr>Resource<wbr>Definition<wbr>Condition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#customresourcedefinitioncondition">List&lt;Custom<wbr>Resource<wbr>Definition<wbr>Condition&gt;</a></span>
     </dt>
     <dd>{{% md %}}conditions indicate state for particular aspects of a CustomResourceDefinition{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1291,7 +1291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acceptednames_nodejs" style="color: inherit; text-decoration: inherit;">accepted<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcedefinitionnames">Custom<wbr>Resource<wbr>Definition<wbr>Names<wbr>Args</a></span>
+        <span class="property-type"><a href="#customresourcedefinitionnames">Custom<wbr>Resource<wbr>Definition<wbr>Names</a></span>
     </dt>
     <dd>{{% md %}}acceptedNames are the names that are actually being used to serve discovery. They may be different than the names in spec.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1307,7 +1307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcedefinitioncondition">Custom<wbr>Resource<wbr>Definition<wbr>Condition<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#customresourcedefinitioncondition">Custom<wbr>Resource<wbr>Definition<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}conditions indicate state for particular aspects of a CustomResourceDefinition{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1319,7 +1319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accepted_names_python" style="color: inherit; text-decoration: inherit;">accepted_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcedefinitionnames">Custom<wbr>Resource<wbr>Definition<wbr>Names<wbr>Args</a></span>
+        <span class="property-type"><a href="#customresourcedefinitionnames">Custom<wbr>Resource<wbr>Definition<wbr>Names</a></span>
     </dt>
     <dd>{{% md %}}acceptedNames are the names that are actually being used to serve discovery. They may be different than the names in spec.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1335,7 +1335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcedefinitioncondition">Custom<wbr>Resource<wbr>Definition<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#customresourcedefinitioncondition">Custom<wbr>Resource<wbr>Definition<wbr>Condition]</a></span>
     </dt>
     <dd>{{% md %}}conditions indicate state for particular aspects of a CustomResourceDefinition{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1373,7 +1373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additionalprintercolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Printer<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcecolumndefinition">List&lt;Custom<wbr>Resource<wbr>Column<wbr>Definition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#customresourcecolumndefinition">List&lt;Custom<wbr>Resource<wbr>Column<wbr>Definition&gt;</a></span>
     </dt>
     <dd>{{% md %}}additionalPrinterColumns specifies additional columns returned in Table output. See https://kubernetes.io/docs/reference/using-api/api-concepts/#receiving-resources-as-tables for details. If no columns are specified, a single column displaying the age of the custom resource is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1397,7 +1397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schema_csharp" style="color: inherit; text-decoration: inherit;">Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcevalidation">Custom<wbr>Resource<wbr>Validation<wbr>Args</a></span>
+        <span class="property-type"><a href="#customresourcevalidation">Custom<wbr>Resource<wbr>Validation</a></span>
     </dt>
     <dd>{{% md %}}schema describes the schema used for validation, pruning, and defaulting of this version of the custom resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1405,7 +1405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subresources_csharp" style="color: inherit; text-decoration: inherit;">Subresources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcesubresources">Custom<wbr>Resource<wbr>Subresources<wbr>Args</a></span>
+        <span class="property-type"><a href="#customresourcesubresources">Custom<wbr>Resource<wbr>Subresources</a></span>
     </dt>
     <dd>{{% md %}}subresources specify what subresources this version of the defined custom resource have.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1509,7 +1509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additionalprintercolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Printer<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcecolumndefinition">Custom<wbr>Resource<wbr>Column<wbr>Definition<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#customresourcecolumndefinition">Custom<wbr>Resource<wbr>Column<wbr>Definition[]</a></span>
     </dt>
     <dd>{{% md %}}additionalPrinterColumns specifies additional columns returned in Table output. See https://kubernetes.io/docs/reference/using-api/api-concepts/#receiving-resources-as-tables for details. If no columns are specified, a single column displaying the age of the custom resource is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1533,7 +1533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schema_nodejs" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcevalidation">Custom<wbr>Resource<wbr>Validation<wbr>Args</a></span>
+        <span class="property-type"><a href="#customresourcevalidation">Custom<wbr>Resource<wbr>Validation</a></span>
     </dt>
     <dd>{{% md %}}schema describes the schema used for validation, pruning, and defaulting of this version of the custom resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1541,7 +1541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subresources_nodejs" style="color: inherit; text-decoration: inherit;">subresources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcesubresources">Custom<wbr>Resource<wbr>Subresources<wbr>Args</a></span>
+        <span class="property-type"><a href="#customresourcesubresources">Custom<wbr>Resource<wbr>Subresources</a></span>
     </dt>
     <dd>{{% md %}}subresources specify what subresources this version of the defined custom resource have.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1577,7 +1577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additional_printer_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>printer_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcecolumndefinition">Custom<wbr>Resource<wbr>Column<wbr>Definition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#customresourcecolumndefinition">Custom<wbr>Resource<wbr>Column<wbr>Definition]</a></span>
     </dt>
     <dd>{{% md %}}additionalPrinterColumns specifies additional columns returned in Table output. See https://kubernetes.io/docs/reference/using-api/api-concepts/#receiving-resources-as-tables for details. If no columns are specified, a single column displaying the age of the custom resource is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1601,7 +1601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcevalidation">Custom<wbr>Resource<wbr>Validation<wbr>Args</a></span>
+        <span class="property-type"><a href="#customresourcevalidation">Custom<wbr>Resource<wbr>Validation</a></span>
     </dt>
     <dd>{{% md %}}schema describes the schema used for validation, pruning, and defaulting of this version of the custom resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1609,7 +1609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subresources_python" style="color: inherit; text-decoration: inherit;">subresources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcesubresources">Custom<wbr>Resource<wbr>Subresources<wbr>Args</a></span>
+        <span class="property-type"><a href="#customresourcesubresources">Custom<wbr>Resource<wbr>Subresources</a></span>
     </dt>
     <dd>{{% md %}}subresources specify what subresources this version of the defined custom resource have.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1737,7 +1737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scale_csharp" style="color: inherit; text-decoration: inherit;">Scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcesubresourcescale">Custom<wbr>Resource<wbr>Subresource<wbr>Scale<wbr>Args</a></span>
+        <span class="property-type"><a href="#customresourcesubresourcescale">Custom<wbr>Resource<wbr>Subresource<wbr>Scale</a></span>
     </dt>
     <dd>{{% md %}}scale indicates the custom resource should serve a `/scale` subresource that returns an `autoscaling/v1` Scale object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1777,7 +1777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scale_nodejs" style="color: inherit; text-decoration: inherit;">scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcesubresourcescale">Custom<wbr>Resource<wbr>Subresource<wbr>Scale<wbr>Args</a></span>
+        <span class="property-type"><a href="#customresourcesubresourcescale">Custom<wbr>Resource<wbr>Subresource<wbr>Scale</a></span>
     </dt>
     <dd>{{% md %}}scale indicates the custom resource should serve a `/scale` subresource that returns an `autoscaling/v1` Scale object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1797,7 +1797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scale_python" style="color: inherit; text-decoration: inherit;">scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcesubresourcescale">Custom<wbr>Resource<wbr>Subresource<wbr>Scale<wbr>Args</a></span>
+        <span class="property-type"><a href="#customresourcesubresourcescale">Custom<wbr>Resource<wbr>Subresource<wbr>Scale</a></span>
     </dt>
     <dd>{{% md %}}scale indicates the custom resource should serve a `/scale` subresource that returns an `autoscaling/v1` Scale object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1819,7 +1819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#openapiv3schema_csharp" style="color: inherit; text-decoration: inherit;">Open<wbr>APIV3Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props</a></span>
     </dt>
     <dd>{{% md %}}openAPIV3Schema is the OpenAPI v3 schema to use for validation and pruning.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1843,7 +1843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#openapiv3schema_nodejs" style="color: inherit; text-decoration: inherit;">open<wbr>APIV3Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props</a></span>
     </dt>
     <dd>{{% md %}}openAPIV3Schema is the OpenAPI v3 schema to use for validation and pruning.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1855,7 +1855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#open_apiv3_schema_python" style="color: inherit; text-decoration: inherit;">open_<wbr>apiv3_<wbr>schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props</a></span>
     </dt>
     <dd>{{% md %}}openAPIV3Schema is the OpenAPI v3 schema to use for validation and pruning.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1951,7 +1951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additionalitems_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props<wbr>Args</a> | bool</span>
+        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props</a> | bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1959,7 +1959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additionalproperties_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props<wbr>Args</a> | bool</span>
+        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props</a> | bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1967,7 +1967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allof_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonschemaprops">List&lt;JSONSchema<wbr>Props<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#jsonschemaprops">List&lt;JSONSchema<wbr>Props&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1975,7 +1975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#anyof_csharp" style="color: inherit; text-decoration: inherit;">Any<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonschemaprops">List&lt;JSONSchema<wbr>Props<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#jsonschemaprops">List&lt;JSONSchema<wbr>Props&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1991,7 +1991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#definitions_csharp" style="color: inherit; text-decoration: inherit;">Definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, JSONSchema<wbr>Props<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, JSONSchema<wbr>Props&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1999,7 +1999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dependencies_csharp" style="color: inherit; text-decoration: inherit;">Dependencies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Union&lt;JSONSchema<wbr>Props<wbr>Args, Immutable<wbr>Array&lt;string&gt;&gt;&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Union&lt;JSONSchema<wbr>Props, Immutable<wbr>Array&lt;string&gt;&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2047,7 +2047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#externaldocs_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Docs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#externaldocumentation">External<wbr>Documentation<wbr>Args</a></span>
+        <span class="property-type"><a href="#externaldocumentation">External<wbr>Documentation</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2073,7 +2073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props<wbr>Args</a> | List&lt;System.<wbr>Text.<wbr>Json.<wbr>Json<wbr>Element&gt;</span>
+        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props</a> | List&lt;System.<wbr>Text.<wbr>Json.<wbr>Json<wbr>Element&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2153,7 +2153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#not_csharp" style="color: inherit; text-decoration: inherit;">Not</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2169,7 +2169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oneof_csharp" style="color: inherit; text-decoration: inherit;">One<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonschemaprops">List&lt;JSONSchema<wbr>Props<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#jsonschemaprops">List&lt;JSONSchema<wbr>Props&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2185,7 +2185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#patternproperties_csharp" style="color: inherit; text-decoration: inherit;">Pattern<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, JSONSchema<wbr>Props<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, JSONSchema<wbr>Props&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2193,7 +2193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, JSONSchema<wbr>Props<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, JSONSchema<wbr>Props&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2733,7 +2733,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd><dt class="property-optional"
 <a href="#additionalitems_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props<wbr>Args</a> | boolean</span>
+        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props</a> | boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2741,7 +2741,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd><dt class="property-optional"
 <a href="#additionalproperties_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props<wbr>Args</a> | boolean</span>
+        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props</a> | boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2749,7 +2749,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd><dt class="property-optional"
 <a href="#allof_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2757,7 +2757,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd><dt class="property-optional"
 <a href="#anyof_nodejs" style="color: inherit; text-decoration: inherit;">any<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2773,7 +2773,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd><dt class="property-optional"
 <a href="#definitions_nodejs" style="color: inherit; text-decoration: inherit;">definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: JSONSchema<wbr>Props<wbr>Args}</span>
+        <span class="property-type">{[key: string]: JSONSchema<wbr>Props}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2781,7 +2781,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd><dt class="property-optional"
 <a href="#dependencies_nodejs" style="color: inherit; text-decoration: inherit;">dependencies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: JSONSchema<wbr>Props<wbr>Args | string[]}</span>
+        <span class="property-type">{[key: string]: JSONSchema<wbr>Props | string[]}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2829,7 +2829,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd><dt class="property-optional"
 <a href="#externaldocs_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Docs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#externaldocumentation">External<wbr>Documentation<wbr>Args</a></span>
+        <span class="property-type"><a href="#externaldocumentation">External<wbr>Documentation</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2855,7 +2855,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd><dt class="property-optional"
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props<wbr>Args</a> | any[]</span>
+        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props</a> | any[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2935,7 +2935,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd><dt class="property-optional"
 <a href="#not_nodejs" style="color: inherit; text-decoration: inherit;">not</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2951,7 +2951,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd><dt class="property-optional"
 <a href="#oneof_nodejs" style="color: inherit; text-decoration: inherit;">one<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2967,7 +2967,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd><dt class="property-optional"
 <a href="#patternproperties_nodejs" style="color: inherit; text-decoration: inherit;">pattern<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: JSONSchema<wbr>Props<wbr>Args}</span>
+        <span class="property-type">{[key: string]: JSONSchema<wbr>Props}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2975,7 +2975,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd><dt class="property-optional"
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: JSONSchema<wbr>Props<wbr>Args}</span>
+        <span class="property-type">{[key: string]: JSONSchema<wbr>Props}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3116,7 +3116,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd><dt class="property-optional"
 <a href="#additional_items_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props<wbr>Args</a> | bool</span>
+        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props</a> | bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3124,7 +3124,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd><dt class="property-optional"
 <a href="#additional_properties_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props<wbr>Args</a> | bool</span>
+        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props</a> | bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3132,7 +3132,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd><dt class="property-optional"
 <a href="#all_of_python" style="color: inherit; text-decoration: inherit;">all_<wbr>of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3140,7 +3140,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd><dt class="property-optional"
 <a href="#any_of_python" style="color: inherit; text-decoration: inherit;">any_<wbr>of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3156,7 +3156,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd><dt class="property-optional"
 <a href="#definitions_python" style="color: inherit; text-decoration: inherit;">definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">JSONSchema<wbr>Props<wbr>Args]</span>
+        <span class="property-type">JSONSchema<wbr>Props]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3164,7 +3164,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd><dt class="property-optional"
 <a href="#dependencies_python" style="color: inherit; text-decoration: inherit;">dependencies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">JSONSchema<wbr>Props<wbr>Args, Sequence[str]]]</span>
+        <span class="property-type">JSONSchema<wbr>Props, Sequence[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3212,7 +3212,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd><dt class="property-optional"
 <a href="#external_docs_python" style="color: inherit; text-decoration: inherit;">external_<wbr>docs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#externaldocumentation">External<wbr>Documentation<wbr>Args</a></span>
+        <span class="property-type"><a href="#externaldocumentation">External<wbr>Documentation</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3238,7 +3238,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd><dt class="property-optional"
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props<wbr>Args</a> | Sequence[Any]</span>
+        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props</a> | Sequence[Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3318,7 +3318,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd><dt class="property-optional"
 <a href="#not__python" style="color: inherit; text-decoration: inherit;">not_</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3334,7 +3334,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd><dt class="property-optional"
 <a href="#one_of_python" style="color: inherit; text-decoration: inherit;">one_<wbr>of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3350,7 +3350,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd><dt class="property-optional"
 <a href="#pattern_properties_python" style="color: inherit; text-decoration: inherit;">pattern_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">JSONSchema<wbr>Props<wbr>Args]</span>
+        <span class="property-type">JSONSchema<wbr>Props]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3358,7 +3358,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd><dt class="property-optional"
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">JSONSchema<wbr>Props<wbr>Args]</span>
+        <span class="property-type">JSONSchema<wbr>Props]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3775,7 +3775,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#managedfields_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedfieldsentry">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Managed<wbr>Fields<wbr>Entry<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managedfieldsentry">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Managed<wbr>Fields<wbr>Entry&gt;</a></span>
     </dt>
     <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3801,7 +3801,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 <a href="#ownerreferences_csharp" style="color: inherit; text-decoration: inherit;">Owner<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ownerreference">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Owner<wbr>Reference<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ownerreference">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Owner<wbr>Reference&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4071,7 +4071,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#managedfields_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedfieldsentry">meta.v1.<wbr>Managed<wbr>Fields<wbr>Entry<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#managedfieldsentry">meta.v1.<wbr>Managed<wbr>Fields<wbr>Entry[]</a></span>
     </dt>
     <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4097,7 +4097,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 <a href="#ownerreferences_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ownerreference">meta.v1.<wbr>Owner<wbr>Reference<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#ownerreference">meta.v1.<wbr>Owner<wbr>Reference[]</a></span>
     </dt>
     <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4219,7 +4219,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#managed_fields_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedfieldsentry">Managed<wbr>Fields<wbr>Entry<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedfieldsentry">Managed<wbr>Fields<wbr>Entry]</a></span>
     </dt>
     <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4245,7 +4245,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 <a href="#owner_references_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>references</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ownerreference">Owner<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ownerreference">Owner<wbr>Reference]</a></span>
     </dt>
     <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4653,7 +4653,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicereference">Service<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicereference">Service<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}service is a reference to the service for this webhook. Either service or url must be specified.
 
@@ -4733,7 +4733,7 @@ Attempting to use a user or basic auth e.g. "user:password@" is not allowed. Fra
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicereference">Service<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicereference">Service<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}service is a reference to the service for this webhook. Either service or url must be specified.
 
@@ -4773,7 +4773,7 @@ Attempting to use a user or basic auth e.g. "user:password@" is not allowed. Fra
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicereference">Service<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicereference">Service<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}service is a reference to the service for this webhook. Either service or url must be specified.
 
@@ -4815,7 +4815,7 @@ Attempting to use a user or basic auth e.g. "user:password@" is not allowed. Fra
 <a href="#clientconfig_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookclientconfig">Webhook<wbr>Client<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#webhookclientconfig">Webhook<wbr>Client<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}clientConfig is the instructions for how to call the webhook if strategy is `Webhook`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4855,7 +4855,7 @@ Attempting to use a user or basic auth e.g. "user:password@" is not allowed. Fra
 <a href="#clientconfig_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookclientconfig">Webhook<wbr>Client<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#webhookclientconfig">Webhook<wbr>Client<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}clientConfig is the instructions for how to call the webhook if strategy is `Webhook`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4875,7 +4875,7 @@ Attempting to use a user or basic auth e.g. "user:password@" is not allowed. Fra
 <a href="#client_config_python" style="color: inherit; text-decoration: inherit;">client_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookclientconfig">Webhook<wbr>Client<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#webhookclientconfig">Webhook<wbr>Client<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}clientConfig is the instructions for how to call the webhook if strategy is `Webhook`.{{% /md %}}</dd></dl>
 {{% /choosable %}}

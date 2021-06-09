@@ -508,7 +508,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#firewallpolicy_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyfirewallpolicy">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy</a></span>
+        <span class="property-type"><a href="#firewallpolicyfirewallpolicy">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the rule groups and policy actions to use in the firewall policy. See Firewall Policy below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -999,7 +999,7 @@ The following state arguments are supported:
 <a href="#state_firewallpolicy_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyfirewallpolicy">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy</a></span>
+        <span class="property-type"><a href="#firewallpolicyfirewallpolicy">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the rule groups and policy actions to use in the firewall policy. See Firewall Policy below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1213,7 +1213,7 @@ In addition, you can specify custom actions that are compatible with your standa
 <a href="#statefulrulegroupreferences_csharp" style="color: inherit; text-decoration: inherit;">Stateful<wbr>Rule<wbr>Group<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyfirewallpolicystatefulrulegroupreference">List&lt;Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateful<wbr>Rule<wbr>Group<wbr>Reference<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#firewallpolicyfirewallpolicystatefulrulegroupreference">List&lt;Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateful<wbr>Rule<wbr>Group<wbr>Reference&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing references to the stateful rule groups that are used in the policy. See Stateful Rule Group Reference below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1222,7 +1222,7 @@ In addition, you can specify custom actions that are compatible with your standa
 <a href="#statelesscustomactions_csharp" style="color: inherit; text-decoration: inherit;">Stateless<wbr>Custom<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyfirewallpolicystatelesscustomaction">List&lt;Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Custom<wbr>Action<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#firewallpolicyfirewallpolicystatelesscustomaction">List&lt;Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Custom<wbr>Action&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the custom action definitions that are available for use in the firewall policy's `stateless_default_actions`. See Stateless Custom Action below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1231,7 +1231,7 @@ In addition, you can specify custom actions that are compatible with your standa
 <a href="#statelessrulegroupreferences_csharp" style="color: inherit; text-decoration: inherit;">Stateless<wbr>Rule<wbr>Group<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyfirewallpolicystatelessrulegroupreference">List&lt;Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Rule<wbr>Group<wbr>Reference<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#firewallpolicyfirewallpolicystatelessrulegroupreference">List&lt;Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Rule<wbr>Group<wbr>Reference&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing references to the stateless rule groups that are used in the policy. See Stateless Rule Group Reference below for details.
 {{% /md %}}</dd></dl>
@@ -1315,7 +1315,7 @@ In addition, you can specify custom actions that are compatible with your standa
 <a href="#statefulrulegroupreferences_nodejs" style="color: inherit; text-decoration: inherit;">stateful<wbr>Rule<wbr>Group<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyfirewallpolicystatefulrulegroupreference">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateful<wbr>Rule<wbr>Group<wbr>Reference<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#firewallpolicyfirewallpolicystatefulrulegroupreference">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateful<wbr>Rule<wbr>Group<wbr>Reference[]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing references to the stateful rule groups that are used in the policy. See Stateful Rule Group Reference below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1324,7 +1324,7 @@ In addition, you can specify custom actions that are compatible with your standa
 <a href="#statelesscustomactions_nodejs" style="color: inherit; text-decoration: inherit;">stateless<wbr>Custom<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyfirewallpolicystatelesscustomaction">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Custom<wbr>Action<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#firewallpolicyfirewallpolicystatelesscustomaction">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Custom<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the custom action definitions that are available for use in the firewall policy's `stateless_default_actions`. See Stateless Custom Action below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1333,7 +1333,7 @@ In addition, you can specify custom actions that are compatible with your standa
 <a href="#statelessrulegroupreferences_nodejs" style="color: inherit; text-decoration: inherit;">stateless<wbr>Rule<wbr>Group<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyfirewallpolicystatelessrulegroupreference">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Rule<wbr>Group<wbr>Reference<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#firewallpolicyfirewallpolicystatelessrulegroupreference">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Rule<wbr>Group<wbr>Reference[]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing references to the stateless rule groups that are used in the policy. See Stateless Rule Group Reference below for details.
 {{% /md %}}</dd></dl>
@@ -1366,7 +1366,7 @@ In addition, you can specify custom actions that are compatible with your standa
 <a href="#stateful_rule_group_references_python" style="color: inherit; text-decoration: inherit;">stateful_<wbr>rule_<wbr>group_<wbr>references</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyfirewallpolicystatefulrulegroupreference">Sequence[Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateful<wbr>Rule<wbr>Group<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firewallpolicyfirewallpolicystatefulrulegroupreference">Sequence[Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateful<wbr>Rule<wbr>Group<wbr>Reference]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing references to the stateful rule groups that are used in the policy. See Stateful Rule Group Reference below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1375,7 +1375,7 @@ In addition, you can specify custom actions that are compatible with your standa
 <a href="#stateless_custom_actions_python" style="color: inherit; text-decoration: inherit;">stateless_<wbr>custom_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyfirewallpolicystatelesscustomaction">Sequence[Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Custom<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firewallpolicyfirewallpolicystatelesscustomaction">Sequence[Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Custom<wbr>Action]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the custom action definitions that are available for use in the firewall policy's `stateless_default_actions`. See Stateless Custom Action below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1384,7 +1384,7 @@ In addition, you can specify custom actions that are compatible with your standa
 <a href="#stateless_rule_group_references_python" style="color: inherit; text-decoration: inherit;">stateless_<wbr>rule_<wbr>group_<wbr>references</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyfirewallpolicystatelessrulegroupreference">Sequence[Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Rule<wbr>Group<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firewallpolicyfirewallpolicystatelessrulegroupreference">Sequence[Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Rule<wbr>Group<wbr>Reference]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks containing references to the stateless rule groups that are used in the policy. See Stateless Rule Group Reference below for details.
 {{% /md %}}</dd></dl>
@@ -1453,7 +1453,7 @@ In addition, you can specify custom actions that are compatible with your standa
 <a href="#actiondefinition_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyfirewallpolicystatelesscustomactionactiondefinition">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicyfirewallpolicystatelesscustomactionactiondefinition">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the custom action associated with the `action_name`. See Action Definition below for details.
 {{% /md %}}</dd><dt class="property-required"
@@ -1497,7 +1497,7 @@ In addition, you can specify custom actions that are compatible with your standa
 <a href="#actiondefinition_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyfirewallpolicystatelesscustomactionactiondefinition">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicyfirewallpolicystatelesscustomactionactiondefinition">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the custom action associated with the `action_name`. See Action Definition below for details.
 {{% /md %}}</dd><dt class="property-required"
@@ -1519,7 +1519,7 @@ In addition, you can specify custom actions that are compatible with your standa
 <a href="#action_definition_python" style="color: inherit; text-decoration: inherit;">action_<wbr>definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyfirewallpolicystatelesscustomactionactiondefinition">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicyfirewallpolicystatelesscustomactionactiondefinition">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the custom action associated with the `action_name`. See Action Definition below for details.
 {{% /md %}}</dd><dt class="property-required"
@@ -1543,7 +1543,7 @@ In addition, you can specify custom actions that are compatible with your standa
 <a href="#publishmetricaction_csharp" style="color: inherit; text-decoration: inherit;">Publish<wbr>Metric<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyfirewallpolicystatelesscustomactionactiondefinitionpublishmetricaction">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicyfirewallpolicystatelesscustomactionactiondefinitionpublishmetricaction">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the stateless inspection criteria that publishes the specified metrics to Amazon CloudWatch for the matching packet. You can pair this custom action with any of the standard stateless rule actions. See Publish Metric Action below for details.
 {{% /md %}}</dd></dl>
@@ -1569,7 +1569,7 @@ In addition, you can specify custom actions that are compatible with your standa
 <a href="#publishmetricaction_nodejs" style="color: inherit; text-decoration: inherit;">publish<wbr>Metric<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyfirewallpolicystatelesscustomactionactiondefinitionpublishmetricaction">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicyfirewallpolicystatelesscustomactionactiondefinitionpublishmetricaction">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the stateless inspection criteria that publishes the specified metrics to Amazon CloudWatch for the matching packet. You can pair this custom action with any of the standard stateless rule actions. See Publish Metric Action below for details.
 {{% /md %}}</dd></dl>
@@ -1582,7 +1582,7 @@ In addition, you can specify custom actions that are compatible with your standa
 <a href="#publish_metric_action_python" style="color: inherit; text-decoration: inherit;">publish_<wbr>metric_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyfirewallpolicystatelesscustomactionactiondefinitionpublishmetricaction">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicyfirewallpolicystatelesscustomactionactiondefinitionpublishmetricaction">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the stateless inspection criteria that publishes the specified metrics to Amazon CloudWatch for the matching packet. You can pair this custom action with any of the standard stateless rule actions. See Publish Metric Action below for details.
 {{% /md %}}</dd></dl>
@@ -1597,7 +1597,7 @@ In addition, you can specify custom actions that are compatible with your standa
 <a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyfirewallpolicystatelesscustomactionactiondefinitionpublishmetricactiondimension">List&lt;Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action<wbr>Dimension<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#firewallpolicyfirewallpolicystatelesscustomactionactiondefinitionpublishmetricactiondimension">List&lt;Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action<wbr>Dimension&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing dimension settings to use for Amazon CloudWatch custom metrics. See Dimension below for more details.
 {{% /md %}}</dd></dl>
@@ -1623,7 +1623,7 @@ In addition, you can specify custom actions that are compatible with your standa
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyfirewallpolicystatelesscustomactionactiondefinitionpublishmetricactiondimension">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action<wbr>Dimension<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#firewallpolicyfirewallpolicystatelesscustomactionactiondefinitionpublishmetricactiondimension">Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action<wbr>Dimension[]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing dimension settings to use for Amazon CloudWatch custom metrics. See Dimension below for more details.
 {{% /md %}}</dd></dl>
@@ -1636,7 +1636,7 @@ In addition, you can specify custom actions that are compatible with your standa
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyfirewallpolicystatelesscustomactionactiondefinitionpublishmetricactiondimension">Sequence[Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action<wbr>Dimension<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firewallpolicyfirewallpolicystatelesscustomactionactiondefinitionpublishmetricactiondimension">Sequence[Firewall<wbr>Policy<wbr>Firewall<wbr>Policy<wbr>Stateless<wbr>Custom<wbr>Action<wbr>Action<wbr>Definition<wbr>Publish<wbr>Metric<wbr>Action<wbr>Dimension]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing dimension settings to use for Amazon CloudWatch custom metrics. See Dimension below for more details.
 {{% /md %}}</dd></dl>

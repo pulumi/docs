@@ -412,7 +412,7 @@ The OriginRequestPolicy resource accepts the following [input]({{< relref "/docs
 <a href="#cookiesconfig_go" style="color: inherit; text-decoration: inherit;">Cookies<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#originrequestpolicycookiesconfig">Origin<wbr>Request<wbr>Policy<wbr>Cookies<wbr>Config</a></span>
+        <span class="property-type"><a href="#originrequestpolicycookiesconfig">Origin<wbr>Request<wbr>Policy<wbr>Cookies<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any cookies in viewer requests (and if so, which cookies) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Cookies Config for more information.
 {{% /md %}}</dd><dt class="property-required"
@@ -421,7 +421,7 @@ The OriginRequestPolicy resource accepts the following [input]({{< relref "/docs
 <a href="#headersconfig_go" style="color: inherit; text-decoration: inherit;">Headers<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#originrequestpolicyheadersconfig">Origin<wbr>Request<wbr>Policy<wbr>Headers<wbr>Config</a></span>
+        <span class="property-type"><a href="#originrequestpolicyheadersconfig">Origin<wbr>Request<wbr>Policy<wbr>Headers<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any HTTP headers (and if so, which headers) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Headers Config for more information.
 {{% /md %}}</dd><dt class="property-required"
@@ -430,7 +430,7 @@ The OriginRequestPolicy resource accepts the following [input]({{< relref "/docs
 <a href="#querystringsconfig_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Strings<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#originrequestpolicyquerystringsconfig">Origin<wbr>Request<wbr>Policy<wbr>Query<wbr>Strings<wbr>Config</a></span>
+        <span class="property-type"><a href="#originrequestpolicyquerystringsconfig">Origin<wbr>Request<wbr>Policy<wbr>Query<wbr>Strings<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any URL query strings in viewer requests (and if so, which query strings) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Query Strings Config for more information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -839,7 +839,7 @@ The following state arguments are supported:
 <a href="#state_cookiesconfig_go" style="color: inherit; text-decoration: inherit;">Cookies<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#originrequestpolicycookiesconfig">Origin<wbr>Request<wbr>Policy<wbr>Cookies<wbr>Config</a></span>
+        <span class="property-type"><a href="#originrequestpolicycookiesconfig">Origin<wbr>Request<wbr>Policy<wbr>Cookies<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any cookies in viewer requests (and if so, which cookies) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Cookies Config for more information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -857,7 +857,7 @@ The following state arguments are supported:
 <a href="#state_headersconfig_go" style="color: inherit; text-decoration: inherit;">Headers<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#originrequestpolicyheadersconfig">Origin<wbr>Request<wbr>Policy<wbr>Headers<wbr>Config</a></span>
+        <span class="property-type"><a href="#originrequestpolicyheadersconfig">Origin<wbr>Request<wbr>Policy<wbr>Headers<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any HTTP headers (and if so, which headers) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Headers Config for more information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -875,7 +875,7 @@ The following state arguments are supported:
 <a href="#state_querystringsconfig_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Strings<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#originrequestpolicyquerystringsconfig">Origin<wbr>Request<wbr>Policy<wbr>Query<wbr>Strings<wbr>Config</a></span>
+        <span class="property-type"><a href="#originrequestpolicyquerystringsconfig">Origin<wbr>Request<wbr>Policy<wbr>Query<wbr>Strings<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any URL query strings in viewer requests (and if so, which query strings) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Query Strings Config for more information.
 {{% /md %}}</dd></dl>
@@ -1023,7 +1023,7 @@ The following state arguments are supported:
 <a href="#cookies_csharp" style="color: inherit; text-decoration: inherit;">Cookies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#originrequestpolicycookiesconfigcookies">Origin<wbr>Request<wbr>Policy<wbr>Cookies<wbr>Config<wbr>Cookies<wbr>Args</a></span>
+        <span class="property-type"><a href="#originrequestpolicycookiesconfigcookies">Origin<wbr>Request<wbr>Policy<wbr>Cookies<wbr>Config<wbr>Cookies</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1063,7 +1063,7 @@ The following state arguments are supported:
 <a href="#cookies_nodejs" style="color: inherit; text-decoration: inherit;">cookies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#originrequestpolicycookiesconfigcookies">Origin<wbr>Request<wbr>Policy<wbr>Cookies<wbr>Config<wbr>Cookies<wbr>Args</a></span>
+        <span class="property-type"><a href="#originrequestpolicycookiesconfigcookies">Origin<wbr>Request<wbr>Policy<wbr>Cookies<wbr>Config<wbr>Cookies</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1083,7 +1083,7 @@ The following state arguments are supported:
 <a href="#cookies_python" style="color: inherit; text-decoration: inherit;">cookies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#originrequestpolicycookiesconfigcookies">Origin<wbr>Request<wbr>Policy<wbr>Cookies<wbr>Config<wbr>Cookies<wbr>Args</a></span>
+        <span class="property-type"><a href="#originrequestpolicycookiesconfigcookies">Origin<wbr>Request<wbr>Policy<wbr>Cookies<wbr>Config<wbr>Cookies</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1155,7 +1155,7 @@ The following state arguments are supported:
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#originrequestpolicyheadersconfigheaders">Origin<wbr>Request<wbr>Policy<wbr>Headers<wbr>Config<wbr>Headers<wbr>Args</a></span>
+        <span class="property-type"><a href="#originrequestpolicyheadersconfigheaders">Origin<wbr>Request<wbr>Policy<wbr>Headers<wbr>Config<wbr>Headers</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1195,7 +1195,7 @@ The following state arguments are supported:
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#originrequestpolicyheadersconfigheaders">Origin<wbr>Request<wbr>Policy<wbr>Headers<wbr>Config<wbr>Headers<wbr>Args</a></span>
+        <span class="property-type"><a href="#originrequestpolicyheadersconfigheaders">Origin<wbr>Request<wbr>Policy<wbr>Headers<wbr>Config<wbr>Headers</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1215,7 +1215,7 @@ The following state arguments are supported:
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#originrequestpolicyheadersconfigheaders">Origin<wbr>Request<wbr>Policy<wbr>Headers<wbr>Config<wbr>Headers<wbr>Args</a></span>
+        <span class="property-type"><a href="#originrequestpolicyheadersconfigheaders">Origin<wbr>Request<wbr>Policy<wbr>Headers<wbr>Config<wbr>Headers</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1287,7 +1287,7 @@ The following state arguments are supported:
 <a href="#querystrings_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Strings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#originrequestpolicyquerystringsconfigquerystrings">Origin<wbr>Request<wbr>Policy<wbr>Query<wbr>Strings<wbr>Config<wbr>Query<wbr>Strings<wbr>Args</a></span>
+        <span class="property-type"><a href="#originrequestpolicyquerystringsconfigquerystrings">Origin<wbr>Request<wbr>Policy<wbr>Query<wbr>Strings<wbr>Config<wbr>Query<wbr>Strings</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1327,7 +1327,7 @@ The following state arguments are supported:
 <a href="#querystrings_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Strings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#originrequestpolicyquerystringsconfigquerystrings">Origin<wbr>Request<wbr>Policy<wbr>Query<wbr>Strings<wbr>Config<wbr>Query<wbr>Strings<wbr>Args</a></span>
+        <span class="property-type"><a href="#originrequestpolicyquerystringsconfigquerystrings">Origin<wbr>Request<wbr>Policy<wbr>Query<wbr>Strings<wbr>Config<wbr>Query<wbr>Strings</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1347,7 +1347,7 @@ The following state arguments are supported:
 <a href="#query_strings_python" style="color: inherit; text-decoration: inherit;">query_<wbr>strings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#originrequestpolicyquerystringsconfigquerystrings">Origin<wbr>Request<wbr>Policy<wbr>Query<wbr>Strings<wbr>Config<wbr>Query<wbr>Strings<wbr>Args</a></span>
+        <span class="property-type"><a href="#originrequestpolicyquerystringsconfigquerystrings">Origin<wbr>Request<wbr>Policy<wbr>Query<wbr>Strings<wbr>Config<wbr>Query<wbr>Strings</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

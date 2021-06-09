@@ -314,7 +314,7 @@ The SqlInjectionMatchSet resource accepts the following [input]({{< relref "/doc
 <a href="#sqlinjectionmatchtuples_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Injection<wbr>Match<wbr>Tuples</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlinjectionmatchsetsqlinjectionmatchtuple">[]Sql<wbr>Injection<wbr>Match<wbr>Set<wbr>Sql<wbr>Injection<wbr>Match<wbr>Tuple</a></span>
+        <span class="property-type"><a href="#sqlinjectionmatchsetsqlinjectionmatchtuple">[]Sql<wbr>Injection<wbr>Match<wbr>Set<wbr>Sql<wbr>Injection<wbr>Match<wbr>Tuple<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parts of web requests that you want AWS WAF to inspect for malicious SQL code and, if you want AWS WAF to inspect a header, the name of the header.
 {{% /md %}}</dd></dl>
@@ -584,7 +584,7 @@ The following state arguments are supported:
 <a href="#state_sqlinjectionmatchtuples_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Injection<wbr>Match<wbr>Tuples</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlinjectionmatchsetsqlinjectionmatchtuple">[]Sql<wbr>Injection<wbr>Match<wbr>Set<wbr>Sql<wbr>Injection<wbr>Match<wbr>Tuple</a></span>
+        <span class="property-type"><a href="#sqlinjectionmatchsetsqlinjectionmatchtuple">[]Sql<wbr>Injection<wbr>Match<wbr>Set<wbr>Sql<wbr>Injection<wbr>Match<wbr>Tuple<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parts of web requests that you want AWS WAF to inspect for malicious SQL code and, if you want AWS WAF to inspect a header, the name of the header.
 {{% /md %}}</dd></dl>
@@ -652,7 +652,7 @@ The following state arguments are supported:
 <a href="#fieldtomatch_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlinjectionmatchsetsqlinjectionmatchtuplefieldtomatch">Sql<wbr>Injection<wbr>Match<wbr>Set<wbr>Sql<wbr>Injection<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlinjectionmatchsetsqlinjectionmatchtuplefieldtomatch">Sql<wbr>Injection<wbr>Match<wbr>Set<wbr>Sql<wbr>Injection<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}Specifies where in a web request to look for snippets of malicious SQL code.
 {{% /md %}}</dd><dt class="property-required"
@@ -704,7 +704,7 @@ for all supported values.
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlinjectionmatchsetsqlinjectionmatchtuplefieldtomatch">Sql<wbr>Injection<wbr>Match<wbr>Set<wbr>Sql<wbr>Injection<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlinjectionmatchsetsqlinjectionmatchtuplefieldtomatch">Sql<wbr>Injection<wbr>Match<wbr>Set<wbr>Sql<wbr>Injection<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}Specifies where in a web request to look for snippets of malicious SQL code.
 {{% /md %}}</dd><dt class="property-required"
@@ -730,7 +730,7 @@ for all supported values.
 <a href="#field_to_match_python" style="color: inherit; text-decoration: inherit;">field_<wbr>to_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlinjectionmatchsetsqlinjectionmatchtuplefieldtomatch">Sql<wbr>Injection<wbr>Match<wbr>Set<wbr>Sql<wbr>Injection<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlinjectionmatchsetsqlinjectionmatchtuplefieldtomatch">Sql<wbr>Injection<wbr>Match<wbr>Set<wbr>Sql<wbr>Injection<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}Specifies where in a web request to look for snippets of malicious SQL code.
 {{% /md %}}</dd><dt class="property-required"

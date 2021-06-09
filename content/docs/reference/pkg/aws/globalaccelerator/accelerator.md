@@ -344,7 +344,7 @@ The Accelerator resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#attributes_go" style="color: inherit; text-decoration: inherit;">Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#acceleratorattributes">Accelerator<wbr>Attributes</a></span>
+        <span class="property-type"><a href="#acceleratorattributes">Accelerator<wbr>Attributes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The attributes of the accelerator. Fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -910,7 +910,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 <a href="#state_attributes_go" style="color: inherit; text-decoration: inherit;">Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#acceleratorattributes">Accelerator<wbr>Attributes</a></span>
+        <span class="property-type"><a href="#acceleratorattributes">Accelerator<wbr>Attributes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The attributes of the accelerator. Fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -957,7 +957,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 <a href="#state_ipsets_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#acceleratoripset">[]Accelerator<wbr>Ip<wbr>Set</a></span>
+        <span class="property-type"><a href="#acceleratoripset">[]Accelerator<wbr>Ip<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}IP address set associated with the accelerator.
 {{% /md %}}</dd><dt class="property-optional"

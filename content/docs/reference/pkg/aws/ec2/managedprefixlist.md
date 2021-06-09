@@ -401,7 +401,7 @@ The ManagedPrefixList resource accepts the following [input]({{< relref "/docs/i
 <a href="#entries_go" style="color: inherit; text-decoration: inherit;">Entries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedprefixlistentry">[]Managed<wbr>Prefix<wbr>List<wbr>Entry</a></span>
+        <span class="property-type"><a href="#managedprefixlistentry">[]Managed<wbr>Prefix<wbr>List<wbr>Entry<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for prefix list entry. Detailed below. Different entries may have overlapping CIDR blocks, but a particular CIDR should not be duplicated.
 {{% /md %}}</dd><dt class="property-optional"
@@ -949,7 +949,7 @@ The following state arguments are supported:
 <a href="#state_entries_go" style="color: inherit; text-decoration: inherit;">Entries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedprefixlistentry">[]Managed<wbr>Prefix<wbr>List<wbr>Entry</a></span>
+        <span class="property-type"><a href="#managedprefixlistentry">[]Managed<wbr>Prefix<wbr>List<wbr>Entry<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for prefix list entry. Detailed below. Different entries may have overlapping CIDR blocks, but a particular CIDR should not be duplicated.
 {{% /md %}}</dd><dt class="property-optional"

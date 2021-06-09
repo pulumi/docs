@@ -473,7 +473,7 @@ The Filter resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#findingcriteria_go" style="color: inherit; text-decoration: inherit;">Finding<wbr>Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filterfindingcriteria">Filter<wbr>Finding<wbr>Criteria</a></span>
+        <span class="property-type"><a href="#filterfindingcriteria">Filter<wbr>Finding<wbr>Criteria<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Represents the criteria to be used in the filter for querying findings. Contains one or more `criterion` blocks, documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1029,7 +1029,7 @@ The following state arguments are supported:
 <a href="#state_findingcriteria_go" style="color: inherit; text-decoration: inherit;">Finding<wbr>Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filterfindingcriteria">Filter<wbr>Finding<wbr>Criteria</a></span>
+        <span class="property-type"><a href="#filterfindingcriteria">Filter<wbr>Finding<wbr>Criteria<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Represents the criteria to be used in the filter for querying findings. Contains one or more `criterion` blocks, documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1259,7 +1259,7 @@ The following state arguments are supported:
 <a href="#criterions_csharp" style="color: inherit; text-decoration: inherit;">Criterions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filterfindingcriteriacriterion">List&lt;Filter<wbr>Finding<wbr>Criteria<wbr>Criterion<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#filterfindingcriteriacriterion">List&lt;Filter<wbr>Finding<wbr>Criteria<wbr>Criterion&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1283,7 +1283,7 @@ The following state arguments are supported:
 <a href="#criterions_nodejs" style="color: inherit; text-decoration: inherit;">criterions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filterfindingcriteriacriterion">Filter<wbr>Finding<wbr>Criteria<wbr>Criterion<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#filterfindingcriteriacriterion">Filter<wbr>Finding<wbr>Criteria<wbr>Criterion[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1295,7 +1295,7 @@ The following state arguments are supported:
 <a href="#criterions_python" style="color: inherit; text-decoration: inherit;">criterions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filterfindingcriteriacriterion">Sequence[Filter<wbr>Finding<wbr>Criteria<wbr>Criterion<wbr>Args]</a></span>
+        <span class="property-type"><a href="#filterfindingcriteriacriterion">Sequence[Filter<wbr>Finding<wbr>Criteria<wbr>Criterion]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

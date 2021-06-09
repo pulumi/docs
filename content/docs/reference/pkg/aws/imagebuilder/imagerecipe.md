@@ -412,7 +412,7 @@ The ImageRecipe resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#components_go" style="color: inherit; text-decoration: inherit;">Components</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagerecipecomponent">[]Image<wbr>Recipe<wbr>Component</a></span>
+        <span class="property-type"><a href="#imagerecipecomponent">[]Image<wbr>Recipe<wbr>Component<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Ordered configuration block(s) with components for the image recipe. Detailed below.
 {{% /md %}}</dd><dt class="property-required"
@@ -439,7 +439,7 @@ The ImageRecipe resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#blockdevicemappings_go" style="color: inherit; text-decoration: inherit;">Block<wbr>Device<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagerecipeblockdevicemapping">[]Image<wbr>Recipe<wbr>Block<wbr>Device<wbr>Mapping</a></span>
+        <span class="property-type"><a href="#imagerecipeblockdevicemapping">[]Image<wbr>Recipe<wbr>Block<wbr>Device<wbr>Mapping<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with block device mappings for the the image recipe. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1134,7 +1134,7 @@ The following state arguments are supported:
 <a href="#state_blockdevicemappings_go" style="color: inherit; text-decoration: inherit;">Block<wbr>Device<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagerecipeblockdevicemapping">[]Image<wbr>Recipe<wbr>Block<wbr>Device<wbr>Mapping</a></span>
+        <span class="property-type"><a href="#imagerecipeblockdevicemapping">[]Image<wbr>Recipe<wbr>Block<wbr>Device<wbr>Mapping<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with block device mappings for the the image recipe. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1143,7 +1143,7 @@ The following state arguments are supported:
 <a href="#state_components_go" style="color: inherit; text-decoration: inherit;">Components</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagerecipecomponent">[]Image<wbr>Recipe<wbr>Component</a></span>
+        <span class="property-type"><a href="#imagerecipecomponent">[]Image<wbr>Recipe<wbr>Component<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Ordered configuration block(s) with components for the image recipe. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1508,7 +1508,7 @@ The following state arguments are supported:
 <a href="#ebs_csharp" style="color: inherit; text-decoration: inherit;">Ebs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagerecipeblockdevicemappingebs">Image<wbr>Recipe<wbr>Block<wbr>Device<wbr>Mapping<wbr>Ebs<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagerecipeblockdevicemappingebs">Image<wbr>Recipe<wbr>Block<wbr>Device<wbr>Mapping<wbr>Ebs</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Elastic Block Storage (EBS) block device mapping settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1588,7 +1588,7 @@ The following state arguments are supported:
 <a href="#ebs_nodejs" style="color: inherit; text-decoration: inherit;">ebs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagerecipeblockdevicemappingebs">Image<wbr>Recipe<wbr>Block<wbr>Device<wbr>Mapping<wbr>Ebs<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagerecipeblockdevicemappingebs">Image<wbr>Recipe<wbr>Block<wbr>Device<wbr>Mapping<wbr>Ebs</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Elastic Block Storage (EBS) block device mapping settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1628,7 +1628,7 @@ The following state arguments are supported:
 <a href="#ebs_python" style="color: inherit; text-decoration: inherit;">ebs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagerecipeblockdevicemappingebs">Image<wbr>Recipe<wbr>Block<wbr>Device<wbr>Mapping<wbr>Ebs<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagerecipeblockdevicemappingebs">Image<wbr>Recipe<wbr>Block<wbr>Device<wbr>Mapping<wbr>Ebs</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with Elastic Block Storage (EBS) block device mapping settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"

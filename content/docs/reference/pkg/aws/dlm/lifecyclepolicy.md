@@ -595,7 +595,7 @@ The LifecyclePolicy resource accepts the following [input]({{< relref "/docs/int
 <a href="#policydetails_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lifecyclepolicypolicydetails">Lifecycle<wbr>Policy<wbr>Policy<wbr>Details</a></span>
+        <span class="property-type"><a href="#lifecyclepolicypolicydetails">Lifecycle<wbr>Policy<wbr>Policy<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See the `policy_details` configuration block. Max of 1.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1068,7 +1068,7 @@ The following state arguments are supported:
 <a href="#state_policydetails_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lifecyclepolicypolicydetails">Lifecycle<wbr>Policy<wbr>Policy<wbr>Details</a></span>
+        <span class="property-type"><a href="#lifecyclepolicypolicydetails">Lifecycle<wbr>Policy<wbr>Policy<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See the `policy_details` configuration block. Max of 1.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1262,7 +1262,7 @@ The following state arguments are supported:
 <a href="#schedules_csharp" style="color: inherit; text-decoration: inherit;">Schedules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lifecyclepolicypolicydetailsschedule">List&lt;Lifecycle<wbr>Policy<wbr>Policy<wbr>Details<wbr>Schedule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#lifecyclepolicypolicydetailsschedule">List&lt;Lifecycle<wbr>Policy<wbr>Policy<wbr>Details<wbr>Schedule&gt;</a></span>
     </dt>
     <dd>{{% md %}}See the `schedule` configuration block.
 {{% /md %}}</dd><dt class="property-required"
@@ -1324,7 +1324,7 @@ The following state arguments are supported:
 <a href="#schedules_nodejs" style="color: inherit; text-decoration: inherit;">schedules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lifecyclepolicypolicydetailsschedule">Lifecycle<wbr>Policy<wbr>Policy<wbr>Details<wbr>Schedule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#lifecyclepolicypolicydetailsschedule">Lifecycle<wbr>Policy<wbr>Policy<wbr>Details<wbr>Schedule[]</a></span>
     </dt>
     <dd>{{% md %}}See the `schedule` configuration block.
 {{% /md %}}</dd><dt class="property-required"
@@ -1355,7 +1355,7 @@ The following state arguments are supported:
 <a href="#schedules_python" style="color: inherit; text-decoration: inherit;">schedules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lifecyclepolicypolicydetailsschedule">Sequence[Lifecycle<wbr>Policy<wbr>Policy<wbr>Details<wbr>Schedule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#lifecyclepolicypolicydetailsschedule">Sequence[Lifecycle<wbr>Policy<wbr>Policy<wbr>Details<wbr>Schedule]</a></span>
     </dt>
     <dd>{{% md %}}See the `schedule` configuration block.
 {{% /md %}}</dd><dt class="property-required"
@@ -1379,7 +1379,7 @@ The following state arguments are supported:
 <a href="#createrule_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lifecyclepolicypolicydetailsschedulecreaterule">Lifecycle<wbr>Policy<wbr>Policy<wbr>Details<wbr>Schedule<wbr>Create<wbr>Rule<wbr>Args</a></span>
+        <span class="property-type"><a href="#lifecyclepolicypolicydetailsschedulecreaterule">Lifecycle<wbr>Policy<wbr>Policy<wbr>Details<wbr>Schedule<wbr>Create<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}See the `create_rule` block. Max of 1 per schedule.
 {{% /md %}}</dd><dt class="property-required"
@@ -1397,7 +1397,7 @@ The following state arguments are supported:
 <a href="#retainrule_csharp" style="color: inherit; text-decoration: inherit;">Retain<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lifecyclepolicypolicydetailsscheduleretainrule">Lifecycle<wbr>Policy<wbr>Policy<wbr>Details<wbr>Schedule<wbr>Retain<wbr>Rule<wbr>Args</a></span>
+        <span class="property-type"><a href="#lifecyclepolicypolicydetailsscheduleretainrule">Lifecycle<wbr>Policy<wbr>Policy<wbr>Details<wbr>Schedule<wbr>Retain<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}See the `retain_rule` block. Max of 1 per schedule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1477,7 +1477,7 @@ The following state arguments are supported:
 <a href="#createrule_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lifecyclepolicypolicydetailsschedulecreaterule">Lifecycle<wbr>Policy<wbr>Policy<wbr>Details<wbr>Schedule<wbr>Create<wbr>Rule<wbr>Args</a></span>
+        <span class="property-type"><a href="#lifecyclepolicypolicydetailsschedulecreaterule">Lifecycle<wbr>Policy<wbr>Policy<wbr>Details<wbr>Schedule<wbr>Create<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}See the `create_rule` block. Max of 1 per schedule.
 {{% /md %}}</dd><dt class="property-required"
@@ -1495,7 +1495,7 @@ The following state arguments are supported:
 <a href="#retainrule_nodejs" style="color: inherit; text-decoration: inherit;">retain<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lifecyclepolicypolicydetailsscheduleretainrule">Lifecycle<wbr>Policy<wbr>Policy<wbr>Details<wbr>Schedule<wbr>Retain<wbr>Rule<wbr>Args</a></span>
+        <span class="property-type"><a href="#lifecyclepolicypolicydetailsscheduleretainrule">Lifecycle<wbr>Policy<wbr>Policy<wbr>Details<wbr>Schedule<wbr>Retain<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}See the `retain_rule` block. Max of 1 per schedule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1526,7 +1526,7 @@ The following state arguments are supported:
 <a href="#create_rule_python" style="color: inherit; text-decoration: inherit;">create_<wbr>rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lifecyclepolicypolicydetailsschedulecreaterule">Lifecycle<wbr>Policy<wbr>Policy<wbr>Details<wbr>Schedule<wbr>Create<wbr>Rule<wbr>Args</a></span>
+        <span class="property-type"><a href="#lifecyclepolicypolicydetailsschedulecreaterule">Lifecycle<wbr>Policy<wbr>Policy<wbr>Details<wbr>Schedule<wbr>Create<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}See the `create_rule` block. Max of 1 per schedule.
 {{% /md %}}</dd><dt class="property-required"
@@ -1544,7 +1544,7 @@ The following state arguments are supported:
 <a href="#retain_rule_python" style="color: inherit; text-decoration: inherit;">retain_<wbr>rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lifecyclepolicypolicydetailsscheduleretainrule">Lifecycle<wbr>Policy<wbr>Policy<wbr>Details<wbr>Schedule<wbr>Retain<wbr>Rule<wbr>Args</a></span>
+        <span class="property-type"><a href="#lifecyclepolicypolicydetailsscheduleretainrule">Lifecycle<wbr>Policy<wbr>Policy<wbr>Details<wbr>Schedule<wbr>Retain<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}See the `retain_rule` block. Max of 1 per schedule.
 {{% /md %}}</dd><dt class="property-optional"

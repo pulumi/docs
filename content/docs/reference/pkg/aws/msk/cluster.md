@@ -831,7 +831,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#brokernodegroupinfo_go" style="color: inherit; text-decoration: inherit;">Broker<wbr>Node<wbr>Group<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterbrokernodegroupinfo">Cluster<wbr>Broker<wbr>Node<wbr>Group<wbr>Info</a></span>
+        <span class="property-type"><a href="#clusterbrokernodegroupinfo">Cluster<wbr>Broker<wbr>Node<wbr>Group<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the broker nodes of the Kafka cluster.
 {{% /md %}}</dd><dt class="property-required"
@@ -858,7 +858,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#clientauthentication_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclientauthentication">Cluster<wbr>Client<wbr>Authentication</a></span>
+        <span class="property-type"><a href="#clusterclientauthentication">Cluster<wbr>Client<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for specifying a client authentication. See below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -876,7 +876,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#configurationinfo_go" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterconfigurationinfo">Cluster<wbr>Configuration<wbr>Info</a></span>
+        <span class="property-type"><a href="#clusterconfigurationinfo">Cluster<wbr>Configuration<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for specifying a MSK Configuration to attach to Kafka brokers. See below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -885,7 +885,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#encryptioninfo_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterencryptioninfo">Cluster<wbr>Encryption<wbr>Info</a></span>
+        <span class="property-type"><a href="#clusterencryptioninfo">Cluster<wbr>Encryption<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for specifying encryption. See below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -903,7 +903,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#logginginfo_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterlogginginfo">Cluster<wbr>Logging<wbr>Info</a></span>
+        <span class="property-type"><a href="#clusterlogginginfo">Cluster<wbr>Logging<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for streaming broker logs to Cloudwatch/S3/Kinesis Firehose. See below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -912,7 +912,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#openmonitoring_go" style="color: inherit; text-decoration: inherit;">Open<wbr>Monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteropenmonitoring">Cluster<wbr>Open<wbr>Monitoring</a></span>
+        <span class="property-type"><a href="#clusteropenmonitoring">Cluster<wbr>Open<wbr>Monitoring<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for JMX and Node monitoring for the MSK cluster. See below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1843,7 +1843,7 @@ The following state arguments are supported:
 <a href="#state_brokernodegroupinfo_go" style="color: inherit; text-decoration: inherit;">Broker<wbr>Node<wbr>Group<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterbrokernodegroupinfo">Cluster<wbr>Broker<wbr>Node<wbr>Group<wbr>Info</a></span>
+        <span class="property-type"><a href="#clusterbrokernodegroupinfo">Cluster<wbr>Broker<wbr>Node<wbr>Group<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the broker nodes of the Kafka cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1852,7 +1852,7 @@ The following state arguments are supported:
 <a href="#state_clientauthentication_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclientauthentication">Cluster<wbr>Client<wbr>Authentication</a></span>
+        <span class="property-type"><a href="#clusterclientauthentication">Cluster<wbr>Client<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for specifying a client authentication. See below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1870,7 +1870,7 @@ The following state arguments are supported:
 <a href="#state_configurationinfo_go" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterconfigurationinfo">Cluster<wbr>Configuration<wbr>Info</a></span>
+        <span class="property-type"><a href="#clusterconfigurationinfo">Cluster<wbr>Configuration<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for specifying a MSK Configuration to attach to Kafka brokers. See below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1889,7 +1889,7 @@ The following state arguments are supported:
 <a href="#state_encryptioninfo_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterencryptioninfo">Cluster<wbr>Encryption<wbr>Info</a></span>
+        <span class="property-type"><a href="#clusterencryptioninfo">Cluster<wbr>Encryption<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for specifying encryption. See below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1916,7 +1916,7 @@ The following state arguments are supported:
 <a href="#state_logginginfo_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterlogginginfo">Cluster<wbr>Logging<wbr>Info</a></span>
+        <span class="property-type"><a href="#clusterlogginginfo">Cluster<wbr>Logging<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for streaming broker logs to Cloudwatch/S3/Kinesis Firehose. See below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1934,7 +1934,7 @@ The following state arguments are supported:
 <a href="#state_openmonitoring_go" style="color: inherit; text-decoration: inherit;">Open<wbr>Monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteropenmonitoring">Cluster<wbr>Open<wbr>Monitoring</a></span>
+        <span class="property-type"><a href="#clusteropenmonitoring">Cluster<wbr>Open<wbr>Monitoring<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for JMX and Node monitoring for the MSK cluster. See below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2535,7 +2535,7 @@ The following state arguments are supported:
 <a href="#sasl_csharp" style="color: inherit; text-decoration: inherit;">Sasl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclientauthenticationsasl">Cluster<wbr>Client<wbr>Authentication<wbr>Sasl<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclientauthenticationsasl">Cluster<wbr>Client<wbr>Authentication<wbr>Sasl</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for specifying SASL client authentication. See below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2544,7 +2544,7 @@ The following state arguments are supported:
 <a href="#tls_csharp" style="color: inherit; text-decoration: inherit;">Tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclientauthenticationtls">Cluster<wbr>Client<wbr>Authentication<wbr>Tls<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclientauthenticationtls">Cluster<wbr>Client<wbr>Authentication<wbr>Tls</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for specifying TLS client authentication. See below.
 {{% /md %}}</dd></dl>
@@ -2579,7 +2579,7 @@ The following state arguments are supported:
 <a href="#sasl_nodejs" style="color: inherit; text-decoration: inherit;">sasl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclientauthenticationsasl">Cluster<wbr>Client<wbr>Authentication<wbr>Sasl<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclientauthenticationsasl">Cluster<wbr>Client<wbr>Authentication<wbr>Sasl</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for specifying SASL client authentication. See below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2588,7 +2588,7 @@ The following state arguments are supported:
 <a href="#tls_nodejs" style="color: inherit; text-decoration: inherit;">tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclientauthenticationtls">Cluster<wbr>Client<wbr>Authentication<wbr>Tls<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclientauthenticationtls">Cluster<wbr>Client<wbr>Authentication<wbr>Tls</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for specifying TLS client authentication. See below.
 {{% /md %}}</dd></dl>
@@ -2601,7 +2601,7 @@ The following state arguments are supported:
 <a href="#sasl_python" style="color: inherit; text-decoration: inherit;">sasl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclientauthenticationsasl">Cluster<wbr>Client<wbr>Authentication<wbr>Sasl<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclientauthenticationsasl">Cluster<wbr>Client<wbr>Authentication<wbr>Sasl</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for specifying SASL client authentication. See below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2610,7 +2610,7 @@ The following state arguments are supported:
 <a href="#tls_python" style="color: inherit; text-decoration: inherit;">tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclientauthenticationtls">Cluster<wbr>Client<wbr>Authentication<wbr>Tls<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclientauthenticationtls">Cluster<wbr>Client<wbr>Authentication<wbr>Tls</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for specifying TLS client authentication. See below.
 {{% /md %}}</dd></dl>
@@ -2868,7 +2868,7 @@ The following state arguments are supported:
 <a href="#encryptionintransit_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>In<wbr>Transit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterencryptioninfoencryptionintransit">Cluster<wbr>Encryption<wbr>Info<wbr>Encryption<wbr>In<wbr>Transit<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterencryptioninfoencryptionintransit">Cluster<wbr>Encryption<wbr>Info<wbr>Encryption<wbr>In<wbr>Transit</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to specify encryption in transit. See below.
 {{% /md %}}</dd></dl>
@@ -2912,7 +2912,7 @@ The following state arguments are supported:
 <a href="#encryptionintransit_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>In<wbr>Transit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterencryptioninfoencryptionintransit">Cluster<wbr>Encryption<wbr>Info<wbr>Encryption<wbr>In<wbr>Transit<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterencryptioninfoencryptionintransit">Cluster<wbr>Encryption<wbr>Info<wbr>Encryption<wbr>In<wbr>Transit</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to specify encryption in transit. See below.
 {{% /md %}}</dd></dl>
@@ -2934,7 +2934,7 @@ The following state arguments are supported:
 <a href="#encryption_in_transit_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>in_<wbr>transit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterencryptioninfoencryptionintransit">Cluster<wbr>Encryption<wbr>Info<wbr>Encryption<wbr>In<wbr>Transit<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterencryptioninfoencryptionintransit">Cluster<wbr>Encryption<wbr>Info<wbr>Encryption<wbr>In<wbr>Transit</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to specify encryption in transit. See below.
 {{% /md %}}</dd></dl>
@@ -3039,7 +3039,7 @@ The following state arguments are supported:
 <a href="#brokerlogs_csharp" style="color: inherit; text-decoration: inherit;">Broker<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterlogginginfobrokerlogs">Cluster<wbr>Logging<wbr>Info<wbr>Broker<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterlogginginfobrokerlogs">Cluster<wbr>Logging<wbr>Info<wbr>Broker<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for Broker Logs settings for logging info. See below.
 {{% /md %}}</dd></dl>
@@ -3065,7 +3065,7 @@ The following state arguments are supported:
 <a href="#brokerlogs_nodejs" style="color: inherit; text-decoration: inherit;">broker<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterlogginginfobrokerlogs">Cluster<wbr>Logging<wbr>Info<wbr>Broker<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterlogginginfobrokerlogs">Cluster<wbr>Logging<wbr>Info<wbr>Broker<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for Broker Logs settings for logging info. See below.
 {{% /md %}}</dd></dl>
@@ -3078,7 +3078,7 @@ The following state arguments are supported:
 <a href="#broker_logs_python" style="color: inherit; text-decoration: inherit;">broker_<wbr>logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterlogginginfobrokerlogs">Cluster<wbr>Logging<wbr>Info<wbr>Broker<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterlogginginfobrokerlogs">Cluster<wbr>Logging<wbr>Info<wbr>Broker<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for Broker Logs settings for logging info. See below.
 {{% /md %}}</dd></dl>
@@ -3093,7 +3093,7 @@ The following state arguments are supported:
 <a href="#cloudwatchlogs_csharp" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterlogginginfobrokerlogscloudwatchlogs">Cluster<wbr>Logging<wbr>Info<wbr>Broker<wbr>Logs<wbr>Cloudwatch<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterlogginginfobrokerlogscloudwatchlogs">Cluster<wbr>Logging<wbr>Info<wbr>Broker<wbr>Logs<wbr>Cloudwatch<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3101,7 +3101,7 @@ The following state arguments are supported:
 <a href="#firehose_csharp" style="color: inherit; text-decoration: inherit;">Firehose</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterlogginginfobrokerlogsfirehose">Cluster<wbr>Logging<wbr>Info<wbr>Broker<wbr>Logs<wbr>Firehose<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterlogginginfobrokerlogsfirehose">Cluster<wbr>Logging<wbr>Info<wbr>Broker<wbr>Logs<wbr>Firehose</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3109,7 +3109,7 @@ The following state arguments are supported:
 <a href="#s3_csharp" style="color: inherit; text-decoration: inherit;">S3</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterlogginginfobrokerlogss3">Cluster<wbr>Logging<wbr>Info<wbr>Broker<wbr>Logs<wbr>S3Args</a></span>
+        <span class="property-type"><a href="#clusterlogginginfobrokerlogss3">Cluster<wbr>Logging<wbr>Info<wbr>Broker<wbr>Logs<wbr>S3</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3149,7 +3149,7 @@ The following state arguments are supported:
 <a href="#cloudwatchlogs_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterlogginginfobrokerlogscloudwatchlogs">Cluster<wbr>Logging<wbr>Info<wbr>Broker<wbr>Logs<wbr>Cloudwatch<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterlogginginfobrokerlogscloudwatchlogs">Cluster<wbr>Logging<wbr>Info<wbr>Broker<wbr>Logs<wbr>Cloudwatch<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3157,7 +3157,7 @@ The following state arguments are supported:
 <a href="#firehose_nodejs" style="color: inherit; text-decoration: inherit;">firehose</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterlogginginfobrokerlogsfirehose">Cluster<wbr>Logging<wbr>Info<wbr>Broker<wbr>Logs<wbr>Firehose<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterlogginginfobrokerlogsfirehose">Cluster<wbr>Logging<wbr>Info<wbr>Broker<wbr>Logs<wbr>Firehose</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3165,7 +3165,7 @@ The following state arguments are supported:
 <a href="#s3_nodejs" style="color: inherit; text-decoration: inherit;">s3</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterlogginginfobrokerlogss3">Cluster<wbr>Logging<wbr>Info<wbr>Broker<wbr>Logs<wbr>S3Args</a></span>
+        <span class="property-type"><a href="#clusterlogginginfobrokerlogss3">Cluster<wbr>Logging<wbr>Info<wbr>Broker<wbr>Logs<wbr>S3</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3177,7 +3177,7 @@ The following state arguments are supported:
 <a href="#cloudwatch_logs_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterlogginginfobrokerlogscloudwatchlogs">Cluster<wbr>Logging<wbr>Info<wbr>Broker<wbr>Logs<wbr>Cloudwatch<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterlogginginfobrokerlogscloudwatchlogs">Cluster<wbr>Logging<wbr>Info<wbr>Broker<wbr>Logs<wbr>Cloudwatch<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3185,7 +3185,7 @@ The following state arguments are supported:
 <a href="#firehose_python" style="color: inherit; text-decoration: inherit;">firehose</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterlogginginfobrokerlogsfirehose">Cluster<wbr>Logging<wbr>Info<wbr>Broker<wbr>Logs<wbr>Firehose<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterlogginginfobrokerlogsfirehose">Cluster<wbr>Logging<wbr>Info<wbr>Broker<wbr>Logs<wbr>Firehose</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3193,7 +3193,7 @@ The following state arguments are supported:
 <a href="#s3_python" style="color: inherit; text-decoration: inherit;">s3</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterlogginginfobrokerlogss3">Cluster<wbr>Logging<wbr>Info<wbr>Broker<wbr>Logs<wbr>S3Args</a></span>
+        <span class="property-type"><a href="#clusterlogginginfobrokerlogss3">Cluster<wbr>Logging<wbr>Info<wbr>Broker<wbr>Logs<wbr>S3</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3513,7 +3513,7 @@ The following state arguments are supported:
 <a href="#prometheus_csharp" style="color: inherit; text-decoration: inherit;">Prometheus</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteropenmonitoringprometheus">Cluster<wbr>Open<wbr>Monitoring<wbr>Prometheus<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteropenmonitoringprometheus">Cluster<wbr>Open<wbr>Monitoring<wbr>Prometheus</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for Prometheus settings for open monitoring. See below.
 {{% /md %}}</dd></dl>
@@ -3539,7 +3539,7 @@ The following state arguments are supported:
 <a href="#prometheus_nodejs" style="color: inherit; text-decoration: inherit;">prometheus</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteropenmonitoringprometheus">Cluster<wbr>Open<wbr>Monitoring<wbr>Prometheus<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteropenmonitoringprometheus">Cluster<wbr>Open<wbr>Monitoring<wbr>Prometheus</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for Prometheus settings for open monitoring. See below.
 {{% /md %}}</dd></dl>
@@ -3552,7 +3552,7 @@ The following state arguments are supported:
 <a href="#prometheus_python" style="color: inherit; text-decoration: inherit;">prometheus</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteropenmonitoringprometheus">Cluster<wbr>Open<wbr>Monitoring<wbr>Prometheus<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteropenmonitoringprometheus">Cluster<wbr>Open<wbr>Monitoring<wbr>Prometheus</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for Prometheus settings for open monitoring. See below.
 {{% /md %}}</dd></dl>
@@ -3567,7 +3567,7 @@ The following state arguments are supported:
 <a href="#jmxexporter_csharp" style="color: inherit; text-decoration: inherit;">Jmx<wbr>Exporter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteropenmonitoringprometheusjmxexporter">Cluster<wbr>Open<wbr>Monitoring<wbr>Prometheus<wbr>Jmx<wbr>Exporter<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteropenmonitoringprometheusjmxexporter">Cluster<wbr>Open<wbr>Monitoring<wbr>Prometheus<wbr>Jmx<wbr>Exporter</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for JMX Exporter. See below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3576,7 +3576,7 @@ The following state arguments are supported:
 <a href="#nodeexporter_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Exporter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteropenmonitoringprometheusnodeexporter">Cluster<wbr>Open<wbr>Monitoring<wbr>Prometheus<wbr>Node<wbr>Exporter<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteropenmonitoringprometheusnodeexporter">Cluster<wbr>Open<wbr>Monitoring<wbr>Prometheus<wbr>Node<wbr>Exporter</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for Node Exporter. See below.
 {{% /md %}}</dd></dl>
@@ -3611,7 +3611,7 @@ The following state arguments are supported:
 <a href="#jmxexporter_nodejs" style="color: inherit; text-decoration: inherit;">jmx<wbr>Exporter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteropenmonitoringprometheusjmxexporter">Cluster<wbr>Open<wbr>Monitoring<wbr>Prometheus<wbr>Jmx<wbr>Exporter<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteropenmonitoringprometheusjmxexporter">Cluster<wbr>Open<wbr>Monitoring<wbr>Prometheus<wbr>Jmx<wbr>Exporter</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for JMX Exporter. See below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3620,7 +3620,7 @@ The following state arguments are supported:
 <a href="#nodeexporter_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Exporter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteropenmonitoringprometheusnodeexporter">Cluster<wbr>Open<wbr>Monitoring<wbr>Prometheus<wbr>Node<wbr>Exporter<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteropenmonitoringprometheusnodeexporter">Cluster<wbr>Open<wbr>Monitoring<wbr>Prometheus<wbr>Node<wbr>Exporter</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for Node Exporter. See below.
 {{% /md %}}</dd></dl>
@@ -3633,7 +3633,7 @@ The following state arguments are supported:
 <a href="#jmx_exporter_python" style="color: inherit; text-decoration: inherit;">jmx_<wbr>exporter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteropenmonitoringprometheusjmxexporter">Cluster<wbr>Open<wbr>Monitoring<wbr>Prometheus<wbr>Jmx<wbr>Exporter<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteropenmonitoringprometheusjmxexporter">Cluster<wbr>Open<wbr>Monitoring<wbr>Prometheus<wbr>Jmx<wbr>Exporter</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for JMX Exporter. See below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3642,7 +3642,7 @@ The following state arguments are supported:
 <a href="#node_exporter_python" style="color: inherit; text-decoration: inherit;">node_<wbr>exporter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteropenmonitoringprometheusnodeexporter">Cluster<wbr>Open<wbr>Monitoring<wbr>Prometheus<wbr>Node<wbr>Exporter<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteropenmonitoringprometheusnodeexporter">Cluster<wbr>Open<wbr>Monitoring<wbr>Prometheus<wbr>Node<wbr>Exporter</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for Node Exporter. See below.
 {{% /md %}}</dd></dl>

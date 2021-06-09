@@ -182,7 +182,7 @@ The EphemeralContainers resource accepts the following [input]({{< relref "/docs
 <a href="#ephemeralcontainers_go" style="color: inherit; text-decoration: inherit;">Ephemeral<wbr>Containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ephemeralcontainer">[]Ephemeral<wbr>Container</a></span>
+        <span class="property-type"><a href="#ephemeralcontainer">[]Ephemeral<wbr>Container<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of ephemeral containers associated with this pod. New ephemeral containers may be appended to this list, but existing ephemeral containers may not be removed or modified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -190,7 +190,7 @@ The EphemeralContainers resource accepts the following [input]({{< relref "/docs
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta</a></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -765,7 +765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configmapref_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>Map<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configmapenvsource">Config<wbr>Map<wbr>Env<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#configmapenvsource">Config<wbr>Map<wbr>Env<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}The ConfigMap to select from{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -781,7 +781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretref_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretenvsource">Secret<wbr>Env<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretenvsource">Secret<wbr>Env<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}The Secret to select from{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -821,7 +821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configmapref_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Map<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configmapenvsource">Config<wbr>Map<wbr>Env<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#configmapenvsource">Config<wbr>Map<wbr>Env<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}The ConfigMap to select from{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -837,7 +837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretref_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretenvsource">Secret<wbr>Env<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretenvsource">Secret<wbr>Env<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}The Secret to select from{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -849,7 +849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#config_map_ref_python" style="color: inherit; text-decoration: inherit;">config_<wbr>map_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configmapenvsource">Config<wbr>Map<wbr>Env<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#configmapenvsource">Config<wbr>Map<wbr>Env<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}The ConfigMap to select from{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -865,7 +865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretenvsource">Secret<wbr>Env<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretenvsource">Secret<wbr>Env<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}The Secret to select from{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -895,7 +895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#valuefrom_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#envvarsource">Env<wbr>Var<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#envvarsource">Env<wbr>Var<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Source for the environment variable's value. Cannot be used if value is not empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -951,7 +951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#valuefrom_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#envvarsource">Env<wbr>Var<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#envvarsource">Env<wbr>Var<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Source for the environment variable's value. Cannot be used if value is not empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -979,7 +979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_from_python" style="color: inherit; text-decoration: inherit;">value_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#envvarsource">Env<wbr>Var<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#envvarsource">Env<wbr>Var<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Source for the environment variable's value. Cannot be used if value is not empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -993,7 +993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configmapkeyref_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>Map<wbr>Key<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configmapkeyselector">Config<wbr>Map<wbr>Key<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#configmapkeyselector">Config<wbr>Map<wbr>Key<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}Selects a key of a ConfigMap.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1001,7 +1001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldref_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectfieldselector">Object<wbr>Field<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectfieldselector">Object<wbr>Field<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}Selects a field of the pod: supports metadata.name, metadata.namespace, `metadata.labels['<KEY>']`, `metadata.annotations['<KEY>']`, spec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1009,7 +1009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcefieldref_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Field<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcefieldselector">Resource<wbr>Field<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcefieldselector">Resource<wbr>Field<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, limits.ephemeral-storage, requests.cpu, requests.memory and requests.ephemeral-storage) are currently supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1017,7 +1017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretkeyref_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretkeyselector">Secret<wbr>Key<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretkeyselector">Secret<wbr>Key<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}Selects a key of a secret in the pod's namespace{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1065,7 +1065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configmapkeyref_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Map<wbr>Key<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configmapkeyselector">Config<wbr>Map<wbr>Key<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#configmapkeyselector">Config<wbr>Map<wbr>Key<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}Selects a key of a ConfigMap.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1073,7 +1073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldref_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectfieldselector">Object<wbr>Field<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectfieldselector">Object<wbr>Field<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}Selects a field of the pod: supports metadata.name, metadata.namespace, `metadata.labels['<KEY>']`, `metadata.annotations['<KEY>']`, spec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1081,7 +1081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcefieldref_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Field<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcefieldselector">Resource<wbr>Field<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcefieldselector">Resource<wbr>Field<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, limits.ephemeral-storage, requests.cpu, requests.memory and requests.ephemeral-storage) are currently supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1089,7 +1089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretkeyref_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretkeyselector">Secret<wbr>Key<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretkeyselector">Secret<wbr>Key<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}Selects a key of a secret in the pod's namespace{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1101,7 +1101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#config_map_key_ref_python" style="color: inherit; text-decoration: inherit;">config_<wbr>map_<wbr>key_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configmapkeyselector">Config<wbr>Map<wbr>Key<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#configmapkeyselector">Config<wbr>Map<wbr>Key<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}Selects a key of a ConfigMap.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1109,7 +1109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#field_ref_python" style="color: inherit; text-decoration: inherit;">field_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectfieldselector">Object<wbr>Field<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectfieldselector">Object<wbr>Field<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}Selects a field of the pod: supports metadata.name, metadata.namespace, `metadata.labels['<KEY>']`, `metadata.annotations['<KEY>']`, spec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1117,7 +1117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_field_ref_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>field_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcefieldselector">Resource<wbr>Field<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcefieldselector">Resource<wbr>Field<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, limits.ephemeral-storage, requests.cpu, requests.memory and requests.ephemeral-storage) are currently supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1125,7 +1125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_key_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretkeyselector">Secret<wbr>Key<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretkeyselector">Secret<wbr>Key<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}Selects a key of a secret in the pod's namespace{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1163,7 +1163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#env_csharp" style="color: inherit; text-decoration: inherit;">Env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#envvar">List&lt;Env<wbr>Var<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#envvar">List&lt;Env<wbr>Var&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of environment variables to set in the container. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1171,7 +1171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#envfrom_csharp" style="color: inherit; text-decoration: inherit;">Env<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#envfromsource">List&lt;Env<wbr>From<wbr>Source<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#envfromsource">List&lt;Env<wbr>From<wbr>Source&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of sources to populate environment variables in the container. The keys defined within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container is starting. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1195,7 +1195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lifecycle_csharp" style="color: inherit; text-decoration: inherit;">Lifecycle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lifecycle">Lifecycle<wbr>Args</a></span>
+        <span class="property-type"><a href="#lifecycle">Lifecycle</a></span>
     </dt>
     <dd>{{% md %}}Lifecycle is not allowed for ephemeral containers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1203,7 +1203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#livenessprobe_csharp" style="color: inherit; text-decoration: inherit;">Liveness<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probe">Probe<wbr>Args</a></span>
+        <span class="property-type"><a href="#probe">Probe</a></span>
     </dt>
     <dd>{{% md %}}Probes are not allowed for ephemeral containers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1211,7 +1211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerport">List&lt;Container<wbr>Port<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#containerport">List&lt;Container<wbr>Port&gt;</a></span>
     </dt>
     <dd>{{% md %}}Ports are not allowed for ephemeral containers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1219,7 +1219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#readinessprobe_csharp" style="color: inherit; text-decoration: inherit;">Readiness<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probe">Probe<wbr>Args</a></span>
+        <span class="property-type"><a href="#probe">Probe</a></span>
     </dt>
     <dd>{{% md %}}Probes are not allowed for ephemeral containers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1227,7 +1227,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resources_csharp" style="color: inherit; text-decoration: inherit;">Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequirements">Resource<wbr>Requirements<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcerequirements">Resource<wbr>Requirements</a></span>
     </dt>
     <dd>{{% md %}}Resources are not allowed for ephemeral containers. Ephemeral containers use spare resources already allocated to the pod.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1235,7 +1235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securitycontext_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitycontext">Security<wbr>Context<wbr>Args</a></span>
+        <span class="property-type"><a href="#securitycontext">Security<wbr>Context</a></span>
     </dt>
     <dd>{{% md %}}SecurityContext is not allowed for ephemeral containers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1243,7 +1243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#startupprobe_csharp" style="color: inherit; text-decoration: inherit;">Startup<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probe">Probe<wbr>Args</a></span>
+        <span class="property-type"><a href="#probe">Probe</a></span>
     </dt>
     <dd>{{% md %}}Probes are not allowed for ephemeral containers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1299,7 +1299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumedevices_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumedevice">List&lt;Volume<wbr>Device<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#volumedevice">List&lt;Volume<wbr>Device&gt;</a></span>
     </dt>
     <dd>{{% md %}}volumeDevices is the list of block devices to be used by the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1307,7 +1307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumemounts_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Mounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumemount">List&lt;Volume<wbr>Mount<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#volumemount">List&lt;Volume<wbr>Mount&gt;</a></span>
     </dt>
     <dd>{{% md %}}Pod volumes to mount into the container's filesystem. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1539,7 +1539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#env_nodejs" style="color: inherit; text-decoration: inherit;">env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#envvar">Env<wbr>Var<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#envvar">Env<wbr>Var[]</a></span>
     </dt>
     <dd>{{% md %}}List of environment variables to set in the container. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1547,7 +1547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#envfrom_nodejs" style="color: inherit; text-decoration: inherit;">env<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#envfromsource">Env<wbr>From<wbr>Source<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#envfromsource">Env<wbr>From<wbr>Source[]</a></span>
     </dt>
     <dd>{{% md %}}List of sources to populate environment variables in the container. The keys defined within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container is starting. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1571,7 +1571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lifecycle_nodejs" style="color: inherit; text-decoration: inherit;">lifecycle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lifecycle">Lifecycle<wbr>Args</a></span>
+        <span class="property-type"><a href="#lifecycle">Lifecycle</a></span>
     </dt>
     <dd>{{% md %}}Lifecycle is not allowed for ephemeral containers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1579,7 +1579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#livenessprobe_nodejs" style="color: inherit; text-decoration: inherit;">liveness<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probe">Probe<wbr>Args</a></span>
+        <span class="property-type"><a href="#probe">Probe</a></span>
     </dt>
     <dd>{{% md %}}Probes are not allowed for ephemeral containers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1587,7 +1587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerport">Container<wbr>Port<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#containerport">Container<wbr>Port[]</a></span>
     </dt>
     <dd>{{% md %}}Ports are not allowed for ephemeral containers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1595,7 +1595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#readinessprobe_nodejs" style="color: inherit; text-decoration: inherit;">readiness<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probe">Probe<wbr>Args</a></span>
+        <span class="property-type"><a href="#probe">Probe</a></span>
     </dt>
     <dd>{{% md %}}Probes are not allowed for ephemeral containers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1603,7 +1603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequirements">Resource<wbr>Requirements<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcerequirements">Resource<wbr>Requirements</a></span>
     </dt>
     <dd>{{% md %}}Resources are not allowed for ephemeral containers. Ephemeral containers use spare resources already allocated to the pod.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1611,7 +1611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securitycontext_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitycontext">Security<wbr>Context<wbr>Args</a></span>
+        <span class="property-type"><a href="#securitycontext">Security<wbr>Context</a></span>
     </dt>
     <dd>{{% md %}}SecurityContext is not allowed for ephemeral containers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1619,7 +1619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#startupprobe_nodejs" style="color: inherit; text-decoration: inherit;">startup<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probe">Probe<wbr>Args</a></span>
+        <span class="property-type"><a href="#probe">Probe</a></span>
     </dt>
     <dd>{{% md %}}Probes are not allowed for ephemeral containers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1675,7 +1675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumedevices_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumedevice">Volume<wbr>Device<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#volumedevice">Volume<wbr>Device[]</a></span>
     </dt>
     <dd>{{% md %}}volumeDevices is the list of block devices to be used by the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1683,7 +1683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumemounts_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Mounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumemount">Volume<wbr>Mount<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#volumemount">Volume<wbr>Mount[]</a></span>
     </dt>
     <dd>{{% md %}}Pod volumes to mount into the container's filesystem. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1727,7 +1727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#env_python" style="color: inherit; text-decoration: inherit;">env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#envvar">Env<wbr>Var<wbr>Args]</a></span>
+        <span class="property-type"><a href="#envvar">Env<wbr>Var]</a></span>
     </dt>
     <dd>{{% md %}}List of environment variables to set in the container. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1735,7 +1735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#env_from_python" style="color: inherit; text-decoration: inherit;">env_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#envfromsource">Env<wbr>From<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#envfromsource">Env<wbr>From<wbr>Source]</a></span>
     </dt>
     <dd>{{% md %}}List of sources to populate environment variables in the container. The keys defined within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container is starting. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1759,7 +1759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lifecycle_python" style="color: inherit; text-decoration: inherit;">lifecycle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lifecycle">Lifecycle<wbr>Args</a></span>
+        <span class="property-type"><a href="#lifecycle">Lifecycle</a></span>
     </dt>
     <dd>{{% md %}}Lifecycle is not allowed for ephemeral containers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1767,7 +1767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#liveness_probe_python" style="color: inherit; text-decoration: inherit;">liveness_<wbr>probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probe">Probe<wbr>Args</a></span>
+        <span class="property-type"><a href="#probe">Probe</a></span>
     </dt>
     <dd>{{% md %}}Probes are not allowed for ephemeral containers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1775,7 +1775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerport">Container<wbr>Port<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containerport">Container<wbr>Port]</a></span>
     </dt>
     <dd>{{% md %}}Ports are not allowed for ephemeral containers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1783,7 +1783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#readiness_probe_python" style="color: inherit; text-decoration: inherit;">readiness_<wbr>probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probe">Probe<wbr>Args</a></span>
+        <span class="property-type"><a href="#probe">Probe</a></span>
     </dt>
     <dd>{{% md %}}Probes are not allowed for ephemeral containers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1791,7 +1791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequirements">Resource<wbr>Requirements<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcerequirements">Resource<wbr>Requirements</a></span>
     </dt>
     <dd>{{% md %}}Resources are not allowed for ephemeral containers. Ephemeral containers use spare resources already allocated to the pod.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1799,7 +1799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#security_context_python" style="color: inherit; text-decoration: inherit;">security_<wbr>context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitycontext">Security<wbr>Context<wbr>Args</a></span>
+        <span class="property-type"><a href="#securitycontext">Security<wbr>Context</a></span>
     </dt>
     <dd>{{% md %}}SecurityContext is not allowed for ephemeral containers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1807,7 +1807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#startup_probe_python" style="color: inherit; text-decoration: inherit;">startup_<wbr>probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probe">Probe<wbr>Args</a></span>
+        <span class="property-type"><a href="#probe">Probe</a></span>
     </dt>
     <dd>{{% md %}}Probes are not allowed for ephemeral containers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1863,7 +1863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volume_devices_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumedevice">Volume<wbr>Device<wbr>Args]</a></span>
+        <span class="property-type"><a href="#volumedevice">Volume<wbr>Device]</a></span>
     </dt>
     <dd>{{% md %}}volumeDevices is the list of block devices to be used by the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1871,7 +1871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volume_mounts_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>mounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumemount">Volume<wbr>Mount<wbr>Args]</a></span>
+        <span class="property-type"><a href="#volumemount">Volume<wbr>Mount]</a></span>
     </dt>
     <dd>{{% md %}}Pod volumes to mount into the container's filesystem. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1959,7 +1959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httpheaders_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheader">List&lt;HTTPHeader<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#httpheader">List&lt;HTTPHeader&gt;</a></span>
     </dt>
     <dd>{{% md %}}Custom headers to set in the request. HTTP allows repeated headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2047,7 +2047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httpheaders_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheader">HTTPHeader<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#httpheader">HTTPHeader[]</a></span>
     </dt>
     <dd>{{% md %}}Custom headers to set in the request. HTTP allows repeated headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2091,7 +2091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#http_headers_python" style="color: inherit; text-decoration: inherit;">http_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheader">HTTPHeader<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httpheader">HTTPHeader]</a></span>
     </dt>
     <dd>{{% md %}}Custom headers to set in the request. HTTP allows repeated headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2203,7 +2203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exec_csharp" style="color: inherit; text-decoration: inherit;">Exec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#execaction">Exec<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#execaction">Exec<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}One and only one of the following should be specified. Exec specifies the action to take.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2211,7 +2211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httpget_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Get</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpgetaction">HTTPGet<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#httpgetaction">HTTPGet<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}HTTPGet specifies the http request to perform.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2219,7 +2219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tcpsocket_csharp" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Socket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tcpsocketaction">TCPSocket<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#tcpsocketaction">TCPSocket<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2259,7 +2259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exec_nodejs" style="color: inherit; text-decoration: inherit;">exec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#execaction">Exec<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#execaction">Exec<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}One and only one of the following should be specified. Exec specifies the action to take.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2267,7 +2267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httpget_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Get</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpgetaction">HTTPGet<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#httpgetaction">HTTPGet<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}HTTPGet specifies the http request to perform.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2275,7 +2275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tcpsocket_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Socket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tcpsocketaction">TCPSocket<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#tcpsocketaction">TCPSocket<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2287,7 +2287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exec__python" style="color: inherit; text-decoration: inherit;">exec_</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#execaction">Exec<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#execaction">Exec<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}One and only one of the following should be specified. Exec specifies the action to take.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2295,7 +2295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#http_get_python" style="color: inherit; text-decoration: inherit;">http_<wbr>get</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpgetaction">HTTPGet<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#httpgetaction">HTTPGet<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}HTTPGet specifies the http request to perform.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2303,7 +2303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tcp_socket_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>socket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tcpsocketaction">TCPSocket<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#tcpsocketaction">TCPSocket<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2317,7 +2317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#poststart_csharp" style="color: inherit; text-decoration: inherit;">Post<wbr>Start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#handler">Handler<wbr>Args</a></span>
+        <span class="property-type"><a href="#handler">Handler</a></span>
     </dt>
     <dd>{{% md %}}PostStart is called immediately after a container is created. If the handler fails, the container is terminated and restarted according to its restart policy. Other management of the container blocks until the hook completes. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2325,7 +2325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prestop_csharp" style="color: inherit; text-decoration: inherit;">Pre<wbr>Stop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#handler">Handler<wbr>Args</a></span>
+        <span class="property-type"><a href="#handler">Handler</a></span>
     </dt>
     <dd>{{% md %}}PreStop is called immediately before a container is terminated due to an API request or management event such as liveness/startup probe failure, preemption, resource contention, etc. The handler is not called if the container crashes or exits. The reason for termination is passed to the handler. The Pod's termination grace period countdown begins before the PreStop hooked is executed. Regardless of the outcome of the handler, the container will eventually terminate within the Pod's termination grace period. Other management of the container blocks until the hook completes or until the termination grace period is reached. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2357,7 +2357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#poststart_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#handler">Handler<wbr>Args</a></span>
+        <span class="property-type"><a href="#handler">Handler</a></span>
     </dt>
     <dd>{{% md %}}PostStart is called immediately after a container is created. If the handler fails, the container is terminated and restarted according to its restart policy. Other management of the container blocks until the hook completes. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2365,7 +2365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prestop_nodejs" style="color: inherit; text-decoration: inherit;">pre<wbr>Stop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#handler">Handler<wbr>Args</a></span>
+        <span class="property-type"><a href="#handler">Handler</a></span>
     </dt>
     <dd>{{% md %}}PreStop is called immediately before a container is terminated due to an API request or management event such as liveness/startup probe failure, preemption, resource contention, etc. The handler is not called if the container crashes or exits. The reason for termination is passed to the handler. The Pod's termination grace period countdown begins before the PreStop hooked is executed. Regardless of the outcome of the handler, the container will eventually terminate within the Pod's termination grace period. Other management of the container blocks until the hook completes or until the termination grace period is reached. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2377,7 +2377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#post_start_python" style="color: inherit; text-decoration: inherit;">post_<wbr>start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#handler">Handler<wbr>Args</a></span>
+        <span class="property-type"><a href="#handler">Handler</a></span>
     </dt>
     <dd>{{% md %}}PostStart is called immediately after a container is created. If the handler fails, the container is terminated and restarted according to its restart policy. Other management of the container blocks until the hook completes. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2385,7 +2385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pre_stop_python" style="color: inherit; text-decoration: inherit;">pre_<wbr>stop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#handler">Handler<wbr>Args</a></span>
+        <span class="property-type"><a href="#handler">Handler</a></span>
     </dt>
     <dd>{{% md %}}PreStop is called immediately before a container is terminated due to an API request or management event such as liveness/startup probe failure, preemption, resource contention, etc. The handler is not called if the container crashes or exits. The reason for termination is passed to the handler. The Pod's termination grace period countdown begins before the PreStop hooked is executed. Regardless of the outcome of the handler, the container will eventually terminate within the Pod's termination grace period. Other management of the container blocks until the hook completes or until the termination grace period is reached. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2771,7 +2771,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#managedfields_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedfieldsentry">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Managed<wbr>Fields<wbr>Entry<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managedfieldsentry">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Managed<wbr>Fields<wbr>Entry&gt;</a></span>
     </dt>
     <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2797,7 +2797,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 <a href="#ownerreferences_csharp" style="color: inherit; text-decoration: inherit;">Owner<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ownerreference">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Owner<wbr>Reference<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ownerreference">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Owner<wbr>Reference&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3067,7 +3067,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#managedfields_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedfieldsentry">meta.v1.<wbr>Managed<wbr>Fields<wbr>Entry<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#managedfieldsentry">meta.v1.<wbr>Managed<wbr>Fields<wbr>Entry[]</a></span>
     </dt>
     <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3093,7 +3093,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 <a href="#ownerreferences_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ownerreference">meta.v1.<wbr>Owner<wbr>Reference<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#ownerreference">meta.v1.<wbr>Owner<wbr>Reference[]</a></span>
     </dt>
     <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3215,7 +3215,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#managed_fields_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedfieldsentry">Managed<wbr>Fields<wbr>Entry<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedfieldsentry">Managed<wbr>Fields<wbr>Entry]</a></span>
     </dt>
     <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3241,7 +3241,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 <a href="#owner_references_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>references</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ownerreference">Owner<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ownerreference">Owner<wbr>Reference]</a></span>
     </dt>
     <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3495,7 +3495,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#exec_csharp" style="color: inherit; text-decoration: inherit;">Exec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#execaction">Exec<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#execaction">Exec<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}One and only one of the following should be specified. Exec specifies the action to take.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3511,7 +3511,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#httpget_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Get</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpgetaction">HTTPGet<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#httpgetaction">HTTPGet<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}HTTPGet specifies the http request to perform.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3543,7 +3543,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#tcpsocket_csharp" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Socket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tcpsocketaction">TCPSocket<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#tcpsocketaction">TCPSocket<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3647,7 +3647,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#exec_nodejs" style="color: inherit; text-decoration: inherit;">exec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#execaction">Exec<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#execaction">Exec<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}One and only one of the following should be specified. Exec specifies the action to take.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3663,7 +3663,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#httpget_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Get</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpgetaction">HTTPGet<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#httpgetaction">HTTPGet<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}HTTPGet specifies the http request to perform.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3695,7 +3695,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#tcpsocket_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Socket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tcpsocketaction">TCPSocket<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#tcpsocketaction">TCPSocket<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3723,7 +3723,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#exec__python" style="color: inherit; text-decoration: inherit;">exec_</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#execaction">Exec<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#execaction">Exec<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}One and only one of the following should be specified. Exec specifies the action to take.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3739,7 +3739,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#http_get_python" style="color: inherit; text-decoration: inherit;">http_<wbr>get</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpgetaction">HTTPGet<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#httpgetaction">HTTPGet<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}HTTPGet specifies the http request to perform.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3771,7 +3771,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#tcp_socket_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>socket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tcpsocketaction">TCPSocket<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#tcpsocketaction">TCPSocket<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4437,7 +4437,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#capabilities_csharp" style="color: inherit; text-decoration: inherit;">Capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capabilities">Capabilities<wbr>Args</a></span>
+        <span class="property-type"><a href="#capabilities">Capabilities</a></span>
     </dt>
     <dd>{{% md %}}The capabilities to add/drop when running containers. Defaults to the default set of capabilities granted by the container runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4493,7 +4493,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#selinuxoptions_csharp" style="color: inherit; text-decoration: inherit;">Se<wbr>Linux<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selinuxoptions">SELinux<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#selinuxoptions">SELinux<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The SELinux context to be applied to the container. If unspecified, the container runtime will allocate a random SELinux context for each container.  May also be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4501,7 +4501,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#seccompprofile_csharp" style="color: inherit; text-decoration: inherit;">Seccomp<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#seccompprofile">Seccomp<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#seccompprofile">Seccomp<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}The seccomp options to use by this container. If seccomp options are provided at both the pod & container level, the container options override the pod options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4509,7 +4509,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#windowsoptions_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowssecuritycontextoptions">Windows<wbr>Security<wbr>Context<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#windowssecuritycontextoptions">Windows<wbr>Security<wbr>Context<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The Windows specific settings applied to all containers. If unspecified, the options from the PodSecurityContext will be used. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4621,7 +4621,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#capabilities_nodejs" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capabilities">Capabilities<wbr>Args</a></span>
+        <span class="property-type"><a href="#capabilities">Capabilities</a></span>
     </dt>
     <dd>{{% md %}}The capabilities to add/drop when running containers. Defaults to the default set of capabilities granted by the container runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4677,7 +4677,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#selinuxoptions_nodejs" style="color: inherit; text-decoration: inherit;">se<wbr>Linux<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selinuxoptions">SELinux<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#selinuxoptions">SELinux<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The SELinux context to be applied to the container. If unspecified, the container runtime will allocate a random SELinux context for each container.  May also be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4685,7 +4685,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#seccompprofile_nodejs" style="color: inherit; text-decoration: inherit;">seccomp<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#seccompprofile">Seccomp<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#seccompprofile">Seccomp<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}The seccomp options to use by this container. If seccomp options are provided at both the pod & container level, the container options override the pod options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4693,7 +4693,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#windowsoptions_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowssecuritycontextoptions">Windows<wbr>Security<wbr>Context<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#windowssecuritycontextoptions">Windows<wbr>Security<wbr>Context<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The Windows specific settings applied to all containers. If unspecified, the options from the PodSecurityContext will be used. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4713,7 +4713,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capabilities">Capabilities<wbr>Args</a></span>
+        <span class="property-type"><a href="#capabilities">Capabilities</a></span>
     </dt>
     <dd>{{% md %}}The capabilities to add/drop when running containers. Defaults to the default set of capabilities granted by the container runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4769,7 +4769,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#se_linux_options_python" style="color: inherit; text-decoration: inherit;">se_<wbr>linux_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selinuxoptions">SELinux<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#selinuxoptions">SELinux<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The SELinux context to be applied to the container. If unspecified, the container runtime will allocate a random SELinux context for each container.  May also be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4777,7 +4777,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#seccomp_profile_python" style="color: inherit; text-decoration: inherit;">seccomp_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#seccompprofile">Seccomp<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#seccompprofile">Seccomp<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}The seccomp options to use by this container. If seccomp options are provided at both the pod & container level, the container options override the pod options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4785,7 +4785,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#windows_options_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowssecuritycontextoptions">Windows<wbr>Security<wbr>Context<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#windowssecuritycontextoptions">Windows<wbr>Security<wbr>Context<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The Windows specific settings applied to all containers. If unspecified, the options from the PodSecurityContext will be used. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.{{% /md %}}</dd></dl>
 {{% /choosable %}}

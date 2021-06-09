@@ -332,7 +332,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#appversionlifecycle_go" style="color: inherit; text-decoration: inherit;">Appversion<wbr>Lifecycle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationappversionlifecycle">Application<wbr>Appversion<wbr>Lifecycle</a></span>
+        <span class="property-type"><a href="#applicationappversionlifecycle">Application<wbr>Appversion<wbr>Lifecycle<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -747,7 +747,7 @@ The following state arguments are supported:
 <a href="#state_appversionlifecycle_go" style="color: inherit; text-decoration: inherit;">Appversion<wbr>Lifecycle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationappversionlifecycle">Application<wbr>Appversion<wbr>Lifecycle</a></span>
+        <span class="property-type"><a href="#applicationappversionlifecycle">Application<wbr>Appversion<wbr>Lifecycle<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

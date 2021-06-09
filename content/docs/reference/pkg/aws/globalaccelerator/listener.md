@@ -378,7 +378,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#portranges_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerportrange">[]Listener<wbr>Port<wbr>Range</a></span>
+        <span class="property-type"><a href="#listenerportrange">[]Listener<wbr>Port<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of port ranges for the connections from clients to the accelerator. Fields documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -731,7 +731,7 @@ The following state arguments are supported:
 <a href="#state_portranges_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerportrange">[]Listener<wbr>Port<wbr>Range</a></span>
+        <span class="property-type"><a href="#listenerportrange">[]Listener<wbr>Port<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of port ranges for the connections from clients to the accelerator. Fields documented below.
 {{% /md %}}</dd><dt class="property-optional"

@@ -969,7 +969,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#deadletterconfig_go" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functiondeadletterconfig">Function<wbr>Dead<wbr>Letter<wbr>Config</a></span>
+        <span class="property-type"><a href="#functiondeadletterconfig">Function<wbr>Dead<wbr>Letter<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -987,7 +987,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#environment_go" style="color: inherit; text-decoration: inherit;">Environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionenvironment">Function<wbr>Environment</a></span>
+        <span class="property-type"><a href="#functionenvironment">Function<wbr>Environment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -996,7 +996,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#filesystemconfig_go" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionfilesystemconfig">Function<wbr>File<wbr>System<wbr>Config</a></span>
+        <span class="property-type"><a href="#functionfilesystemconfig">Function<wbr>File<wbr>System<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1014,7 +1014,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#imageconfig_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionimageconfig">Function<wbr>Image<wbr>Config</a></span>
+        <span class="property-type"><a href="#functionimageconfig">Function<wbr>Image<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1167,7 +1167,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tracingconfig_go" style="color: inherit; text-decoration: inherit;">Tracing<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functiontracingconfig">Function<wbr>Tracing<wbr>Config</a></span>
+        <span class="property-type"><a href="#functiontracingconfig">Function<wbr>Tracing<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1176,7 +1176,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#vpcconfig_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionvpcconfig">Function<wbr>Vpc<wbr>Config</a></span>
+        <span class="property-type"><a href="#functionvpcconfig">Function<wbr>Vpc<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd></dl>
@@ -2537,7 +2537,7 @@ The following state arguments are supported:
 <a href="#state_deadletterconfig_go" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functiondeadletterconfig">Function<wbr>Dead<wbr>Letter<wbr>Config</a></span>
+        <span class="property-type"><a href="#functiondeadletterconfig">Function<wbr>Dead<wbr>Letter<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2555,7 +2555,7 @@ The following state arguments are supported:
 <a href="#state_environment_go" style="color: inherit; text-decoration: inherit;">Environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionenvironment">Function<wbr>Environment</a></span>
+        <span class="property-type"><a href="#functionenvironment">Function<wbr>Environment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2564,7 +2564,7 @@ The following state arguments are supported:
 <a href="#state_filesystemconfig_go" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionfilesystemconfig">Function<wbr>File<wbr>System<wbr>Config</a></span>
+        <span class="property-type"><a href="#functionfilesystemconfig">Function<wbr>File<wbr>System<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2582,7 +2582,7 @@ The following state arguments are supported:
 <a href="#state_imageconfig_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionimageconfig">Function<wbr>Image<wbr>Config</a></span>
+        <span class="property-type"><a href="#functionimageconfig">Function<wbr>Image<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2798,7 +2798,7 @@ The following state arguments are supported:
 <a href="#state_tracingconfig_go" style="color: inherit; text-decoration: inherit;">Tracing<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functiontracingconfig">Function<wbr>Tracing<wbr>Config</a></span>
+        <span class="property-type"><a href="#functiontracingconfig">Function<wbr>Tracing<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2817,7 +2817,7 @@ The following state arguments are supported:
 <a href="#state_vpcconfig_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionvpcconfig">Function<wbr>Vpc<wbr>Config</a></span>
+        <span class="property-type"><a href="#functionvpcconfig">Function<wbr>Vpc<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd></dl>

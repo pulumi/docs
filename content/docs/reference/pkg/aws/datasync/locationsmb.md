@@ -426,7 +426,7 @@ The LocationSmb resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#mountoptions_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#locationsmbmountoptions">Location<wbr>Smb<wbr>Mount<wbr>Options</a></span>
+        <span class="property-type"><a href="#locationsmbmountoptions">Location<wbr>Smb<wbr>Mount<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing mount options used by DataSync to access the SMB Server. Can be `AUTOMATIC`, `SMB2`, or `SMB3`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1015,7 +1015,7 @@ The following state arguments are supported:
 <a href="#state_mountoptions_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#locationsmbmountoptions">Location<wbr>Smb<wbr>Mount<wbr>Options</a></span>
+        <span class="property-type"><a href="#locationsmbmountoptions">Location<wbr>Smb<wbr>Mount<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing mount options used by DataSync to access the SMB Server. Can be `AUTOMATIC`, `SMB2`, or `SMB3`.
 {{% /md %}}</dd><dt class="property-optional"

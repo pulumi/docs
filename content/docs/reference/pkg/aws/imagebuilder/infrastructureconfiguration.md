@@ -469,7 +469,7 @@ The InfrastructureConfiguration resource accepts the following [input]({{< relre
 <a href="#logging_go" style="color: inherit; text-decoration: inherit;">Logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#infrastructureconfigurationlogging">Infrastructure<wbr>Configuration<wbr>Logging</a></span>
+        <span class="property-type"><a href="#infrastructureconfigurationlogging">Infrastructure<wbr>Configuration<wbr>Logging<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with logging settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1311,7 +1311,7 @@ The following state arguments are supported:
 <a href="#state_logging_go" style="color: inherit; text-decoration: inherit;">Logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#infrastructureconfigurationlogging">Infrastructure<wbr>Configuration<wbr>Logging</a></span>
+        <span class="property-type"><a href="#infrastructureconfigurationlogging">Infrastructure<wbr>Configuration<wbr>Logging<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with logging settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1703,7 +1703,7 @@ The following state arguments are supported:
 <a href="#s3logs_csharp" style="color: inherit; text-decoration: inherit;">S3Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#infrastructureconfigurationloggings3logs">Infrastructure<wbr>Configuration<wbr>Logging<wbr>S3Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#infrastructureconfigurationloggings3logs">Infrastructure<wbr>Configuration<wbr>Logging<wbr>S3Logs</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with S3 logging settings. Detailed below.
 {{% /md %}}</dd></dl>
@@ -1729,7 +1729,7 @@ The following state arguments are supported:
 <a href="#s3logs_nodejs" style="color: inherit; text-decoration: inherit;">s3Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#infrastructureconfigurationloggings3logs">Infrastructure<wbr>Configuration<wbr>Logging<wbr>S3Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#infrastructureconfigurationloggings3logs">Infrastructure<wbr>Configuration<wbr>Logging<wbr>S3Logs</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with S3 logging settings. Detailed below.
 {{% /md %}}</dd></dl>
@@ -1742,7 +1742,7 @@ The following state arguments are supported:
 <a href="#s3_logs_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#infrastructureconfigurationloggings3logs">Infrastructure<wbr>Configuration<wbr>Logging<wbr>S3Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#infrastructureconfigurationloggings3logs">Infrastructure<wbr>Configuration<wbr>Logging<wbr>S3Logs</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with S3 logging settings. Detailed below.
 {{% /md %}}</dd></dl>

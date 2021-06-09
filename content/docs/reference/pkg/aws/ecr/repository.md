@@ -330,7 +330,7 @@ The Repository resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#encryptionconfigurations_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#repositoryencryptionconfiguration">[]Repository<wbr>Encryption<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#repositoryencryptionconfiguration">[]Repository<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encryption configuration for the repository. See below for schema.
 {{% /md %}}</dd><dt class="property-optional"
@@ -339,7 +339,7 @@ The Repository resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#imagescanningconfiguration_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Scanning<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#repositoryimagescanningconfiguration">Repository<wbr>Image<wbr>Scanning<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#repositoryimagescanningconfiguration">Repository<wbr>Image<wbr>Scanning<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block that defines image scanning configuration for the repository. By default, image scanning must be manually triggered. See the [ECR User Guide](https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-scanning.html) for more information about image scanning.
 {{% /md %}}</dd><dt class="property-optional"
@@ -887,7 +887,7 @@ The following state arguments are supported:
 <a href="#state_encryptionconfigurations_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#repositoryencryptionconfiguration">[]Repository<wbr>Encryption<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#repositoryencryptionconfiguration">[]Repository<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encryption configuration for the repository. See below for schema.
 {{% /md %}}</dd><dt class="property-optional"
@@ -896,7 +896,7 @@ The following state arguments are supported:
 <a href="#state_imagescanningconfiguration_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Scanning<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#repositoryimagescanningconfiguration">Repository<wbr>Image<wbr>Scanning<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#repositoryimagescanningconfiguration">Repository<wbr>Image<wbr>Scanning<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block that defines image scanning configuration for the repository. By default, image scanning must be manually triggered. See the [ECR User Guide](https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-scanning.html) for more information about image scanning.
 {{% /md %}}</dd><dt class="property-optional"

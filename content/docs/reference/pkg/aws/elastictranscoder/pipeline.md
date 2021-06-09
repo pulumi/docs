@@ -424,7 +424,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#contentconfig_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinecontentconfig">Pipeline<wbr>Content<wbr>Config</a></span>
+        <span class="property-type"><a href="#pipelinecontentconfig">Pipeline<wbr>Content<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ContentConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save transcoded files and playlists. (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -433,7 +433,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#contentconfigpermissions_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Config<wbr>Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinecontentconfigpermission">[]Pipeline<wbr>Content<wbr>Config<wbr>Permission</a></span>
+        <span class="property-type"><a href="#pipelinecontentconfigpermission">[]Pipeline<wbr>Content<wbr>Config<wbr>Permission<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The permissions for the `content_config` object. (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -451,7 +451,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#notifications_go" style="color: inherit; text-decoration: inherit;">Notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinenotifications">Pipeline<wbr>Notifications</a></span>
+        <span class="property-type"><a href="#pipelinenotifications">Pipeline<wbr>Notifications<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Simple Notification Service (Amazon SNS) topic that you want to notify to report job status. (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -469,7 +469,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#thumbnailconfig_go" style="color: inherit; text-decoration: inherit;">Thumbnail<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinethumbnailconfig">Pipeline<wbr>Thumbnail<wbr>Config</a></span>
+        <span class="property-type"><a href="#pipelinethumbnailconfig">Pipeline<wbr>Thumbnail<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ThumbnailConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save thumbnail files. (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -478,7 +478,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#thumbnailconfigpermissions_go" style="color: inherit; text-decoration: inherit;">Thumbnail<wbr>Config<wbr>Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinethumbnailconfigpermission">[]Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission</a></span>
+        <span class="property-type"><a href="#pipelinethumbnailconfigpermission">[]Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The permissions for the `thumbnail_config` object. (documented below)
 {{% /md %}}</dd></dl>
@@ -1027,7 +1027,7 @@ The following state arguments are supported:
 <a href="#state_contentconfig_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinecontentconfig">Pipeline<wbr>Content<wbr>Config</a></span>
+        <span class="property-type"><a href="#pipelinecontentconfig">Pipeline<wbr>Content<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ContentConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save transcoded files and playlists. (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1036,7 +1036,7 @@ The following state arguments are supported:
 <a href="#state_contentconfigpermissions_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Config<wbr>Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinecontentconfigpermission">[]Pipeline<wbr>Content<wbr>Config<wbr>Permission</a></span>
+        <span class="property-type"><a href="#pipelinecontentconfigpermission">[]Pipeline<wbr>Content<wbr>Config<wbr>Permission<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The permissions for the `content_config` object. (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1063,7 +1063,7 @@ The following state arguments are supported:
 <a href="#state_notifications_go" style="color: inherit; text-decoration: inherit;">Notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinenotifications">Pipeline<wbr>Notifications</a></span>
+        <span class="property-type"><a href="#pipelinenotifications">Pipeline<wbr>Notifications<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Simple Notification Service (Amazon SNS) topic that you want to notify to report job status. (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1090,7 +1090,7 @@ The following state arguments are supported:
 <a href="#state_thumbnailconfig_go" style="color: inherit; text-decoration: inherit;">Thumbnail<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinethumbnailconfig">Pipeline<wbr>Thumbnail<wbr>Config</a></span>
+        <span class="property-type"><a href="#pipelinethumbnailconfig">Pipeline<wbr>Thumbnail<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ThumbnailConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save thumbnail files. (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1099,7 +1099,7 @@ The following state arguments are supported:
 <a href="#state_thumbnailconfigpermissions_go" style="color: inherit; text-decoration: inherit;">Thumbnail<wbr>Config<wbr>Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinethumbnailconfigpermission">[]Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission</a></span>
+        <span class="property-type"><a href="#pipelinethumbnailconfigpermission">[]Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The permissions for the `thumbnail_config` object. (documented below)
 {{% /md %}}</dd></dl>

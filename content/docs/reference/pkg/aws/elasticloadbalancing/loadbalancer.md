@@ -558,7 +558,7 @@ instances. Use this for Classic or Default VPC only.
 <a href="#listeners_go" style="color: inherit; text-decoration: inherit;">Listeners</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerlistener">[]Load<wbr>Balancer<wbr>Listener</a></span>
+        <span class="property-type"><a href="#loadbalancerlistener">[]Load<wbr>Balancer<wbr>Listener<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of listener blocks. Listeners documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -567,7 +567,7 @@ instances. Use this for Classic or Default VPC only.
 <a href="#accesslogs_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs</a></span>
+        <span class="property-type"><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An Access Logs block. Access Logs documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -612,7 +612,7 @@ instances. Use this for Classic or Default VPC only.
 <a href="#healthcheck_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerhealthcheck">Load<wbr>Balancer<wbr>Health<wbr>Check</a></span>
+        <span class="property-type"><a href="#loadbalancerhealthcheck">Load<wbr>Balancer<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A health_check block. Health Check documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1585,7 +1585,7 @@ instances. Only available on ELBs launched in a VPC.
 <a href="#state_accesslogs_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs</a></span>
+        <span class="property-type"><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An Access Logs block. Access Logs documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1648,7 +1648,7 @@ instances. Only available on ELBs launched in a VPC.
 <a href="#state_healthcheck_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerhealthcheck">Load<wbr>Balancer<wbr>Health<wbr>Check</a></span>
+        <span class="property-type"><a href="#loadbalancerhealthcheck">Load<wbr>Balancer<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A health_check block. Health Check documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1684,7 +1684,7 @@ instances. Only available on ELBs launched in a VPC.
 <a href="#state_listeners_go" style="color: inherit; text-decoration: inherit;">Listeners</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerlistener">[]Load<wbr>Balancer<wbr>Listener</a></span>
+        <span class="property-type"><a href="#loadbalancerlistener">[]Load<wbr>Balancer<wbr>Listener<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of listener blocks. Listeners documented below.
 {{% /md %}}</dd><dt class="property-optional"

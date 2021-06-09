@@ -572,7 +572,7 @@ The ConformancePack resource accepts the following [input]({{< relref "/docs/int
 <a href="#inputparameters_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conformancepackinputparameter">[]Conformance<wbr>Pack<wbr>Input<wbr>Parameter</a></span>
+        <span class="property-type"><a href="#conformancepackinputparameter">[]Conformance<wbr>Pack<wbr>Input<wbr>Parameter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing input parameters passed to the conformance pack template. Documented below. When configured, the parameters must also be included in the `template_body` or in the template stored in Amazon S3 if using `template_s3_uri`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1045,7 +1045,7 @@ The following state arguments are supported:
 <a href="#state_inputparameters_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conformancepackinputparameter">[]Conformance<wbr>Pack<wbr>Input<wbr>Parameter</a></span>
+        <span class="property-type"><a href="#conformancepackinputparameter">[]Conformance<wbr>Pack<wbr>Input<wbr>Parameter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing input parameters passed to the conformance pack template. Documented below. When configured, the parameters must also be included in the `template_body` or in the template stored in Amazon S3 if using `template_s3_uri`.
 {{% /md %}}</dd><dt class="property-optional"

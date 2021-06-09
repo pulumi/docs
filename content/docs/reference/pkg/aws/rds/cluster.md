@@ -1334,7 +1334,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#restoretopointintime_go" style="color: inherit; text-decoration: inherit;">Restore<wbr>To<wbr>Point<wbr>In<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrestoretopointintime">Cluster<wbr>Restore<wbr>To<wbr>Point<wbr>In<wbr>Time</a></span>
+        <span class="property-type"><a href="#clusterrestoretopointintime">Cluster<wbr>Restore<wbr>To<wbr>Point<wbr>In<wbr>Time<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested attribute for [point in time restore](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_PIT.html). More details below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1343,7 +1343,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#s3import_go" style="color: inherit; text-decoration: inherit;">S3Import</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusters3import">Cluster<wbr>S3Import</a></span>
+        <span class="property-type"><a href="#clusters3import">Cluster<wbr>S3Import<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1351,7 +1351,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#scalingconfiguration_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterscalingconfiguration">Cluster<wbr>Scaling<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#clusterscalingconfiguration">Cluster<wbr>Scaling<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested attribute with scaling properties. Only valid when `engine_mode` is set to `serverless`. More details below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3250,7 +3250,7 @@ load-balanced across replicas
 <a href="#state_restoretopointintime_go" style="color: inherit; text-decoration: inherit;">Restore<wbr>To<wbr>Point<wbr>In<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterrestoretopointintime">Cluster<wbr>Restore<wbr>To<wbr>Point<wbr>In<wbr>Time</a></span>
+        <span class="property-type"><a href="#clusterrestoretopointintime">Cluster<wbr>Restore<wbr>To<wbr>Point<wbr>In<wbr>Time<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested attribute for [point in time restore](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_PIT.html). More details below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3259,7 +3259,7 @@ load-balanced across replicas
 <a href="#state_s3import_go" style="color: inherit; text-decoration: inherit;">S3Import</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusters3import">Cluster<wbr>S3Import</a></span>
+        <span class="property-type"><a href="#clusters3import">Cluster<wbr>S3Import<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3267,7 +3267,7 @@ load-balanced across replicas
 <a href="#state_scalingconfiguration_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterscalingconfiguration">Cluster<wbr>Scaling<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#clusterscalingconfiguration">Cluster<wbr>Scaling<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested attribute with scaling properties. Only valid when `engine_mode` is set to `serverless`. More details below.
 {{% /md %}}</dd><dt class="property-optional"

@@ -501,7 +501,7 @@ The FargateProfile resource accepts the following [input]({{< relref "/docs/intr
 <a href="#selectors_go" style="color: inherit; text-decoration: inherit;">Selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fargateprofileselector">[]Fargate<wbr>Profile<wbr>Selector</a></span>
+        <span class="property-type"><a href="#fargateprofileselector">[]Fargate<wbr>Profile<wbr>Selector<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) for selecting Kubernetes Pods to execute with this EKS Fargate Profile. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1058,7 +1058,7 @@ The following state arguments are supported:
 <a href="#state_selectors_go" style="color: inherit; text-decoration: inherit;">Selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fargateprofileselector">[]Fargate<wbr>Profile<wbr>Selector</a></span>
+        <span class="property-type"><a href="#fargateprofileselector">[]Fargate<wbr>Profile<wbr>Selector<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) for selecting Kubernetes Pods to execute with this EKS Fargate Profile. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"

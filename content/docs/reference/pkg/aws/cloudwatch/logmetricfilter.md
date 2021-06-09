@@ -343,7 +343,7 @@ for extracting metric data out of ingested log events.
 <a href="#metrictransformation_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Transformation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logmetricfiltermetrictransformation">Log<wbr>Metric<wbr>Filter<wbr>Metric<wbr>Transformation</a></span>
+        <span class="property-type"><a href="#logmetricfiltermetrictransformation">Log<wbr>Metric<wbr>Filter<wbr>Metric<wbr>Transformation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A block defining collection of information needed to define how metric data gets emitted. See below.
 {{% /md %}}</dd><dt class="property-required"
@@ -691,7 +691,7 @@ for extracting metric data out of ingested log events.
 <a href="#state_metrictransformation_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Transformation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logmetricfiltermetrictransformation">Log<wbr>Metric<wbr>Filter<wbr>Metric<wbr>Transformation</a></span>
+        <span class="property-type"><a href="#logmetricfiltermetrictransformation">Log<wbr>Metric<wbr>Filter<wbr>Metric<wbr>Transformation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A block defining collection of information needed to define how metric data gets emitted. See below.
 {{% /md %}}</dd><dt class="property-optional"

@@ -366,7 +366,7 @@ The ManagedScalingPolicy resource accepts the following [input]({{< relref "/doc
 <a href="#computelimits_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedscalingpolicycomputelimit">[]Managed<wbr>Scaling<wbr>Policy<wbr>Compute<wbr>Limit</a></span>
+        <span class="property-type"><a href="#managedscalingpolicycomputelimit">[]Managed<wbr>Scaling<wbr>Policy<wbr>Compute<wbr>Limit<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with compute limit settings. Described below.
 {{% /md %}}</dd></dl>
@@ -636,7 +636,7 @@ The following state arguments are supported:
 <a href="#state_computelimits_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedscalingpolicycomputelimit">[]Managed<wbr>Scaling<wbr>Policy<wbr>Compute<wbr>Limit</a></span>
+        <span class="property-type"><a href="#managedscalingpolicycomputelimit">[]Managed<wbr>Scaling<wbr>Policy<wbr>Compute<wbr>Limit<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with compute limit settings. Described below.
 {{% /md %}}</dd></dl>

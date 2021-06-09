@@ -530,7 +530,7 @@ The MaintenanceWindowTarget resource accepts the following [input]({{< relref "/
 <a href="#targets_go" style="color: inherit; text-decoration: inherit;">Targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtargettarget">[]Maintenance<wbr>Window<wbr>Target<wbr>Target</a></span>
+        <span class="property-type"><a href="#maintenancewindowtargettarget">[]Maintenance<wbr>Window<wbr>Target<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The targets to register with the maintenance window. In other words, the instances to run commands on when the maintenance window runs. You can specify targets using instance IDs, resource group names, or tags that have been applied to instances. For more information about these examples formats see
 (https://docs.aws.amazon.com/systems-manager/latest/userguide/mw-cli-tutorial-targets-examples.html)
@@ -979,7 +979,7 @@ The following state arguments are supported:
 <a href="#state_targets_go" style="color: inherit; text-decoration: inherit;">Targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtargettarget">[]Maintenance<wbr>Window<wbr>Target<wbr>Target</a></span>
+        <span class="property-type"><a href="#maintenancewindowtargettarget">[]Maintenance<wbr>Window<wbr>Target<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The targets to register with the maintenance window. In other words, the instances to run commands on when the maintenance window runs. You can specify targets using instance IDs, resource group names, or tags that have been applied to instances. For more information about these examples formats see
 (https://docs.aws.amazon.com/systems-manager/latest/userguide/mw-cli-tutorial-targets-examples.html)

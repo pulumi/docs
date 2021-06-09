@@ -924,7 +924,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#connectsettings_go" style="color: inherit; text-decoration: inherit;">Connect<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryconnectsettings">Directory<wbr>Connect<wbr>Settings</a></span>
+        <span class="property-type"><a href="#directoryconnectsettings">Directory<wbr>Connect<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connector related information about the directory. Fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1005,7 +1005,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#vpcsettings_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryvpcsettings">Directory<wbr>Vpc<wbr>Settings</a></span>
+        <span class="property-type"><a href="#directoryvpcsettings">Directory<wbr>Vpc<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}VPC related information about the directory. Fields documented below.
 {{% /md %}}</dd></dl>
@@ -1730,7 +1730,7 @@ The following state arguments are supported:
 <a href="#state_connectsettings_go" style="color: inherit; text-decoration: inherit;">Connect<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryconnectsettings">Directory<wbr>Connect<wbr>Settings</a></span>
+        <span class="property-type"><a href="#directoryconnectsettings">Directory<wbr>Connect<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connector related information about the directory. Fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1847,7 +1847,7 @@ The following state arguments are supported:
 <a href="#state_vpcsettings_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryvpcsettings">Directory<wbr>Vpc<wbr>Settings</a></span>
+        <span class="property-type"><a href="#directoryvpcsettings">Directory<wbr>Vpc<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}VPC related information about the directory. Fields documented below.
 {{% /md %}}</dd></dl>

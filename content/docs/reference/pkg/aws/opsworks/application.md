@@ -517,7 +517,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#appsources_go" style="color: inherit; text-decoration: inherit;">App<wbr>Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationappsource">[]Application<wbr>App<wbr>Source</a></span>
+        <span class="property-type"><a href="#applicationappsource">[]Application<wbr>App<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SCM configuration of the app as described below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -607,7 +607,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#environments_go" style="color: inherit; text-decoration: inherit;">Environments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationenvironment">[]Application<wbr>Environment</a></span>
+        <span class="property-type"><a href="#applicationenvironment">[]Application<wbr>Environment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Object to define environment variables.  Object is described below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -643,7 +643,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#sslconfigurations_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationsslconfiguration">[]Application<wbr>Ssl<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#applicationsslconfiguration">[]Application<wbr>Ssl<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SSL configuration of the app. Object is described below.
 {{% /md %}}</dd></dl>
@@ -1324,7 +1324,7 @@ The following state arguments are supported:
 <a href="#state_appsources_go" style="color: inherit; text-decoration: inherit;">App<wbr>Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationappsource">[]Application<wbr>App<wbr>Source</a></span>
+        <span class="property-type"><a href="#applicationappsource">[]Application<wbr>App<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SCM configuration of the app as described below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1414,7 +1414,7 @@ The following state arguments are supported:
 <a href="#state_environments_go" style="color: inherit; text-decoration: inherit;">Environments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationenvironment">[]Application<wbr>Environment</a></span>
+        <span class="property-type"><a href="#applicationenvironment">[]Application<wbr>Environment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Object to define environment variables.  Object is described below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1450,7 +1450,7 @@ The following state arguments are supported:
 <a href="#state_sslconfigurations_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationsslconfiguration">[]Application<wbr>Ssl<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#applicationsslconfiguration">[]Application<wbr>Ssl<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SSL configuration of the app. Object is described below.
 {{% /md %}}</dd><dt class="property-optional"

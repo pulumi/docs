@@ -471,7 +471,7 @@ changes the set of further arguments that are required, as described below.
 <a href="#ebsblockdevices_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Block<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amiebsblockdevice">[]Ami<wbr>Ebs<wbr>Block<wbr>Device</a></span>
+        <span class="property-type"><a href="#amiebsblockdevice">[]Ami<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested block describing an EBS block device that should be
 attached to created instances. The structure of this block is described below.
@@ -490,7 +490,7 @@ attached to created instances. The structure of this block is described below.
 <a href="#ephemeralblockdevices_go" style="color: inherit; text-decoration: inherit;">Ephemeral<wbr>Block<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amiephemeralblockdevice">[]Ami<wbr>Ephemeral<wbr>Block<wbr>Device</a></span>
+        <span class="property-type"><a href="#amiephemeralblockdevice">[]Ami<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested block describing an ephemeral block device that
 should be attached to created instances. The structure of this block is described below.
@@ -1727,7 +1727,7 @@ changes the set of further arguments that are required, as described below.
 <a href="#state_ebsblockdevices_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Block<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amiebsblockdevice">[]Ami<wbr>Ebs<wbr>Block<wbr>Device</a></span>
+        <span class="property-type"><a href="#amiebsblockdevice">[]Ami<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested block describing an EBS block device that should be
 attached to created instances. The structure of this block is described below.
@@ -1746,7 +1746,7 @@ attached to created instances. The structure of this block is described below.
 <a href="#state_ephemeralblockdevices_go" style="color: inherit; text-decoration: inherit;">Ephemeral<wbr>Block<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amiephemeralblockdevice">[]Ami<wbr>Ephemeral<wbr>Block<wbr>Device</a></span>
+        <span class="property-type"><a href="#amiephemeralblockdevice">[]Ami<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested block describing an ephemeral block device that
 should be attached to created instances. The structure of this block is described below.

@@ -514,7 +514,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#costtypes_go" style="color: inherit; text-decoration: inherit;">Cost<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcosttypes">Budget<wbr>Cost<wbr>Types</a></span>
+        <span class="property-type"><a href="#budgetcosttypes">Budget<wbr>Cost<wbr>Types<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Object containing Cost Types The types of cost included in a budget, such as tax and subscriptions..
 {{% /md %}}</dd><dt class="property-optional"
@@ -541,7 +541,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#notifications_go" style="color: inherit; text-decoration: inherit;">Notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetnotification">[]Budget<wbr>Notification</a></span>
+        <span class="property-type"><a href="#budgetnotification">[]Budget<wbr>Notification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Object containing Budget Notifications. Can be used multiple times to define more than one budget notification
 {{% /md %}}</dd><dt class="property-optional"
@@ -1173,7 +1173,7 @@ The following state arguments are supported:
 <a href="#state_costtypes_go" style="color: inherit; text-decoration: inherit;">Cost<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcosttypes">Budget<wbr>Cost<wbr>Types</a></span>
+        <span class="property-type"><a href="#budgetcosttypes">Budget<wbr>Cost<wbr>Types<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Object containing Cost Types The types of cost included in a budget, such as tax and subscriptions..
 {{% /md %}}</dd><dt class="property-optional"
@@ -1218,7 +1218,7 @@ The following state arguments are supported:
 <a href="#state_notifications_go" style="color: inherit; text-decoration: inherit;">Notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetnotification">[]Budget<wbr>Notification</a></span>
+        <span class="property-type"><a href="#budgetnotification">[]Budget<wbr>Notification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Object containing Budget Notifications. Can be used multiple times to define more than one budget notification
 {{% /md %}}</dd><dt class="property-optional"

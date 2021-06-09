@@ -658,7 +658,7 @@ The Repository resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#externalconnections_go" style="color: inherit; text-decoration: inherit;">External<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#repositoryexternalconnections">Repository<wbr>External<wbr>Connections</a></span>
+        <span class="property-type"><a href="#repositoryexternalconnections">Repository<wbr>External<wbr>Connections<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An array of external connections associated with the repository. Only one external connection can be set per repository. see External Connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -685,7 +685,7 @@ The Repository resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#upstreams_go" style="color: inherit; text-decoration: inherit;">Upstreams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#repositoryupstream">[]Repository<wbr>Upstream</a></span>
+        <span class="property-type"><a href="#repositoryupstream">[]Repository<wbr>Upstream<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of upstream repositories to associate with the repository. The order of the upstream repositories in the list determines their priority order when AWS CodeArtifact looks for a requested package version. see Upstream
 {{% /md %}}</dd></dl>
@@ -1251,7 +1251,7 @@ The following state arguments are supported:
 <a href="#state_externalconnections_go" style="color: inherit; text-decoration: inherit;">External<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#repositoryexternalconnections">Repository<wbr>External<wbr>Connections</a></span>
+        <span class="property-type"><a href="#repositoryexternalconnections">Repository<wbr>External<wbr>Connections<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An array of external connections associated with the repository. Only one external connection can be set per repository. see External Connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1287,7 +1287,7 @@ The following state arguments are supported:
 <a href="#state_upstreams_go" style="color: inherit; text-decoration: inherit;">Upstreams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#repositoryupstream">[]Repository<wbr>Upstream</a></span>
+        <span class="property-type"><a href="#repositoryupstream">[]Repository<wbr>Upstream<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of upstream repositories to associate with the repository. The order of the upstream repositories in the list determines their priority order when AWS CodeArtifact looks for a requested package version. see Upstream
 {{% /md %}}</dd></dl>

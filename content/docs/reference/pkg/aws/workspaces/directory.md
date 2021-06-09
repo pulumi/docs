@@ -876,7 +876,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#selfservicepermissions_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Service<wbr>Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryselfservicepermissions">Directory<wbr>Self<wbr>Service<wbr>Permissions</a></span>
+        <span class="property-type"><a href="#directoryselfservicepermissions">Directory<wbr>Self<wbr>Service<wbr>Permissions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Permissions to enable or disable self-service capabilities. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -912,7 +912,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#workspaceaccessproperties_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Access<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryworkspaceaccessproperties">Directory<wbr>Workspace<wbr>Access<wbr>Properties</a></span>
+        <span class="property-type"><a href="#directoryworkspaceaccessproperties">Directory<wbr>Workspace<wbr>Access<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies which devices and operating systems users can use to access their WorkSpaces. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -921,7 +921,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#workspacecreationproperties_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Creation<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryworkspacecreationproperties">Directory<wbr>Workspace<wbr>Creation<wbr>Properties</a></span>
+        <span class="property-type"><a href="#directoryworkspacecreationproperties">Directory<wbr>Workspace<wbr>Creation<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Default properties that are used for creating WorkSpaces. Defined below.
 {{% /md %}}</dd></dl>
@@ -1799,7 +1799,7 @@ The following state arguments are supported:
 <a href="#state_selfservicepermissions_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Service<wbr>Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryselfservicepermissions">Directory<wbr>Self<wbr>Service<wbr>Permissions</a></span>
+        <span class="property-type"><a href="#directoryselfservicepermissions">Directory<wbr>Self<wbr>Service<wbr>Permissions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Permissions to enable or disable self-service capabilities. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1835,7 +1835,7 @@ The following state arguments are supported:
 <a href="#state_workspaceaccessproperties_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Access<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryworkspaceaccessproperties">Directory<wbr>Workspace<wbr>Access<wbr>Properties</a></span>
+        <span class="property-type"><a href="#directoryworkspaceaccessproperties">Directory<wbr>Workspace<wbr>Access<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies which devices and operating systems users can use to access their WorkSpaces. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1844,7 +1844,7 @@ The following state arguments are supported:
 <a href="#state_workspacecreationproperties_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Creation<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryworkspacecreationproperties">Directory<wbr>Workspace<wbr>Creation<wbr>Properties</a></span>
+        <span class="property-type"><a href="#directoryworkspacecreationproperties">Directory<wbr>Workspace<wbr>Creation<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Default properties that are used for creating WorkSpaces. Defined below.
 {{% /md %}}</dd><dt class="property-optional"

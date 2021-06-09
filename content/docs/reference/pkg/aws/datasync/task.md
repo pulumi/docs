@@ -499,7 +499,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#excludes_go" style="color: inherit; text-decoration: inherit;">Excludes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskexcludes">Task<wbr>Excludes</a></span>
+        <span class="property-type"><a href="#taskexcludes">Task<wbr>Excludes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Filter rules that determines which files to exclude from a task.
 {{% /md %}}</dd><dt class="property-optional"
@@ -517,7 +517,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#options_go" style="color: inherit; text-decoration: inherit;">Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskoptions">Task<wbr>Options</a></span>
+        <span class="property-type"><a href="#taskoptions">Task<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing option that controls the default behavior when you start an execution of this DataSync Task. For each individual task execution, you can override these options by specifying an overriding configuration in those executions.
 {{% /md %}}</dd><dt class="property-optional"
@@ -526,7 +526,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskschedule">Task<wbr>Schedule</a></span>
+        <span class="property-type"><a href="#taskschedule">Task<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a schedule used to periodically transfer files from a source to a destination location.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1074,7 +1074,7 @@ The following state arguments are supported:
 <a href="#state_excludes_go" style="color: inherit; text-decoration: inherit;">Excludes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskexcludes">Task<wbr>Excludes</a></span>
+        <span class="property-type"><a href="#taskexcludes">Task<wbr>Excludes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Filter rules that determines which files to exclude from a task.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1092,7 +1092,7 @@ The following state arguments are supported:
 <a href="#state_options_go" style="color: inherit; text-decoration: inherit;">Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskoptions">Task<wbr>Options</a></span>
+        <span class="property-type"><a href="#taskoptions">Task<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing option that controls the default behavior when you start an execution of this DataSync Task. For each individual task execution, you can override these options by specifying an overriding configuration in those executions.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1101,7 +1101,7 @@ The following state arguments are supported:
 <a href="#state_schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskschedule">Task<wbr>Schedule</a></span>
+        <span class="property-type"><a href="#taskschedule">Task<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a schedule used to periodically transfer files from a source to a destination location.
 {{% /md %}}</dd><dt class="property-optional"

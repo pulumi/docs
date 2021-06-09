@@ -537,7 +537,7 @@ Applicable for WebSocket APIs.
 <a href="#corsconfiguration_go" style="color: inherit; text-decoration: inherit;">Cors<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apicorsconfiguration">Api<wbr>Cors<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#apicorsconfiguration">Api<wbr>Cors<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cross-origin resource sharing (CORS) [configuration](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-cors.html). Applicable for HTTP APIs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1473,7 +1473,7 @@ Applicable for WebSocket APIs.
 <a href="#state_corsconfiguration_go" style="color: inherit; text-decoration: inherit;">Cors<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apicorsconfiguration">Api<wbr>Cors<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#apicorsconfiguration">Api<wbr>Cors<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cross-origin resource sharing (CORS) [configuration](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-cors.html). Applicable for HTTP APIs.
 {{% /md %}}</dd><dt class="property-optional"

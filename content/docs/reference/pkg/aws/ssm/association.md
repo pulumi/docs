@@ -463,7 +463,7 @@ The Association resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#outputlocation_go" style="color: inherit; text-decoration: inherit;">Output<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#associationoutputlocation">Association<wbr>Output<wbr>Location</a></span>
+        <span class="property-type"><a href="#associationoutputlocation">Association<wbr>Output<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An output location block. Output Location is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -490,7 +490,7 @@ The Association resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#targets_go" style="color: inherit; text-decoration: inherit;">Targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#associationtarget">[]Association<wbr>Target</a></span>
+        <span class="property-type"><a href="#associationtarget">[]Association<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A block containing the targets of the SSM association. Targets are documented below. AWS currently supports a maximum of 5 targets.
 {{% /md %}}</dd></dl>
@@ -1195,7 +1195,7 @@ The following state arguments are supported:
 <a href="#state_outputlocation_go" style="color: inherit; text-decoration: inherit;">Output<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#associationoutputlocation">Association<wbr>Output<wbr>Location</a></span>
+        <span class="property-type"><a href="#associationoutputlocation">Association<wbr>Output<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An output location block. Output Location is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1222,7 +1222,7 @@ The following state arguments are supported:
 <a href="#state_targets_go" style="color: inherit; text-decoration: inherit;">Targets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#associationtarget">[]Association<wbr>Target</a></span>
+        <span class="property-type"><a href="#associationtarget">[]Association<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A block containing the targets of the SSM association. Targets are documented below. AWS currently supports a maximum of 5 targets.
 {{% /md %}}</dd></dl>

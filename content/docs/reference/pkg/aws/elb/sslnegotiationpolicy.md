@@ -510,7 +510,7 @@ should be attached.
 <a href="#attributes_go" style="color: inherit; text-decoration: inherit;">Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslnegotiationpolicyattribute">[]Ssl<wbr>Negotiation<wbr>Policy<wbr>Attribute</a></span>
+        <span class="property-type"><a href="#sslnegotiationpolicyattribute">[]Ssl<wbr>Negotiation<wbr>Policy<wbr>Attribute<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An SSL Negotiation policy attribute. Each has two properties:
 {{% /md %}}</dd><dt class="property-optional"
@@ -845,7 +845,7 @@ should be attached.
 <a href="#state_attributes_go" style="color: inherit; text-decoration: inherit;">Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslnegotiationpolicyattribute">[]Ssl<wbr>Negotiation<wbr>Policy<wbr>Attribute</a></span>
+        <span class="property-type"><a href="#sslnegotiationpolicyattribute">[]Ssl<wbr>Negotiation<wbr>Policy<wbr>Attribute<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An SSL Negotiation policy attribute. Each has two properties:
 {{% /md %}}</dd><dt class="property-optional"

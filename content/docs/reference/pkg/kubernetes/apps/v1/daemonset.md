@@ -182,7 +182,7 @@ The DaemonSet resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta</a></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -190,7 +190,7 @@ The DaemonSet resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#spec_go" style="color: inherit; text-decoration: inherit;">Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#daemonsetspec">Daemon<wbr>Set<wbr>Spec</a></span>
+        <span class="property-type"><a href="#daemonsetspec">Daemon<wbr>Set<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The desired behavior of this daemon set. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -487,7 +487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodeaffinity_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeaffinity">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Node<wbr>Affinity<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodeaffinity">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Node<wbr>Affinity</a></span>
     </dt>
     <dd>{{% md %}}Describes node affinity scheduling rules for the pod.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -495,7 +495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#podaffinity_csharp" style="color: inherit; text-decoration: inherit;">Pod<wbr>Affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podaffinity">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Pod<wbr>Affinity<wbr>Args</a></span>
+        <span class="property-type"><a href="#podaffinity">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Pod<wbr>Affinity</a></span>
     </dt>
     <dd>{{% md %}}Describes pod affinity scheduling rules (e.g. co-locate this pod in the same node, zone, etc. as some other pod(s)).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -503,7 +503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#podantiaffinity_csharp" style="color: inherit; text-decoration: inherit;">Pod<wbr>Anti<wbr>Affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podantiaffinity">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Pod<wbr>Anti<wbr>Affinity<wbr>Args</a></span>
+        <span class="property-type"><a href="#podantiaffinity">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Pod<wbr>Anti<wbr>Affinity</a></span>
     </dt>
     <dd>{{% md %}}Describes pod anti-affinity scheduling rules (e.g. avoid putting this pod in the same node, zone, etc. as some other pod(s)).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -543,7 +543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodeaffinity_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeaffinity">core.v1.<wbr>Node<wbr>Affinity<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodeaffinity">core.v1.<wbr>Node<wbr>Affinity</a></span>
     </dt>
     <dd>{{% md %}}Describes node affinity scheduling rules for the pod.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -551,7 +551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#podaffinity_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podaffinity">core.v1.<wbr>Pod<wbr>Affinity<wbr>Args</a></span>
+        <span class="property-type"><a href="#podaffinity">core.v1.<wbr>Pod<wbr>Affinity</a></span>
     </dt>
     <dd>{{% md %}}Describes pod affinity scheduling rules (e.g. co-locate this pod in the same node, zone, etc. as some other pod(s)).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -559,7 +559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#podantiaffinity_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Anti<wbr>Affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podantiaffinity">core.v1.<wbr>Pod<wbr>Anti<wbr>Affinity<wbr>Args</a></span>
+        <span class="property-type"><a href="#podantiaffinity">core.v1.<wbr>Pod<wbr>Anti<wbr>Affinity</a></span>
     </dt>
     <dd>{{% md %}}Describes pod anti-affinity scheduling rules (e.g. avoid putting this pod in the same node, zone, etc. as some other pod(s)).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -571,7 +571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#node_affinity_python" style="color: inherit; text-decoration: inherit;">node_<wbr>affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeaffinity">Node<wbr>Affinity<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodeaffinity">Node<wbr>Affinity</a></span>
     </dt>
     <dd>{{% md %}}Describes node affinity scheduling rules for the pod.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -579,7 +579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pod_affinity_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podaffinity">Pod<wbr>Affinity<wbr>Args</a></span>
+        <span class="property-type"><a href="#podaffinity">Pod<wbr>Affinity</a></span>
     </dt>
     <dd>{{% md %}}Describes pod affinity scheduling rules (e.g. co-locate this pod in the same node, zone, etc. as some other pod(s)).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -587,7 +587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pod_anti_affinity_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>anti_<wbr>affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podantiaffinity">Pod<wbr>Anti<wbr>Affinity<wbr>Args</a></span>
+        <span class="property-type"><a href="#podantiaffinity">Pod<wbr>Anti<wbr>Affinity</a></span>
     </dt>
     <dd>{{% md %}}Describes pod anti-affinity scheduling rules (e.g. avoid putting this pod in the same node, zone, etc. as some other pod(s)).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -941,7 +941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodepublishsecretref_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Publish<wbr>Secret<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localobjectreference">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#localobjectreference">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Local<wbr>Object<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}NodePublishSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI NodePublishVolume and NodeUnpublishVolume calls. This field is optional, and  may be empty if no secret is required. If the secret object contains more than one secret, all secret references are passed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1029,7 +1029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodepublishsecretref_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Publish<wbr>Secret<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localobjectreference">core.v1.<wbr>Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#localobjectreference">core.v1.<wbr>Local<wbr>Object<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}NodePublishSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI NodePublishVolume and NodeUnpublishVolume calls. This field is optional, and  may be empty if no secret is required. If the secret object contains more than one secret, all secret references are passed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1073,7 +1073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#node_publish_secret_ref_python" style="color: inherit; text-decoration: inherit;">node_<wbr>publish_<wbr>secret_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localobjectreference">Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#localobjectreference">Local<wbr>Object<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}NodePublishSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI NodePublishVolume and NodeUnpublishVolume calls. This field is optional, and  may be empty if no secret is required. If the secret object contains more than one secret, all secret references are passed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1217,7 +1217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretref_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localobjectreference">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#localobjectreference">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Local<wbr>Object<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Optional: SecretRef is reference to the authentication secret for User, default is empty. More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1321,7 +1321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretref_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localobjectreference">core.v1.<wbr>Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#localobjectreference">core.v1.<wbr>Local<wbr>Object<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Optional: SecretRef is reference to the authentication secret for User, default is empty. More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1373,7 +1373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localobjectreference">Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#localobjectreference">Local<wbr>Object<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Optional: SecretRef is reference to the authentication secret for User, default is empty. More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1419,7 +1419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretref_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localobjectreference">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#localobjectreference">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Local<wbr>Object<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Optional: points to a secret object containing parameters used to connect to OpenStack.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1491,7 +1491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretref_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localobjectreference">core.v1.<wbr>Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#localobjectreference">core.v1.<wbr>Local<wbr>Object<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Optional: points to a secret object containing parameters used to connect to OpenStack.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1527,7 +1527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localobjectreference">Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#localobjectreference">Local<wbr>Object<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Optional: points to a secret object containing parameters used to connect to OpenStack.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1737,7 +1737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keytopath">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Key<wbr>To<wbr>Path<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#keytopath">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Key<wbr>To<wbr>Path&gt;</a></span>
     </dt>
     <dd>{{% md %}}If unspecified, each key-value pair in the Data field of the referenced ConfigMap will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the ConfigMap, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the '..' path or start with '..'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1793,7 +1793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keytopath">core.v1.<wbr>Key<wbr>To<wbr>Path<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#keytopath">core.v1.<wbr>Key<wbr>To<wbr>Path[]</a></span>
     </dt>
     <dd>{{% md %}}If unspecified, each key-value pair in the Data field of the referenced ConfigMap will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the ConfigMap, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the '..' path or start with '..'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1821,7 +1821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keytopath">Key<wbr>To<wbr>Path<wbr>Args]</a></span>
+        <span class="property-type"><a href="#keytopath">Key<wbr>To<wbr>Path]</a></span>
     </dt>
     <dd>{{% md %}}If unspecified, each key-value pair in the Data field of the referenced ConfigMap will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the ConfigMap, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the '..' path or start with '..'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1859,7 +1859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keytopath">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Key<wbr>To<wbr>Path<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#keytopath">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Key<wbr>To<wbr>Path&gt;</a></span>
     </dt>
     <dd>{{% md %}}If unspecified, each key-value pair in the Data field of the referenced ConfigMap will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the ConfigMap, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the '..' path or start with '..'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1931,7 +1931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keytopath">core.v1.<wbr>Key<wbr>To<wbr>Path<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#keytopath">core.v1.<wbr>Key<wbr>To<wbr>Path[]</a></span>
     </dt>
     <dd>{{% md %}}If unspecified, each key-value pair in the Data field of the referenced ConfigMap will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the ConfigMap, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the '..' path or start with '..'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1967,7 +1967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keytopath">Key<wbr>To<wbr>Path<wbr>Args]</a></span>
+        <span class="property-type"><a href="#keytopath">Key<wbr>To<wbr>Path]</a></span>
     </dt>
     <dd>{{% md %}}If unspecified, each key-value pair in the Data field of the referenced ConfigMap will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the ConfigMap, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the '..' path or start with '..'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2021,7 +2021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#env_csharp" style="color: inherit; text-decoration: inherit;">Env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#envvar">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Env<wbr>Var<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#envvar">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Env<wbr>Var&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of environment variables to set in the container. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2029,7 +2029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#envfrom_csharp" style="color: inherit; text-decoration: inherit;">Env<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#envfromsource">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Env<wbr>From<wbr>Source<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#envfromsource">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Env<wbr>From<wbr>Source&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of sources to populate environment variables in the container. The keys defined within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container is starting. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2053,7 +2053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lifecycle_csharp" style="color: inherit; text-decoration: inherit;">Lifecycle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lifecycle">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Lifecycle<wbr>Args</a></span>
+        <span class="property-type"><a href="#lifecycle">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Lifecycle</a></span>
     </dt>
     <dd>{{% md %}}Actions that the management system should take in response to container lifecycle events. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2061,7 +2061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#livenessprobe_csharp" style="color: inherit; text-decoration: inherit;">Liveness<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probe">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Probe<wbr>Args</a></span>
+        <span class="property-type"><a href="#probe">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Probe</a></span>
     </dt>
     <dd>{{% md %}}Periodic probe of container liveness. Container will be restarted if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2069,7 +2069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerport">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Container<wbr>Port<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#containerport">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Container<wbr>Port&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of ports to expose from the container. Exposing a port here gives the system additional information about the network connections a container uses, but is primarily informational. Not specifying a port here DOES NOT prevent that port from being exposed. Any port which is listening on the default "0.0.0.0" address inside a container will be accessible from the network. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2077,7 +2077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#readinessprobe_csharp" style="color: inherit; text-decoration: inherit;">Readiness<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probe">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Probe<wbr>Args</a></span>
+        <span class="property-type"><a href="#probe">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Probe</a></span>
     </dt>
     <dd>{{% md %}}Periodic probe of container service readiness. Container will be removed from service endpoints if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2085,7 +2085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resources_csharp" style="color: inherit; text-decoration: inherit;">Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequirements">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Resource<wbr>Requirements<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcerequirements">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Resource<wbr>Requirements</a></span>
     </dt>
     <dd>{{% md %}}Compute Resources required by this container. Cannot be updated. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2093,7 +2093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securitycontext_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitycontext">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Security<wbr>Context<wbr>Args</a></span>
+        <span class="property-type"><a href="#securitycontext">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Security<wbr>Context</a></span>
     </dt>
     <dd>{{% md %}}Security options the pod should run with. More info: https://kubernetes.io/docs/concepts/policy/security-context/ More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2101,7 +2101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#startupprobe_csharp" style="color: inherit; text-decoration: inherit;">Startup<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probe">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Probe<wbr>Args</a></span>
+        <span class="property-type"><a href="#probe">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Probe</a></span>
     </dt>
     <dd>{{% md %}}StartupProbe indicates that the Pod has successfully initialized. If specified, no other probes are executed until this completes successfully. If this probe fails, the Pod will be restarted, just as if the livenessProbe failed. This can be used to provide different probe parameters at the beginning of a Pod's lifecycle, when it might take a long time to load data or warm a cache, than during steady-state operation. This cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2149,7 +2149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumedevices_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumedevice">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Volume<wbr>Device<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#volumedevice">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Volume<wbr>Device&gt;</a></span>
     </dt>
     <dd>{{% md %}}volumeDevices is the list of block devices to be used by the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2157,7 +2157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumemounts_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Mounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumemount">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Volume<wbr>Mount<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#volumemount">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Volume<wbr>Mount&gt;</a></span>
     </dt>
     <dd>{{% md %}}Pod volumes to mount into the container's filesystem. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2381,7 +2381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#env_nodejs" style="color: inherit; text-decoration: inherit;">env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#envvar">core.v1.<wbr>Env<wbr>Var<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#envvar">core.v1.<wbr>Env<wbr>Var[]</a></span>
     </dt>
     <dd>{{% md %}}List of environment variables to set in the container. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2389,7 +2389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#envfrom_nodejs" style="color: inherit; text-decoration: inherit;">env<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#envfromsource">core.v1.<wbr>Env<wbr>From<wbr>Source<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#envfromsource">core.v1.<wbr>Env<wbr>From<wbr>Source[]</a></span>
     </dt>
     <dd>{{% md %}}List of sources to populate environment variables in the container. The keys defined within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container is starting. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2413,7 +2413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lifecycle_nodejs" style="color: inherit; text-decoration: inherit;">lifecycle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lifecycle">core.v1.<wbr>Lifecycle<wbr>Args</a></span>
+        <span class="property-type"><a href="#lifecycle">core.v1.<wbr>Lifecycle</a></span>
     </dt>
     <dd>{{% md %}}Actions that the management system should take in response to container lifecycle events. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2421,7 +2421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#livenessprobe_nodejs" style="color: inherit; text-decoration: inherit;">liveness<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probe">core.v1.<wbr>Probe<wbr>Args</a></span>
+        <span class="property-type"><a href="#probe">core.v1.<wbr>Probe</a></span>
     </dt>
     <dd>{{% md %}}Periodic probe of container liveness. Container will be restarted if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2429,7 +2429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerport">core.v1.<wbr>Container<wbr>Port<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#containerport">core.v1.<wbr>Container<wbr>Port[]</a></span>
     </dt>
     <dd>{{% md %}}List of ports to expose from the container. Exposing a port here gives the system additional information about the network connections a container uses, but is primarily informational. Not specifying a port here DOES NOT prevent that port from being exposed. Any port which is listening on the default "0.0.0.0" address inside a container will be accessible from the network. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2437,7 +2437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#readinessprobe_nodejs" style="color: inherit; text-decoration: inherit;">readiness<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probe">core.v1.<wbr>Probe<wbr>Args</a></span>
+        <span class="property-type"><a href="#probe">core.v1.<wbr>Probe</a></span>
     </dt>
     <dd>{{% md %}}Periodic probe of container service readiness. Container will be removed from service endpoints if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2445,7 +2445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequirements">core.v1.<wbr>Resource<wbr>Requirements<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcerequirements">core.v1.<wbr>Resource<wbr>Requirements</a></span>
     </dt>
     <dd>{{% md %}}Compute Resources required by this container. Cannot be updated. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2453,7 +2453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securitycontext_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitycontext">core.v1.<wbr>Security<wbr>Context<wbr>Args</a></span>
+        <span class="property-type"><a href="#securitycontext">core.v1.<wbr>Security<wbr>Context</a></span>
     </dt>
     <dd>{{% md %}}Security options the pod should run with. More info: https://kubernetes.io/docs/concepts/policy/security-context/ More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2461,7 +2461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#startupprobe_nodejs" style="color: inherit; text-decoration: inherit;">startup<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probe">core.v1.<wbr>Probe<wbr>Args</a></span>
+        <span class="property-type"><a href="#probe">core.v1.<wbr>Probe</a></span>
     </dt>
     <dd>{{% md %}}StartupProbe indicates that the Pod has successfully initialized. If specified, no other probes are executed until this completes successfully. If this probe fails, the Pod will be restarted, just as if the livenessProbe failed. This can be used to provide different probe parameters at the beginning of a Pod's lifecycle, when it might take a long time to load data or warm a cache, than during steady-state operation. This cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2509,7 +2509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumedevices_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumedevice">core.v1.<wbr>Volume<wbr>Device<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#volumedevice">core.v1.<wbr>Volume<wbr>Device[]</a></span>
     </dt>
     <dd>{{% md %}}volumeDevices is the list of block devices to be used by the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2517,7 +2517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumemounts_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Mounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumemount">core.v1.<wbr>Volume<wbr>Mount<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#volumemount">core.v1.<wbr>Volume<wbr>Mount[]</a></span>
     </dt>
     <dd>{{% md %}}Pod volumes to mount into the container's filesystem. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2561,7 +2561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#env_python" style="color: inherit; text-decoration: inherit;">env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#envvar">Env<wbr>Var<wbr>Args]</a></span>
+        <span class="property-type"><a href="#envvar">Env<wbr>Var]</a></span>
     </dt>
     <dd>{{% md %}}List of environment variables to set in the container. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2569,7 +2569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#env_from_python" style="color: inherit; text-decoration: inherit;">env_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#envfromsource">Env<wbr>From<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#envfromsource">Env<wbr>From<wbr>Source]</a></span>
     </dt>
     <dd>{{% md %}}List of sources to populate environment variables in the container. The keys defined within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container is starting. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2593,7 +2593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lifecycle_python" style="color: inherit; text-decoration: inherit;">lifecycle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lifecycle">Lifecycle<wbr>Args</a></span>
+        <span class="property-type"><a href="#lifecycle">Lifecycle</a></span>
     </dt>
     <dd>{{% md %}}Actions that the management system should take in response to container lifecycle events. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2601,7 +2601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#liveness_probe_python" style="color: inherit; text-decoration: inherit;">liveness_<wbr>probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probe">Probe<wbr>Args</a></span>
+        <span class="property-type"><a href="#probe">Probe</a></span>
     </dt>
     <dd>{{% md %}}Periodic probe of container liveness. Container will be restarted if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2609,7 +2609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerport">Container<wbr>Port<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containerport">Container<wbr>Port]</a></span>
     </dt>
     <dd>{{% md %}}List of ports to expose from the container. Exposing a port here gives the system additional information about the network connections a container uses, but is primarily informational. Not specifying a port here DOES NOT prevent that port from being exposed. Any port which is listening on the default "0.0.0.0" address inside a container will be accessible from the network. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2617,7 +2617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#readiness_probe_python" style="color: inherit; text-decoration: inherit;">readiness_<wbr>probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probe">Probe<wbr>Args</a></span>
+        <span class="property-type"><a href="#probe">Probe</a></span>
     </dt>
     <dd>{{% md %}}Periodic probe of container service readiness. Container will be removed from service endpoints if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2625,7 +2625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequirements">Resource<wbr>Requirements<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcerequirements">Resource<wbr>Requirements</a></span>
     </dt>
     <dd>{{% md %}}Compute Resources required by this container. Cannot be updated. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2633,7 +2633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#security_context_python" style="color: inherit; text-decoration: inherit;">security_<wbr>context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitycontext">Security<wbr>Context<wbr>Args</a></span>
+        <span class="property-type"><a href="#securitycontext">Security<wbr>Context</a></span>
     </dt>
     <dd>{{% md %}}Security options the pod should run with. More info: https://kubernetes.io/docs/concepts/policy/security-context/ More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2641,7 +2641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#startup_probe_python" style="color: inherit; text-decoration: inherit;">startup_<wbr>probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probe">Probe<wbr>Args</a></span>
+        <span class="property-type"><a href="#probe">Probe</a></span>
     </dt>
     <dd>{{% md %}}StartupProbe indicates that the Pod has successfully initialized. If specified, no other probes are executed until this completes successfully. If this probe fails, the Pod will be restarted, just as if the livenessProbe failed. This can be used to provide different probe parameters at the beginning of a Pod's lifecycle, when it might take a long time to load data or warm a cache, than during steady-state operation. This cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2689,7 +2689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volume_devices_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumedevice">Volume<wbr>Device<wbr>Args]</a></span>
+        <span class="property-type"><a href="#volumedevice">Volume<wbr>Device]</a></span>
     </dt>
     <dd>{{% md %}}volumeDevices is the list of block devices to be used by the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2697,7 +2697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volume_mounts_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>mounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumemount">Volume<wbr>Mount<wbr>Args]</a></span>
+        <span class="property-type"><a href="#volumemount">Volume<wbr>Mount]</a></span>
     </dt>
     <dd>{{% md %}}Pod volumes to mount into the container's filesystem. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3075,7 +3075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selector_csharp" style="color: inherit; text-decoration: inherit;">Selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelselector">Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Label<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#labelselector">Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Label<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}A label query over pods that are managed by the daemon set. Must match in order to be controlled. It must match the pod template's labels. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3083,7 +3083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#template_csharp" style="color: inherit; text-decoration: inherit;">Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podtemplatespec">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Pod<wbr>Template<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#podtemplatespec">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Pod<wbr>Template<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}An object that describes the pod that will be created. The DaemonSet will create exactly one copy of this pod on every node that matches the template's node selector (or on every node if no node selector is specified). More info: https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#pod-template{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3107,7 +3107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#updatestrategy_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#daemonsetupdatestrategy">Daemon<wbr>Set<wbr>Update<wbr>Strategy<wbr>Args</a></span>
+        <span class="property-type"><a href="#daemonsetupdatestrategy">Daemon<wbr>Set<wbr>Update<wbr>Strategy</a></span>
     </dt>
     <dd>{{% md %}}An update strategy to replace existing DaemonSet pods with new pods.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3163,7 +3163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selector_nodejs" style="color: inherit; text-decoration: inherit;">selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelselector">meta.v1.<wbr>Label<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#labelselector">meta.v1.<wbr>Label<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}A label query over pods that are managed by the daemon set. Must match in order to be controlled. It must match the pod template's labels. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3171,7 +3171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#template_nodejs" style="color: inherit; text-decoration: inherit;">template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podtemplatespec">core.v1.<wbr>Pod<wbr>Template<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#podtemplatespec">core.v1.<wbr>Pod<wbr>Template<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}An object that describes the pod that will be created. The DaemonSet will create exactly one copy of this pod on every node that matches the template's node selector (or on every node if no node selector is specified). More info: https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#pod-template{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3195,7 +3195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#updatestrategy_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#daemonsetupdatestrategy">Daemon<wbr>Set<wbr>Update<wbr>Strategy<wbr>Args</a></span>
+        <span class="property-type"><a href="#daemonsetupdatestrategy">Daemon<wbr>Set<wbr>Update<wbr>Strategy</a></span>
     </dt>
     <dd>{{% md %}}An update strategy to replace existing DaemonSet pods with new pods.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3207,7 +3207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelselector">Label<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#labelselector">Label<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}A label query over pods that are managed by the daemon set. Must match in order to be controlled. It must match the pod template's labels. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3215,7 +3215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#template_python" style="color: inherit; text-decoration: inherit;">template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podtemplatespec">Pod<wbr>Template<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#podtemplatespec">Pod<wbr>Template<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}An object that describes the pod that will be created. The DaemonSet will create exactly one copy of this pod on every node that matches the template's node selector (or on every node if no node selector is specified). More info: https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#pod-template{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3239,7 +3239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#update_strategy_python" style="color: inherit; text-decoration: inherit;">update_<wbr>strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#daemonsetupdatestrategy">Daemon<wbr>Set<wbr>Update<wbr>Strategy<wbr>Args</a></span>
+        <span class="property-type"><a href="#daemonsetupdatestrategy">Daemon<wbr>Set<wbr>Update<wbr>Strategy</a></span>
     </dt>
     <dd>{{% md %}}An update strategy to replace existing DaemonSet pods with new pods.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3293,7 +3293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#daemonsetcondition">List&lt;Daemon<wbr>Set<wbr>Condition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#daemonsetcondition">List&lt;Daemon<wbr>Set<wbr>Condition&gt;</a></span>
     </dt>
     <dd>{{% md %}}Represents the latest available observations of a DaemonSet's current state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3461,7 +3461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#daemonsetcondition">Daemon<wbr>Set<wbr>Condition<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#daemonsetcondition">Daemon<wbr>Set<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}Represents the latest available observations of a DaemonSet's current state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3545,7 +3545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#daemonsetcondition">Daemon<wbr>Set<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#daemonsetcondition">Daemon<wbr>Set<wbr>Condition]</a></span>
     </dt>
     <dd>{{% md %}}Represents the latest available observations of a DaemonSet's current state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3591,7 +3591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rollingupdate_csharp" style="color: inherit; text-decoration: inherit;">Rolling<wbr>Update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rollingupdatedaemonset">Rolling<wbr>Update<wbr>Daemon<wbr>Set<wbr>Args</a></span>
+        <span class="property-type"><a href="#rollingupdatedaemonset">Rolling<wbr>Update<wbr>Daemon<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}Rolling update config params. Present only if type = "RollingUpdate".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3631,7 +3631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rollingupdate_nodejs" style="color: inherit; text-decoration: inherit;">rolling<wbr>Update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rollingupdatedaemonset">Rolling<wbr>Update<wbr>Daemon<wbr>Set<wbr>Args</a></span>
+        <span class="property-type"><a href="#rollingupdatedaemonset">Rolling<wbr>Update<wbr>Daemon<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}Rolling update config params. Present only if type = "RollingUpdate".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3651,7 +3651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rolling_update_python" style="color: inherit; text-decoration: inherit;">rolling_<wbr>update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rollingupdatedaemonset">Rolling<wbr>Update<wbr>Daemon<wbr>Set<wbr>Args</a></span>
+        <span class="property-type"><a href="#rollingupdatedaemonset">Rolling<wbr>Update<wbr>Daemon<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}Rolling update config params. Present only if type = "RollingUpdate".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3673,7 +3673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#downwardapivolumefile">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Downward<wbr>APIVolume<wbr>File<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#downwardapivolumefile">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Downward<wbr>APIVolume<wbr>File&gt;</a></span>
     </dt>
     <dd>{{% md %}}Items is a list of DownwardAPIVolume file{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3697,7 +3697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#downwardapivolumefile">core.v1.<wbr>Downward<wbr>APIVolume<wbr>File<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#downwardapivolumefile">core.v1.<wbr>Downward<wbr>APIVolume<wbr>File[]</a></span>
     </dt>
     <dd>{{% md %}}Items is a list of DownwardAPIVolume file{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3709,7 +3709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#downwardapivolumefile">Downward<wbr>APIVolume<wbr>File<wbr>Args]</a></span>
+        <span class="property-type"><a href="#downwardapivolumefile">Downward<wbr>APIVolume<wbr>File]</a></span>
     </dt>
     <dd>{{% md %}}Items is a list of DownwardAPIVolume file{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3731,7 +3731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldref_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectfieldselector">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Object<wbr>Field<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectfieldselector">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Object<wbr>Field<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}Required: Selects a field of the pod: only annotations, labels, name and namespace are supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3747,7 +3747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcefieldref_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Field<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcefieldselector">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Resource<wbr>Field<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcefieldselector">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Resource<wbr>Field<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, requests.cpu and requests.memory) are currently supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3803,7 +3803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldref_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectfieldselector">core.v1.<wbr>Object<wbr>Field<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectfieldselector">core.v1.<wbr>Object<wbr>Field<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}Required: Selects a field of the pod: only annotations, labels, name and namespace are supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3819,7 +3819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcefieldref_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Field<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcefieldselector">core.v1.<wbr>Resource<wbr>Field<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcefieldselector">core.v1.<wbr>Resource<wbr>Field<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, requests.cpu and requests.memory) are currently supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3839,7 +3839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#field_ref_python" style="color: inherit; text-decoration: inherit;">field_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectfieldselector">Object<wbr>Field<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectfieldselector">Object<wbr>Field<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}Required: Selects a field of the pod: only annotations, labels, name and namespace are supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3855,7 +3855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_field_ref_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>field_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcefieldselector">Resource<wbr>Field<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcefieldselector">Resource<wbr>Field<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, requests.cpu and requests.memory) are currently supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3877,7 +3877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#downwardapivolumefile">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Downward<wbr>APIVolume<wbr>File<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#downwardapivolumefile">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Downward<wbr>APIVolume<wbr>File&gt;</a></span>
     </dt>
     <dd>{{% md %}}Items is a list of downward API volume file{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3917,7 +3917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#downwardapivolumefile">core.v1.<wbr>Downward<wbr>APIVolume<wbr>File<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#downwardapivolumefile">core.v1.<wbr>Downward<wbr>APIVolume<wbr>File[]</a></span>
     </dt>
     <dd>{{% md %}}Items is a list of downward API volume file{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3937,7 +3937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#downwardapivolumefile">Downward<wbr>APIVolume<wbr>File<wbr>Args]</a></span>
+        <span class="property-type"><a href="#downwardapivolumefile">Downward<wbr>APIVolume<wbr>File]</a></span>
     </dt>
     <dd>{{% md %}}Items is a list of downward API volume file{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4033,7 +4033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configmapref_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>Map<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configmapenvsource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Config<wbr>Map<wbr>Env<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#configmapenvsource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Config<wbr>Map<wbr>Env<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}The ConfigMap to select from{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4049,7 +4049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretref_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretenvsource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Secret<wbr>Env<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretenvsource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Secret<wbr>Env<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}The Secret to select from{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4089,7 +4089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configmapref_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Map<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configmapenvsource">core.v1.<wbr>Config<wbr>Map<wbr>Env<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#configmapenvsource">core.v1.<wbr>Config<wbr>Map<wbr>Env<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}The ConfigMap to select from{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4105,7 +4105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretref_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretenvsource">core.v1.<wbr>Secret<wbr>Env<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretenvsource">core.v1.<wbr>Secret<wbr>Env<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}The Secret to select from{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4117,7 +4117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#config_map_ref_python" style="color: inherit; text-decoration: inherit;">config_<wbr>map_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configmapenvsource">Config<wbr>Map<wbr>Env<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#configmapenvsource">Config<wbr>Map<wbr>Env<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}The ConfigMap to select from{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4133,7 +4133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretenvsource">Secret<wbr>Env<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretenvsource">Secret<wbr>Env<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}The Secret to select from{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4163,7 +4163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#valuefrom_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#envvarsource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Env<wbr>Var<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#envvarsource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Env<wbr>Var<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Source for the environment variable's value. Cannot be used if value is not empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4219,7 +4219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#valuefrom_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#envvarsource">core.v1.<wbr>Env<wbr>Var<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#envvarsource">core.v1.<wbr>Env<wbr>Var<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Source for the environment variable's value. Cannot be used if value is not empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4247,7 +4247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_from_python" style="color: inherit; text-decoration: inherit;">value_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#envvarsource">Env<wbr>Var<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#envvarsource">Env<wbr>Var<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Source for the environment variable's value. Cannot be used if value is not empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4261,7 +4261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configmapkeyref_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>Map<wbr>Key<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configmapkeyselector">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Config<wbr>Map<wbr>Key<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#configmapkeyselector">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Config<wbr>Map<wbr>Key<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}Selects a key of a ConfigMap.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4269,7 +4269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldref_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectfieldselector">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Object<wbr>Field<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectfieldselector">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Object<wbr>Field<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}Selects a field of the pod: supports metadata.name, metadata.namespace, `metadata.labels['<KEY>']`, `metadata.annotations['<KEY>']`, spec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4277,7 +4277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcefieldref_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Field<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcefieldselector">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Resource<wbr>Field<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcefieldselector">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Resource<wbr>Field<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, limits.ephemeral-storage, requests.cpu, requests.memory and requests.ephemeral-storage) are currently supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4285,7 +4285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretkeyref_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretkeyselector">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Secret<wbr>Key<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretkeyselector">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Secret<wbr>Key<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}Selects a key of a secret in the pod's namespace{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4333,7 +4333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configmapkeyref_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Map<wbr>Key<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configmapkeyselector">core.v1.<wbr>Config<wbr>Map<wbr>Key<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#configmapkeyselector">core.v1.<wbr>Config<wbr>Map<wbr>Key<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}Selects a key of a ConfigMap.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4341,7 +4341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldref_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectfieldselector">core.v1.<wbr>Object<wbr>Field<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectfieldselector">core.v1.<wbr>Object<wbr>Field<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}Selects a field of the pod: supports metadata.name, metadata.namespace, `metadata.labels['<KEY>']`, `metadata.annotations['<KEY>']`, spec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4349,7 +4349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcefieldref_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Field<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcefieldselector">core.v1.<wbr>Resource<wbr>Field<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcefieldselector">core.v1.<wbr>Resource<wbr>Field<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, limits.ephemeral-storage, requests.cpu, requests.memory and requests.ephemeral-storage) are currently supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4357,7 +4357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretkeyref_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretkeyselector">core.v1.<wbr>Secret<wbr>Key<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretkeyselector">core.v1.<wbr>Secret<wbr>Key<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}Selects a key of a secret in the pod's namespace{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4369,7 +4369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#config_map_key_ref_python" style="color: inherit; text-decoration: inherit;">config_<wbr>map_<wbr>key_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configmapkeyselector">Config<wbr>Map<wbr>Key<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#configmapkeyselector">Config<wbr>Map<wbr>Key<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}Selects a key of a ConfigMap.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4377,7 +4377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#field_ref_python" style="color: inherit; text-decoration: inherit;">field_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectfieldselector">Object<wbr>Field<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectfieldselector">Object<wbr>Field<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}Selects a field of the pod: supports metadata.name, metadata.namespace, `metadata.labels['<KEY>']`, `metadata.annotations['<KEY>']`, spec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4385,7 +4385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_field_ref_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>field_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcefieldselector">Resource<wbr>Field<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcefieldselector">Resource<wbr>Field<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, limits.ephemeral-storage, requests.cpu, requests.memory and requests.ephemeral-storage) are currently supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4393,7 +4393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_key_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretkeyselector">Secret<wbr>Key<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretkeyselector">Secret<wbr>Key<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}Selects a key of a secret in the pod's namespace{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4431,7 +4431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#env_csharp" style="color: inherit; text-decoration: inherit;">Env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#envvar">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Env<wbr>Var<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#envvar">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Env<wbr>Var&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of environment variables to set in the container. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4439,7 +4439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#envfrom_csharp" style="color: inherit; text-decoration: inherit;">Env<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#envfromsource">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Env<wbr>From<wbr>Source<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#envfromsource">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Env<wbr>From<wbr>Source&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of sources to populate environment variables in the container. The keys defined within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container is starting. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4463,7 +4463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lifecycle_csharp" style="color: inherit; text-decoration: inherit;">Lifecycle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lifecycle">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Lifecycle<wbr>Args</a></span>
+        <span class="property-type"><a href="#lifecycle">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Lifecycle</a></span>
     </dt>
     <dd>{{% md %}}Lifecycle is not allowed for ephemeral containers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4471,7 +4471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#livenessprobe_csharp" style="color: inherit; text-decoration: inherit;">Liveness<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probe">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Probe<wbr>Args</a></span>
+        <span class="property-type"><a href="#probe">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Probe</a></span>
     </dt>
     <dd>{{% md %}}Probes are not allowed for ephemeral containers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4479,7 +4479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerport">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Container<wbr>Port<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#containerport">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Container<wbr>Port&gt;</a></span>
     </dt>
     <dd>{{% md %}}Ports are not allowed for ephemeral containers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4487,7 +4487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#readinessprobe_csharp" style="color: inherit; text-decoration: inherit;">Readiness<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probe">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Probe<wbr>Args</a></span>
+        <span class="property-type"><a href="#probe">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Probe</a></span>
     </dt>
     <dd>{{% md %}}Probes are not allowed for ephemeral containers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4495,7 +4495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resources_csharp" style="color: inherit; text-decoration: inherit;">Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequirements">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Resource<wbr>Requirements<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcerequirements">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Resource<wbr>Requirements</a></span>
     </dt>
     <dd>{{% md %}}Resources are not allowed for ephemeral containers. Ephemeral containers use spare resources already allocated to the pod.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4503,7 +4503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securitycontext_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitycontext">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Security<wbr>Context<wbr>Args</a></span>
+        <span class="property-type"><a href="#securitycontext">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Security<wbr>Context</a></span>
     </dt>
     <dd>{{% md %}}SecurityContext is not allowed for ephemeral containers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4511,7 +4511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#startupprobe_csharp" style="color: inherit; text-decoration: inherit;">Startup<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probe">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Probe<wbr>Args</a></span>
+        <span class="property-type"><a href="#probe">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Probe</a></span>
     </dt>
     <dd>{{% md %}}Probes are not allowed for ephemeral containers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4567,7 +4567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumedevices_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumedevice">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Volume<wbr>Device<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#volumedevice">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Volume<wbr>Device&gt;</a></span>
     </dt>
     <dd>{{% md %}}volumeDevices is the list of block devices to be used by the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4575,7 +4575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumemounts_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Mounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumemount">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Volume<wbr>Mount<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#volumemount">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Volume<wbr>Mount&gt;</a></span>
     </dt>
     <dd>{{% md %}}Pod volumes to mount into the container's filesystem. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4807,7 +4807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#env_nodejs" style="color: inherit; text-decoration: inherit;">env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#envvar">core.v1.<wbr>Env<wbr>Var<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#envvar">core.v1.<wbr>Env<wbr>Var[]</a></span>
     </dt>
     <dd>{{% md %}}List of environment variables to set in the container. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4815,7 +4815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#envfrom_nodejs" style="color: inherit; text-decoration: inherit;">env<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#envfromsource">core.v1.<wbr>Env<wbr>From<wbr>Source<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#envfromsource">core.v1.<wbr>Env<wbr>From<wbr>Source[]</a></span>
     </dt>
     <dd>{{% md %}}List of sources to populate environment variables in the container. The keys defined within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container is starting. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4839,7 +4839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lifecycle_nodejs" style="color: inherit; text-decoration: inherit;">lifecycle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lifecycle">core.v1.<wbr>Lifecycle<wbr>Args</a></span>
+        <span class="property-type"><a href="#lifecycle">core.v1.<wbr>Lifecycle</a></span>
     </dt>
     <dd>{{% md %}}Lifecycle is not allowed for ephemeral containers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4847,7 +4847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#livenessprobe_nodejs" style="color: inherit; text-decoration: inherit;">liveness<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probe">core.v1.<wbr>Probe<wbr>Args</a></span>
+        <span class="property-type"><a href="#probe">core.v1.<wbr>Probe</a></span>
     </dt>
     <dd>{{% md %}}Probes are not allowed for ephemeral containers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4855,7 +4855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerport">core.v1.<wbr>Container<wbr>Port<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#containerport">core.v1.<wbr>Container<wbr>Port[]</a></span>
     </dt>
     <dd>{{% md %}}Ports are not allowed for ephemeral containers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4863,7 +4863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#readinessprobe_nodejs" style="color: inherit; text-decoration: inherit;">readiness<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probe">core.v1.<wbr>Probe<wbr>Args</a></span>
+        <span class="property-type"><a href="#probe">core.v1.<wbr>Probe</a></span>
     </dt>
     <dd>{{% md %}}Probes are not allowed for ephemeral containers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4871,7 +4871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequirements">core.v1.<wbr>Resource<wbr>Requirements<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcerequirements">core.v1.<wbr>Resource<wbr>Requirements</a></span>
     </dt>
     <dd>{{% md %}}Resources are not allowed for ephemeral containers. Ephemeral containers use spare resources already allocated to the pod.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4879,7 +4879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securitycontext_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitycontext">core.v1.<wbr>Security<wbr>Context<wbr>Args</a></span>
+        <span class="property-type"><a href="#securitycontext">core.v1.<wbr>Security<wbr>Context</a></span>
     </dt>
     <dd>{{% md %}}SecurityContext is not allowed for ephemeral containers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4887,7 +4887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#startupprobe_nodejs" style="color: inherit; text-decoration: inherit;">startup<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probe">core.v1.<wbr>Probe<wbr>Args</a></span>
+        <span class="property-type"><a href="#probe">core.v1.<wbr>Probe</a></span>
     </dt>
     <dd>{{% md %}}Probes are not allowed for ephemeral containers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4943,7 +4943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumedevices_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumedevice">core.v1.<wbr>Volume<wbr>Device<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#volumedevice">core.v1.<wbr>Volume<wbr>Device[]</a></span>
     </dt>
     <dd>{{% md %}}volumeDevices is the list of block devices to be used by the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4951,7 +4951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumemounts_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Mounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumemount">core.v1.<wbr>Volume<wbr>Mount<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#volumemount">core.v1.<wbr>Volume<wbr>Mount[]</a></span>
     </dt>
     <dd>{{% md %}}Pod volumes to mount into the container's filesystem. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4995,7 +4995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#env_python" style="color: inherit; text-decoration: inherit;">env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#envvar">Env<wbr>Var<wbr>Args]</a></span>
+        <span class="property-type"><a href="#envvar">Env<wbr>Var]</a></span>
     </dt>
     <dd>{{% md %}}List of environment variables to set in the container. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5003,7 +5003,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#env_from_python" style="color: inherit; text-decoration: inherit;">env_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#envfromsource">Env<wbr>From<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#envfromsource">Env<wbr>From<wbr>Source]</a></span>
     </dt>
     <dd>{{% md %}}List of sources to populate environment variables in the container. The keys defined within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container is starting. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5027,7 +5027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lifecycle_python" style="color: inherit; text-decoration: inherit;">lifecycle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lifecycle">Lifecycle<wbr>Args</a></span>
+        <span class="property-type"><a href="#lifecycle">Lifecycle</a></span>
     </dt>
     <dd>{{% md %}}Lifecycle is not allowed for ephemeral containers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5035,7 +5035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#liveness_probe_python" style="color: inherit; text-decoration: inherit;">liveness_<wbr>probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probe">Probe<wbr>Args</a></span>
+        <span class="property-type"><a href="#probe">Probe</a></span>
     </dt>
     <dd>{{% md %}}Probes are not allowed for ephemeral containers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5043,7 +5043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerport">Container<wbr>Port<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containerport">Container<wbr>Port]</a></span>
     </dt>
     <dd>{{% md %}}Ports are not allowed for ephemeral containers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5051,7 +5051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#readiness_probe_python" style="color: inherit; text-decoration: inherit;">readiness_<wbr>probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probe">Probe<wbr>Args</a></span>
+        <span class="property-type"><a href="#probe">Probe</a></span>
     </dt>
     <dd>{{% md %}}Probes are not allowed for ephemeral containers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5059,7 +5059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequirements">Resource<wbr>Requirements<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcerequirements">Resource<wbr>Requirements</a></span>
     </dt>
     <dd>{{% md %}}Resources are not allowed for ephemeral containers. Ephemeral containers use spare resources already allocated to the pod.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5067,7 +5067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#security_context_python" style="color: inherit; text-decoration: inherit;">security_<wbr>context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitycontext">Security<wbr>Context<wbr>Args</a></span>
+        <span class="property-type"><a href="#securitycontext">Security<wbr>Context</a></span>
     </dt>
     <dd>{{% md %}}SecurityContext is not allowed for ephemeral containers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5075,7 +5075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#startup_probe_python" style="color: inherit; text-decoration: inherit;">startup_<wbr>probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probe">Probe<wbr>Args</a></span>
+        <span class="property-type"><a href="#probe">Probe</a></span>
     </dt>
     <dd>{{% md %}}Probes are not allowed for ephemeral containers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5131,7 +5131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volume_devices_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumedevice">Volume<wbr>Device<wbr>Args]</a></span>
+        <span class="property-type"><a href="#volumedevice">Volume<wbr>Device]</a></span>
     </dt>
     <dd>{{% md %}}volumeDevices is the list of block devices to be used by the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5139,7 +5139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volume_mounts_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>mounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumemount">Volume<wbr>Mount<wbr>Args]</a></span>
+        <span class="property-type"><a href="#volumemount">Volume<wbr>Mount]</a></span>
     </dt>
     <dd>{{% md %}}Pod volumes to mount into the container's filesystem. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5161,7 +5161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumeclaimtemplate_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Claim<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#persistentvolumeclaimtemplate">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Persistent<wbr>Volume<wbr>Claim<wbr>Template<wbr>Args</a></span>
+        <span class="property-type"><a href="#persistentvolumeclaimtemplate">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Persistent<wbr>Volume<wbr>Claim<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}Will be used to create a stand-alone PVC to provision the volume. The pod in which this EphemeralVolumeSource is embedded will be the owner of the PVC, i.e. the PVC will be deleted together with the pod.  The name of the PVC will be `<pod name>-<volume name>` where `<volume name>` is the name from the `PodSpec.Volumes` array entry. Pod validation will reject the pod if the concatenated name is not valid for a PVC (for example, too long).
 
@@ -5197,7 +5197,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
 <a href="#volumeclaimtemplate_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Claim<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#persistentvolumeclaimtemplate">core.v1.<wbr>Persistent<wbr>Volume<wbr>Claim<wbr>Template<wbr>Args</a></span>
+        <span class="property-type"><a href="#persistentvolumeclaimtemplate">core.v1.<wbr>Persistent<wbr>Volume<wbr>Claim<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}Will be used to create a stand-alone PVC to provision the volume. The pod in which this EphemeralVolumeSource is embedded will be the owner of the PVC, i.e. the PVC will be deleted together with the pod.  The name of the PVC will be `<pod name>-<volume name>` where `<volume name>` is the name from the `PodSpec.Volumes` array entry. Pod validation will reject the pod if the concatenated name is not valid for a PVC (for example, too long).
 
@@ -5215,7 +5215,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
 <a href="#volume_claim_template_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>claim_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#persistentvolumeclaimtemplate">Persistent<wbr>Volume<wbr>Claim<wbr>Template<wbr>Args</a></span>
+        <span class="property-type"><a href="#persistentvolumeclaimtemplate">Persistent<wbr>Volume<wbr>Claim<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}Will be used to create a stand-alone PVC to provision the volume. The pod in which this EphemeralVolumeSource is embedded will be the owner of the PVC, i.e. the PVC will be deleted together with the pod.  The name of the PVC will be `<pod name>-<volume name>` where `<volume name>` is the name from the `PodSpec.Volumes` array entry. Pod validation will reject the pod if the concatenated name is not valid for a PVC (for example, too long).
 
@@ -5495,7 +5495,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
 <a href="#secretref_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localobjectreference">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#localobjectreference">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Local<wbr>Object<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Optional: SecretRef is reference to the secret object containing sensitive information to pass to the plugin scripts. This may be empty if no secret object is specified. If the secret object contains more than one secret, all secrets are passed to the plugin scripts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5583,7 +5583,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
 <a href="#secretref_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localobjectreference">core.v1.<wbr>Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#localobjectreference">core.v1.<wbr>Local<wbr>Object<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Optional: SecretRef is reference to the secret object containing sensitive information to pass to the plugin scripts. This may be empty if no secret object is specified. If the secret object contains more than one secret, all secrets are passed to the plugin scripts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5627,7 +5627,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
 <a href="#secret_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localobjectreference">Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#localobjectreference">Local<wbr>Object<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Optional: SecretRef is reference to the secret object containing sensitive information to pass to the plugin scripts. This may be empty if no secret object is specified. If the secret object contains more than one secret, all secrets are passed to the plugin scripts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6113,7 +6113,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
 <a href="#httpheaders_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheader">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>HTTPHeader<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#httpheader">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>HTTPHeader&gt;</a></span>
     </dt>
     <dd>{{% md %}}Custom headers to set in the request. HTTP allows repeated headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6201,7 +6201,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
 <a href="#httpheaders_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheader">core.v1.<wbr>HTTPHeader<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#httpheader">core.v1.<wbr>HTTPHeader[]</a></span>
     </dt>
     <dd>{{% md %}}Custom headers to set in the request. HTTP allows repeated headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6245,7 +6245,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
 <a href="#http_headers_python" style="color: inherit; text-decoration: inherit;">http_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheader">HTTPHeader<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httpheader">HTTPHeader]</a></span>
     </dt>
     <dd>{{% md %}}Custom headers to set in the request. HTTP allows repeated headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6357,7 +6357,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
 <a href="#exec_csharp" style="color: inherit; text-decoration: inherit;">Exec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#execaction">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Exec<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#execaction">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Exec<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}One and only one of the following should be specified. Exec specifies the action to take.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6365,7 +6365,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
 <a href="#httpget_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Get</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpgetaction">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>HTTPGet<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#httpgetaction">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>HTTPGet<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}HTTPGet specifies the http request to perform.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6373,7 +6373,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
 <a href="#tcpsocket_csharp" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Socket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tcpsocketaction">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>TCPSocket<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#tcpsocketaction">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>TCPSocket<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6413,7 +6413,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
 <a href="#exec_nodejs" style="color: inherit; text-decoration: inherit;">exec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#execaction">core.v1.<wbr>Exec<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#execaction">core.v1.<wbr>Exec<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}One and only one of the following should be specified. Exec specifies the action to take.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6421,7 +6421,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
 <a href="#httpget_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Get</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpgetaction">core.v1.<wbr>HTTPGet<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#httpgetaction">core.v1.<wbr>HTTPGet<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}HTTPGet specifies the http request to perform.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6429,7 +6429,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
 <a href="#tcpsocket_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Socket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tcpsocketaction">core.v1.<wbr>TCPSocket<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#tcpsocketaction">core.v1.<wbr>TCPSocket<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6441,7 +6441,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
 <a href="#exec__python" style="color: inherit; text-decoration: inherit;">exec_</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#execaction">Exec<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#execaction">Exec<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}One and only one of the following should be specified. Exec specifies the action to take.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6449,7 +6449,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
 <a href="#http_get_python" style="color: inherit; text-decoration: inherit;">http_<wbr>get</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpgetaction">HTTPGet<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#httpgetaction">HTTPGet<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}HTTPGet specifies the http request to perform.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6457,7 +6457,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
 <a href="#tcp_socket_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>socket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tcpsocketaction">TCPSocket<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#tcpsocketaction">TCPSocket<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6715,7 +6715,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
 <a href="#secretref_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localobjectreference">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#localobjectreference">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Local<wbr>Object<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}CHAP Secret for iSCSI target and initiator authentication{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6899,7 +6899,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
 <a href="#secretref_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localobjectreference">core.v1.<wbr>Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#localobjectreference">core.v1.<wbr>Local<wbr>Object<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}CHAP Secret for iSCSI target and initiator authentication{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6991,7 +6991,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
 <a href="#secret_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localobjectreference">Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#localobjectreference">Local<wbr>Object<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}CHAP Secret for iSCSI target and initiator authentication{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7119,7 +7119,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
 <a href="#matchexpressions_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Expressions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelselectorrequirement">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Label<wbr>Selector<wbr>Requirement<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#labelselectorrequirement">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Label<wbr>Selector<wbr>Requirement&gt;</a></span>
     </dt>
     <dd>{{% md %}}matchExpressions is a list of label selector requirements. The requirements are ANDed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7159,7 +7159,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
 <a href="#matchexpressions_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Expressions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelselectorrequirement">meta.v1.<wbr>Label<wbr>Selector<wbr>Requirement<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#labelselectorrequirement">meta.v1.<wbr>Label<wbr>Selector<wbr>Requirement[]</a></span>
     </dt>
     <dd>{{% md %}}matchExpressions is a list of label selector requirements. The requirements are ANDed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7179,7 +7179,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
 <a href="#match_expressions_python" style="color: inherit; text-decoration: inherit;">match_<wbr>expressions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelselectorrequirement">Label<wbr>Selector<wbr>Requirement<wbr>Args]</a></span>
+        <span class="property-type"><a href="#labelselectorrequirement">Label<wbr>Selector<wbr>Requirement]</a></span>
     </dt>
     <dd>{{% md %}}matchExpressions is a list of label selector requirements. The requirements are ANDed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7315,7 +7315,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
 <a href="#poststart_csharp" style="color: inherit; text-decoration: inherit;">Post<wbr>Start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#handler">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Handler<wbr>Args</a></span>
+        <span class="property-type"><a href="#handler">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Handler</a></span>
     </dt>
     <dd>{{% md %}}PostStart is called immediately after a container is created. If the handler fails, the container is terminated and restarted according to its restart policy. Other management of the container blocks until the hook completes. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7323,7 +7323,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
 <a href="#prestop_csharp" style="color: inherit; text-decoration: inherit;">Pre<wbr>Stop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#handler">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Handler<wbr>Args</a></span>
+        <span class="property-type"><a href="#handler">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Handler</a></span>
     </dt>
     <dd>{{% md %}}PreStop is called immediately before a container is terminated due to an API request or management event such as liveness/startup probe failure, preemption, resource contention, etc. The handler is not called if the container crashes or exits. The reason for termination is passed to the handler. The Pod's termination grace period countdown begins before the PreStop hooked is executed. Regardless of the outcome of the handler, the container will eventually terminate within the Pod's termination grace period. Other management of the container blocks until the hook completes or until the termination grace period is reached. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7355,7 +7355,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
 <a href="#poststart_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#handler">core.v1.<wbr>Handler<wbr>Args</a></span>
+        <span class="property-type"><a href="#handler">core.v1.<wbr>Handler</a></span>
     </dt>
     <dd>{{% md %}}PostStart is called immediately after a container is created. If the handler fails, the container is terminated and restarted according to its restart policy. Other management of the container blocks until the hook completes. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7363,7 +7363,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
 <a href="#prestop_nodejs" style="color: inherit; text-decoration: inherit;">pre<wbr>Stop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#handler">core.v1.<wbr>Handler<wbr>Args</a></span>
+        <span class="property-type"><a href="#handler">core.v1.<wbr>Handler</a></span>
     </dt>
     <dd>{{% md %}}PreStop is called immediately before a container is terminated due to an API request or management event such as liveness/startup probe failure, preemption, resource contention, etc. The handler is not called if the container crashes or exits. The reason for termination is passed to the handler. The Pod's termination grace period countdown begins before the PreStop hooked is executed. Regardless of the outcome of the handler, the container will eventually terminate within the Pod's termination grace period. Other management of the container blocks until the hook completes or until the termination grace period is reached. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7375,7 +7375,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
 <a href="#post_start_python" style="color: inherit; text-decoration: inherit;">post_<wbr>start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#handler">Handler<wbr>Args</a></span>
+        <span class="property-type"><a href="#handler">Handler</a></span>
     </dt>
     <dd>{{% md %}}PostStart is called immediately after a container is created. If the handler fails, the container is terminated and restarted according to its restart policy. Other management of the container blocks until the hook completes. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7383,7 +7383,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
 <a href="#pre_stop_python" style="color: inherit; text-decoration: inherit;">pre_<wbr>stop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#handler">Handler<wbr>Args</a></span>
+        <span class="property-type"><a href="#handler">Handler</a></span>
     </dt>
     <dd>{{% md %}}PreStop is called immediately before a container is terminated due to an API request or management event such as liveness/startup probe failure, preemption, resource contention, etc. The handler is not called if the container crashes or exits. The reason for termination is passed to the handler. The Pod's termination grace period countdown begins before the PreStop hooked is executed. Regardless of the outcome of the handler, the container will eventually terminate within the Pod's termination grace period. Other management of the container blocks until the hook completes or until the termination grace period is reached. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7771,7 +7771,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
 <a href="#preferredduringschedulingignoredduringexecution_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>During<wbr>Scheduling<wbr>Ignored<wbr>During<wbr>Execution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preferredschedulingterm">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Preferred<wbr>Scheduling<wbr>Term<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#preferredschedulingterm">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Preferred<wbr>Scheduling<wbr>Term&gt;</a></span>
     </dt>
     <dd>{{% md %}}The scheduler will prefer to schedule pods to nodes that satisfy the affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding "weight" to the sum if the node matches the corresponding matchExpressions; the node(s) with the highest sum are the most preferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7779,7 +7779,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
 <a href="#requiredduringschedulingignoredduringexecution_csharp" style="color: inherit; text-decoration: inherit;">Required<wbr>During<wbr>Scheduling<wbr>Ignored<wbr>During<wbr>Execution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeselector">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Node<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodeselector">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Node<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}If the affinity requirements specified by this field are not met at scheduling time, the pod will not be scheduled onto the node. If the affinity requirements specified by this field cease to be met at some point during pod execution (e.g. due to an update), the system may or may not try to eventually evict the pod from its node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7811,7 +7811,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
 <a href="#preferredduringschedulingignoredduringexecution_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>During<wbr>Scheduling<wbr>Ignored<wbr>During<wbr>Execution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preferredschedulingterm">core.v1.<wbr>Preferred<wbr>Scheduling<wbr>Term<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#preferredschedulingterm">core.v1.<wbr>Preferred<wbr>Scheduling<wbr>Term[]</a></span>
     </dt>
     <dd>{{% md %}}The scheduler will prefer to schedule pods to nodes that satisfy the affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding "weight" to the sum if the node matches the corresponding matchExpressions; the node(s) with the highest sum are the most preferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7819,7 +7819,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
 <a href="#requiredduringschedulingignoredduringexecution_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>During<wbr>Scheduling<wbr>Ignored<wbr>During<wbr>Execution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeselector">core.v1.<wbr>Node<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodeselector">core.v1.<wbr>Node<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}If the affinity requirements specified by this field are not met at scheduling time, the pod will not be scheduled onto the node. If the affinity requirements specified by this field cease to be met at some point during pod execution (e.g. due to an update), the system may or may not try to eventually evict the pod from its node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7831,7 +7831,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
 <a href="#preferred_during_scheduling_ignored_during_execution_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>during_<wbr>scheduling_<wbr>ignored_<wbr>during_<wbr>execution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preferredschedulingterm">Preferred<wbr>Scheduling<wbr>Term<wbr>Args]</a></span>
+        <span class="property-type"><a href="#preferredschedulingterm">Preferred<wbr>Scheduling<wbr>Term]</a></span>
     </dt>
     <dd>{{% md %}}The scheduler will prefer to schedule pods to nodes that satisfy the affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding "weight" to the sum if the node matches the corresponding matchExpressions; the node(s) with the highest sum are the most preferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7839,7 +7839,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
 <a href="#required_during_scheduling_ignored_during_execution_python" style="color: inherit; text-decoration: inherit;">required_<wbr>during_<wbr>scheduling_<wbr>ignored_<wbr>during_<wbr>execution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeselector">Node<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodeselector">Node<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}If the affinity requirements specified by this field are not met at scheduling time, the pod will not be scheduled onto the node. If the affinity requirements specified by this field cease to be met at some point during pod execution (e.g. due to an update), the system may or may not try to eventually evict the pod from its node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7853,7 +7853,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
 <a href="#nodeselectorterms_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Selector<wbr>Terms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeselectorterm">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Node<wbr>Selector<wbr>Term<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#nodeselectorterm">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Node<wbr>Selector<wbr>Term&gt;</a></span>
     </dt>
     <dd>{{% md %}}Required. A list of node selector terms. The terms are ORed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7877,7 +7877,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
 <a href="#nodeselectorterms_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Selector<wbr>Terms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeselectorterm">core.v1.<wbr>Node<wbr>Selector<wbr>Term<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#nodeselectorterm">core.v1.<wbr>Node<wbr>Selector<wbr>Term[]</a></span>
     </dt>
     <dd>{{% md %}}Required. A list of node selector terms. The terms are ORed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7889,7 +7889,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
 <a href="#node_selector_terms_python" style="color: inherit; text-decoration: inherit;">node_<wbr>selector_<wbr>terms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeselectorterm">Node<wbr>Selector<wbr>Term<wbr>Args]</a></span>
+        <span class="property-type"><a href="#nodeselectorterm">Node<wbr>Selector<wbr>Term]</a></span>
     </dt>
     <dd>{{% md %}}Required. A list of node selector terms. The terms are ORed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8017,7 +8017,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
 <a href="#matchexpressions_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Expressions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeselectorrequirement">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Node<wbr>Selector<wbr>Requirement<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#nodeselectorrequirement">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Node<wbr>Selector<wbr>Requirement&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of node selector requirements by node's labels.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8025,7 +8025,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
 <a href="#matchfields_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeselectorrequirement">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Node<wbr>Selector<wbr>Requirement<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#nodeselectorrequirement">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Node<wbr>Selector<wbr>Requirement&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of node selector requirements by node's fields.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8057,7 +8057,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
 <a href="#matchexpressions_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Expressions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeselectorrequirement">core.v1.<wbr>Node<wbr>Selector<wbr>Requirement<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#nodeselectorrequirement">core.v1.<wbr>Node<wbr>Selector<wbr>Requirement[]</a></span>
     </dt>
     <dd>{{% md %}}A list of node selector requirements by node's labels.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8065,7 +8065,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
 <a href="#matchfields_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeselectorrequirement">core.v1.<wbr>Node<wbr>Selector<wbr>Requirement<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#nodeselectorrequirement">core.v1.<wbr>Node<wbr>Selector<wbr>Requirement[]</a></span>
     </dt>
     <dd>{{% md %}}A list of node selector requirements by node's fields.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8077,7 +8077,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
 <a href="#match_expressions_python" style="color: inherit; text-decoration: inherit;">match_<wbr>expressions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeselectorrequirement">Node<wbr>Selector<wbr>Requirement<wbr>Args]</a></span>
+        <span class="property-type"><a href="#nodeselectorrequirement">Node<wbr>Selector<wbr>Requirement]</a></span>
     </dt>
     <dd>{{% md %}}A list of node selector requirements by node's labels.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8085,7 +8085,7 @@ Required, must not be nil.{{% /md %}}</dd></dl>
 <a href="#match_fields_python" style="color: inherit; text-decoration: inherit;">match_<wbr>fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeselectorrequirement">Node<wbr>Selector<wbr>Requirement<wbr>Args]</a></span>
+        <span class="property-type"><a href="#nodeselectorrequirement">Node<wbr>Selector<wbr>Requirement]</a></span>
     </dt>
     <dd>{{% md %}}A list of node selector requirements by node's fields.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8261,7 +8261,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#managedfields_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedfieldsentry">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Managed<wbr>Fields<wbr>Entry<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managedfieldsentry">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Managed<wbr>Fields<wbr>Entry&gt;</a></span>
     </dt>
     <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8287,7 +8287,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 <a href="#ownerreferences_csharp" style="color: inherit; text-decoration: inherit;">Owner<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ownerreference">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Owner<wbr>Reference<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ownerreference">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Owner<wbr>Reference&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8557,7 +8557,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#managedfields_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedfieldsentry">meta.v1.<wbr>Managed<wbr>Fields<wbr>Entry<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#managedfieldsentry">meta.v1.<wbr>Managed<wbr>Fields<wbr>Entry[]</a></span>
     </dt>
     <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8583,7 +8583,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 <a href="#ownerreferences_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ownerreference">meta.v1.<wbr>Owner<wbr>Reference<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#ownerreference">meta.v1.<wbr>Owner<wbr>Reference[]</a></span>
     </dt>
     <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8705,7 +8705,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#managed_fields_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedfieldsentry">Managed<wbr>Fields<wbr>Entry<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedfieldsentry">Managed<wbr>Fields<wbr>Entry]</a></span>
     </dt>
     <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8731,7 +8731,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 <a href="#owner_references_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>references</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ownerreference">Owner<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ownerreference">Owner<wbr>Reference]</a></span>
     </dt>
     <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8993,7 +8993,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#datasource_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#typedlocalobjectreference">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Typed<wbr>Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#typedlocalobjectreference">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Typed<wbr>Local<wbr>Object<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}This field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) * An existing custom resource that implements data population (Alpha) In order to use custom resource types that implement data population, the AnyVolumeDataSource feature gate must be enabled. If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9001,7 +9001,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#resources_csharp" style="color: inherit; text-decoration: inherit;">Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequirements">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Resource<wbr>Requirements<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcerequirements">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Resource<wbr>Requirements</a></span>
     </dt>
     <dd>{{% md %}}Resources represents the minimum resources the volume should have. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9009,7 +9009,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#selector_csharp" style="color: inherit; text-decoration: inherit;">Selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelselector">Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Label<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#labelselector">Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Label<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}A label query over volumes to consider for binding.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9113,7 +9113,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#datasource_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#typedlocalobjectreference">core.v1.<wbr>Typed<wbr>Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#typedlocalobjectreference">core.v1.<wbr>Typed<wbr>Local<wbr>Object<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}This field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) * An existing custom resource that implements data population (Alpha) In order to use custom resource types that implement data population, the AnyVolumeDataSource feature gate must be enabled. If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9121,7 +9121,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequirements">core.v1.<wbr>Resource<wbr>Requirements<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcerequirements">core.v1.<wbr>Resource<wbr>Requirements</a></span>
     </dt>
     <dd>{{% md %}}Resources represents the minimum resources the volume should have. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9129,7 +9129,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#selector_nodejs" style="color: inherit; text-decoration: inherit;">selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelselector">meta.v1.<wbr>Label<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#labelselector">meta.v1.<wbr>Label<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}A label query over volumes to consider for binding.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9173,7 +9173,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#data_source_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#typedlocalobjectreference">Typed<wbr>Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#typedlocalobjectreference">Typed<wbr>Local<wbr>Object<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}This field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) * An existing custom resource that implements data population (Alpha) In order to use custom resource types that implement data population, the AnyVolumeDataSource feature gate must be enabled. If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9181,7 +9181,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequirements">Resource<wbr>Requirements<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcerequirements">Resource<wbr>Requirements</a></span>
     </dt>
     <dd>{{% md %}}Resources represents the minimum resources the volume should have. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9189,7 +9189,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelselector">Label<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#labelselector">Label<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}A label query over volumes to consider for binding.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9227,7 +9227,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#spec_csharp" style="color: inherit; text-decoration: inherit;">Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#persistentvolumeclaimspec">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Persistent<wbr>Volume<wbr>Claim<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#persistentvolumeclaimspec">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Persistent<wbr>Volume<wbr>Claim<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The specification for the PersistentVolumeClaim. The entire content is copied unchanged into the PVC that gets created from this template. The same fields as in a PersistentVolumeClaim are also valid here.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9235,7 +9235,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Object<wbr>Meta<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectmeta">Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Object<wbr>Meta</a></span>
     </dt>
     <dd>{{% md %}}May contain labels and annotations that will be copied into the PVC when creating it. No other fields are allowed and will be rejected during validation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9267,7 +9267,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#spec_nodejs" style="color: inherit; text-decoration: inherit;">spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#persistentvolumeclaimspec">core.v1.<wbr>Persistent<wbr>Volume<wbr>Claim<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#persistentvolumeclaimspec">core.v1.<wbr>Persistent<wbr>Volume<wbr>Claim<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The specification for the PersistentVolumeClaim. The entire content is copied unchanged into the PVC that gets created from this template. The same fields as in a PersistentVolumeClaim are also valid here.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9275,7 +9275,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">meta.v1.<wbr>Object<wbr>Meta<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectmeta">meta.v1.<wbr>Object<wbr>Meta</a></span>
     </dt>
     <dd>{{% md %}}May contain labels and annotations that will be copied into the PVC when creating it. No other fields are allowed and will be rejected during validation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9287,7 +9287,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#persistentvolumeclaimspec">Persistent<wbr>Volume<wbr>Claim<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#persistentvolumeclaimspec">Persistent<wbr>Volume<wbr>Claim<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The specification for the PersistentVolumeClaim. The entire content is copied unchanged into the PVC that gets created from this template. The same fields as in a PersistentVolumeClaim are also valid here.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9295,7 +9295,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta</a></span>
     </dt>
     <dd>{{% md %}}May contain labels and annotations that will be copied into the PVC when creating it. No other fields are allowed and will be rejected during validation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9473,7 +9473,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#preferredduringschedulingignoredduringexecution_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>During<wbr>Scheduling<wbr>Ignored<wbr>During<wbr>Execution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weightedpodaffinityterm">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Weighted<wbr>Pod<wbr>Affinity<wbr>Term<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#weightedpodaffinityterm">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Weighted<wbr>Pod<wbr>Affinity<wbr>Term&gt;</a></span>
     </dt>
     <dd>{{% md %}}The scheduler will prefer to schedule pods to nodes that satisfy the affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding "weight" to the sum if the node has pods which matches the corresponding podAffinityTerm; the node(s) with the highest sum are the most preferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9481,7 +9481,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#requiredduringschedulingignoredduringexecution_csharp" style="color: inherit; text-decoration: inherit;">Required<wbr>During<wbr>Scheduling<wbr>Ignored<wbr>During<wbr>Execution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podaffinityterm">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Pod<wbr>Affinity<wbr>Term<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#podaffinityterm">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Pod<wbr>Affinity<wbr>Term&gt;</a></span>
     </dt>
     <dd>{{% md %}}If the affinity requirements specified by this field are not met at scheduling time, the pod will not be scheduled onto the node. If the affinity requirements specified by this field cease to be met at some point during pod execution (e.g. due to a pod label update), the system may or may not try to eventually evict the pod from its node. When there are multiple elements, the lists of nodes corresponding to each podAffinityTerm are intersected, i.e. all terms must be satisfied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9513,7 +9513,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#preferredduringschedulingignoredduringexecution_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>During<wbr>Scheduling<wbr>Ignored<wbr>During<wbr>Execution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weightedpodaffinityterm">core.v1.<wbr>Weighted<wbr>Pod<wbr>Affinity<wbr>Term<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#weightedpodaffinityterm">core.v1.<wbr>Weighted<wbr>Pod<wbr>Affinity<wbr>Term[]</a></span>
     </dt>
     <dd>{{% md %}}The scheduler will prefer to schedule pods to nodes that satisfy the affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding "weight" to the sum if the node has pods which matches the corresponding podAffinityTerm; the node(s) with the highest sum are the most preferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9521,7 +9521,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#requiredduringschedulingignoredduringexecution_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>During<wbr>Scheduling<wbr>Ignored<wbr>During<wbr>Execution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podaffinityterm">core.v1.<wbr>Pod<wbr>Affinity<wbr>Term<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#podaffinityterm">core.v1.<wbr>Pod<wbr>Affinity<wbr>Term[]</a></span>
     </dt>
     <dd>{{% md %}}If the affinity requirements specified by this field are not met at scheduling time, the pod will not be scheduled onto the node. If the affinity requirements specified by this field cease to be met at some point during pod execution (e.g. due to a pod label update), the system may or may not try to eventually evict the pod from its node. When there are multiple elements, the lists of nodes corresponding to each podAffinityTerm are intersected, i.e. all terms must be satisfied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9533,7 +9533,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#preferred_during_scheduling_ignored_during_execution_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>during_<wbr>scheduling_<wbr>ignored_<wbr>during_<wbr>execution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weightedpodaffinityterm">Weighted<wbr>Pod<wbr>Affinity<wbr>Term<wbr>Args]</a></span>
+        <span class="property-type"><a href="#weightedpodaffinityterm">Weighted<wbr>Pod<wbr>Affinity<wbr>Term]</a></span>
     </dt>
     <dd>{{% md %}}The scheduler will prefer to schedule pods to nodes that satisfy the affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding "weight" to the sum if the node has pods which matches the corresponding podAffinityTerm; the node(s) with the highest sum are the most preferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9541,7 +9541,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#required_during_scheduling_ignored_during_execution_python" style="color: inherit; text-decoration: inherit;">required_<wbr>during_<wbr>scheduling_<wbr>ignored_<wbr>during_<wbr>execution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podaffinityterm">Pod<wbr>Affinity<wbr>Term<wbr>Args]</a></span>
+        <span class="property-type"><a href="#podaffinityterm">Pod<wbr>Affinity<wbr>Term]</a></span>
     </dt>
     <dd>{{% md %}}If the affinity requirements specified by this field are not met at scheduling time, the pod will not be scheduled onto the node. If the affinity requirements specified by this field cease to be met at some point during pod execution (e.g. due to a pod label update), the system may or may not try to eventually evict the pod from its node. When there are multiple elements, the lists of nodes corresponding to each podAffinityTerm are intersected, i.e. all terms must be satisfied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9563,7 +9563,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#labelselector_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelselector">Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Label<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#labelselector">Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Label<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}A label query over a set of resources, in this case pods.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9571,7 +9571,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#namespaceselector_csharp" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelselector">Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Label<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#labelselector">Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Label<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces. This field is alpha-level and is only honored when PodAffinityNamespaceSelector feature is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9635,7 +9635,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#labelselector_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelselector">meta.v1.<wbr>Label<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#labelselector">meta.v1.<wbr>Label<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}A label query over a set of resources, in this case pods.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9643,7 +9643,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#namespaceselector_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelselector">meta.v1.<wbr>Label<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#labelselector">meta.v1.<wbr>Label<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces. This field is alpha-level and is only honored when PodAffinityNamespaceSelector feature is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9671,7 +9671,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#label_selector_python" style="color: inherit; text-decoration: inherit;">label_<wbr>selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelselector">Label<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#labelselector">Label<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}A label query over a set of resources, in this case pods.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9679,7 +9679,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#namespace_selector_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelselector">Label<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#labelselector">Label<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces. This field is alpha-level and is only honored when PodAffinityNamespaceSelector feature is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9701,7 +9701,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#preferredduringschedulingignoredduringexecution_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>During<wbr>Scheduling<wbr>Ignored<wbr>During<wbr>Execution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weightedpodaffinityterm">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Weighted<wbr>Pod<wbr>Affinity<wbr>Term<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#weightedpodaffinityterm">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Weighted<wbr>Pod<wbr>Affinity<wbr>Term&gt;</a></span>
     </dt>
     <dd>{{% md %}}The scheduler will prefer to schedule pods to nodes that satisfy the anti-affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling anti-affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding "weight" to the sum if the node has pods which matches the corresponding podAffinityTerm; the node(s) with the highest sum are the most preferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9709,7 +9709,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#requiredduringschedulingignoredduringexecution_csharp" style="color: inherit; text-decoration: inherit;">Required<wbr>During<wbr>Scheduling<wbr>Ignored<wbr>During<wbr>Execution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podaffinityterm">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Pod<wbr>Affinity<wbr>Term<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#podaffinityterm">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Pod<wbr>Affinity<wbr>Term&gt;</a></span>
     </dt>
     <dd>{{% md %}}If the anti-affinity requirements specified by this field are not met at scheduling time, the pod will not be scheduled onto the node. If the anti-affinity requirements specified by this field cease to be met at some point during pod execution (e.g. due to a pod label update), the system may or may not try to eventually evict the pod from its node. When there are multiple elements, the lists of nodes corresponding to each podAffinityTerm are intersected, i.e. all terms must be satisfied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9741,7 +9741,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#preferredduringschedulingignoredduringexecution_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>During<wbr>Scheduling<wbr>Ignored<wbr>During<wbr>Execution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weightedpodaffinityterm">core.v1.<wbr>Weighted<wbr>Pod<wbr>Affinity<wbr>Term<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#weightedpodaffinityterm">core.v1.<wbr>Weighted<wbr>Pod<wbr>Affinity<wbr>Term[]</a></span>
     </dt>
     <dd>{{% md %}}The scheduler will prefer to schedule pods to nodes that satisfy the anti-affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling anti-affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding "weight" to the sum if the node has pods which matches the corresponding podAffinityTerm; the node(s) with the highest sum are the most preferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9749,7 +9749,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#requiredduringschedulingignoredduringexecution_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>During<wbr>Scheduling<wbr>Ignored<wbr>During<wbr>Execution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podaffinityterm">core.v1.<wbr>Pod<wbr>Affinity<wbr>Term<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#podaffinityterm">core.v1.<wbr>Pod<wbr>Affinity<wbr>Term[]</a></span>
     </dt>
     <dd>{{% md %}}If the anti-affinity requirements specified by this field are not met at scheduling time, the pod will not be scheduled onto the node. If the anti-affinity requirements specified by this field cease to be met at some point during pod execution (e.g. due to a pod label update), the system may or may not try to eventually evict the pod from its node. When there are multiple elements, the lists of nodes corresponding to each podAffinityTerm are intersected, i.e. all terms must be satisfied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9761,7 +9761,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#preferred_during_scheduling_ignored_during_execution_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>during_<wbr>scheduling_<wbr>ignored_<wbr>during_<wbr>execution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weightedpodaffinityterm">Weighted<wbr>Pod<wbr>Affinity<wbr>Term<wbr>Args]</a></span>
+        <span class="property-type"><a href="#weightedpodaffinityterm">Weighted<wbr>Pod<wbr>Affinity<wbr>Term]</a></span>
     </dt>
     <dd>{{% md %}}The scheduler will prefer to schedule pods to nodes that satisfy the anti-affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling anti-affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding "weight" to the sum if the node has pods which matches the corresponding podAffinityTerm; the node(s) with the highest sum are the most preferred.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9769,7 +9769,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#required_during_scheduling_ignored_during_execution_python" style="color: inherit; text-decoration: inherit;">required_<wbr>during_<wbr>scheduling_<wbr>ignored_<wbr>during_<wbr>execution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podaffinityterm">Pod<wbr>Affinity<wbr>Term<wbr>Args]</a></span>
+        <span class="property-type"><a href="#podaffinityterm">Pod<wbr>Affinity<wbr>Term]</a></span>
     </dt>
     <dd>{{% md %}}If the anti-affinity requirements specified by this field are not met at scheduling time, the pod will not be scheduled onto the node. If the anti-affinity requirements specified by this field cease to be met at some point during pod execution (e.g. due to a pod label update), the system may or may not try to eventually evict the pod from its node. When there are multiple elements, the lists of nodes corresponding to each podAffinityTerm are intersected, i.e. all terms must be satisfied.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9791,7 +9791,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#options_csharp" style="color: inherit; text-decoration: inherit;">Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poddnsconfigoption">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Pod<wbr>DNSConfig<wbr>Option<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#poddnsconfigoption">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Pod<wbr>DNSConfig<wbr>Option&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of DNS resolver options. This will be merged with the base options generated from DNSPolicy. Duplicated entries will be removed. Resolution options given in Options will override those that appear in the base DNSPolicy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9847,7 +9847,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poddnsconfigoption">core.v1.<wbr>Pod<wbr>DNSConfig<wbr>Option<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#poddnsconfigoption">core.v1.<wbr>Pod<wbr>DNSConfig<wbr>Option[]</a></span>
     </dt>
     <dd>{{% md %}}A list of DNS resolver options. This will be merged with the base options generated from DNSPolicy. Duplicated entries will be removed. Resolution options given in Options will override those that appear in the base DNSPolicy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9875,7 +9875,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poddnsconfigoption">Pod<wbr>DNSConfig<wbr>Option<wbr>Args]</a></span>
+        <span class="property-type"><a href="#poddnsconfigoption">Pod<wbr>DNSConfig<wbr>Option]</a></span>
     </dt>
     <dd>{{% md %}}A list of DNS resolver options. This will be merged with the base options generated from DNSPolicy. Duplicated entries will be removed. Resolution options given in Options will override those that appear in the base DNSPolicy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10073,7 +10073,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#selinuxoptions_csharp" style="color: inherit; text-decoration: inherit;">Se<wbr>Linux<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selinuxoptions">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>SELinux<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#selinuxoptions">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>SELinux<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The SELinux context to be applied to all containers. If unspecified, the container runtime will allocate a random SELinux context for each container.  May also be set in SecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence for that container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10081,7 +10081,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#seccompprofile_csharp" style="color: inherit; text-decoration: inherit;">Seccomp<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#seccompprofile">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Seccomp<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#seccompprofile">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Seccomp<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}The seccomp options to use by the containers in this pod.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10097,7 +10097,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#sysctls_csharp" style="color: inherit; text-decoration: inherit;">Sysctls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sysctl">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Sysctl<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#sysctl">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Sysctl&gt;</a></span>
     </dt>
     <dd>{{% md %}}Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupported sysctls (by the container runtime) might fail to launch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10105,7 +10105,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#windowsoptions_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowssecuritycontextoptions">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Windows<wbr>Security<wbr>Context<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#windowssecuritycontextoptions">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Windows<wbr>Security<wbr>Context<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The Windows specific settings applied to all containers. If unspecified, the options within a container's SecurityContext will be used. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10249,7 +10249,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#selinuxoptions_nodejs" style="color: inherit; text-decoration: inherit;">se<wbr>Linux<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selinuxoptions">core.v1.<wbr>SELinux<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#selinuxoptions">core.v1.<wbr>SELinux<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The SELinux context to be applied to all containers. If unspecified, the container runtime will allocate a random SELinux context for each container.  May also be set in SecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence for that container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10257,7 +10257,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#seccompprofile_nodejs" style="color: inherit; text-decoration: inherit;">seccomp<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#seccompprofile">core.v1.<wbr>Seccomp<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#seccompprofile">core.v1.<wbr>Seccomp<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}The seccomp options to use by the containers in this pod.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10273,7 +10273,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#sysctls_nodejs" style="color: inherit; text-decoration: inherit;">sysctls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sysctl">core.v1.<wbr>Sysctl<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#sysctl">core.v1.<wbr>Sysctl[]</a></span>
     </dt>
     <dd>{{% md %}}Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupported sysctls (by the container runtime) might fail to launch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10281,7 +10281,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#windowsoptions_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowssecuritycontextoptions">core.v1.<wbr>Windows<wbr>Security<wbr>Context<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#windowssecuritycontextoptions">core.v1.<wbr>Windows<wbr>Security<wbr>Context<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The Windows specific settings applied to all containers. If unspecified, the options within a container's SecurityContext will be used. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10337,7 +10337,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#se_linux_options_python" style="color: inherit; text-decoration: inherit;">se_<wbr>linux_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selinuxoptions">SELinux<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#selinuxoptions">SELinux<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The SELinux context to be applied to all containers. If unspecified, the container runtime will allocate a random SELinux context for each container.  May also be set in SecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence for that container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10345,7 +10345,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#seccomp_profile_python" style="color: inherit; text-decoration: inherit;">seccomp_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#seccompprofile">Seccomp<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#seccompprofile">Seccomp<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}The seccomp options to use by the containers in this pod.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10361,7 +10361,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#sysctls_python" style="color: inherit; text-decoration: inherit;">sysctls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sysctl">Sysctl<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sysctl">Sysctl]</a></span>
     </dt>
     <dd>{{% md %}}Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupported sysctls (by the container runtime) might fail to launch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10369,7 +10369,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#windows_options_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowssecuritycontextoptions">Windows<wbr>Security<wbr>Context<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#windowssecuritycontextoptions">Windows<wbr>Security<wbr>Context<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The Windows specific settings applied to all containers. If unspecified, the options within a container's SecurityContext will be used. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10383,7 +10383,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#containers_csharp" style="color: inherit; text-decoration: inherit;">Containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#container">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Container<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#container">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Container&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of containers belonging to the pod. Containers cannot currently be added or removed. There must be at least one container in a Pod. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10399,7 +10399,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#affinity_csharp" style="color: inherit; text-decoration: inherit;">Affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#affinity">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Affinity<wbr>Args</a></span>
+        <span class="property-type"><a href="#affinity">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Affinity</a></span>
     </dt>
     <dd>{{% md %}}If specified, the pod's scheduling constraints{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10415,7 +10415,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#dnsconfig_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poddnsconfig">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Pod<wbr>DNSConfig<wbr>Args</a></span>
+        <span class="property-type"><a href="#poddnsconfig">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Pod<wbr>DNSConfig</a></span>
     </dt>
     <dd>{{% md %}}Specifies the DNS parameters of a pod. Parameters specified here will be merged to the generated DNS configuration based on DNSPolicy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10439,7 +10439,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#ephemeralcontainers_csharp" style="color: inherit; text-decoration: inherit;">Ephemeral<wbr>Containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ephemeralcontainer">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Ephemeral<wbr>Container<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ephemeralcontainer">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Ephemeral<wbr>Container&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of ephemeral containers run in this pod. Ephemeral containers may be run in an existing pod to perform user-initiated actions such as debugging. This list cannot be specified when creating a pod, and it cannot be modified by updating the pod spec. In order to add an ephemeral container to an existing pod, use the pod's ephemeralcontainers subresource. This field is alpha-level and is only honored by servers that enable the EphemeralContainers feature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10447,7 +10447,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#hostaliases_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Aliases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostalias">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Host<wbr>Alias<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#hostalias">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Host<wbr>Alias&gt;</a></span>
     </dt>
     <dd>{{% md %}}HostAliases is an optional list of hosts and IPs that will be injected into the pod's hosts file if specified. This is only valid for non-hostNetwork pods.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10487,7 +10487,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#imagepullsecrets_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Pull<wbr>Secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localobjectreference">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Local<wbr>Object<wbr>Reference<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#localobjectreference">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Local<wbr>Object<wbr>Reference&gt;</a></span>
     </dt>
     <dd>{{% md %}}ImagePullSecrets is an optional list of references to secrets in the same namespace to use for pulling any of the images used by this PodSpec. If specified, these secrets will be passed to individual puller implementations for them to use. For example, in the case of docker, only DockerConfig type secrets are honored. More info: https://kubernetes.io/docs/concepts/containers/images#specifying-imagepullsecrets-on-a-pod{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10495,7 +10495,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#initcontainers_csharp" style="color: inherit; text-decoration: inherit;">Init<wbr>Containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#container">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Container<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#container">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Container&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of initialization containers belonging to the pod. Init containers are executed in order prior to containers being started. If any init container fails, the pod is considered to have failed and is handled according to its restartPolicy. The name for an init container or normal container must be unique among all containers. Init containers may not have Lifecycle actions, Readiness probes, Liveness probes, or Startup probes. The resourceRequirements of an init container are taken into account during scheduling by finding the highest request/limit for each resource type, and then using the max of of that value or the sum of the normal containers. Limits are applied to init containers in a similar fashion. Init containers cannot currently be added or removed. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/init-containers/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10551,7 +10551,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#readinessgates_csharp" style="color: inherit; text-decoration: inherit;">Readiness<wbr>Gates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podreadinessgate">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Pod<wbr>Readiness<wbr>Gate<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#podreadinessgate">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Pod<wbr>Readiness<wbr>Gate&gt;</a></span>
     </dt>
     <dd>{{% md %}}If specified, all readiness gates will be evaluated for pod readiness. A pod is ready when all its containers are ready AND all conditions specified in the readiness gates have status equal to "True" More info: https://git.k8s.io/enhancements/keps/sig-network/0007-pod-ready%2B%2B.md{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10583,7 +10583,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#securitycontext_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritycontext">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Pod<wbr>Security<wbr>Context<wbr>Args</a></span>
+        <span class="property-type"><a href="#podsecuritycontext">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Pod<wbr>Security<wbr>Context</a></span>
     </dt>
     <dd>{{% md %}}SecurityContext holds pod-level security attributes and common container settings. Optional: Defaults to empty.  See type description for default values of each field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10639,7 +10639,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#tolerations_csharp" style="color: inherit; text-decoration: inherit;">Tolerations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#toleration">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Toleration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#toleration">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Toleration&gt;</a></span>
     </dt>
     <dd>{{% md %}}If specified, the pod's tolerations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10647,7 +10647,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#topologyspreadconstraints_csharp" style="color: inherit; text-decoration: inherit;">Topology<wbr>Spread<wbr>Constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topologyspreadconstraint">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Topology<wbr>Spread<wbr>Constraint<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#topologyspreadconstraint">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Topology<wbr>Spread<wbr>Constraint&gt;</a></span>
     </dt>
     <dd>{{% md %}}TopologySpreadConstraints describes how a group of pods ought to spread across topology domains. Scheduler will schedule pods in a way which abides by the constraints. All topologySpreadConstraints are ANDed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10655,7 +10655,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#volumes_csharp" style="color: inherit; text-decoration: inherit;">Volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volume">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Volume<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#volume">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Volume&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of volumes that can be mounted by containers belonging to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10951,7 +10951,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#containers_nodejs" style="color: inherit; text-decoration: inherit;">containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#container">core.v1.<wbr>Container<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#container">core.v1.<wbr>Container[]</a></span>
     </dt>
     <dd>{{% md %}}List of containers belonging to the pod. Containers cannot currently be added or removed. There must be at least one container in a Pod. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10967,7 +10967,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#affinity_nodejs" style="color: inherit; text-decoration: inherit;">affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#affinity">core.v1.<wbr>Affinity<wbr>Args</a></span>
+        <span class="property-type"><a href="#affinity">core.v1.<wbr>Affinity</a></span>
     </dt>
     <dd>{{% md %}}If specified, the pod's scheduling constraints{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10983,7 +10983,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#dnsconfig_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poddnsconfig">core.v1.<wbr>Pod<wbr>DNSConfig<wbr>Args</a></span>
+        <span class="property-type"><a href="#poddnsconfig">core.v1.<wbr>Pod<wbr>DNSConfig</a></span>
     </dt>
     <dd>{{% md %}}Specifies the DNS parameters of a pod. Parameters specified here will be merged to the generated DNS configuration based on DNSPolicy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11007,7 +11007,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#ephemeralcontainers_nodejs" style="color: inherit; text-decoration: inherit;">ephemeral<wbr>Containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ephemeralcontainer">core.v1.<wbr>Ephemeral<wbr>Container<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#ephemeralcontainer">core.v1.<wbr>Ephemeral<wbr>Container[]</a></span>
     </dt>
     <dd>{{% md %}}List of ephemeral containers run in this pod. Ephemeral containers may be run in an existing pod to perform user-initiated actions such as debugging. This list cannot be specified when creating a pod, and it cannot be modified by updating the pod spec. In order to add an ephemeral container to an existing pod, use the pod's ephemeralcontainers subresource. This field is alpha-level and is only honored by servers that enable the EphemeralContainers feature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11015,7 +11015,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#hostaliases_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Aliases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostalias">core.v1.<wbr>Host<wbr>Alias<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#hostalias">core.v1.<wbr>Host<wbr>Alias[]</a></span>
     </dt>
     <dd>{{% md %}}HostAliases is an optional list of hosts and IPs that will be injected into the pod's hosts file if specified. This is only valid for non-hostNetwork pods.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11055,7 +11055,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#imagepullsecrets_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Pull<wbr>Secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localobjectreference">core.v1.<wbr>Local<wbr>Object<wbr>Reference<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#localobjectreference">core.v1.<wbr>Local<wbr>Object<wbr>Reference[]</a></span>
     </dt>
     <dd>{{% md %}}ImagePullSecrets is an optional list of references to secrets in the same namespace to use for pulling any of the images used by this PodSpec. If specified, these secrets will be passed to individual puller implementations for them to use. For example, in the case of docker, only DockerConfig type secrets are honored. More info: https://kubernetes.io/docs/concepts/containers/images#specifying-imagepullsecrets-on-a-pod{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11063,7 +11063,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#initcontainers_nodejs" style="color: inherit; text-decoration: inherit;">init<wbr>Containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#container">core.v1.<wbr>Container<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#container">core.v1.<wbr>Container[]</a></span>
     </dt>
     <dd>{{% md %}}List of initialization containers belonging to the pod. Init containers are executed in order prior to containers being started. If any init container fails, the pod is considered to have failed and is handled according to its restartPolicy. The name for an init container or normal container must be unique among all containers. Init containers may not have Lifecycle actions, Readiness probes, Liveness probes, or Startup probes. The resourceRequirements of an init container are taken into account during scheduling by finding the highest request/limit for each resource type, and then using the max of of that value or the sum of the normal containers. Limits are applied to init containers in a similar fashion. Init containers cannot currently be added or removed. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/init-containers/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11119,7 +11119,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#readinessgates_nodejs" style="color: inherit; text-decoration: inherit;">readiness<wbr>Gates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podreadinessgate">core.v1.<wbr>Pod<wbr>Readiness<wbr>Gate<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#podreadinessgate">core.v1.<wbr>Pod<wbr>Readiness<wbr>Gate[]</a></span>
     </dt>
     <dd>{{% md %}}If specified, all readiness gates will be evaluated for pod readiness. A pod is ready when all its containers are ready AND all conditions specified in the readiness gates have status equal to "True" More info: https://git.k8s.io/enhancements/keps/sig-network/0007-pod-ready%2B%2B.md{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11151,7 +11151,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#securitycontext_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritycontext">core.v1.<wbr>Pod<wbr>Security<wbr>Context<wbr>Args</a></span>
+        <span class="property-type"><a href="#podsecuritycontext">core.v1.<wbr>Pod<wbr>Security<wbr>Context</a></span>
     </dt>
     <dd>{{% md %}}SecurityContext holds pod-level security attributes and common container settings. Optional: Defaults to empty.  See type description for default values of each field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11207,7 +11207,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#tolerations_nodejs" style="color: inherit; text-decoration: inherit;">tolerations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#toleration">core.v1.<wbr>Toleration<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#toleration">core.v1.<wbr>Toleration[]</a></span>
     </dt>
     <dd>{{% md %}}If specified, the pod's tolerations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11215,7 +11215,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#topologyspreadconstraints_nodejs" style="color: inherit; text-decoration: inherit;">topology<wbr>Spread<wbr>Constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topologyspreadconstraint">core.v1.<wbr>Topology<wbr>Spread<wbr>Constraint<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#topologyspreadconstraint">core.v1.<wbr>Topology<wbr>Spread<wbr>Constraint[]</a></span>
     </dt>
     <dd>{{% md %}}TopologySpreadConstraints describes how a group of pods ought to spread across topology domains. Scheduler will schedule pods in a way which abides by the constraints. All topologySpreadConstraints are ANDed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11223,7 +11223,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#volumes_nodejs" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volume">core.v1.<wbr>Volume<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#volume">core.v1.<wbr>Volume[]</a></span>
     </dt>
     <dd>{{% md %}}List of volumes that can be mounted by containers belonging to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11235,7 +11235,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#containers_python" style="color: inherit; text-decoration: inherit;">containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#container">Container<wbr>Args]</a></span>
+        <span class="property-type"><a href="#container">Container]</a></span>
     </dt>
     <dd>{{% md %}}List of containers belonging to the pod. Containers cannot currently be added or removed. There must be at least one container in a Pod. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11251,7 +11251,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#affinity_python" style="color: inherit; text-decoration: inherit;">affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#affinity">Affinity<wbr>Args</a></span>
+        <span class="property-type"><a href="#affinity">Affinity</a></span>
     </dt>
     <dd>{{% md %}}If specified, the pod's scheduling constraints{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11267,7 +11267,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#dns_config_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poddnsconfig">Pod<wbr>DNSConfig<wbr>Args</a></span>
+        <span class="property-type"><a href="#poddnsconfig">Pod<wbr>DNSConfig</a></span>
     </dt>
     <dd>{{% md %}}Specifies the DNS parameters of a pod. Parameters specified here will be merged to the generated DNS configuration based on DNSPolicy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11291,7 +11291,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#ephemeral_containers_python" style="color: inherit; text-decoration: inherit;">ephemeral_<wbr>containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ephemeralcontainer">Ephemeral<wbr>Container<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ephemeralcontainer">Ephemeral<wbr>Container]</a></span>
     </dt>
     <dd>{{% md %}}List of ephemeral containers run in this pod. Ephemeral containers may be run in an existing pod to perform user-initiated actions such as debugging. This list cannot be specified when creating a pod, and it cannot be modified by updating the pod spec. In order to add an ephemeral container to an existing pod, use the pod's ephemeralcontainers subresource. This field is alpha-level and is only honored by servers that enable the EphemeralContainers feature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11299,7 +11299,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#host_aliases_python" style="color: inherit; text-decoration: inherit;">host_<wbr>aliases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostalias">Host<wbr>Alias<wbr>Args]</a></span>
+        <span class="property-type"><a href="#hostalias">Host<wbr>Alias]</a></span>
     </dt>
     <dd>{{% md %}}HostAliases is an optional list of hosts and IPs that will be injected into the pod's hosts file if specified. This is only valid for non-hostNetwork pods.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11339,7 +11339,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#image_pull_secrets_python" style="color: inherit; text-decoration: inherit;">image_<wbr>pull_<wbr>secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localobjectreference">Local<wbr>Object<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#localobjectreference">Local<wbr>Object<wbr>Reference]</a></span>
     </dt>
     <dd>{{% md %}}ImagePullSecrets is an optional list of references to secrets in the same namespace to use for pulling any of the images used by this PodSpec. If specified, these secrets will be passed to individual puller implementations for them to use. For example, in the case of docker, only DockerConfig type secrets are honored. More info: https://kubernetes.io/docs/concepts/containers/images#specifying-imagepullsecrets-on-a-pod{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11347,7 +11347,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#init_containers_python" style="color: inherit; text-decoration: inherit;">init_<wbr>containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#container">Container<wbr>Args]</a></span>
+        <span class="property-type"><a href="#container">Container]</a></span>
     </dt>
     <dd>{{% md %}}List of initialization containers belonging to the pod. Init containers are executed in order prior to containers being started. If any init container fails, the pod is considered to have failed and is handled according to its restartPolicy. The name for an init container or normal container must be unique among all containers. Init containers may not have Lifecycle actions, Readiness probes, Liveness probes, or Startup probes. The resourceRequirements of an init container are taken into account during scheduling by finding the highest request/limit for each resource type, and then using the max of of that value or the sum of the normal containers. Limits are applied to init containers in a similar fashion. Init containers cannot currently be added or removed. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/init-containers/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11403,7 +11403,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#readiness_gates_python" style="color: inherit; text-decoration: inherit;">readiness_<wbr>gates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podreadinessgate">Pod<wbr>Readiness<wbr>Gate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#podreadinessgate">Pod<wbr>Readiness<wbr>Gate]</a></span>
     </dt>
     <dd>{{% md %}}If specified, all readiness gates will be evaluated for pod readiness. A pod is ready when all its containers are ready AND all conditions specified in the readiness gates have status equal to "True" More info: https://git.k8s.io/enhancements/keps/sig-network/0007-pod-ready%2B%2B.md{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11435,7 +11435,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#security_context_python" style="color: inherit; text-decoration: inherit;">security_<wbr>context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritycontext">Pod<wbr>Security<wbr>Context<wbr>Args</a></span>
+        <span class="property-type"><a href="#podsecuritycontext">Pod<wbr>Security<wbr>Context</a></span>
     </dt>
     <dd>{{% md %}}SecurityContext holds pod-level security attributes and common container settings. Optional: Defaults to empty.  See type description for default values of each field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11491,7 +11491,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#tolerations_python" style="color: inherit; text-decoration: inherit;">tolerations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#toleration">Toleration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#toleration">Toleration]</a></span>
     </dt>
     <dd>{{% md %}}If specified, the pod's tolerations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11499,7 +11499,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#topology_spread_constraints_python" style="color: inherit; text-decoration: inherit;">topology_<wbr>spread_<wbr>constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topologyspreadconstraint">Topology<wbr>Spread<wbr>Constraint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#topologyspreadconstraint">Topology<wbr>Spread<wbr>Constraint]</a></span>
     </dt>
     <dd>{{% md %}}TopologySpreadConstraints describes how a group of pods ought to spread across topology domains. Scheduler will schedule pods in a way which abides by the constraints. All topologySpreadConstraints are ANDed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11507,7 +11507,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volume">Volume<wbr>Args]</a></span>
+        <span class="property-type"><a href="#volume">Volume]</a></span>
     </dt>
     <dd>{{% md %}}List of volumes that can be mounted by containers belonging to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11521,7 +11521,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Object<wbr>Meta<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectmeta">Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Object<wbr>Meta</a></span>
     </dt>
     <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11529,7 +11529,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#spec_csharp" style="color: inherit; text-decoration: inherit;">Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podspec">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Pod<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#podspec">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Pod<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}Specification of the desired behavior of the pod. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11561,7 +11561,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">meta.v1.<wbr>Object<wbr>Meta<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectmeta">meta.v1.<wbr>Object<wbr>Meta</a></span>
     </dt>
     <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11569,7 +11569,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#spec_nodejs" style="color: inherit; text-decoration: inherit;">spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podspec">core.v1.<wbr>Pod<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#podspec">core.v1.<wbr>Pod<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}Specification of the desired behavior of the pod. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11581,7 +11581,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta</a></span>
     </dt>
     <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11589,7 +11589,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podspec">Pod<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#podspec">Pod<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}Specification of the desired behavior of the pod. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11717,7 +11717,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#preference_csharp" style="color: inherit; text-decoration: inherit;">Preference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeselectorterm">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Node<wbr>Selector<wbr>Term<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodeselectorterm">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Node<wbr>Selector<wbr>Term</a></span>
     </dt>
     <dd>{{% md %}}A node selector term, associated with the corresponding weight.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11757,7 +11757,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#preference_nodejs" style="color: inherit; text-decoration: inherit;">preference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeselectorterm">core.v1.<wbr>Node<wbr>Selector<wbr>Term<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodeselectorterm">core.v1.<wbr>Node<wbr>Selector<wbr>Term</a></span>
     </dt>
     <dd>{{% md %}}A node selector term, associated with the corresponding weight.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11777,7 +11777,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#preference_python" style="color: inherit; text-decoration: inherit;">preference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeselectorterm">Node<wbr>Selector<wbr>Term<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodeselectorterm">Node<wbr>Selector<wbr>Term</a></span>
     </dt>
     <dd>{{% md %}}A node selector term, associated with the corresponding weight.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11799,7 +11799,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#exec_csharp" style="color: inherit; text-decoration: inherit;">Exec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#execaction">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Exec<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#execaction">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Exec<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}One and only one of the following should be specified. Exec specifies the action to take.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11815,7 +11815,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#httpget_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Get</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpgetaction">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>HTTPGet<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#httpgetaction">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>HTTPGet<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}HTTPGet specifies the http request to perform.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11847,7 +11847,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#tcpsocket_csharp" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Socket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tcpsocketaction">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>TCPSocket<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#tcpsocketaction">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>TCPSocket<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11951,7 +11951,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#exec_nodejs" style="color: inherit; text-decoration: inherit;">exec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#execaction">core.v1.<wbr>Exec<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#execaction">core.v1.<wbr>Exec<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}One and only one of the following should be specified. Exec specifies the action to take.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11967,7 +11967,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#httpget_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Get</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpgetaction">core.v1.<wbr>HTTPGet<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#httpgetaction">core.v1.<wbr>HTTPGet<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}HTTPGet specifies the http request to perform.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11999,7 +11999,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#tcpsocket_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Socket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tcpsocketaction">core.v1.<wbr>TCPSocket<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#tcpsocketaction">core.v1.<wbr>TCPSocket<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12027,7 +12027,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#exec__python" style="color: inherit; text-decoration: inherit;">exec_</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#execaction">Exec<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#execaction">Exec<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}One and only one of the following should be specified. Exec specifies the action to take.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12043,7 +12043,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#http_get_python" style="color: inherit; text-decoration: inherit;">http_<wbr>get</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpgetaction">HTTPGet<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#httpgetaction">HTTPGet<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}HTTPGet specifies the http request to perform.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12075,7 +12075,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#tcp_socket_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>socket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tcpsocketaction">TCPSocket<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#tcpsocketaction">TCPSocket<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12105,7 +12105,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#sources_csharp" style="color: inherit; text-decoration: inherit;">Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumeprojection">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Volume<wbr>Projection<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#volumeprojection">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Volume<wbr>Projection&gt;</a></span>
     </dt>
     <dd>{{% md %}}list of volume projections{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12145,7 +12145,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#sources_nodejs" style="color: inherit; text-decoration: inherit;">sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumeprojection">core.v1.<wbr>Volume<wbr>Projection<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#volumeprojection">core.v1.<wbr>Volume<wbr>Projection[]</a></span>
     </dt>
     <dd>{{% md %}}list of volume projections{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12165,7 +12165,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumeprojection">Volume<wbr>Projection<wbr>Args]</a></span>
+        <span class="property-type"><a href="#volumeprojection">Volume<wbr>Projection]</a></span>
     </dt>
     <dd>{{% md %}}list of volume projections{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12445,7 +12445,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#secretref_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localobjectreference">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#localobjectreference">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Local<wbr>Object<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}SecretRef is name of the authentication secret for RBDUser. If provided overrides keyring. Default is nil. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12581,7 +12581,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#secretref_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localobjectreference">core.v1.<wbr>Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#localobjectreference">core.v1.<wbr>Local<wbr>Object<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}SecretRef is name of the authentication secret for RBDUser. If provided overrides keyring. Default is nil. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12649,7 +12649,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#secret_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localobjectreference">Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#localobjectreference">Local<wbr>Object<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}SecretRef is name of the authentication secret for RBDUser. If provided overrides keyring. Default is nil. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13103,7 +13103,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#secretref_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localobjectreference">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#localobjectreference">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Local<wbr>Object<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}SecretRef references to the secret for ScaleIO user and other sensitive information. If this is not provided, Login operation will fail.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13271,7 +13271,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#secretref_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localobjectreference">core.v1.<wbr>Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#localobjectreference">core.v1.<wbr>Local<wbr>Object<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}SecretRef references to the secret for ScaleIO user and other sensitive information. If this is not provided, Login operation will fail.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13355,7 +13355,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 <a href="#secret_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localobjectreference">Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#localobjectreference">Local<wbr>Object<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}SecretRef references to the secret for ScaleIO user and other sensitive information. If this is not provided, Login operation will fail.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13719,7 +13719,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keytopath">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Key<wbr>To<wbr>Path<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#keytopath">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Key<wbr>To<wbr>Path&gt;</a></span>
     </dt>
     <dd>{{% md %}}If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the '..' path or start with '..'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13775,7 +13775,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keytopath">core.v1.<wbr>Key<wbr>To<wbr>Path<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#keytopath">core.v1.<wbr>Key<wbr>To<wbr>Path[]</a></span>
     </dt>
     <dd>{{% md %}}If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the '..' path or start with '..'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13803,7 +13803,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keytopath">Key<wbr>To<wbr>Path<wbr>Args]</a></span>
+        <span class="property-type"><a href="#keytopath">Key<wbr>To<wbr>Path]</a></span>
     </dt>
     <dd>{{% md %}}If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the '..' path or start with '..'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13841,7 +13841,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keytopath">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Key<wbr>To<wbr>Path<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#keytopath">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Key<wbr>To<wbr>Path&gt;</a></span>
     </dt>
     <dd>{{% md %}}If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the '..' path or start with '..'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13913,7 +13913,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keytopath">core.v1.<wbr>Key<wbr>To<wbr>Path<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#keytopath">core.v1.<wbr>Key<wbr>To<wbr>Path[]</a></span>
     </dt>
     <dd>{{% md %}}If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the '..' path or start with '..'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13949,7 +13949,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keytopath">Key<wbr>To<wbr>Path<wbr>Args]</a></span>
+        <span class="property-type"><a href="#keytopath">Key<wbr>To<wbr>Path]</a></span>
     </dt>
     <dd>{{% md %}}If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the '..' path or start with '..'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13987,7 +13987,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#capabilities_csharp" style="color: inherit; text-decoration: inherit;">Capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capabilities">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Capabilities<wbr>Args</a></span>
+        <span class="property-type"><a href="#capabilities">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Capabilities</a></span>
     </dt>
     <dd>{{% md %}}The capabilities to add/drop when running containers. Defaults to the default set of capabilities granted by the container runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14043,7 +14043,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#selinuxoptions_csharp" style="color: inherit; text-decoration: inherit;">Se<wbr>Linux<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selinuxoptions">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>SELinux<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#selinuxoptions">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>SELinux<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The SELinux context to be applied to the container. If unspecified, the container runtime will allocate a random SELinux context for each container.  May also be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14051,7 +14051,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#seccompprofile_csharp" style="color: inherit; text-decoration: inherit;">Seccomp<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#seccompprofile">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Seccomp<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#seccompprofile">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Seccomp<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}The seccomp options to use by this container. If seccomp options are provided at both the pod & container level, the container options override the pod options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14059,7 +14059,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#windowsoptions_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowssecuritycontextoptions">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Windows<wbr>Security<wbr>Context<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#windowssecuritycontextoptions">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Windows<wbr>Security<wbr>Context<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The Windows specific settings applied to all containers. If unspecified, the options from the PodSecurityContext will be used. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14171,7 +14171,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#capabilities_nodejs" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capabilities">core.v1.<wbr>Capabilities<wbr>Args</a></span>
+        <span class="property-type"><a href="#capabilities">core.v1.<wbr>Capabilities</a></span>
     </dt>
     <dd>{{% md %}}The capabilities to add/drop when running containers. Defaults to the default set of capabilities granted by the container runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14227,7 +14227,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#selinuxoptions_nodejs" style="color: inherit; text-decoration: inherit;">se<wbr>Linux<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selinuxoptions">core.v1.<wbr>SELinux<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#selinuxoptions">core.v1.<wbr>SELinux<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The SELinux context to be applied to the container. If unspecified, the container runtime will allocate a random SELinux context for each container.  May also be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14235,7 +14235,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#seccompprofile_nodejs" style="color: inherit; text-decoration: inherit;">seccomp<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#seccompprofile">core.v1.<wbr>Seccomp<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#seccompprofile">core.v1.<wbr>Seccomp<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}The seccomp options to use by this container. If seccomp options are provided at both the pod & container level, the container options override the pod options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14243,7 +14243,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#windowsoptions_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowssecuritycontextoptions">core.v1.<wbr>Windows<wbr>Security<wbr>Context<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#windowssecuritycontextoptions">core.v1.<wbr>Windows<wbr>Security<wbr>Context<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The Windows specific settings applied to all containers. If unspecified, the options from the PodSecurityContext will be used. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14263,7 +14263,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capabilities">Capabilities<wbr>Args</a></span>
+        <span class="property-type"><a href="#capabilities">Capabilities</a></span>
     </dt>
     <dd>{{% md %}}The capabilities to add/drop when running containers. Defaults to the default set of capabilities granted by the container runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14319,7 +14319,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#se_linux_options_python" style="color: inherit; text-decoration: inherit;">se_<wbr>linux_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selinuxoptions">SELinux<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#selinuxoptions">SELinux<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The SELinux context to be applied to the container. If unspecified, the container runtime will allocate a random SELinux context for each container.  May also be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14327,7 +14327,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#seccomp_profile_python" style="color: inherit; text-decoration: inherit;">seccomp_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#seccompprofile">Seccomp<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#seccompprofile">Seccomp<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}The seccomp options to use by this container. If seccomp options are provided at both the pod & container level, the container options override the pod options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14335,7 +14335,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#windows_options_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowssecuritycontextoptions">Windows<wbr>Security<wbr>Context<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#windowssecuritycontextoptions">Windows<wbr>Security<wbr>Context<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The Windows specific settings applied to all containers. If unspecified, the options from the PodSecurityContext will be used. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14479,7 +14479,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#secretref_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localobjectreference">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#localobjectreference">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Local<wbr>Object<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}SecretRef specifies the secret to use for obtaining the StorageOS API credentials.  If not specified, default values will be attempted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14567,7 +14567,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#secretref_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localobjectreference">core.v1.<wbr>Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#localobjectreference">core.v1.<wbr>Local<wbr>Object<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}SecretRef specifies the secret to use for obtaining the StorageOS API credentials.  If not specified, default values will be attempted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14611,7 +14611,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#secret_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localobjectreference">Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#localobjectreference">Local<wbr>Object<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}SecretRef specifies the secret to use for obtaining the StorageOS API credentials.  If not specified, default values will be attempted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15010,7 +15010,7 @@ A constraint is considered "Unsatisfiable" for an incoming pod if and only if ev
 <a href="#labelselector_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelselector">Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Label<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#labelselector">Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Label<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}LabelSelector is used to find matching pods. Pods that match this label selector are counted to determine the number of pods in their corresponding topology domain.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -15088,7 +15088,7 @@ A constraint is considered "Unsatisfiable" for an incoming pod if and only if ev
 <a href="#labelselector_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelselector">meta.v1.<wbr>Label<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#labelselector">meta.v1.<wbr>Label<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}LabelSelector is used to find matching pods. Pods that match this label selector are counted to determine the number of pods in their corresponding topology domain.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -15127,7 +15127,7 @@ A constraint is considered "Unsatisfiable" for an incoming pod if and only if ev
 <a href="#label_selector_python" style="color: inherit; text-decoration: inherit;">label_<wbr>selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelselector">Label<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#labelselector">Label<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}LabelSelector is used to find matching pods. Pods that match this label selector are counted to determine the number of pods in their corresponding topology domain.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -15263,7 +15263,7 @@ A constraint is considered "Unsatisfiable" for an incoming pod if and only if ev
 <a href="#awselasticblockstore_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Elastic<wbr>Block<wbr>Store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#awselasticblockstorevolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>AWSElastic<wbr>Block<wbr>Store<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#awselasticblockstorevolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>AWSElastic<wbr>Block<wbr>Store<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}AWSElasticBlockStore represents an AWS Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15271,7 +15271,7 @@ A constraint is considered "Unsatisfiable" for an incoming pod if and only if ev
 <a href="#azuredisk_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurediskvolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Azure<wbr>Disk<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurediskvolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Azure<wbr>Disk<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}AzureDisk represents an Azure Data Disk mount on the host and bind mount to the pod.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15279,7 +15279,7 @@ A constraint is considered "Unsatisfiable" for an incoming pod if and only if ev
 <a href="#azurefile_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefilevolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefilevolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}AzureFile represents an Azure File Service mount on the host and bind mount to the pod.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15287,7 +15287,7 @@ A constraint is considered "Unsatisfiable" for an incoming pod if and only if ev
 <a href="#cephfs_csharp" style="color: inherit; text-decoration: inherit;">Cephfs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cephfsvolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Ceph<wbr>FSVolume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#cephfsvolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Ceph<wbr>FSVolume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}CephFS represents a Ceph FS mount on the host that shares a pod's lifetime{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15295,7 +15295,7 @@ A constraint is considered "Unsatisfiable" for an incoming pod if and only if ev
 <a href="#cinder_csharp" style="color: inherit; text-decoration: inherit;">Cinder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cindervolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Cinder<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#cindervolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Cinder<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Cinder represents a cinder volume attached and mounted on kubelets host machine. More info: https://examples.k8s.io/mysql-cinder-pd/README.md{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15303,7 +15303,7 @@ A constraint is considered "Unsatisfiable" for an incoming pod if and only if ev
 <a href="#configmap_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>Map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configmapvolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Config<wbr>Map<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#configmapvolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Config<wbr>Map<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}ConfigMap represents a configMap that should populate this volume{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15311,7 +15311,7 @@ A constraint is considered "Unsatisfiable" for an incoming pod if and only if ev
 <a href="#csi_csharp" style="color: inherit; text-decoration: inherit;">Csi</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#csivolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>CSIVolume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#csivolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>CSIVolume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}CSI (Container Storage Interface) represents ephemeral storage that is handled by certain external CSI drivers (Beta feature).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15319,7 +15319,7 @@ A constraint is considered "Unsatisfiable" for an incoming pod if and only if ev
 <a href="#downwardapi_csharp" style="color: inherit; text-decoration: inherit;">Downward<wbr>API</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#downwardapivolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Downward<wbr>APIVolume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#downwardapivolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Downward<wbr>APIVolume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}DownwardAPI represents downward API about the pod that should populate this volume{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15327,7 +15327,7 @@ A constraint is considered "Unsatisfiable" for an incoming pod if and only if ev
 <a href="#emptydir_csharp" style="color: inherit; text-decoration: inherit;">Empty<wbr>Dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#emptydirvolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Empty<wbr>Dir<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#emptydirvolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Empty<wbr>Dir<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}EmptyDir represents a temporary directory that shares a pod's lifetime. More info: https://kubernetes.io/docs/concepts/storage/volumes#emptydir{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15335,7 +15335,7 @@ A constraint is considered "Unsatisfiable" for an incoming pod if and only if ev
 <a href="#ephemeral_csharp" style="color: inherit; text-decoration: inherit;">Ephemeral</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ephemeralvolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Ephemeral<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#ephemeralvolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Ephemeral<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Ephemeral represents a volume that is handled by a cluster storage driver. The volume's lifecycle is tied to the pod that defines it - it will be created before the pod starts, and deleted when the pod is removed.
 
@@ -15358,7 +15358,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#fc_csharp" style="color: inherit; text-decoration: inherit;">Fc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fcvolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>FCVolume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#fcvolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>FCVolume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}FC represents a Fibre Channel resource that is attached to a kubelet's host machine and then exposed to the pod.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15366,7 +15366,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#flexvolume_csharp" style="color: inherit; text-decoration: inherit;">Flex<wbr>Volume</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexvolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Flex<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#flexvolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Flex<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}FlexVolume represents a generic volume resource that is provisioned/attached using an exec based plugin.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15374,7 +15374,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#flocker_csharp" style="color: inherit; text-decoration: inherit;">Flocker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flockervolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Flocker<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#flockervolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Flocker<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Flocker represents a Flocker volume attached to a kubelet's host machine. This depends on the Flocker control service being running{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15382,7 +15382,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#gcepersistentdisk_csharp" style="color: inherit; text-decoration: inherit;">Gce<wbr>Persistent<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcepersistentdiskvolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>GCEPersistent<wbr>Disk<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#gcepersistentdiskvolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>GCEPersistent<wbr>Disk<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}GCEPersistentDisk represents a GCE Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15390,7 +15390,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#gitrepo_csharp" style="color: inherit; text-decoration: inherit;">Git<wbr>Repo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gitrepovolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Git<wbr>Repo<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#gitrepovolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Git<wbr>Repo<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}GitRepo represents a git repository at a particular revision. DEPRECATED: GitRepo is deprecated. To provision a container with a git repo, mount an EmptyDir into an InitContainer that clones the repo using git, then mount the EmptyDir into the Pod's container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15398,7 +15398,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#glusterfs_csharp" style="color: inherit; text-decoration: inherit;">Glusterfs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#glusterfsvolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Glusterfs<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#glusterfsvolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Glusterfs<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Glusterfs represents a Glusterfs mount on the host that shares a pod's lifetime. More info: https://examples.k8s.io/volumes/glusterfs/README.md{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15406,7 +15406,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#hostpath_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostpathvolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Host<wbr>Path<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#hostpathvolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Host<wbr>Path<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}HostPath represents a pre-existing file or directory on the host machine that is directly exposed to the container. This is generally used for system agents or other privileged things that are allowed to see the host machine. Most containers will NOT need this. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15414,7 +15414,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#iscsi_csharp" style="color: inherit; text-decoration: inherit;">Iscsi</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iscsivolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>ISCSIVolume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#iscsivolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>ISCSIVolume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}ISCSI represents an ISCSI Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://examples.k8s.io/volumes/iscsi/README.md{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15422,7 +15422,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#nfs_csharp" style="color: inherit; text-decoration: inherit;">Nfs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsvolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>NFSVolume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#nfsvolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>NFSVolume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}NFS represents an NFS mount on the host that shares a pod's lifetime More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15430,7 +15430,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#persistentvolumeclaim_csharp" style="color: inherit; text-decoration: inherit;">Persistent<wbr>Volume<wbr>Claim</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#persistentvolumeclaimvolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Persistent<wbr>Volume<wbr>Claim<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#persistentvolumeclaimvolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Persistent<wbr>Volume<wbr>Claim<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}PersistentVolumeClaimVolumeSource represents a reference to a PersistentVolumeClaim in the same namespace. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15438,7 +15438,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#photonpersistentdisk_csharp" style="color: inherit; text-decoration: inherit;">Photon<wbr>Persistent<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#photonpersistentdiskvolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Photon<wbr>Persistent<wbr>Disk<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#photonpersistentdiskvolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Photon<wbr>Persistent<wbr>Disk<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}PhotonPersistentDisk represents a PhotonController persistent disk attached and mounted on kubelets host machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15446,7 +15446,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#portworxvolume_csharp" style="color: inherit; text-decoration: inherit;">Portworx<wbr>Volume</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portworxvolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Portworx<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#portworxvolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Portworx<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}PortworxVolume represents a portworx volume attached and mounted on kubelets host machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15454,7 +15454,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#projected_csharp" style="color: inherit; text-decoration: inherit;">Projected</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectedvolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Projected<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectedvolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Projected<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Items for all in one resources secrets, configmaps, and downward API{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15462,7 +15462,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#quobyte_csharp" style="color: inherit; text-decoration: inherit;">Quobyte</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#quobytevolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Quobyte<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#quobytevolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Quobyte<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Quobyte represents a Quobyte mount on the host that shares a pod's lifetime{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15470,7 +15470,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#rbd_csharp" style="color: inherit; text-decoration: inherit;">Rbd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rbdvolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>RBDVolume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#rbdvolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>RBDVolume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}RBD represents a Rados Block Device mount on the host that shares a pod's lifetime. More info: https://examples.k8s.io/volumes/rbd/README.md{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15478,7 +15478,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#scaleio_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>IO</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scaleiovolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Scale<wbr>IOVolume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#scaleiovolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Scale<wbr>IOVolume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}ScaleIO represents a ScaleIO persistent volume attached and mounted on Kubernetes nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15486,7 +15486,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#secret_csharp" style="color: inherit; text-decoration: inherit;">Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretvolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Secret<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretvolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Secret<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Secret represents a secret that should populate this volume. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15494,7 +15494,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#storageos_csharp" style="color: inherit; text-decoration: inherit;">Storageos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageosvolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Storage<wbr>OSVolume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageosvolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Storage<wbr>OSVolume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}StorageOS represents a StorageOS volume attached and mounted on Kubernetes nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15502,7 +15502,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#vspherevolume_csharp" style="color: inherit; text-decoration: inherit;">Vsphere<wbr>Volume</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vspherevirtualdiskvolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Vsphere<wbr>Virtual<wbr>Disk<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#vspherevirtualdiskvolumesource">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Vsphere<wbr>Virtual<wbr>Disk<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}VsphereVolume represents a vSphere volume attached and mounted on kubelets host machine{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -15781,7 +15781,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#awselasticblockstore_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Elastic<wbr>Block<wbr>Store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#awselasticblockstorevolumesource">core.v1.<wbr>AWSElastic<wbr>Block<wbr>Store<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#awselasticblockstorevolumesource">core.v1.<wbr>AWSElastic<wbr>Block<wbr>Store<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}AWSElasticBlockStore represents an AWS Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15789,7 +15789,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#azuredisk_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurediskvolumesource">core.v1.<wbr>Azure<wbr>Disk<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurediskvolumesource">core.v1.<wbr>Azure<wbr>Disk<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}AzureDisk represents an Azure Data Disk mount on the host and bind mount to the pod.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15797,7 +15797,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#azurefile_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefilevolumesource">core.v1.<wbr>Azure<wbr>File<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefilevolumesource">core.v1.<wbr>Azure<wbr>File<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}AzureFile represents an Azure File Service mount on the host and bind mount to the pod.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15805,7 +15805,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#cephfs_nodejs" style="color: inherit; text-decoration: inherit;">cephfs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cephfsvolumesource">core.v1.<wbr>Ceph<wbr>FSVolume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#cephfsvolumesource">core.v1.<wbr>Ceph<wbr>FSVolume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}CephFS represents a Ceph FS mount on the host that shares a pod's lifetime{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15813,7 +15813,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#cinder_nodejs" style="color: inherit; text-decoration: inherit;">cinder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cindervolumesource">core.v1.<wbr>Cinder<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#cindervolumesource">core.v1.<wbr>Cinder<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Cinder represents a cinder volume attached and mounted on kubelets host machine. More info: https://examples.k8s.io/mysql-cinder-pd/README.md{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15821,7 +15821,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#configmap_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configmapvolumesource">core.v1.<wbr>Config<wbr>Map<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#configmapvolumesource">core.v1.<wbr>Config<wbr>Map<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}ConfigMap represents a configMap that should populate this volume{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15829,7 +15829,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#csi_nodejs" style="color: inherit; text-decoration: inherit;">csi</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#csivolumesource">core.v1.<wbr>CSIVolume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#csivolumesource">core.v1.<wbr>CSIVolume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}CSI (Container Storage Interface) represents ephemeral storage that is handled by certain external CSI drivers (Beta feature).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15837,7 +15837,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#downwardapi_nodejs" style="color: inherit; text-decoration: inherit;">downward<wbr>API</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#downwardapivolumesource">core.v1.<wbr>Downward<wbr>APIVolume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#downwardapivolumesource">core.v1.<wbr>Downward<wbr>APIVolume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}DownwardAPI represents downward API about the pod that should populate this volume{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15845,7 +15845,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#emptydir_nodejs" style="color: inherit; text-decoration: inherit;">empty<wbr>Dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#emptydirvolumesource">core.v1.<wbr>Empty<wbr>Dir<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#emptydirvolumesource">core.v1.<wbr>Empty<wbr>Dir<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}EmptyDir represents a temporary directory that shares a pod's lifetime. More info: https://kubernetes.io/docs/concepts/storage/volumes#emptydir{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15853,7 +15853,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#ephemeral_nodejs" style="color: inherit; text-decoration: inherit;">ephemeral</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ephemeralvolumesource">core.v1.<wbr>Ephemeral<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#ephemeralvolumesource">core.v1.<wbr>Ephemeral<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Ephemeral represents a volume that is handled by a cluster storage driver. The volume's lifecycle is tied to the pod that defines it - it will be created before the pod starts, and deleted when the pod is removed.
 
@@ -15876,7 +15876,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#fc_nodejs" style="color: inherit; text-decoration: inherit;">fc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fcvolumesource">core.v1.<wbr>FCVolume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#fcvolumesource">core.v1.<wbr>FCVolume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}FC represents a Fibre Channel resource that is attached to a kubelet's host machine and then exposed to the pod.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15884,7 +15884,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#flexvolume_nodejs" style="color: inherit; text-decoration: inherit;">flex<wbr>Volume</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexvolumesource">core.v1.<wbr>Flex<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#flexvolumesource">core.v1.<wbr>Flex<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}FlexVolume represents a generic volume resource that is provisioned/attached using an exec based plugin.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15892,7 +15892,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#flocker_nodejs" style="color: inherit; text-decoration: inherit;">flocker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flockervolumesource">core.v1.<wbr>Flocker<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#flockervolumesource">core.v1.<wbr>Flocker<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Flocker represents a Flocker volume attached to a kubelet's host machine. This depends on the Flocker control service being running{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15900,7 +15900,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#gcepersistentdisk_nodejs" style="color: inherit; text-decoration: inherit;">gce<wbr>Persistent<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcepersistentdiskvolumesource">core.v1.<wbr>GCEPersistent<wbr>Disk<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#gcepersistentdiskvolumesource">core.v1.<wbr>GCEPersistent<wbr>Disk<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}GCEPersistentDisk represents a GCE Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15908,7 +15908,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#gitrepo_nodejs" style="color: inherit; text-decoration: inherit;">git<wbr>Repo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gitrepovolumesource">core.v1.<wbr>Git<wbr>Repo<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#gitrepovolumesource">core.v1.<wbr>Git<wbr>Repo<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}GitRepo represents a git repository at a particular revision. DEPRECATED: GitRepo is deprecated. To provision a container with a git repo, mount an EmptyDir into an InitContainer that clones the repo using git, then mount the EmptyDir into the Pod's container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15916,7 +15916,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#glusterfs_nodejs" style="color: inherit; text-decoration: inherit;">glusterfs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#glusterfsvolumesource">core.v1.<wbr>Glusterfs<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#glusterfsvolumesource">core.v1.<wbr>Glusterfs<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Glusterfs represents a Glusterfs mount on the host that shares a pod's lifetime. More info: https://examples.k8s.io/volumes/glusterfs/README.md{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15924,7 +15924,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#hostpath_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostpathvolumesource">core.v1.<wbr>Host<wbr>Path<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#hostpathvolumesource">core.v1.<wbr>Host<wbr>Path<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}HostPath represents a pre-existing file or directory on the host machine that is directly exposed to the container. This is generally used for system agents or other privileged things that are allowed to see the host machine. Most containers will NOT need this. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15932,7 +15932,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#iscsi_nodejs" style="color: inherit; text-decoration: inherit;">iscsi</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iscsivolumesource">core.v1.<wbr>ISCSIVolume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#iscsivolumesource">core.v1.<wbr>ISCSIVolume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}ISCSI represents an ISCSI Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://examples.k8s.io/volumes/iscsi/README.md{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15940,7 +15940,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#nfs_nodejs" style="color: inherit; text-decoration: inherit;">nfs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsvolumesource">core.v1.<wbr>NFSVolume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#nfsvolumesource">core.v1.<wbr>NFSVolume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}NFS represents an NFS mount on the host that shares a pod's lifetime More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15948,7 +15948,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#persistentvolumeclaim_nodejs" style="color: inherit; text-decoration: inherit;">persistent<wbr>Volume<wbr>Claim</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#persistentvolumeclaimvolumesource">core.v1.<wbr>Persistent<wbr>Volume<wbr>Claim<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#persistentvolumeclaimvolumesource">core.v1.<wbr>Persistent<wbr>Volume<wbr>Claim<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}PersistentVolumeClaimVolumeSource represents a reference to a PersistentVolumeClaim in the same namespace. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15956,7 +15956,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#photonpersistentdisk_nodejs" style="color: inherit; text-decoration: inherit;">photon<wbr>Persistent<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#photonpersistentdiskvolumesource">core.v1.<wbr>Photon<wbr>Persistent<wbr>Disk<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#photonpersistentdiskvolumesource">core.v1.<wbr>Photon<wbr>Persistent<wbr>Disk<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}PhotonPersistentDisk represents a PhotonController persistent disk attached and mounted on kubelets host machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15964,7 +15964,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#portworxvolume_nodejs" style="color: inherit; text-decoration: inherit;">portworx<wbr>Volume</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portworxvolumesource">core.v1.<wbr>Portworx<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#portworxvolumesource">core.v1.<wbr>Portworx<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}PortworxVolume represents a portworx volume attached and mounted on kubelets host machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15972,7 +15972,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#projected_nodejs" style="color: inherit; text-decoration: inherit;">projected</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectedvolumesource">core.v1.<wbr>Projected<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectedvolumesource">core.v1.<wbr>Projected<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Items for all in one resources secrets, configmaps, and downward API{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15980,7 +15980,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#quobyte_nodejs" style="color: inherit; text-decoration: inherit;">quobyte</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#quobytevolumesource">core.v1.<wbr>Quobyte<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#quobytevolumesource">core.v1.<wbr>Quobyte<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Quobyte represents a Quobyte mount on the host that shares a pod's lifetime{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15988,7 +15988,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#rbd_nodejs" style="color: inherit; text-decoration: inherit;">rbd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rbdvolumesource">core.v1.<wbr>RBDVolume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#rbdvolumesource">core.v1.<wbr>RBDVolume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}RBD represents a Rados Block Device mount on the host that shares a pod's lifetime. More info: https://examples.k8s.io/volumes/rbd/README.md{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15996,7 +15996,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#scaleio_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>IO</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scaleiovolumesource">core.v1.<wbr>Scale<wbr>IOVolume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#scaleiovolumesource">core.v1.<wbr>Scale<wbr>IOVolume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}ScaleIO represents a ScaleIO persistent volume attached and mounted on Kubernetes nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16004,7 +16004,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretvolumesource">core.v1.<wbr>Secret<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretvolumesource">core.v1.<wbr>Secret<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Secret represents a secret that should populate this volume. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16012,7 +16012,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#storageos_nodejs" style="color: inherit; text-decoration: inherit;">storageos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageosvolumesource">core.v1.<wbr>Storage<wbr>OSVolume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageosvolumesource">core.v1.<wbr>Storage<wbr>OSVolume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}StorageOS represents a StorageOS volume attached and mounted on Kubernetes nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16020,7 +16020,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#vspherevolume_nodejs" style="color: inherit; text-decoration: inherit;">vsphere<wbr>Volume</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vspherevirtualdiskvolumesource">core.v1.<wbr>Vsphere<wbr>Virtual<wbr>Disk<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#vspherevirtualdiskvolumesource">core.v1.<wbr>Vsphere<wbr>Virtual<wbr>Disk<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}VsphereVolume represents a vSphere volume attached and mounted on kubelets host machine{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -16040,7 +16040,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#aws_elastic_block_store_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>elastic_<wbr>block_<wbr>store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#awselasticblockstorevolumesource">AWSElastic<wbr>Block<wbr>Store<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#awselasticblockstorevolumesource">AWSElastic<wbr>Block<wbr>Store<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}AWSElasticBlockStore represents an AWS Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16048,7 +16048,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#azure_disk_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurediskvolumesource">Azure<wbr>Disk<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurediskvolumesource">Azure<wbr>Disk<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}AzureDisk represents an Azure Data Disk mount on the host and bind mount to the pod.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16056,7 +16056,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#azure_file_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefilevolumesource">Azure<wbr>File<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefilevolumesource">Azure<wbr>File<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}AzureFile represents an Azure File Service mount on the host and bind mount to the pod.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16064,7 +16064,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#cephfs_python" style="color: inherit; text-decoration: inherit;">cephfs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cephfsvolumesource">Ceph<wbr>FSVolume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#cephfsvolumesource">Ceph<wbr>FSVolume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}CephFS represents a Ceph FS mount on the host that shares a pod's lifetime{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16072,7 +16072,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#cinder_python" style="color: inherit; text-decoration: inherit;">cinder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cindervolumesource">Cinder<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#cindervolumesource">Cinder<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Cinder represents a cinder volume attached and mounted on kubelets host machine. More info: https://examples.k8s.io/mysql-cinder-pd/README.md{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16080,7 +16080,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#config_map_python" style="color: inherit; text-decoration: inherit;">config_<wbr>map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configmapvolumesource">Config<wbr>Map<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#configmapvolumesource">Config<wbr>Map<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}ConfigMap represents a configMap that should populate this volume{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16088,7 +16088,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#csi_python" style="color: inherit; text-decoration: inherit;">csi</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#csivolumesource">CSIVolume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#csivolumesource">CSIVolume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}CSI (Container Storage Interface) represents ephemeral storage that is handled by certain external CSI drivers (Beta feature).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16096,7 +16096,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#downward_api_python" style="color: inherit; text-decoration: inherit;">downward_<wbr>api</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#downwardapivolumesource">Downward<wbr>APIVolume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#downwardapivolumesource">Downward<wbr>APIVolume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}DownwardAPI represents downward API about the pod that should populate this volume{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16104,7 +16104,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#empty_dir_python" style="color: inherit; text-decoration: inherit;">empty_<wbr>dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#emptydirvolumesource">Empty<wbr>Dir<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#emptydirvolumesource">Empty<wbr>Dir<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}EmptyDir represents a temporary directory that shares a pod's lifetime. More info: https://kubernetes.io/docs/concepts/storage/volumes#emptydir{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16112,7 +16112,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#ephemeral_python" style="color: inherit; text-decoration: inherit;">ephemeral</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ephemeralvolumesource">Ephemeral<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#ephemeralvolumesource">Ephemeral<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Ephemeral represents a volume that is handled by a cluster storage driver. The volume's lifecycle is tied to the pod that defines it - it will be created before the pod starts, and deleted when the pod is removed.
 
@@ -16135,7 +16135,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#fc_python" style="color: inherit; text-decoration: inherit;">fc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fcvolumesource">FCVolume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#fcvolumesource">FCVolume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}FC represents a Fibre Channel resource that is attached to a kubelet's host machine and then exposed to the pod.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16143,7 +16143,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#flex_volume_python" style="color: inherit; text-decoration: inherit;">flex_<wbr>volume</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexvolumesource">Flex<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#flexvolumesource">Flex<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}FlexVolume represents a generic volume resource that is provisioned/attached using an exec based plugin.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16151,7 +16151,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#flocker_python" style="color: inherit; text-decoration: inherit;">flocker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flockervolumesource">Flocker<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#flockervolumesource">Flocker<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Flocker represents a Flocker volume attached to a kubelet's host machine. This depends on the Flocker control service being running{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16159,7 +16159,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#gce_persistent_disk_python" style="color: inherit; text-decoration: inherit;">gce_<wbr>persistent_<wbr>disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcepersistentdiskvolumesource">GCEPersistent<wbr>Disk<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#gcepersistentdiskvolumesource">GCEPersistent<wbr>Disk<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}GCEPersistentDisk represents a GCE Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16167,7 +16167,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#git_repo_python" style="color: inherit; text-decoration: inherit;">git_<wbr>repo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gitrepovolumesource">Git<wbr>Repo<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#gitrepovolumesource">Git<wbr>Repo<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}GitRepo represents a git repository at a particular revision. DEPRECATED: GitRepo is deprecated. To provision a container with a git repo, mount an EmptyDir into an InitContainer that clones the repo using git, then mount the EmptyDir into the Pod's container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16175,7 +16175,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#glusterfs_python" style="color: inherit; text-decoration: inherit;">glusterfs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#glusterfsvolumesource">Glusterfs<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#glusterfsvolumesource">Glusterfs<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Glusterfs represents a Glusterfs mount on the host that shares a pod's lifetime. More info: https://examples.k8s.io/volumes/glusterfs/README.md{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16183,7 +16183,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#host_path_python" style="color: inherit; text-decoration: inherit;">host_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostpathvolumesource">Host<wbr>Path<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#hostpathvolumesource">Host<wbr>Path<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}HostPath represents a pre-existing file or directory on the host machine that is directly exposed to the container. This is generally used for system agents or other privileged things that are allowed to see the host machine. Most containers will NOT need this. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16191,7 +16191,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#iscsi_python" style="color: inherit; text-decoration: inherit;">iscsi</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iscsivolumesource">ISCSIVolume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#iscsivolumesource">ISCSIVolume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}ISCSI represents an ISCSI Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://examples.k8s.io/volumes/iscsi/README.md{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16199,7 +16199,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#nfs_python" style="color: inherit; text-decoration: inherit;">nfs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsvolumesource">NFSVolume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#nfsvolumesource">NFSVolume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}NFS represents an NFS mount on the host that shares a pod's lifetime More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16207,7 +16207,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#persistent_volume_claim_python" style="color: inherit; text-decoration: inherit;">persistent_<wbr>volume_<wbr>claim</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#persistentvolumeclaimvolumesource">Persistent<wbr>Volume<wbr>Claim<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#persistentvolumeclaimvolumesource">Persistent<wbr>Volume<wbr>Claim<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}PersistentVolumeClaimVolumeSource represents a reference to a PersistentVolumeClaim in the same namespace. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16215,7 +16215,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#photon_persistent_disk_python" style="color: inherit; text-decoration: inherit;">photon_<wbr>persistent_<wbr>disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#photonpersistentdiskvolumesource">Photon<wbr>Persistent<wbr>Disk<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#photonpersistentdiskvolumesource">Photon<wbr>Persistent<wbr>Disk<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}PhotonPersistentDisk represents a PhotonController persistent disk attached and mounted on kubelets host machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16223,7 +16223,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#portworx_volume_python" style="color: inherit; text-decoration: inherit;">portworx_<wbr>volume</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portworxvolumesource">Portworx<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#portworxvolumesource">Portworx<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}PortworxVolume represents a portworx volume attached and mounted on kubelets host machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16231,7 +16231,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#projected_python" style="color: inherit; text-decoration: inherit;">projected</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectedvolumesource">Projected<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectedvolumesource">Projected<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Items for all in one resources secrets, configmaps, and downward API{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16239,7 +16239,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#quobyte_python" style="color: inherit; text-decoration: inherit;">quobyte</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#quobytevolumesource">Quobyte<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#quobytevolumesource">Quobyte<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Quobyte represents a Quobyte mount on the host that shares a pod's lifetime{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16247,7 +16247,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#rbd_python" style="color: inherit; text-decoration: inherit;">rbd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rbdvolumesource">RBDVolume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#rbdvolumesource">RBDVolume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}RBD represents a Rados Block Device mount on the host that shares a pod's lifetime. More info: https://examples.k8s.io/volumes/rbd/README.md{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16255,7 +16255,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#scale_io_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>io</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scaleiovolumesource">Scale<wbr>IOVolume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#scaleiovolumesource">Scale<wbr>IOVolume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}ScaleIO represents a ScaleIO persistent volume attached and mounted on Kubernetes nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16263,7 +16263,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretvolumesource">Secret<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretvolumesource">Secret<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Secret represents a secret that should populate this volume. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16271,7 +16271,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#storageos_python" style="color: inherit; text-decoration: inherit;">storageos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageosvolumesource">Storage<wbr>OSVolume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageosvolumesource">Storage<wbr>OSVolume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}StorageOS represents a StorageOS volume attached and mounted on Kubernetes nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16279,7 +16279,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#vsphere_volume_python" style="color: inherit; text-decoration: inherit;">vsphere_<wbr>volume</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vspherevirtualdiskvolumesource">Vsphere<wbr>Virtual<wbr>Disk<wbr>Volume<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#vspherevirtualdiskvolumesource">Vsphere<wbr>Virtual<wbr>Disk<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}VsphereVolume represents a vSphere volume attached and mounted on kubelets host machine{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -16585,7 +16585,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#configmap_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>Map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configmapprojection">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Config<wbr>Map<wbr>Projection<wbr>Args</a></span>
+        <span class="property-type"><a href="#configmapprojection">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Config<wbr>Map<wbr>Projection</a></span>
     </dt>
     <dd>{{% md %}}information about the configMap data to project{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16593,7 +16593,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#downwardapi_csharp" style="color: inherit; text-decoration: inherit;">Downward<wbr>API</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#downwardapiprojection">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Downward<wbr>APIProjection<wbr>Args</a></span>
+        <span class="property-type"><a href="#downwardapiprojection">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Downward<wbr>APIProjection</a></span>
     </dt>
     <dd>{{% md %}}information about the downwardAPI data to project{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16601,7 +16601,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#secret_csharp" style="color: inherit; text-decoration: inherit;">Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretprojection">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Secret<wbr>Projection<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretprojection">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Secret<wbr>Projection</a></span>
     </dt>
     <dd>{{% md %}}information about the secret data to project{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16609,7 +16609,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#serviceaccounttoken_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceaccounttokenprojection">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Service<wbr>Account<wbr>Token<wbr>Projection<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceaccounttokenprojection">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Service<wbr>Account<wbr>Token<wbr>Projection</a></span>
     </dt>
     <dd>{{% md %}}information about the serviceAccountToken data to project{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -16657,7 +16657,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#configmap_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configmapprojection">core.v1.<wbr>Config<wbr>Map<wbr>Projection<wbr>Args</a></span>
+        <span class="property-type"><a href="#configmapprojection">core.v1.<wbr>Config<wbr>Map<wbr>Projection</a></span>
     </dt>
     <dd>{{% md %}}information about the configMap data to project{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16665,7 +16665,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#downwardapi_nodejs" style="color: inherit; text-decoration: inherit;">downward<wbr>API</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#downwardapiprojection">core.v1.<wbr>Downward<wbr>APIProjection<wbr>Args</a></span>
+        <span class="property-type"><a href="#downwardapiprojection">core.v1.<wbr>Downward<wbr>APIProjection</a></span>
     </dt>
     <dd>{{% md %}}information about the downwardAPI data to project{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16673,7 +16673,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretprojection">core.v1.<wbr>Secret<wbr>Projection<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretprojection">core.v1.<wbr>Secret<wbr>Projection</a></span>
     </dt>
     <dd>{{% md %}}information about the secret data to project{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16681,7 +16681,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#serviceaccounttoken_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceaccounttokenprojection">core.v1.<wbr>Service<wbr>Account<wbr>Token<wbr>Projection<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceaccounttokenprojection">core.v1.<wbr>Service<wbr>Account<wbr>Token<wbr>Projection</a></span>
     </dt>
     <dd>{{% md %}}information about the serviceAccountToken data to project{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -16693,7 +16693,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#config_map_python" style="color: inherit; text-decoration: inherit;">config_<wbr>map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configmapprojection">Config<wbr>Map<wbr>Projection<wbr>Args</a></span>
+        <span class="property-type"><a href="#configmapprojection">Config<wbr>Map<wbr>Projection</a></span>
     </dt>
     <dd>{{% md %}}information about the configMap data to project{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16701,7 +16701,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#downward_api_python" style="color: inherit; text-decoration: inherit;">downward_<wbr>api</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#downwardapiprojection">Downward<wbr>APIProjection<wbr>Args</a></span>
+        <span class="property-type"><a href="#downwardapiprojection">Downward<wbr>APIProjection</a></span>
     </dt>
     <dd>{{% md %}}information about the downwardAPI data to project{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16709,7 +16709,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretprojection">Secret<wbr>Projection<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretprojection">Secret<wbr>Projection</a></span>
     </dt>
     <dd>{{% md %}}information about the secret data to project{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16717,7 +16717,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#service_account_token_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceaccounttokenprojection">Service<wbr>Account<wbr>Token<wbr>Projection<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceaccounttokenprojection">Service<wbr>Account<wbr>Token<wbr>Projection</a></span>
     </dt>
     <dd>{{% md %}}information about the serviceAccountToken data to project{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -16877,7 +16877,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#podaffinityterm_csharp" style="color: inherit; text-decoration: inherit;">Pod<wbr>Affinity<wbr>Term</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podaffinityterm">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Pod<wbr>Affinity<wbr>Term<wbr>Args</a></span>
+        <span class="property-type"><a href="#podaffinityterm">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Pod<wbr>Affinity<wbr>Term</a></span>
     </dt>
     <dd>{{% md %}}Required. A pod affinity term, associated with the corresponding weight.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16917,7 +16917,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#podaffinityterm_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Affinity<wbr>Term</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podaffinityterm">core.v1.<wbr>Pod<wbr>Affinity<wbr>Term<wbr>Args</a></span>
+        <span class="property-type"><a href="#podaffinityterm">core.v1.<wbr>Pod<wbr>Affinity<wbr>Term</a></span>
     </dt>
     <dd>{{% md %}}Required. A pod affinity term, associated with the corresponding weight.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16937,7 +16937,7 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
 <a href="#pod_affinity_term_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>affinity_<wbr>term</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podaffinityterm">Pod<wbr>Affinity<wbr>Term<wbr>Args</a></span>
+        <span class="property-type"><a href="#podaffinityterm">Pod<wbr>Affinity<wbr>Term</a></span>
     </dt>
     <dd>{{% md %}}Required. A pod affinity term, associated with the corresponding weight.{{% /md %}}</dd><dt class="property-required"
             title="Required">

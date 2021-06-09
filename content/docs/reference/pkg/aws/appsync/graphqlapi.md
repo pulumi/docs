@@ -1037,7 +1037,7 @@ The GraphQLApi resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#additionalauthenticationproviders_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Authentication<wbr>Providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#graphqlapiadditionalauthenticationprovider">[]Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider</a></span>
+        <span class="property-type"><a href="#graphqlapiadditionalauthenticationprovider">[]Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more additional authentication providers for the GraphqlApi. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1046,7 +1046,7 @@ The GraphQLApi resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#logconfig_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#graphqlapilogconfig">Graph<wbr>QLApi<wbr>Log<wbr>Config</a></span>
+        <span class="property-type"><a href="#graphqlapilogconfig">Graph<wbr>QLApi<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing logging configuration. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1064,7 +1064,7 @@ The GraphQLApi resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#openidconnectconfig_go" style="color: inherit; text-decoration: inherit;">Openid<wbr>Connect<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#graphqlapiopenidconnectconfig">Graph<wbr>QLApi<wbr>Openid<wbr>Connect<wbr>Config</a></span>
+        <span class="property-type"><a href="#graphqlapiopenidconnectconfig">Graph<wbr>QLApi<wbr>Openid<wbr>Connect<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing OpenID Connect configuration. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1100,7 +1100,7 @@ The GraphQLApi resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#userpoolconfig_go" style="color: inherit; text-decoration: inherit;">User<wbr>Pool<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#graphqlapiuserpoolconfig">Graph<wbr>QLApi<wbr>User<wbr>Pool<wbr>Config</a></span>
+        <span class="property-type"><a href="#graphqlapiuserpoolconfig">Graph<wbr>QLApi<wbr>User<wbr>Pool<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Cognito User Pool configuration. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1686,7 +1686,7 @@ The following state arguments are supported:
 <a href="#state_additionalauthenticationproviders_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Authentication<wbr>Providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#graphqlapiadditionalauthenticationprovider">[]Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider</a></span>
+        <span class="property-type"><a href="#graphqlapiadditionalauthenticationprovider">[]Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more additional authentication providers for the GraphqlApi. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1713,7 +1713,7 @@ The following state arguments are supported:
 <a href="#state_logconfig_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#graphqlapilogconfig">Graph<wbr>QLApi<wbr>Log<wbr>Config</a></span>
+        <span class="property-type"><a href="#graphqlapilogconfig">Graph<wbr>QLApi<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing logging configuration. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1731,7 +1731,7 @@ The following state arguments are supported:
 <a href="#state_openidconnectconfig_go" style="color: inherit; text-decoration: inherit;">Openid<wbr>Connect<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#graphqlapiopenidconnectconfig">Graph<wbr>QLApi<wbr>Openid<wbr>Connect<wbr>Config</a></span>
+        <span class="property-type"><a href="#graphqlapiopenidconnectconfig">Graph<wbr>QLApi<wbr>Openid<wbr>Connect<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing OpenID Connect configuration. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1776,7 +1776,7 @@ The following state arguments are supported:
 <a href="#state_userpoolconfig_go" style="color: inherit; text-decoration: inherit;">User<wbr>Pool<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#graphqlapiuserpoolconfig">Graph<wbr>QLApi<wbr>User<wbr>Pool<wbr>Config</a></span>
+        <span class="property-type"><a href="#graphqlapiuserpoolconfig">Graph<wbr>QLApi<wbr>User<wbr>Pool<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Cognito User Pool configuration. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2042,7 +2042,7 @@ The following state arguments are supported:
 <a href="#openidconnectconfig_csharp" style="color: inherit; text-decoration: inherit;">Openid<wbr>Connect<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#graphqlapiadditionalauthenticationprovideropenidconnectconfig">Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider<wbr>Openid<wbr>Connect<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#graphqlapiadditionalauthenticationprovideropenidconnectconfig">Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider<wbr>Openid<wbr>Connect<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing OpenID Connect configuration. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2051,7 +2051,7 @@ The following state arguments are supported:
 <a href="#userpoolconfig_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Pool<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#graphqlapiadditionalauthenticationprovideruserpoolconfig">Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider<wbr>User<wbr>Pool<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#graphqlapiadditionalauthenticationprovideruserpoolconfig">Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider<wbr>User<wbr>Pool<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Cognito User Pool configuration. Defined below.
 {{% /md %}}</dd></dl>
@@ -2104,7 +2104,7 @@ The following state arguments are supported:
 <a href="#openidconnectconfig_nodejs" style="color: inherit; text-decoration: inherit;">openid<wbr>Connect<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#graphqlapiadditionalauthenticationprovideropenidconnectconfig">Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider<wbr>Openid<wbr>Connect<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#graphqlapiadditionalauthenticationprovideropenidconnectconfig">Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider<wbr>Openid<wbr>Connect<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing OpenID Connect configuration. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2113,7 +2113,7 @@ The following state arguments are supported:
 <a href="#userpoolconfig_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Pool<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#graphqlapiadditionalauthenticationprovideruserpoolconfig">Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider<wbr>User<wbr>Pool<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#graphqlapiadditionalauthenticationprovideruserpoolconfig">Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider<wbr>User<wbr>Pool<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Cognito User Pool configuration. Defined below.
 {{% /md %}}</dd></dl>
@@ -2135,7 +2135,7 @@ The following state arguments are supported:
 <a href="#openid_connect_config_python" style="color: inherit; text-decoration: inherit;">openid_<wbr>connect_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#graphqlapiadditionalauthenticationprovideropenidconnectconfig">Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider<wbr>Openid<wbr>Connect<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#graphqlapiadditionalauthenticationprovideropenidconnectconfig">Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider<wbr>Openid<wbr>Connect<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing OpenID Connect configuration. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2144,7 +2144,7 @@ The following state arguments are supported:
 <a href="#user_pool_config_python" style="color: inherit; text-decoration: inherit;">user_<wbr>pool_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#graphqlapiadditionalauthenticationprovideruserpoolconfig">Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider<wbr>User<wbr>Pool<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#graphqlapiadditionalauthenticationprovideruserpoolconfig">Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider<wbr>User<wbr>Pool<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Cognito User Pool configuration. Defined below.
 {{% /md %}}</dd></dl>

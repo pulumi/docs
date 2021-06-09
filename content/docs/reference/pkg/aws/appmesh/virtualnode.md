@@ -1021,7 +1021,7 @@ The VirtualNode resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#spec_go" style="color: inherit; text-decoration: inherit;">Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespec">Virtual<wbr>Node<wbr>Spec</a></span>
+        <span class="property-type"><a href="#virtualnodespec">Virtual<wbr>Node<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual node specification to apply.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1677,7 +1677,7 @@ The following state arguments are supported:
 <a href="#state_spec_go" style="color: inherit; text-decoration: inherit;">Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespec">Virtual<wbr>Node<wbr>Spec</a></span>
+        <span class="property-type"><a href="#virtualnodespec">Virtual<wbr>Node<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual node specification to apply.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1907,7 +1907,7 @@ The following state arguments are supported:
 <a href="#backenddefaults_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Defaults</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackenddefaults">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaults">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults</a></span>
     </dt>
     <dd>{{% md %}}The defaults for backends.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1916,7 +1916,7 @@ The following state arguments are supported:
 <a href="#backends_csharp" style="color: inherit; text-decoration: inherit;">Backends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackend">List&lt;Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackend">List&lt;Virtual<wbr>Node<wbr>Spec<wbr>Backend&gt;</a></span>
     </dt>
     <dd>{{% md %}}The backends to which the virtual node is expected to send outbound traffic.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1925,7 +1925,7 @@ The following state arguments are supported:
 <a href="#listener_csharp" style="color: inherit; text-decoration: inherit;">Listener</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistener">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistener">Virtual<wbr>Node<wbr>Spec<wbr>Listener</a></span>
     </dt>
     <dd>{{% md %}}The listeners from which the virtual node is expected to receive inbound traffic.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1934,7 +1934,7 @@ The following state arguments are supported:
 <a href="#logging_csharp" style="color: inherit; text-decoration: inherit;">Logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclogging">Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclogging">Virtual<wbr>Node<wbr>Spec<wbr>Logging</a></span>
     </dt>
     <dd>{{% md %}}The inbound and outbound access logging information for the virtual node.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1943,7 +1943,7 @@ The following state arguments are supported:
 <a href="#servicediscovery_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Discovery</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecservicediscovery">Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecservicediscovery">Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery</a></span>
     </dt>
     <dd>{{% md %}}The service discovery information for the virtual node.
 {{% /md %}}</dd></dl>
@@ -2005,7 +2005,7 @@ The following state arguments are supported:
 <a href="#backenddefaults_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Defaults</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackenddefaults">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaults">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults</a></span>
     </dt>
     <dd>{{% md %}}The defaults for backends.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2014,7 +2014,7 @@ The following state arguments are supported:
 <a href="#backends_nodejs" style="color: inherit; text-decoration: inherit;">backends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackend">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackend">Virtual<wbr>Node<wbr>Spec<wbr>Backend[]</a></span>
     </dt>
     <dd>{{% md %}}The backends to which the virtual node is expected to send outbound traffic.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2023,7 +2023,7 @@ The following state arguments are supported:
 <a href="#listener_nodejs" style="color: inherit; text-decoration: inherit;">listener</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistener">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistener">Virtual<wbr>Node<wbr>Spec<wbr>Listener</a></span>
     </dt>
     <dd>{{% md %}}The listeners from which the virtual node is expected to receive inbound traffic.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2032,7 +2032,7 @@ The following state arguments are supported:
 <a href="#logging_nodejs" style="color: inherit; text-decoration: inherit;">logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclogging">Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclogging">Virtual<wbr>Node<wbr>Spec<wbr>Logging</a></span>
     </dt>
     <dd>{{% md %}}The inbound and outbound access logging information for the virtual node.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2041,7 +2041,7 @@ The following state arguments are supported:
 <a href="#servicediscovery_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Discovery</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecservicediscovery">Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecservicediscovery">Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery</a></span>
     </dt>
     <dd>{{% md %}}The service discovery information for the virtual node.
 {{% /md %}}</dd></dl>
@@ -2054,7 +2054,7 @@ The following state arguments are supported:
 <a href="#backend_defaults_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>defaults</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackenddefaults">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaults">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults</a></span>
     </dt>
     <dd>{{% md %}}The defaults for backends.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2063,7 +2063,7 @@ The following state arguments are supported:
 <a href="#backends_python" style="color: inherit; text-decoration: inherit;">backends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackend">Sequence[Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackend">Sequence[Virtual<wbr>Node<wbr>Spec<wbr>Backend]</a></span>
     </dt>
     <dd>{{% md %}}The backends to which the virtual node is expected to send outbound traffic.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2072,7 +2072,7 @@ The following state arguments are supported:
 <a href="#listener_python" style="color: inherit; text-decoration: inherit;">listener</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistener">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistener">Virtual<wbr>Node<wbr>Spec<wbr>Listener</a></span>
     </dt>
     <dd>{{% md %}}The listeners from which the virtual node is expected to receive inbound traffic.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2081,7 +2081,7 @@ The following state arguments are supported:
 <a href="#logging_python" style="color: inherit; text-decoration: inherit;">logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclogging">Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclogging">Virtual<wbr>Node<wbr>Spec<wbr>Logging</a></span>
     </dt>
     <dd>{{% md %}}The inbound and outbound access logging information for the virtual node.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2090,7 +2090,7 @@ The following state arguments are supported:
 <a href="#service_discovery_python" style="color: inherit; text-decoration: inherit;">service_<wbr>discovery</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecservicediscovery">Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecservicediscovery">Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery</a></span>
     </dt>
     <dd>{{% md %}}The service discovery information for the virtual node.
 {{% /md %}}</dd></dl>
@@ -2105,7 +2105,7 @@ The following state arguments are supported:
 <a href="#virtualservice_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackendvirtualservice">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualservice">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service</a></span>
     </dt>
     <dd>{{% md %}}Specifies a virtual service to use as a backend for a virtual node.
 {{% /md %}}</dd></dl>
@@ -2131,7 +2131,7 @@ The following state arguments are supported:
 <a href="#virtualservice_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackendvirtualservice">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualservice">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service</a></span>
     </dt>
     <dd>{{% md %}}Specifies a virtual service to use as a backend for a virtual node.
 {{% /md %}}</dd></dl>
@@ -2144,7 +2144,7 @@ The following state arguments are supported:
 <a href="#virtual_service_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackendvirtualservice">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualservice">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service</a></span>
     </dt>
     <dd>{{% md %}}Specifies a virtual service to use as a backend for a virtual node.
 {{% /md %}}</dd></dl>
@@ -2159,7 +2159,7 @@ The following state arguments are supported:
 <a href="#clientpolicy_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicy">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicy">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The default client policy for virtual service backends. See above for details.
 {{% /md %}}</dd></dl>
@@ -2185,7 +2185,7 @@ The following state arguments are supported:
 <a href="#clientpolicy_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicy">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicy">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The default client policy for virtual service backends. See above for details.
 {{% /md %}}</dd></dl>
@@ -2198,7 +2198,7 @@ The following state arguments are supported:
 <a href="#client_policy_python" style="color: inherit; text-decoration: inherit;">client_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicy">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicy">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The default client policy for virtual service backends. See above for details.
 {{% /md %}}</dd></dl>
@@ -2213,7 +2213,7 @@ The following state arguments are supported:
 <a href="#tls_csharp" style="color: inherit; text-decoration: inherit;">Tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytls">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytls">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls</a></span>
     </dt>
     <dd>{{% md %}}The Transport Layer Security (TLS) client policy.
 {{% /md %}}</dd></dl>
@@ -2239,7 +2239,7 @@ The following state arguments are supported:
 <a href="#tls_nodejs" style="color: inherit; text-decoration: inherit;">tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytls">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytls">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls</a></span>
     </dt>
     <dd>{{% md %}}The Transport Layer Security (TLS) client policy.
 {{% /md %}}</dd></dl>
@@ -2252,7 +2252,7 @@ The following state arguments are supported:
 <a href="#tls_python" style="color: inherit; text-decoration: inherit;">tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytls">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytls">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls</a></span>
     </dt>
     <dd>{{% md %}}The Transport Layer Security (TLS) client policy.
 {{% /md %}}</dd></dl>
@@ -2267,7 +2267,7 @@ The following state arguments are supported:
 <a href="#validation_csharp" style="color: inherit; text-decoration: inherit;">Validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidation">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidation">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation</a></span>
     </dt>
     <dd>{{% md %}}The listener's Transport Layer Security (TLS) validation context.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2276,7 +2276,7 @@ The following state arguments are supported:
 <a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlscertificate">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlscertificate">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate</a></span>
     </dt>
     <dd>{{% md %}}The listener's TLS certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2347,7 +2347,7 @@ The following state arguments are supported:
 <a href="#validation_nodejs" style="color: inherit; text-decoration: inherit;">validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidation">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidation">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation</a></span>
     </dt>
     <dd>{{% md %}}The listener's Transport Layer Security (TLS) validation context.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2356,7 +2356,7 @@ The following state arguments are supported:
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlscertificate">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlscertificate">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate</a></span>
     </dt>
     <dd>{{% md %}}The listener's TLS certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2387,7 +2387,7 @@ The following state arguments are supported:
 <a href="#validation_python" style="color: inherit; text-decoration: inherit;">validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidation">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidation">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation</a></span>
     </dt>
     <dd>{{% md %}}The listener's Transport Layer Security (TLS) validation context.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2396,7 +2396,7 @@ The following state arguments are supported:
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlscertificate">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlscertificate">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate</a></span>
     </dt>
     <dd>{{% md %}}The listener's TLS certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2429,7 +2429,7 @@ The following state arguments are supported:
 <a href="#file_csharp" style="color: inherit; text-decoration: inherit;">File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlscertificatefile">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>File<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlscertificatefile">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}A local file certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2438,7 +2438,7 @@ The following state arguments are supported:
 <a href="#sds_csharp" style="color: inherit; text-decoration: inherit;">Sds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlscertificatesds">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Sds<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlscertificatesds">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Sds</a></span>
     </dt>
     <dd>{{% md %}}A [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
 {{% /md %}}</dd></dl>
@@ -2473,7 +2473,7 @@ The following state arguments are supported:
 <a href="#file_nodejs" style="color: inherit; text-decoration: inherit;">file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlscertificatefile">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>File<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlscertificatefile">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}A local file certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2482,7 +2482,7 @@ The following state arguments are supported:
 <a href="#sds_nodejs" style="color: inherit; text-decoration: inherit;">sds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlscertificatesds">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Sds<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlscertificatesds">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Sds</a></span>
     </dt>
     <dd>{{% md %}}A [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
 {{% /md %}}</dd></dl>
@@ -2495,7 +2495,7 @@ The following state arguments are supported:
 <a href="#file_python" style="color: inherit; text-decoration: inherit;">file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlscertificatefile">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>File<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlscertificatefile">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}A local file certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2504,7 +2504,7 @@ The following state arguments are supported:
 <a href="#sds_python" style="color: inherit; text-decoration: inherit;">sds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlscertificatesds">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Sds<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlscertificatesds">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Sds</a></span>
     </dt>
     <dd>{{% md %}}A [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
 {{% /md %}}</dd></dl>
@@ -2663,7 +2663,7 @@ The following state arguments are supported:
 <a href="#trust_csharp" style="color: inherit; text-decoration: inherit;">Trust</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationtrust">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationtrust">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2672,7 +2672,7 @@ The following state arguments are supported:
 <a href="#subjectalternativenames_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Alternative<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationsubjectalternativenames">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationsubjectalternativenames">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names</a></span>
     </dt>
     <dd>{{% md %}}The SANs for a TLS validation context.
 {{% /md %}}</dd></dl>
@@ -2707,7 +2707,7 @@ The following state arguments are supported:
 <a href="#trust_nodejs" style="color: inherit; text-decoration: inherit;">trust</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationtrust">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationtrust">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2716,7 +2716,7 @@ The following state arguments are supported:
 <a href="#subjectalternativenames_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Alternative<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationsubjectalternativenames">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationsubjectalternativenames">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names</a></span>
     </dt>
     <dd>{{% md %}}The SANs for a TLS validation context.
 {{% /md %}}</dd></dl>
@@ -2729,7 +2729,7 @@ The following state arguments are supported:
 <a href="#trust_python" style="color: inherit; text-decoration: inherit;">trust</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationtrust">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationtrust">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2738,7 +2738,7 @@ The following state arguments are supported:
 <a href="#subject_alternative_names_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>alternative_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationsubjectalternativenames">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationsubjectalternativenames">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names</a></span>
     </dt>
     <dd>{{% md %}}The SANs for a TLS validation context.
 {{% /md %}}</dd></dl>
@@ -2753,7 +2753,7 @@ The following state arguments are supported:
 <a href="#match_csharp" style="color: inherit; text-decoration: inherit;">Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationsubjectalternativenamesmatch">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Match<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationsubjectalternativenamesmatch">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}The criteria for determining a SAN's match.
 {{% /md %}}</dd></dl>
@@ -2779,7 +2779,7 @@ The following state arguments are supported:
 <a href="#match_nodejs" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationsubjectalternativenamesmatch">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Match<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationsubjectalternativenamesmatch">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}The criteria for determining a SAN's match.
 {{% /md %}}</dd></dl>
@@ -2792,7 +2792,7 @@ The following state arguments are supported:
 <a href="#match_python" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationsubjectalternativenamesmatch">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Match<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationsubjectalternativenamesmatch">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}The criteria for determining a SAN's match.
 {{% /md %}}</dd></dl>
@@ -2861,7 +2861,7 @@ The following state arguments are supported:
 <a href="#acm_csharp" style="color: inherit; text-decoration: inherit;">Acm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationtrustacm">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Acm<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationtrustacm">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Acm</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for an AWS Certificate Manager (ACM) certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2870,7 +2870,7 @@ The following state arguments are supported:
 <a href="#file_csharp" style="color: inherit; text-decoration: inherit;">File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationtrustfile">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationtrustfile">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for a local file certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2879,7 +2879,7 @@ The following state arguments are supported:
 <a href="#sds_csharp" style="color: inherit; text-decoration: inherit;">Sds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationtrustsds">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Sds<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationtrustsds">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Sds</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for a [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
 {{% /md %}}</dd></dl>
@@ -2923,7 +2923,7 @@ The following state arguments are supported:
 <a href="#acm_nodejs" style="color: inherit; text-decoration: inherit;">acm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationtrustacm">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Acm<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationtrustacm">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Acm</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for an AWS Certificate Manager (ACM) certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2932,7 +2932,7 @@ The following state arguments are supported:
 <a href="#file_nodejs" style="color: inherit; text-decoration: inherit;">file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationtrustfile">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationtrustfile">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for a local file certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2941,7 +2941,7 @@ The following state arguments are supported:
 <a href="#sds_nodejs" style="color: inherit; text-decoration: inherit;">sds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationtrustsds">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Sds<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationtrustsds">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Sds</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for a [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
 {{% /md %}}</dd></dl>
@@ -2954,7 +2954,7 @@ The following state arguments are supported:
 <a href="#acm_python" style="color: inherit; text-decoration: inherit;">acm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationtrustacm">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Acm<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationtrustacm">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Acm</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for an AWS Certificate Manager (ACM) certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2963,7 +2963,7 @@ The following state arguments are supported:
 <a href="#file_python" style="color: inherit; text-decoration: inherit;">file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationtrustfile">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationtrustfile">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for a local file certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2972,7 +2972,7 @@ The following state arguments are supported:
 <a href="#sds_python" style="color: inherit; text-decoration: inherit;">sds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationtrustsds">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Sds<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackenddefaultsclientpolicytlsvalidationtrustsds">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Sds</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for a [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
 {{% /md %}}</dd></dl>
@@ -3158,7 +3158,7 @@ The following state arguments are supported:
 <a href="#clientpolicy_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicy">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicy">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The client policy for the backend.
 {{% /md %}}</dd></dl>
@@ -3202,7 +3202,7 @@ The following state arguments are supported:
 <a href="#clientpolicy_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicy">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicy">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The client policy for the backend.
 {{% /md %}}</dd></dl>
@@ -3224,7 +3224,7 @@ The following state arguments are supported:
 <a href="#client_policy_python" style="color: inherit; text-decoration: inherit;">client_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicy">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicy">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The client policy for the backend.
 {{% /md %}}</dd></dl>
@@ -3239,7 +3239,7 @@ The following state arguments are supported:
 <a href="#tls_csharp" style="color: inherit; text-decoration: inherit;">Tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytls">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytls">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls</a></span>
     </dt>
     <dd>{{% md %}}The Transport Layer Security (TLS) client policy.
 {{% /md %}}</dd></dl>
@@ -3265,7 +3265,7 @@ The following state arguments are supported:
 <a href="#tls_nodejs" style="color: inherit; text-decoration: inherit;">tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytls">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytls">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls</a></span>
     </dt>
     <dd>{{% md %}}The Transport Layer Security (TLS) client policy.
 {{% /md %}}</dd></dl>
@@ -3278,7 +3278,7 @@ The following state arguments are supported:
 <a href="#tls_python" style="color: inherit; text-decoration: inherit;">tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytls">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytls">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls</a></span>
     </dt>
     <dd>{{% md %}}The Transport Layer Security (TLS) client policy.
 {{% /md %}}</dd></dl>
@@ -3293,7 +3293,7 @@ The following state arguments are supported:
 <a href="#validation_csharp" style="color: inherit; text-decoration: inherit;">Validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidation">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidation">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation</a></span>
     </dt>
     <dd>{{% md %}}The listener's Transport Layer Security (TLS) validation context.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3302,7 +3302,7 @@ The following state arguments are supported:
 <a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlscertificate">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlscertificate">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate</a></span>
     </dt>
     <dd>{{% md %}}The listener's TLS certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3373,7 +3373,7 @@ The following state arguments are supported:
 <a href="#validation_nodejs" style="color: inherit; text-decoration: inherit;">validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidation">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidation">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation</a></span>
     </dt>
     <dd>{{% md %}}The listener's Transport Layer Security (TLS) validation context.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3382,7 +3382,7 @@ The following state arguments are supported:
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlscertificate">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlscertificate">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate</a></span>
     </dt>
     <dd>{{% md %}}The listener's TLS certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3413,7 +3413,7 @@ The following state arguments are supported:
 <a href="#validation_python" style="color: inherit; text-decoration: inherit;">validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidation">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidation">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation</a></span>
     </dt>
     <dd>{{% md %}}The listener's Transport Layer Security (TLS) validation context.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3422,7 +3422,7 @@ The following state arguments are supported:
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlscertificate">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlscertificate">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate</a></span>
     </dt>
     <dd>{{% md %}}The listener's TLS certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3455,7 +3455,7 @@ The following state arguments are supported:
 <a href="#file_csharp" style="color: inherit; text-decoration: inherit;">File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlscertificatefile">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>File<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlscertificatefile">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}A local file certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3464,7 +3464,7 @@ The following state arguments are supported:
 <a href="#sds_csharp" style="color: inherit; text-decoration: inherit;">Sds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlscertificatesds">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Sds<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlscertificatesds">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Sds</a></span>
     </dt>
     <dd>{{% md %}}A [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
 {{% /md %}}</dd></dl>
@@ -3499,7 +3499,7 @@ The following state arguments are supported:
 <a href="#file_nodejs" style="color: inherit; text-decoration: inherit;">file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlscertificatefile">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>File<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlscertificatefile">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}A local file certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3508,7 +3508,7 @@ The following state arguments are supported:
 <a href="#sds_nodejs" style="color: inherit; text-decoration: inherit;">sds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlscertificatesds">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Sds<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlscertificatesds">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Sds</a></span>
     </dt>
     <dd>{{% md %}}A [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
 {{% /md %}}</dd></dl>
@@ -3521,7 +3521,7 @@ The following state arguments are supported:
 <a href="#file_python" style="color: inherit; text-decoration: inherit;">file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlscertificatefile">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>File<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlscertificatefile">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}A local file certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3530,7 +3530,7 @@ The following state arguments are supported:
 <a href="#sds_python" style="color: inherit; text-decoration: inherit;">sds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlscertificatesds">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Sds<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlscertificatesds">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Sds</a></span>
     </dt>
     <dd>{{% md %}}A [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
 {{% /md %}}</dd></dl>
@@ -3689,7 +3689,7 @@ The following state arguments are supported:
 <a href="#trust_csharp" style="color: inherit; text-decoration: inherit;">Trust</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrust">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrust">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3698,7 +3698,7 @@ The following state arguments are supported:
 <a href="#subjectalternativenames_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Alternative<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationsubjectalternativenames">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationsubjectalternativenames">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names</a></span>
     </dt>
     <dd>{{% md %}}The SANs for a TLS validation context.
 {{% /md %}}</dd></dl>
@@ -3733,7 +3733,7 @@ The following state arguments are supported:
 <a href="#trust_nodejs" style="color: inherit; text-decoration: inherit;">trust</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrust">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrust">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3742,7 +3742,7 @@ The following state arguments are supported:
 <a href="#subjectalternativenames_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Alternative<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationsubjectalternativenames">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationsubjectalternativenames">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names</a></span>
     </dt>
     <dd>{{% md %}}The SANs for a TLS validation context.
 {{% /md %}}</dd></dl>
@@ -3755,7 +3755,7 @@ The following state arguments are supported:
 <a href="#trust_python" style="color: inherit; text-decoration: inherit;">trust</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrust">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrust">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3764,7 +3764,7 @@ The following state arguments are supported:
 <a href="#subject_alternative_names_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>alternative_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationsubjectalternativenames">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationsubjectalternativenames">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names</a></span>
     </dt>
     <dd>{{% md %}}The SANs for a TLS validation context.
 {{% /md %}}</dd></dl>
@@ -3779,7 +3779,7 @@ The following state arguments are supported:
 <a href="#match_csharp" style="color: inherit; text-decoration: inherit;">Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationsubjectalternativenamesmatch">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Match<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationsubjectalternativenamesmatch">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}The criteria for determining a SAN's match.
 {{% /md %}}</dd></dl>
@@ -3805,7 +3805,7 @@ The following state arguments are supported:
 <a href="#match_nodejs" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationsubjectalternativenamesmatch">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Match<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationsubjectalternativenamesmatch">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}The criteria for determining a SAN's match.
 {{% /md %}}</dd></dl>
@@ -3818,7 +3818,7 @@ The following state arguments are supported:
 <a href="#match_python" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationsubjectalternativenamesmatch">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Match<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationsubjectalternativenamesmatch">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}The criteria for determining a SAN's match.
 {{% /md %}}</dd></dl>
@@ -3887,7 +3887,7 @@ The following state arguments are supported:
 <a href="#acm_csharp" style="color: inherit; text-decoration: inherit;">Acm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrustacm">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Acm<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrustacm">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Acm</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for an AWS Certificate Manager (ACM) certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3896,7 +3896,7 @@ The following state arguments are supported:
 <a href="#file_csharp" style="color: inherit; text-decoration: inherit;">File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrustfile">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrustfile">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for a local file certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3905,7 +3905,7 @@ The following state arguments are supported:
 <a href="#sds_csharp" style="color: inherit; text-decoration: inherit;">Sds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrustsds">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Sds<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrustsds">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Sds</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for a [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
 {{% /md %}}</dd></dl>
@@ -3949,7 +3949,7 @@ The following state arguments are supported:
 <a href="#acm_nodejs" style="color: inherit; text-decoration: inherit;">acm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrustacm">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Acm<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrustacm">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Acm</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for an AWS Certificate Manager (ACM) certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3958,7 +3958,7 @@ The following state arguments are supported:
 <a href="#file_nodejs" style="color: inherit; text-decoration: inherit;">file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrustfile">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrustfile">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for a local file certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3967,7 +3967,7 @@ The following state arguments are supported:
 <a href="#sds_nodejs" style="color: inherit; text-decoration: inherit;">sds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrustsds">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Sds<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrustsds">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Sds</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for a [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
 {{% /md %}}</dd></dl>
@@ -3980,7 +3980,7 @@ The following state arguments are supported:
 <a href="#acm_python" style="color: inherit; text-decoration: inherit;">acm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrustacm">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Acm<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrustacm">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Acm</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for an AWS Certificate Manager (ACM) certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3989,7 +3989,7 @@ The following state arguments are supported:
 <a href="#file_python" style="color: inherit; text-decoration: inherit;">file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrustfile">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrustfile">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for a local file certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3998,7 +3998,7 @@ The following state arguments are supported:
 <a href="#sds_python" style="color: inherit; text-decoration: inherit;">sds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrustsds">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Sds<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualserviceclientpolicytlsvalidationtrustsds">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Sds</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for a [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
 {{% /md %}}</dd></dl>
@@ -4175,7 +4175,7 @@ The following state arguments are supported:
 <a href="#portmapping_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenerportmapping">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Port<wbr>Mapping<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenerportmapping">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Port<wbr>Mapping</a></span>
     </dt>
     <dd>{{% md %}}The port mapping information for the listener.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4184,7 +4184,7 @@ The following state arguments are supported:
 <a href="#connectionpool_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenerconnectionpool">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenerconnectionpool">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool</a></span>
     </dt>
     <dd>{{% md %}}The connection pool information for the listener.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4193,7 +4193,7 @@ The following state arguments are supported:
 <a href="#healthcheck_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenerhealthcheck">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Health<wbr>Check<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenerhealthcheck">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}The health check information for the listener.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4202,7 +4202,7 @@ The following state arguments are supported:
 <a href="#outlierdetection_csharp" style="color: inherit; text-decoration: inherit;">Outlier<wbr>Detection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclisteneroutlierdetection">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Outlier<wbr>Detection<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclisteneroutlierdetection">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Outlier<wbr>Detection</a></span>
     </dt>
     <dd>{{% md %}}The outlier detection information for the listener.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4211,7 +4211,7 @@ The following state arguments are supported:
 <a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertimeout">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeout">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}Timeouts for different protocols.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4220,7 +4220,7 @@ The following state arguments are supported:
 <a href="#tls_csharp" style="color: inherit; text-decoration: inherit;">Tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertls">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertls">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls</a></span>
     </dt>
     <dd>{{% md %}}The Transport Layer Security (TLS) properties for the listener
 {{% /md %}}</dd></dl>
@@ -4291,7 +4291,7 @@ The following state arguments are supported:
 <a href="#portmapping_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenerportmapping">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Port<wbr>Mapping<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenerportmapping">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Port<wbr>Mapping</a></span>
     </dt>
     <dd>{{% md %}}The port mapping information for the listener.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4300,7 +4300,7 @@ The following state arguments are supported:
 <a href="#connectionpool_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenerconnectionpool">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenerconnectionpool">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool</a></span>
     </dt>
     <dd>{{% md %}}The connection pool information for the listener.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4309,7 +4309,7 @@ The following state arguments are supported:
 <a href="#healthcheck_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenerhealthcheck">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Health<wbr>Check<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenerhealthcheck">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}The health check information for the listener.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4318,7 +4318,7 @@ The following state arguments are supported:
 <a href="#outlierdetection_nodejs" style="color: inherit; text-decoration: inherit;">outlier<wbr>Detection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclisteneroutlierdetection">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Outlier<wbr>Detection<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclisteneroutlierdetection">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Outlier<wbr>Detection</a></span>
     </dt>
     <dd>{{% md %}}The outlier detection information for the listener.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4327,7 +4327,7 @@ The following state arguments are supported:
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertimeout">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeout">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}Timeouts for different protocols.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4336,7 +4336,7 @@ The following state arguments are supported:
 <a href="#tls_nodejs" style="color: inherit; text-decoration: inherit;">tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertls">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertls">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls</a></span>
     </dt>
     <dd>{{% md %}}The Transport Layer Security (TLS) properties for the listener
 {{% /md %}}</dd></dl>
@@ -4349,7 +4349,7 @@ The following state arguments are supported:
 <a href="#port_mapping_python" style="color: inherit; text-decoration: inherit;">port_<wbr>mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenerportmapping">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Port<wbr>Mapping<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenerportmapping">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Port<wbr>Mapping</a></span>
     </dt>
     <dd>{{% md %}}The port mapping information for the listener.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4358,7 +4358,7 @@ The following state arguments are supported:
 <a href="#connection_pool_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenerconnectionpool">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenerconnectionpool">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool</a></span>
     </dt>
     <dd>{{% md %}}The connection pool information for the listener.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4367,7 +4367,7 @@ The following state arguments are supported:
 <a href="#health_check_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenerhealthcheck">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Health<wbr>Check<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenerhealthcheck">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}The health check information for the listener.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4376,7 +4376,7 @@ The following state arguments are supported:
 <a href="#outlier_detection_python" style="color: inherit; text-decoration: inherit;">outlier_<wbr>detection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclisteneroutlierdetection">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Outlier<wbr>Detection<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclisteneroutlierdetection">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Outlier<wbr>Detection</a></span>
     </dt>
     <dd>{{% md %}}The outlier detection information for the listener.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4385,7 +4385,7 @@ The following state arguments are supported:
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertimeout">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeout">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}Timeouts for different protocols.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4394,7 +4394,7 @@ The following state arguments are supported:
 <a href="#tls_python" style="color: inherit; text-decoration: inherit;">tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertls">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertls">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls</a></span>
     </dt>
     <dd>{{% md %}}The Transport Layer Security (TLS) properties for the listener
 {{% /md %}}</dd></dl>
@@ -4409,7 +4409,7 @@ The following state arguments are supported:
 <a href="#grpc_csharp" style="color: inherit; text-decoration: inherit;">Grpc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenerconnectionpoolgrpc">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Grpc<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenerconnectionpoolgrpc">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Grpc</a></span>
     </dt>
     <dd>{{% md %}}Connection pool information for gRPC listeners.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4418,7 +4418,7 @@ The following state arguments are supported:
 <a href="#http_csharp" style="color: inherit; text-decoration: inherit;">Http</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenerconnectionpoolhttp">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenerconnectionpoolhttp">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http</a></span>
     </dt>
     <dd>{{% md %}}Connection pool information for HTTP listeners.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4427,7 +4427,7 @@ The following state arguments are supported:
 <a href="#http2_csharp" style="color: inherit; text-decoration: inherit;">Http2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenerconnectionpoolhttp2">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http2Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenerconnectionpoolhttp2">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http2</a></span>
     </dt>
     <dd>{{% md %}}Connection pool information for HTTP2 listeners.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4436,7 +4436,7 @@ The following state arguments are supported:
 <a href="#tcp_csharp" style="color: inherit; text-decoration: inherit;">Tcp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenerconnectionpooltcp">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Tcp<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenerconnectionpooltcp">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Tcp</a></span>
     </dt>
     <dd>{{% md %}}Connection pool information for TCP listeners.
 {{% /md %}}</dd></dl>
@@ -4489,7 +4489,7 @@ The following state arguments are supported:
 <a href="#grpc_nodejs" style="color: inherit; text-decoration: inherit;">grpc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenerconnectionpoolgrpc">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Grpc<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenerconnectionpoolgrpc">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Grpc</a></span>
     </dt>
     <dd>{{% md %}}Connection pool information for gRPC listeners.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4498,7 +4498,7 @@ The following state arguments are supported:
 <a href="#http_nodejs" style="color: inherit; text-decoration: inherit;">http</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenerconnectionpoolhttp">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenerconnectionpoolhttp">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http</a></span>
     </dt>
     <dd>{{% md %}}Connection pool information for HTTP listeners.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4507,7 +4507,7 @@ The following state arguments are supported:
 <a href="#http2_nodejs" style="color: inherit; text-decoration: inherit;">http2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenerconnectionpoolhttp2">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http2Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenerconnectionpoolhttp2">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http2</a></span>
     </dt>
     <dd>{{% md %}}Connection pool information for HTTP2 listeners.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4516,7 +4516,7 @@ The following state arguments are supported:
 <a href="#tcp_nodejs" style="color: inherit; text-decoration: inherit;">tcp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenerconnectionpooltcp">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Tcp<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenerconnectionpooltcp">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Tcp</a></span>
     </dt>
     <dd>{{% md %}}Connection pool information for TCP listeners.
 {{% /md %}}</dd></dl>
@@ -4529,7 +4529,7 @@ The following state arguments are supported:
 <a href="#grpc_python" style="color: inherit; text-decoration: inherit;">grpc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenerconnectionpoolgrpc">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Grpc<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenerconnectionpoolgrpc">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Grpc</a></span>
     </dt>
     <dd>{{% md %}}Connection pool information for gRPC listeners.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4538,7 +4538,7 @@ The following state arguments are supported:
 <a href="#http_python" style="color: inherit; text-decoration: inherit;">http</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenerconnectionpoolhttp">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenerconnectionpoolhttp">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http</a></span>
     </dt>
     <dd>{{% md %}}Connection pool information for HTTP listeners.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4547,7 +4547,7 @@ The following state arguments are supported:
 <a href="#http2_python" style="color: inherit; text-decoration: inherit;">http2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenerconnectionpoolhttp2">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http2Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenerconnectionpoolhttp2">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http2</a></span>
     </dt>
     <dd>{{% md %}}Connection pool information for HTTP2 listeners.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4556,7 +4556,7 @@ The following state arguments are supported:
 <a href="#tcp_python" style="color: inherit; text-decoration: inherit;">tcp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenerconnectionpooltcp">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Tcp<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenerconnectionpooltcp">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Tcp</a></span>
     </dt>
     <dd>{{% md %}}Connection pool information for TCP listeners.
 {{% /md %}}</dd></dl>
@@ -5093,7 +5093,7 @@ The following state arguments are supported:
 <a href="#baseejectionduration_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Ejection<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclisteneroutlierdetectionbaseejectionduration">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Outlier<wbr>Detection<wbr>Base<wbr>Ejection<wbr>Duration<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclisteneroutlierdetectionbaseejectionduration">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Outlier<wbr>Detection<wbr>Base<wbr>Ejection<wbr>Duration</a></span>
     </dt>
     <dd>{{% md %}}The base amount of time for which a host is ejected.
 {{% /md %}}</dd><dt class="property-required"
@@ -5102,7 +5102,7 @@ The following state arguments are supported:
 <a href="#interval_csharp" style="color: inherit; text-decoration: inherit;">Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclisteneroutlierdetectioninterval">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Outlier<wbr>Detection<wbr>Interval<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclisteneroutlierdetectioninterval">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Outlier<wbr>Detection<wbr>Interval</a></span>
     </dt>
     <dd>{{% md %}}The time interval between ejection sweep analysis.
 {{% /md %}}</dd><dt class="property-required"
@@ -5175,7 +5175,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#baseejectionduration_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Ejection<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclisteneroutlierdetectionbaseejectionduration">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Outlier<wbr>Detection<wbr>Base<wbr>Ejection<wbr>Duration<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclisteneroutlierdetectionbaseejectionduration">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Outlier<wbr>Detection<wbr>Base<wbr>Ejection<wbr>Duration</a></span>
     </dt>
     <dd>{{% md %}}The base amount of time for which a host is ejected.
 {{% /md %}}</dd><dt class="property-required"
@@ -5184,7 +5184,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclisteneroutlierdetectioninterval">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Outlier<wbr>Detection<wbr>Interval<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclisteneroutlierdetectioninterval">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Outlier<wbr>Detection<wbr>Interval</a></span>
     </dt>
     <dd>{{% md %}}The time interval between ejection sweep analysis.
 {{% /md %}}</dd><dt class="property-required"
@@ -5216,7 +5216,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#base_ejection_duration_python" style="color: inherit; text-decoration: inherit;">base_<wbr>ejection_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclisteneroutlierdetectionbaseejectionduration">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Outlier<wbr>Detection<wbr>Base<wbr>Ejection<wbr>Duration<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclisteneroutlierdetectionbaseejectionduration">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Outlier<wbr>Detection<wbr>Base<wbr>Ejection<wbr>Duration</a></span>
     </dt>
     <dd>{{% md %}}The base amount of time for which a host is ejected.
 {{% /md %}}</dd><dt class="property-required"
@@ -5225,7 +5225,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclisteneroutlierdetectioninterval">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Outlier<wbr>Detection<wbr>Interval<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclisteneroutlierdetectioninterval">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Outlier<wbr>Detection<wbr>Interval</a></span>
     </dt>
     <dd>{{% md %}}The time interval between ejection sweep analysis.
 {{% /md %}}</dd><dt class="property-required"
@@ -5529,7 +5529,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#grpc_csharp" style="color: inherit; text-decoration: inherit;">Grpc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertimeoutgrpc">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Grpc<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeoutgrpc">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Grpc</a></span>
     </dt>
     <dd>{{% md %}}Timeouts for gRPC listeners.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5538,7 +5538,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#http_csharp" style="color: inherit; text-decoration: inherit;">Http</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttp">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttp">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http</a></span>
     </dt>
     <dd>{{% md %}}Timeouts for HTTP listeners.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5547,7 +5547,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#http2_csharp" style="color: inherit; text-decoration: inherit;">Http2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttp2">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http2Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttp2">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http2</a></span>
     </dt>
     <dd>{{% md %}}Timeouts for HTTP2 listeners.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5556,7 +5556,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#tcp_csharp" style="color: inherit; text-decoration: inherit;">Tcp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertimeouttcp">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Tcp<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouttcp">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Tcp</a></span>
     </dt>
     <dd>{{% md %}}Timeouts for TCP listeners.
 {{% /md %}}</dd></dl>
@@ -5609,7 +5609,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#grpc_nodejs" style="color: inherit; text-decoration: inherit;">grpc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertimeoutgrpc">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Grpc<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeoutgrpc">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Grpc</a></span>
     </dt>
     <dd>{{% md %}}Timeouts for gRPC listeners.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5618,7 +5618,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#http_nodejs" style="color: inherit; text-decoration: inherit;">http</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttp">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttp">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http</a></span>
     </dt>
     <dd>{{% md %}}Timeouts for HTTP listeners.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5627,7 +5627,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#http2_nodejs" style="color: inherit; text-decoration: inherit;">http2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttp2">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http2Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttp2">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http2</a></span>
     </dt>
     <dd>{{% md %}}Timeouts for HTTP2 listeners.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5636,7 +5636,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#tcp_nodejs" style="color: inherit; text-decoration: inherit;">tcp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertimeouttcp">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Tcp<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouttcp">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Tcp</a></span>
     </dt>
     <dd>{{% md %}}Timeouts for TCP listeners.
 {{% /md %}}</dd></dl>
@@ -5649,7 +5649,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#grpc_python" style="color: inherit; text-decoration: inherit;">grpc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertimeoutgrpc">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Grpc<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeoutgrpc">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Grpc</a></span>
     </dt>
     <dd>{{% md %}}Timeouts for gRPC listeners.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5658,7 +5658,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#http_python" style="color: inherit; text-decoration: inherit;">http</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttp">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttp">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http</a></span>
     </dt>
     <dd>{{% md %}}Timeouts for HTTP listeners.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5667,7 +5667,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#http2_python" style="color: inherit; text-decoration: inherit;">http2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttp2">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http2Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttp2">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http2</a></span>
     </dt>
     <dd>{{% md %}}Timeouts for HTTP2 listeners.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5676,7 +5676,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#tcp_python" style="color: inherit; text-decoration: inherit;">tcp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertimeouttcp">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Tcp<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouttcp">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Tcp</a></span>
     </dt>
     <dd>{{% md %}}Timeouts for TCP listeners.
 {{% /md %}}</dd></dl>
@@ -5691,7 +5691,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#idle_csharp" style="color: inherit; text-decoration: inherit;">Idle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertimeoutgrpcidle">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Grpc<wbr>Idle<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeoutgrpcidle">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Grpc<wbr>Idle</a></span>
     </dt>
     <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5700,7 +5700,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#perrequest_csharp" style="color: inherit; text-decoration: inherit;">Per<wbr>Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertimeoutgrpcperrequest">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Grpc<wbr>Per<wbr>Request<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeoutgrpcperrequest">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Grpc<wbr>Per<wbr>Request</a></span>
     </dt>
     <dd>{{% md %}}The per request timeout.
 {{% /md %}}</dd></dl>
@@ -5735,7 +5735,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#idle_nodejs" style="color: inherit; text-decoration: inherit;">idle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertimeoutgrpcidle">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Grpc<wbr>Idle<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeoutgrpcidle">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Grpc<wbr>Idle</a></span>
     </dt>
     <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5744,7 +5744,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#perrequest_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertimeoutgrpcperrequest">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Grpc<wbr>Per<wbr>Request<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeoutgrpcperrequest">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Grpc<wbr>Per<wbr>Request</a></span>
     </dt>
     <dd>{{% md %}}The per request timeout.
 {{% /md %}}</dd></dl>
@@ -5757,7 +5757,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#idle_python" style="color: inherit; text-decoration: inherit;">idle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertimeoutgrpcidle">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Grpc<wbr>Idle<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeoutgrpcidle">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Grpc<wbr>Idle</a></span>
     </dt>
     <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5766,7 +5766,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#per_request_python" style="color: inherit; text-decoration: inherit;">per_<wbr>request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertimeoutgrpcperrequest">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Grpc<wbr>Per<wbr>Request<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeoutgrpcperrequest">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Grpc<wbr>Per<wbr>Request</a></span>
     </dt>
     <dd>{{% md %}}The per request timeout.
 {{% /md %}}</dd></dl>
@@ -5961,7 +5961,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#idle_csharp" style="color: inherit; text-decoration: inherit;">Idle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttpidle">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http<wbr>Idle<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttpidle">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http<wbr>Idle</a></span>
     </dt>
     <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5970,7 +5970,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#perrequest_csharp" style="color: inherit; text-decoration: inherit;">Per<wbr>Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttpperrequest">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http<wbr>Per<wbr>Request<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttpperrequest">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http<wbr>Per<wbr>Request</a></span>
     </dt>
     <dd>{{% md %}}The per request timeout.
 {{% /md %}}</dd></dl>
@@ -6005,7 +6005,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#idle_nodejs" style="color: inherit; text-decoration: inherit;">idle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttpidle">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http<wbr>Idle<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttpidle">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http<wbr>Idle</a></span>
     </dt>
     <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6014,7 +6014,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#perrequest_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttpperrequest">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http<wbr>Per<wbr>Request<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttpperrequest">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http<wbr>Per<wbr>Request</a></span>
     </dt>
     <dd>{{% md %}}The per request timeout.
 {{% /md %}}</dd></dl>
@@ -6027,7 +6027,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#idle_python" style="color: inherit; text-decoration: inherit;">idle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttpidle">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http<wbr>Idle<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttpidle">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http<wbr>Idle</a></span>
     </dt>
     <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6036,7 +6036,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#per_request_python" style="color: inherit; text-decoration: inherit;">per_<wbr>request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttpperrequest">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http<wbr>Per<wbr>Request<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttpperrequest">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http<wbr>Per<wbr>Request</a></span>
     </dt>
     <dd>{{% md %}}The per request timeout.
 {{% /md %}}</dd></dl>
@@ -6051,7 +6051,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#idle_csharp" style="color: inherit; text-decoration: inherit;">Idle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttp2idle">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http2Idle<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttp2idle">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http2Idle</a></span>
     </dt>
     <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6060,7 +6060,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#perrequest_csharp" style="color: inherit; text-decoration: inherit;">Per<wbr>Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttp2perrequest">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http2Per<wbr>Request<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttp2perrequest">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http2Per<wbr>Request</a></span>
     </dt>
     <dd>{{% md %}}The per request timeout.
 {{% /md %}}</dd></dl>
@@ -6095,7 +6095,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#idle_nodejs" style="color: inherit; text-decoration: inherit;">idle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttp2idle">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http2Idle<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttp2idle">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http2Idle</a></span>
     </dt>
     <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6104,7 +6104,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#perrequest_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttp2perrequest">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http2Per<wbr>Request<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttp2perrequest">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http2Per<wbr>Request</a></span>
     </dt>
     <dd>{{% md %}}The per request timeout.
 {{% /md %}}</dd></dl>
@@ -6117,7 +6117,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#idle_python" style="color: inherit; text-decoration: inherit;">idle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttp2idle">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http2Idle<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttp2idle">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http2Idle</a></span>
     </dt>
     <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6126,7 +6126,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#per_request_python" style="color: inherit; text-decoration: inherit;">per_<wbr>request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttp2perrequest">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http2Per<wbr>Request<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouthttp2perrequest">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Http2Per<wbr>Request</a></span>
     </dt>
     <dd>{{% md %}}The per request timeout.
 {{% /md %}}</dd></dl>
@@ -6501,7 +6501,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#idle_csharp" style="color: inherit; text-decoration: inherit;">Idle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertimeouttcpidle">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Tcp<wbr>Idle<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouttcpidle">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Tcp<wbr>Idle</a></span>
     </dt>
     <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
 {{% /md %}}</dd></dl>
@@ -6527,7 +6527,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#idle_nodejs" style="color: inherit; text-decoration: inherit;">idle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertimeouttcpidle">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Tcp<wbr>Idle<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouttcpidle">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Tcp<wbr>Idle</a></span>
     </dt>
     <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
 {{% /md %}}</dd></dl>
@@ -6540,7 +6540,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#idle_python" style="color: inherit; text-decoration: inherit;">idle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertimeouttcpidle">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Tcp<wbr>Idle<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertimeouttcpidle">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Timeout<wbr>Tcp<wbr>Idle</a></span>
     </dt>
     <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
 {{% /md %}}</dd></dl>
@@ -6645,7 +6645,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertlscertificate">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlscertificate">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate</a></span>
     </dt>
     <dd>{{% md %}}The listener's TLS certificate.
 {{% /md %}}</dd><dt class="property-required"
@@ -6663,7 +6663,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#validation_csharp" style="color: inherit; text-decoration: inherit;">Validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidation">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidation">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation</a></span>
     </dt>
     <dd>{{% md %}}The listener's Transport Layer Security (TLS) validation context.
 {{% /md %}}</dd></dl>
@@ -6707,7 +6707,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertlscertificate">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlscertificate">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate</a></span>
     </dt>
     <dd>{{% md %}}The listener's TLS certificate.
 {{% /md %}}</dd><dt class="property-required"
@@ -6725,7 +6725,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#validation_nodejs" style="color: inherit; text-decoration: inherit;">validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidation">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidation">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation</a></span>
     </dt>
     <dd>{{% md %}}The listener's Transport Layer Security (TLS) validation context.
 {{% /md %}}</dd></dl>
@@ -6738,7 +6738,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertlscertificate">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlscertificate">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate</a></span>
     </dt>
     <dd>{{% md %}}The listener's TLS certificate.
 {{% /md %}}</dd><dt class="property-required"
@@ -6756,7 +6756,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#validation_python" style="color: inherit; text-decoration: inherit;">validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidation">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidation">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation</a></span>
     </dt>
     <dd>{{% md %}}The listener's Transport Layer Security (TLS) validation context.
 {{% /md %}}</dd></dl>
@@ -6771,7 +6771,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#acm_csharp" style="color: inherit; text-decoration: inherit;">Acm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertlscertificateacm">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Acm<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlscertificateacm">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Acm</a></span>
     </dt>
     <dd>{{% md %}}An AWS Certificate Manager (ACM) certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6780,7 +6780,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#file_csharp" style="color: inherit; text-decoration: inherit;">File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertlscertificatefile">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>File<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlscertificatefile">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}A local file certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6789,7 +6789,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#sds_csharp" style="color: inherit; text-decoration: inherit;">Sds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertlscertificatesds">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Sds<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlscertificatesds">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Sds</a></span>
     </dt>
     <dd>{{% md %}}A [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
 {{% /md %}}</dd></dl>
@@ -6833,7 +6833,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#acm_nodejs" style="color: inherit; text-decoration: inherit;">acm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertlscertificateacm">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Acm<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlscertificateacm">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Acm</a></span>
     </dt>
     <dd>{{% md %}}An AWS Certificate Manager (ACM) certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6842,7 +6842,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#file_nodejs" style="color: inherit; text-decoration: inherit;">file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertlscertificatefile">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>File<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlscertificatefile">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}A local file certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6851,7 +6851,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#sds_nodejs" style="color: inherit; text-decoration: inherit;">sds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertlscertificatesds">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Sds<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlscertificatesds">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Sds</a></span>
     </dt>
     <dd>{{% md %}}A [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
 {{% /md %}}</dd></dl>
@@ -6864,7 +6864,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#acm_python" style="color: inherit; text-decoration: inherit;">acm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertlscertificateacm">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Acm<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlscertificateacm">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Acm</a></span>
     </dt>
     <dd>{{% md %}}An AWS Certificate Manager (ACM) certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6873,7 +6873,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#file_python" style="color: inherit; text-decoration: inherit;">file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertlscertificatefile">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>File<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlscertificatefile">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}A local file certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6882,7 +6882,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#sds_python" style="color: inherit; text-decoration: inherit;">sds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertlscertificatesds">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Sds<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlscertificatesds">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Sds</a></span>
     </dt>
     <dd>{{% md %}}A [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
 {{% /md %}}</dd></dl>
@@ -7095,7 +7095,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#trust_csharp" style="color: inherit; text-decoration: inherit;">Trust</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidationtrust">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidationtrust">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7104,7 +7104,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#subjectalternativenames_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Alternative<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidationsubjectalternativenames">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidationsubjectalternativenames">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names</a></span>
     </dt>
     <dd>{{% md %}}The SANs for a TLS validation context.
 {{% /md %}}</dd></dl>
@@ -7139,7 +7139,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#trust_nodejs" style="color: inherit; text-decoration: inherit;">trust</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidationtrust">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidationtrust">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7148,7 +7148,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#subjectalternativenames_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Alternative<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidationsubjectalternativenames">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidationsubjectalternativenames">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names</a></span>
     </dt>
     <dd>{{% md %}}The SANs for a TLS validation context.
 {{% /md %}}</dd></dl>
@@ -7161,7 +7161,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#trust_python" style="color: inherit; text-decoration: inherit;">trust</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidationtrust">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidationtrust">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7170,7 +7170,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#subject_alternative_names_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>alternative_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidationsubjectalternativenames">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidationsubjectalternativenames">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names</a></span>
     </dt>
     <dd>{{% md %}}The SANs for a TLS validation context.
 {{% /md %}}</dd></dl>
@@ -7185,7 +7185,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#match_csharp" style="color: inherit; text-decoration: inherit;">Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidationsubjectalternativenamesmatch">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Match<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidationsubjectalternativenamesmatch">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}The criteria for determining a SAN's match.
 {{% /md %}}</dd></dl>
@@ -7211,7 +7211,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#match_nodejs" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidationsubjectalternativenamesmatch">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Match<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidationsubjectalternativenamesmatch">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}The criteria for determining a SAN's match.
 {{% /md %}}</dd></dl>
@@ -7224,7 +7224,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#match_python" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidationsubjectalternativenamesmatch">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Match<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidationsubjectalternativenamesmatch">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}The criteria for determining a SAN's match.
 {{% /md %}}</dd></dl>
@@ -7293,7 +7293,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#file_csharp" style="color: inherit; text-decoration: inherit;">File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidationtrustfile">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidationtrustfile">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for a local file certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7302,7 +7302,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#sds_csharp" style="color: inherit; text-decoration: inherit;">Sds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidationtrustsds">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Sds<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidationtrustsds">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Sds</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for a [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
 {{% /md %}}</dd></dl>
@@ -7337,7 +7337,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#file_nodejs" style="color: inherit; text-decoration: inherit;">file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidationtrustfile">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidationtrustfile">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for a local file certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7346,7 +7346,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#sds_nodejs" style="color: inherit; text-decoration: inherit;">sds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidationtrustsds">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Sds<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidationtrustsds">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Sds</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for a [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
 {{% /md %}}</dd></dl>
@@ -7359,7 +7359,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#file_python" style="color: inherit; text-decoration: inherit;">file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidationtrustfile">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidationtrustfile">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for a local file certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7368,7 +7368,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#sds_python" style="color: inherit; text-decoration: inherit;">sds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidationtrustsds">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Sds<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenertlsvalidationtrustsds">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Sds</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for a [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
 {{% /md %}}</dd></dl>
@@ -7491,7 +7491,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#accesslog_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Log</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecloggingaccesslog">Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecloggingaccesslog">Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log</a></span>
     </dt>
     <dd>{{% md %}}The access log configuration for a virtual node.
 {{% /md %}}</dd></dl>
@@ -7517,7 +7517,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#accesslog_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Log</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecloggingaccesslog">Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecloggingaccesslog">Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log</a></span>
     </dt>
     <dd>{{% md %}}The access log configuration for a virtual node.
 {{% /md %}}</dd></dl>
@@ -7530,7 +7530,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#access_log_python" style="color: inherit; text-decoration: inherit;">access_<wbr>log</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecloggingaccesslog">Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecloggingaccesslog">Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log</a></span>
     </dt>
     <dd>{{% md %}}The access log configuration for a virtual node.
 {{% /md %}}</dd></dl>
@@ -7545,7 +7545,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#file_csharp" style="color: inherit; text-decoration: inherit;">File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecloggingaccesslogfile">Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>File<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecloggingaccesslogfile">Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}The file object to send virtual node access logs to.
 {{% /md %}}</dd></dl>
@@ -7571,7 +7571,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#file_nodejs" style="color: inherit; text-decoration: inherit;">file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecloggingaccesslogfile">Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>File<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecloggingaccesslogfile">Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}The file object to send virtual node access logs to.
 {{% /md %}}</dd></dl>
@@ -7584,7 +7584,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#file_python" style="color: inherit; text-decoration: inherit;">file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecloggingaccesslogfile">Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>File<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecloggingaccesslogfile">Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}The file object to send virtual node access logs to.
 {{% /md %}}</dd></dl>
@@ -7653,7 +7653,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#awscloudmap_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Cloud<wbr>Map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecservicediscoveryawscloudmap">Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Aws<wbr>Cloud<wbr>Map<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecservicediscoveryawscloudmap">Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Aws<wbr>Cloud<wbr>Map</a></span>
     </dt>
     <dd>{{% md %}}Specifies any AWS Cloud Map information for the virtual node.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7662,7 +7662,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#dns_csharp" style="color: inherit; text-decoration: inherit;">Dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecservicediscoverydns">Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Dns<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecservicediscoverydns">Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Dns</a></span>
     </dt>
     <dd>{{% md %}}Specifies the DNS service name for the virtual node.
 {{% /md %}}</dd></dl>
@@ -7697,7 +7697,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#awscloudmap_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Cloud<wbr>Map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecservicediscoveryawscloudmap">Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Aws<wbr>Cloud<wbr>Map<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecservicediscoveryawscloudmap">Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Aws<wbr>Cloud<wbr>Map</a></span>
     </dt>
     <dd>{{% md %}}Specifies any AWS Cloud Map information for the virtual node.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7706,7 +7706,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#dns_nodejs" style="color: inherit; text-decoration: inherit;">dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecservicediscoverydns">Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Dns<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecservicediscoverydns">Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Dns</a></span>
     </dt>
     <dd>{{% md %}}Specifies the DNS service name for the virtual node.
 {{% /md %}}</dd></dl>
@@ -7719,7 +7719,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#aws_cloud_map_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>cloud_<wbr>map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecservicediscoveryawscloudmap">Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Aws<wbr>Cloud<wbr>Map<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecservicediscoveryawscloudmap">Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Aws<wbr>Cloud<wbr>Map</a></span>
     </dt>
     <dd>{{% md %}}Specifies any AWS Cloud Map information for the virtual node.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7728,7 +7728,7 @@ Minimum value of `0`. Maximum value of `100`.
 <a href="#dns_python" style="color: inherit; text-decoration: inherit;">dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecservicediscoverydns">Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Dns<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnodespecservicediscoverydns">Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Dns</a></span>
     </dt>
     <dd>{{% md %}}Specifies the DNS service name for the virtual node.
 {{% /md %}}</dd></dl>

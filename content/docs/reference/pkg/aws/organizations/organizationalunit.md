@@ -732,7 +732,7 @@ The following state arguments are supported:
 <a href="#state_accounts_go" style="color: inherit; text-decoration: inherit;">Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationalunitaccount">[]Organizational<wbr>Unit<wbr>Account</a></span>
+        <span class="property-type"><a href="#organizationalunitaccount">[]Organizational<wbr>Unit<wbr>Account<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of child accounts for this Organizational Unit. Does not return account information for child Organizational Units. All elements have these attributes:
 {{% /md %}}</dd><dt class="property-optional"

@@ -489,7 +489,7 @@ The OptionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#options_go" style="color: inherit; text-decoration: inherit;">Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#optiongroupoption">[]Option<wbr>Group<wbr>Option</a></span>
+        <span class="property-type"><a href="#optiongroupoption">[]Option<wbr>Group<wbr>Option<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of Options to apply.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1036,7 +1036,7 @@ The following state arguments are supported:
 <a href="#state_options_go" style="color: inherit; text-decoration: inherit;">Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#optiongroupoption">[]Option<wbr>Group<wbr>Option</a></span>
+        <span class="property-type"><a href="#optiongroupoption">[]Option<wbr>Group<wbr>Option<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of Options to apply.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1266,7 +1266,7 @@ The following state arguments are supported:
 <a href="#optionsettings_csharp" style="color: inherit; text-decoration: inherit;">Option<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#optiongroupoptionoptionsetting">List&lt;Option<wbr>Group<wbr>Option<wbr>Option<wbr>Setting<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#optiongroupoptionoptionsetting">List&lt;Option<wbr>Group<wbr>Option<wbr>Option<wbr>Setting&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of option settings to apply.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1382,7 +1382,7 @@ The following state arguments are supported:
 <a href="#optionsettings_nodejs" style="color: inherit; text-decoration: inherit;">option<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#optiongroupoptionoptionsetting">Option<wbr>Group<wbr>Option<wbr>Option<wbr>Setting<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#optiongroupoptionoptionsetting">Option<wbr>Group<wbr>Option<wbr>Option<wbr>Setting[]</a></span>
     </dt>
     <dd>{{% md %}}A list of option settings to apply.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1440,7 +1440,7 @@ The following state arguments are supported:
 <a href="#option_settings_python" style="color: inherit; text-decoration: inherit;">option_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#optiongroupoptionoptionsetting">Sequence[Option<wbr>Group<wbr>Option<wbr>Option<wbr>Setting<wbr>Args]</a></span>
+        <span class="property-type"><a href="#optiongroupoptionoptionsetting">Sequence[Option<wbr>Group<wbr>Option<wbr>Option<wbr>Setting]</a></span>
     </dt>
     <dd>{{% md %}}A list of option settings to apply.
 {{% /md %}}</dd><dt class="property-optional"

@@ -371,7 +371,7 @@ The Workgroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#configuration_go" style="color: inherit; text-decoration: inherit;">Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workgroupconfiguration">Workgroup<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#workgroupconfiguration">Workgroup<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with various settings for the workgroup. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -881,7 +881,7 @@ The following state arguments are supported:
 <a href="#state_configuration_go" style="color: inherit; text-decoration: inherit;">Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workgroupconfiguration">Workgroup<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#workgroupconfiguration">Workgroup<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with various settings for the workgroup. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1138,7 +1138,7 @@ The following state arguments are supported:
 <a href="#resultconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Result<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workgroupconfigurationresultconfiguration">Workgroup<wbr>Configuration<wbr>Result<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#workgroupconfigurationresultconfiguration">Workgroup<wbr>Configuration<wbr>Result<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with result settings. Documented below.
 {{% /md %}}</dd></dl>
@@ -1218,7 +1218,7 @@ The following state arguments are supported:
 <a href="#resultconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">result<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workgroupconfigurationresultconfiguration">Workgroup<wbr>Configuration<wbr>Result<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#workgroupconfigurationresultconfiguration">Workgroup<wbr>Configuration<wbr>Result<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with result settings. Documented below.
 {{% /md %}}</dd></dl>
@@ -1258,7 +1258,7 @@ The following state arguments are supported:
 <a href="#result_configuration_python" style="color: inherit; text-decoration: inherit;">result_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workgroupconfigurationresultconfiguration">Workgroup<wbr>Configuration<wbr>Result<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#workgroupconfigurationresultconfiguration">Workgroup<wbr>Configuration<wbr>Result<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with result settings. Documented below.
 {{% /md %}}</dd></dl>
@@ -1273,7 +1273,7 @@ The following state arguments are supported:
 <a href="#encryptionconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workgroupconfigurationresultconfigurationencryptionconfiguration">Workgroup<wbr>Configuration<wbr>Result<wbr>Configuration<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#workgroupconfigurationresultconfigurationencryptionconfiguration">Workgroup<wbr>Configuration<wbr>Result<wbr>Configuration<wbr>Encryption<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with encryption settings. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1317,7 +1317,7 @@ The following state arguments are supported:
 <a href="#encryptionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workgroupconfigurationresultconfigurationencryptionconfiguration">Workgroup<wbr>Configuration<wbr>Result<wbr>Configuration<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#workgroupconfigurationresultconfigurationencryptionconfiguration">Workgroup<wbr>Configuration<wbr>Result<wbr>Configuration<wbr>Encryption<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with encryption settings. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1339,7 +1339,7 @@ The following state arguments are supported:
 <a href="#encryption_configuration_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workgroupconfigurationresultconfigurationencryptionconfiguration">Workgroup<wbr>Configuration<wbr>Result<wbr>Configuration<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#workgroupconfigurationresultconfigurationencryptionconfiguration">Workgroup<wbr>Configuration<wbr>Result<wbr>Configuration<wbr>Encryption<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with encryption settings. Documented below.
 {{% /md %}}</dd><dt class="property-optional"

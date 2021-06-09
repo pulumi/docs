@@ -388,7 +388,7 @@ The DefaultRouteTable resource accepts the following [input]({{< relref "/docs/i
 <a href="#routes_go" style="color: inherit; text-decoration: inherit;">Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultroutetableroute">[]Default<wbr>Route<wbr>Table<wbr>Route</a></span>
+        <span class="property-type"><a href="#defaultroutetableroute">[]Default<wbr>Route<wbr>Table<wbr>Route<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -921,7 +921,7 @@ The following state arguments are supported:
 <a href="#state_routes_go" style="color: inherit; text-decoration: inherit;">Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultroutetableroute">[]Default<wbr>Route<wbr>Table<wbr>Route</a></span>
+        <span class="property-type"><a href="#defaultroutetableroute">[]Default<wbr>Route<wbr>Table<wbr>Route<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

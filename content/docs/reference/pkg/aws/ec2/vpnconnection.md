@@ -3698,7 +3698,7 @@ The following state arguments are supported:
 <a href="#state_routes_go" style="color: inherit; text-decoration: inherit;">Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnconnectionroute">[]Vpn<wbr>Connection<wbr>Route<wbr>Type</a></span>
+        <span class="property-type"><a href="#vpnconnectionroute">[]Vpn<wbr>Connection<wbr>Route<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4183,7 +4183,7 @@ The following state arguments are supported:
 <a href="#state_vgwtelemetries_go" style="color: inherit; text-decoration: inherit;">Vgw<wbr>Telemetries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnconnectionvgwtelemetry">[]Vpn<wbr>Connection<wbr>Vgw<wbr>Telemetry</a></span>
+        <span class="property-type"><a href="#vpnconnectionvgwtelemetry">[]Vpn<wbr>Connection<wbr>Vgw<wbr>Telemetry<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

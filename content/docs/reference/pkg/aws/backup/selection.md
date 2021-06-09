@@ -614,7 +614,7 @@ The Selection resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#selectiontags_go" style="color: inherit; text-decoration: inherit;">Selection<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selectionselectiontag">[]Selection<wbr>Selection<wbr>Tag</a></span>
+        <span class="property-type"><a href="#selectionselectiontag">[]Selection<wbr>Selection<wbr>Tag<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Tag-based conditions used to specify a set of resources to assign to a backup plan.
 {{% /md %}}</dd></dl>
@@ -995,7 +995,7 @@ The following state arguments are supported:
 <a href="#state_selectiontags_go" style="color: inherit; text-decoration: inherit;">Selection<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selectionselectiontag">[]Selection<wbr>Selection<wbr>Tag</a></span>
+        <span class="property-type"><a href="#selectionselectiontag">[]Selection<wbr>Selection<wbr>Tag<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Tag-based conditions used to specify a set of resources to assign to a backup plan.
 {{% /md %}}</dd></dl>

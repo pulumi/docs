@@ -678,7 +678,7 @@ The StateMachine resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#loggingconfiguration_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statemachineloggingconfiguration">State<wbr>Machine<wbr>Logging<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#statemachineloggingconfiguration">State<wbr>Machine<wbr>Logging<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines what execution history events are logged and where they are logged. The `logging_configuration` parameter is only valid when `type` is set to `EXPRESS`. Defaults to `OFF`. For more information see [Logging Express Workflows](https://docs.aws.amazon.com/step-functions/latest/dg/cw-logs.html) and [Log Levels](https://docs.aws.amazon.com/step-functions/latest/dg/cloudwatch-log-level.html) in the AWS Step Functions User Guide.
 {{% /md %}}</dd><dt class="property-optional"
@@ -714,7 +714,7 @@ The StateMachine resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#tracingconfiguration_go" style="color: inherit; text-decoration: inherit;">Tracing<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statemachinetracingconfiguration">State<wbr>Machine<wbr>Tracing<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#statemachinetracingconfiguration">State<wbr>Machine<wbr>Tracing<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Selects whether AWS X-Ray tracing is enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1317,7 +1317,7 @@ The following state arguments are supported:
 <a href="#state_loggingconfiguration_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statemachineloggingconfiguration">State<wbr>Machine<wbr>Logging<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#statemachineloggingconfiguration">State<wbr>Machine<wbr>Logging<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines what execution history events are logged and where they are logged. The `logging_configuration` parameter is only valid when `type` is set to `EXPRESS`. Defaults to `OFF`. For more information see [Logging Express Workflows](https://docs.aws.amazon.com/step-functions/latest/dg/cw-logs.html) and [Log Levels](https://docs.aws.amazon.com/step-functions/latest/dg/cloudwatch-log-level.html) in the AWS Step Functions User Guide.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1371,7 +1371,7 @@ The following state arguments are supported:
 <a href="#state_tracingconfiguration_go" style="color: inherit; text-decoration: inherit;">Tracing<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statemachinetracingconfiguration">State<wbr>Machine<wbr>Tracing<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#statemachinetracingconfiguration">State<wbr>Machine<wbr>Tracing<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Selects whether AWS X-Ray tracing is enabled.
 {{% /md %}}</dd><dt class="property-optional"

@@ -1233,7 +1233,7 @@ the number of Spot pools that you specify.
 <a href="#launchspecifications_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetrequestlaunchspecification">[]Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification</a></span>
+        <span class="property-type"><a href="#spotfleetrequestlaunchspecification">[]Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Used to define the launch configuration of the
 spot-fleet request. Can be specified multiple times to define different bids
@@ -1244,7 +1244,7 @@ across different markets and instance types. Conflicts with `launch_template_con
 <a href="#launchtemplateconfigs_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfig">[]Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config</a></span>
+        <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfig">[]Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Launch template configuration block. See Launch Template Configs below for more details. Conflicts with `launch_specification`. At least one of `launch_specification` or `launch_template_config` is required.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1271,7 +1271,7 @@ across different markets and instance types. Conflicts with `launch_template_con
 <a href="#spotmaintenancestrategies_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Maintenance<wbr>Strategies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetrequestspotmaintenancestrategies">Spot<wbr>Fleet<wbr>Request<wbr>Spot<wbr>Maintenance<wbr>Strategies</a></span>
+        <span class="property-type"><a href="#spotfleetrequestspotmaintenancestrategies">Spot<wbr>Fleet<wbr>Request<wbr>Spot<wbr>Maintenance<wbr>Strategies<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing maintenance strategies for managing your Spot Instances that are at an elevated risk of being interrupted. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2333,7 +2333,7 @@ the number of Spot pools that you specify.
 <a href="#state_launchspecifications_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetrequestlaunchspecification">[]Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification</a></span>
+        <span class="property-type"><a href="#spotfleetrequestlaunchspecification">[]Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Used to define the launch configuration of the
 spot-fleet request. Can be specified multiple times to define different bids
@@ -2344,7 +2344,7 @@ across different markets and instance types. Conflicts with `launch_template_con
 <a href="#state_launchtemplateconfigs_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfig">[]Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config</a></span>
+        <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfig">[]Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Launch template configuration block. See Launch Template Configs below for more details. Conflicts with `launch_specification`. At least one of `launch_specification` or `launch_template_config` is required.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2371,7 +2371,7 @@ across different markets and instance types. Conflicts with `launch_template_con
 <a href="#state_spotmaintenancestrategies_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Maintenance<wbr>Strategies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetrequestspotmaintenancestrategies">Spot<wbr>Fleet<wbr>Request<wbr>Spot<wbr>Maintenance<wbr>Strategies</a></span>
+        <span class="property-type"><a href="#spotfleetrequestspotmaintenancestrategies">Spot<wbr>Fleet<wbr>Request<wbr>Spot<wbr>Maintenance<wbr>Strategies<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing maintenance strategies for managing your Spot Instances that are at an elevated risk of being interrupted. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2966,7 +2966,7 @@ timeout of 10m is reached.
 <a href="#ebsblockdevices_csharp" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Block<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetrequestlaunchspecificationebsblockdevice">List&lt;Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#spotfleetrequestlaunchspecificationebsblockdevice">List&lt;Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Ebs<wbr>Block<wbr>Device&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2982,7 +2982,7 @@ timeout of 10m is reached.
 <a href="#ephemeralblockdevices_csharp" style="color: inherit; text-decoration: inherit;">Ephemeral<wbr>Block<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetrequestlaunchspecificationephemeralblockdevice">List&lt;Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#spotfleetrequestlaunchspecificationephemeralblockdevice">List&lt;Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Ephemeral<wbr>Block<wbr>Device&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3038,7 +3038,7 @@ timeout of 10m is reached.
 <a href="#rootblockdevices_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Block<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetrequestlaunchspecificationrootblockdevice">List&lt;Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Root<wbr>Block<wbr>Device<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#spotfleetrequestlaunchspecificationrootblockdevice">List&lt;Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Root<wbr>Block<wbr>Device&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3306,7 +3306,7 @@ timeout of 10m is reached.
 <a href="#ebsblockdevices_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Block<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetrequestlaunchspecificationebsblockdevice">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#spotfleetrequestlaunchspecificationebsblockdevice">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Ebs<wbr>Block<wbr>Device[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3322,7 +3322,7 @@ timeout of 10m is reached.
 <a href="#ephemeralblockdevices_nodejs" style="color: inherit; text-decoration: inherit;">ephemeral<wbr>Block<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetrequestlaunchspecificationephemeralblockdevice">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#spotfleetrequestlaunchspecificationephemeralblockdevice">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Ephemeral<wbr>Block<wbr>Device[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3378,7 +3378,7 @@ timeout of 10m is reached.
 <a href="#rootblockdevices_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Block<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetrequestlaunchspecificationrootblockdevice">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Root<wbr>Block<wbr>Device<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#spotfleetrequestlaunchspecificationrootblockdevice">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Root<wbr>Block<wbr>Device[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3476,7 +3476,7 @@ timeout of 10m is reached.
 <a href="#ebs_block_devices_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>block_<wbr>devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetrequestlaunchspecificationebsblockdevice">Sequence[Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args]</a></span>
+        <span class="property-type"><a href="#spotfleetrequestlaunchspecificationebsblockdevice">Sequence[Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Ebs<wbr>Block<wbr>Device]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3492,7 +3492,7 @@ timeout of 10m is reached.
 <a href="#ephemeral_block_devices_python" style="color: inherit; text-decoration: inherit;">ephemeral_<wbr>block_<wbr>devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetrequestlaunchspecificationephemeralblockdevice">Sequence[Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args]</a></span>
+        <span class="property-type"><a href="#spotfleetrequestlaunchspecificationephemeralblockdevice">Sequence[Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Ephemeral<wbr>Block<wbr>Device]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3548,7 +3548,7 @@ timeout of 10m is reached.
 <a href="#root_block_devices_python" style="color: inherit; text-decoration: inherit;">root_<wbr>block_<wbr>devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetrequestlaunchspecificationrootblockdevice">Sequence[Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Root<wbr>Block<wbr>Device<wbr>Args]</a></span>
+        <span class="property-type"><a href="#spotfleetrequestlaunchspecificationrootblockdevice">Sequence[Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Root<wbr>Block<wbr>Device]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4244,7 +4244,7 @@ timeout of 10m is reached.
 <a href="#launchtemplatespecification_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfiglaunchtemplatespecification">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Launch<wbr>Template<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfiglaunchtemplatespecification">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Launch<wbr>Template<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Launch template specification. See Launch Template Specification below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4253,7 +4253,7 @@ timeout of 10m is reached.
 <a href="#overrides_csharp" style="color: inherit; text-decoration: inherit;">Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfigoverride">List&lt;Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Override<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfigoverride">List&lt;Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Override&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more override configurations. See Overrides below for more details.
 {{% /md %}}</dd></dl>
@@ -4288,7 +4288,7 @@ timeout of 10m is reached.
 <a href="#launchtemplatespecification_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfiglaunchtemplatespecification">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Launch<wbr>Template<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfiglaunchtemplatespecification">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Launch<wbr>Template<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Launch template specification. See Launch Template Specification below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4297,7 +4297,7 @@ timeout of 10m is reached.
 <a href="#overrides_nodejs" style="color: inherit; text-decoration: inherit;">overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfigoverride">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Override<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfigoverride">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Override[]</a></span>
     </dt>
     <dd>{{% md %}}One or more override configurations. See Overrides below for more details.
 {{% /md %}}</dd></dl>
@@ -4310,7 +4310,7 @@ timeout of 10m is reached.
 <a href="#launch_template_specification_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template_<wbr>specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfiglaunchtemplatespecification">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Launch<wbr>Template<wbr>Specification<wbr>Args</a></span>
+        <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfiglaunchtemplatespecification">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Launch<wbr>Template<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Launch template specification. See Launch Template Specification below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4319,7 +4319,7 @@ timeout of 10m is reached.
 <a href="#overrides_python" style="color: inherit; text-decoration: inherit;">overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfigoverride">Sequence[Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Override<wbr>Args]</a></span>
+        <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfigoverride">Sequence[Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Override]</a></span>
     </dt>
     <dd>{{% md %}}One or more override configurations. See Overrides below for more details.
 {{% /md %}}</dd></dl>
@@ -4694,7 +4694,7 @@ timeout of 10m is reached.
 <a href="#capacityrebalance_csharp" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Rebalance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetrequestspotmaintenancestrategiescapacityrebalance">Spot<wbr>Fleet<wbr>Request<wbr>Spot<wbr>Maintenance<wbr>Strategies<wbr>Capacity<wbr>Rebalance<wbr>Args</a></span>
+        <span class="property-type"><a href="#spotfleetrequestspotmaintenancestrategiescapacityrebalance">Spot<wbr>Fleet<wbr>Request<wbr>Spot<wbr>Maintenance<wbr>Strategies<wbr>Capacity<wbr>Rebalance</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing the capacity rebalance for your fleet request. Defined below.
 {{% /md %}}</dd></dl>
@@ -4720,7 +4720,7 @@ timeout of 10m is reached.
 <a href="#capacityrebalance_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Rebalance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetrequestspotmaintenancestrategiescapacityrebalance">Spot<wbr>Fleet<wbr>Request<wbr>Spot<wbr>Maintenance<wbr>Strategies<wbr>Capacity<wbr>Rebalance<wbr>Args</a></span>
+        <span class="property-type"><a href="#spotfleetrequestspotmaintenancestrategiescapacityrebalance">Spot<wbr>Fleet<wbr>Request<wbr>Spot<wbr>Maintenance<wbr>Strategies<wbr>Capacity<wbr>Rebalance</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing the capacity rebalance for your fleet request. Defined below.
 {{% /md %}}</dd></dl>
@@ -4733,7 +4733,7 @@ timeout of 10m is reached.
 <a href="#capacity_rebalance_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>rebalance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotfleetrequestspotmaintenancestrategiescapacityrebalance">Spot<wbr>Fleet<wbr>Request<wbr>Spot<wbr>Maintenance<wbr>Strategies<wbr>Capacity<wbr>Rebalance<wbr>Args</a></span>
+        <span class="property-type"><a href="#spotfleetrequestspotmaintenancestrategiescapacityrebalance">Spot<wbr>Fleet<wbr>Request<wbr>Spot<wbr>Maintenance<wbr>Strategies<wbr>Capacity<wbr>Rebalance</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing the capacity rebalance for your fleet request. Defined below.
 {{% /md %}}</dd></dl>

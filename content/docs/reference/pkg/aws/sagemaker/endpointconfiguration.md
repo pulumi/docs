@@ -358,7 +358,7 @@ The EndpointConfiguration resource accepts the following [input]({{< relref "/do
 <a href="#productionvariants_go" style="color: inherit; text-decoration: inherit;">Production<wbr>Variants</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointconfigurationproductionvariant">[]Endpoint<wbr>Configuration<wbr>Production<wbr>Variant</a></span>
+        <span class="property-type"><a href="#endpointconfigurationproductionvariant">[]Endpoint<wbr>Configuration<wbr>Production<wbr>Variant<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Fields are documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -367,7 +367,7 @@ The EndpointConfiguration resource accepts the following [input]({{< relref "/do
 <a href="#datacaptureconfig_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Capture<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointconfigurationdatacaptureconfig">Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config</a></span>
+        <span class="property-type"><a href="#endpointconfigurationdatacaptureconfig">Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the parameters to capture input/output of Sagemaker models endpoints. Fields are documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -831,7 +831,7 @@ The following state arguments are supported:
 <a href="#state_datacaptureconfig_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Capture<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointconfigurationdatacaptureconfig">Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config</a></span>
+        <span class="property-type"><a href="#endpointconfigurationdatacaptureconfig">Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the parameters to capture input/output of Sagemaker models endpoints. Fields are documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -858,7 +858,7 @@ The following state arguments are supported:
 <a href="#state_productionvariants_go" style="color: inherit; text-decoration: inherit;">Production<wbr>Variants</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointconfigurationproductionvariant">[]Endpoint<wbr>Configuration<wbr>Production<wbr>Variant</a></span>
+        <span class="property-type"><a href="#endpointconfigurationproductionvariant">[]Endpoint<wbr>Configuration<wbr>Production<wbr>Variant<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Fields are documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1034,7 +1034,7 @@ The following state arguments are supported:
 <a href="#captureoptions_csharp" style="color: inherit; text-decoration: inherit;">Capture<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointconfigurationdatacaptureconfigcaptureoption">List&lt;Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Capture<wbr>Option<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#endpointconfigurationdatacaptureconfigcaptureoption">List&lt;Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Capture<wbr>Option&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies what data to capture. Fields are documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1061,7 +1061,7 @@ The following state arguments are supported:
 <a href="#capturecontenttypeheader_csharp" style="color: inherit; text-decoration: inherit;">Capture<wbr>Content<wbr>Type<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointconfigurationdatacaptureconfigcapturecontenttypeheader">Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Capture<wbr>Content<wbr>Type<wbr>Header<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointconfigurationdatacaptureconfigcapturecontenttypeheader">Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Capture<wbr>Content<wbr>Type<wbr>Header</a></span>
     </dt>
     <dd>{{% md %}}The content type headers to capture. Fields are documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1150,7 +1150,7 @@ The following state arguments are supported:
 <a href="#captureoptions_nodejs" style="color: inherit; text-decoration: inherit;">capture<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointconfigurationdatacaptureconfigcaptureoption">Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Capture<wbr>Option<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#endpointconfigurationdatacaptureconfigcaptureoption">Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Capture<wbr>Option[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies what data to capture. Fields are documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1177,7 +1177,7 @@ The following state arguments are supported:
 <a href="#capturecontenttypeheader_nodejs" style="color: inherit; text-decoration: inherit;">capture<wbr>Content<wbr>Type<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointconfigurationdatacaptureconfigcapturecontenttypeheader">Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Capture<wbr>Content<wbr>Type<wbr>Header<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointconfigurationdatacaptureconfigcapturecontenttypeheader">Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Capture<wbr>Content<wbr>Type<wbr>Header</a></span>
     </dt>
     <dd>{{% md %}}The content type headers to capture. Fields are documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1208,7 +1208,7 @@ The following state arguments are supported:
 <a href="#capture_options_python" style="color: inherit; text-decoration: inherit;">capture_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointconfigurationdatacaptureconfigcaptureoption">Sequence[Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Capture<wbr>Option<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointconfigurationdatacaptureconfigcaptureoption">Sequence[Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Capture<wbr>Option]</a></span>
     </dt>
     <dd>{{% md %}}Specifies what data to capture. Fields are documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1235,7 +1235,7 @@ The following state arguments are supported:
 <a href="#capture_content_type_header_python" style="color: inherit; text-decoration: inherit;">capture_<wbr>content_<wbr>type_<wbr>header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointconfigurationdatacaptureconfigcapturecontenttypeheader">Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Capture<wbr>Content<wbr>Type<wbr>Header<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointconfigurationdatacaptureconfigcapturecontenttypeheader">Endpoint<wbr>Configuration<wbr>Data<wbr>Capture<wbr>Config<wbr>Capture<wbr>Content<wbr>Type<wbr>Header</a></span>
     </dt>
     <dd>{{% md %}}The content type headers to capture. Fields are documented below.
 {{% /md %}}</dd><dt class="property-optional"

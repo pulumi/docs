@@ -815,7 +815,7 @@ To modify an application's starting position, first stop the application by sett
 <a href="#cloudwatchloggingoptions_go" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Logging<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationcloudwatchloggingoptions">Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
+        <span class="property-type"><a href="#analyticsapplicationcloudwatchloggingoptions">Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch log stream options to monitor application errors.
 See CloudWatch Logging Options below for more details.
@@ -843,7 +843,7 @@ See CloudWatch Logging Options below for more details.
 <a href="#inputs_go" style="color: inherit; text-decoration: inherit;">Inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputs">Analytics<wbr>Application<wbr>Inputs</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputs">Analytics<wbr>Application<wbr>Inputs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Input configuration of the application. See Inputs below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -861,7 +861,7 @@ See CloudWatch Logging Options below for more details.
 <a href="#outputs_go" style="color: inherit; text-decoration: inherit;">Outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationoutput">[]Analytics<wbr>Application<wbr>Output<wbr>Type</a></span>
+        <span class="property-type"><a href="#analyticsapplicationoutput">[]Analytics<wbr>Application<wbr>Output<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Output destination configuration of the application. See Outputs below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -870,7 +870,7 @@ See CloudWatch Logging Options below for more details.
 <a href="#referencedatasources_go" style="color: inherit; text-decoration: inherit;">Reference<wbr>Data<wbr>Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationreferencedatasources">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources</a></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasources">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An S3 Reference Data Source for the application.
 See Reference Data Sources below for more details.
@@ -1624,7 +1624,7 @@ To modify an application's starting position, first stop the application by sett
 <a href="#state_cloudwatchloggingoptions_go" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Logging<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationcloudwatchloggingoptions">Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
+        <span class="property-type"><a href="#analyticsapplicationcloudwatchloggingoptions">Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch log stream options to monitor application errors.
 See CloudWatch Logging Options below for more details.
@@ -1661,7 +1661,7 @@ See CloudWatch Logging Options below for more details.
 <a href="#state_inputs_go" style="color: inherit; text-decoration: inherit;">Inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputs">Analytics<wbr>Application<wbr>Inputs</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputs">Analytics<wbr>Application<wbr>Inputs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Input configuration of the application. See Inputs below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1688,7 +1688,7 @@ See CloudWatch Logging Options below for more details.
 <a href="#state_outputs_go" style="color: inherit; text-decoration: inherit;">Outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationoutput">[]Analytics<wbr>Application<wbr>Output<wbr>Type</a></span>
+        <span class="property-type"><a href="#analyticsapplicationoutput">[]Analytics<wbr>Application<wbr>Output<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Output destination configuration of the application. See Outputs below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1697,7 +1697,7 @@ See CloudWatch Logging Options below for more details.
 <a href="#state_referencedatasources_go" style="color: inherit; text-decoration: inherit;">Reference<wbr>Data<wbr>Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationreferencedatasources">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources</a></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasources">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An S3 Reference Data Source for the application.
 See Reference Data Sources below for more details.
@@ -2181,7 +2181,7 @@ To modify an application's starting position, first stop the application by sett
 <a href="#schema_csharp" style="color: inherit; text-decoration: inherit;">Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsschema">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschema">Analytics<wbr>Application<wbr>Inputs<wbr>Schema</a></span>
     </dt>
     <dd>{{% md %}}The Schema format of the data in the streaming source. See Source Schema below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2199,7 +2199,7 @@ To modify an application's starting position, first stop the application by sett
 <a href="#kinesisfirehose_csharp" style="color: inherit; text-decoration: inherit;">Kinesis<wbr>Firehose</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputskinesisfirehose">Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Firehose<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputskinesisfirehose">Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Firehose</a></span>
     </dt>
     <dd>{{% md %}}The Kinesis Firehose configuration for the streaming source. Conflicts with `kinesis_stream`.
 See Kinesis Firehose below for more details.
@@ -2209,7 +2209,7 @@ See Kinesis Firehose below for more details.
 <a href="#kinesisstream_csharp" style="color: inherit; text-decoration: inherit;">Kinesis<wbr>Stream</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputskinesisstream">Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Stream<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputskinesisstream">Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Stream</a></span>
     </dt>
     <dd>{{% md %}}The Kinesis Stream configuration for the streaming source. Conflicts with `kinesis_firehose`.
 See Kinesis Stream below for more details.
@@ -2219,7 +2219,7 @@ See Kinesis Stream below for more details.
 <a href="#parallelism_csharp" style="color: inherit; text-decoration: inherit;">Parallelism</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsparallelism">Analytics<wbr>Application<wbr>Inputs<wbr>Parallelism<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsparallelism">Analytics<wbr>Application<wbr>Inputs<wbr>Parallelism</a></span>
     </dt>
     <dd>{{% md %}}The number of Parallel in-application streams to create.
 See Parallelism below for more details.
@@ -2229,7 +2229,7 @@ See Parallelism below for more details.
 <a href="#processingconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Processing<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsprocessingconfiguration">Analytics<wbr>Application<wbr>Inputs<wbr>Processing<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsprocessingconfiguration">Analytics<wbr>Application<wbr>Inputs<wbr>Processing<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The Processing Configuration to transform records as they are received from the stream.
 See Processing Configuration below for more details.
@@ -2239,7 +2239,7 @@ See Processing Configuration below for more details.
 <a href="#startingpositionconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Starting<wbr>Position<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsstartingpositionconfiguration">List&lt;Analytics<wbr>Application<wbr>Inputs<wbr>Starting<wbr>Position<wbr>Configuration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsstartingpositionconfiguration">List&lt;Analytics<wbr>Application<wbr>Inputs<wbr>Starting<wbr>Position<wbr>Configuration&gt;</a></span>
     </dt>
     <dd>{{% md %}}The point at which the application starts processing records from the streaming source.
 See Starting Position Configuration below for more details.
@@ -2359,7 +2359,7 @@ See Starting Position Configuration below for more details.
 <a href="#schema_nodejs" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsschema">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschema">Analytics<wbr>Application<wbr>Inputs<wbr>Schema</a></span>
     </dt>
     <dd>{{% md %}}The Schema format of the data in the streaming source. See Source Schema below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2377,7 +2377,7 @@ See Starting Position Configuration below for more details.
 <a href="#kinesisfirehose_nodejs" style="color: inherit; text-decoration: inherit;">kinesis<wbr>Firehose</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputskinesisfirehose">Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Firehose<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputskinesisfirehose">Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Firehose</a></span>
     </dt>
     <dd>{{% md %}}The Kinesis Firehose configuration for the streaming source. Conflicts with `kinesis_stream`.
 See Kinesis Firehose below for more details.
@@ -2387,7 +2387,7 @@ See Kinesis Firehose below for more details.
 <a href="#kinesisstream_nodejs" style="color: inherit; text-decoration: inherit;">kinesis<wbr>Stream</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputskinesisstream">Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Stream<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputskinesisstream">Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Stream</a></span>
     </dt>
     <dd>{{% md %}}The Kinesis Stream configuration for the streaming source. Conflicts with `kinesis_firehose`.
 See Kinesis Stream below for more details.
@@ -2397,7 +2397,7 @@ See Kinesis Stream below for more details.
 <a href="#parallelism_nodejs" style="color: inherit; text-decoration: inherit;">parallelism</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsparallelism">Analytics<wbr>Application<wbr>Inputs<wbr>Parallelism<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsparallelism">Analytics<wbr>Application<wbr>Inputs<wbr>Parallelism</a></span>
     </dt>
     <dd>{{% md %}}The number of Parallel in-application streams to create.
 See Parallelism below for more details.
@@ -2407,7 +2407,7 @@ See Parallelism below for more details.
 <a href="#processingconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">processing<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsprocessingconfiguration">Analytics<wbr>Application<wbr>Inputs<wbr>Processing<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsprocessingconfiguration">Analytics<wbr>Application<wbr>Inputs<wbr>Processing<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The Processing Configuration to transform records as they are received from the stream.
 See Processing Configuration below for more details.
@@ -2417,7 +2417,7 @@ See Processing Configuration below for more details.
 <a href="#startingpositionconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">starting<wbr>Position<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsstartingpositionconfiguration">Analytics<wbr>Application<wbr>Inputs<wbr>Starting<wbr>Position<wbr>Configuration<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsstartingpositionconfiguration">Analytics<wbr>Application<wbr>Inputs<wbr>Starting<wbr>Position<wbr>Configuration[]</a></span>
     </dt>
     <dd>{{% md %}}The point at which the application starts processing records from the streaming source.
 See Starting Position Configuration below for more details.
@@ -2448,7 +2448,7 @@ See Starting Position Configuration below for more details.
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsschema">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschema">Analytics<wbr>Application<wbr>Inputs<wbr>Schema</a></span>
     </dt>
     <dd>{{% md %}}The Schema format of the data in the streaming source. See Source Schema below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2466,7 +2466,7 @@ See Starting Position Configuration below for more details.
 <a href="#kinesis_firehose_python" style="color: inherit; text-decoration: inherit;">kinesis_<wbr>firehose</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputskinesisfirehose">Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Firehose<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputskinesisfirehose">Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Firehose</a></span>
     </dt>
     <dd>{{% md %}}The Kinesis Firehose configuration for the streaming source. Conflicts with `kinesis_stream`.
 See Kinesis Firehose below for more details.
@@ -2476,7 +2476,7 @@ See Kinesis Firehose below for more details.
 <a href="#kinesis_stream_python" style="color: inherit; text-decoration: inherit;">kinesis_<wbr>stream</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputskinesisstream">Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Stream<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputskinesisstream">Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Stream</a></span>
     </dt>
     <dd>{{% md %}}The Kinesis Stream configuration for the streaming source. Conflicts with `kinesis_firehose`.
 See Kinesis Stream below for more details.
@@ -2486,7 +2486,7 @@ See Kinesis Stream below for more details.
 <a href="#parallelism_python" style="color: inherit; text-decoration: inherit;">parallelism</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsparallelism">Analytics<wbr>Application<wbr>Inputs<wbr>Parallelism<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsparallelism">Analytics<wbr>Application<wbr>Inputs<wbr>Parallelism</a></span>
     </dt>
     <dd>{{% md %}}The number of Parallel in-application streams to create.
 See Parallelism below for more details.
@@ -2496,7 +2496,7 @@ See Parallelism below for more details.
 <a href="#processing_configuration_python" style="color: inherit; text-decoration: inherit;">processing_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsprocessingconfiguration">Analytics<wbr>Application<wbr>Inputs<wbr>Processing<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsprocessingconfiguration">Analytics<wbr>Application<wbr>Inputs<wbr>Processing<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The Processing Configuration to transform records as they are received from the stream.
 See Processing Configuration below for more details.
@@ -2506,7 +2506,7 @@ See Processing Configuration below for more details.
 <a href="#starting_position_configurations_python" style="color: inherit; text-decoration: inherit;">starting_<wbr>position_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsstartingpositionconfiguration">Sequence[Analytics<wbr>Application<wbr>Inputs<wbr>Starting<wbr>Position<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsstartingpositionconfiguration">Sequence[Analytics<wbr>Application<wbr>Inputs<wbr>Starting<wbr>Position<wbr>Configuration]</a></span>
     </dt>
     <dd>{{% md %}}The point at which the application starts processing records from the streaming source.
 See Starting Position Configuration below for more details.
@@ -2764,7 +2764,7 @@ See Starting Position Configuration below for more details.
 <a href="#lambda_csharp" style="color: inherit; text-decoration: inherit;">Lambda</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsprocessingconfigurationlambda">Analytics<wbr>Application<wbr>Inputs<wbr>Processing<wbr>Configuration<wbr>Lambda<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsprocessingconfigurationlambda">Analytics<wbr>Application<wbr>Inputs<wbr>Processing<wbr>Configuration<wbr>Lambda</a></span>
     </dt>
     <dd>{{% md %}}The Lambda function configuration. See Lambda below for more details.
 {{% /md %}}</dd></dl>
@@ -2790,7 +2790,7 @@ See Starting Position Configuration below for more details.
 <a href="#lambda_nodejs" style="color: inherit; text-decoration: inherit;">lambda</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsprocessingconfigurationlambda">Analytics<wbr>Application<wbr>Inputs<wbr>Processing<wbr>Configuration<wbr>Lambda<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsprocessingconfigurationlambda">Analytics<wbr>Application<wbr>Inputs<wbr>Processing<wbr>Configuration<wbr>Lambda</a></span>
     </dt>
     <dd>{{% md %}}The Lambda function configuration. See Lambda below for more details.
 {{% /md %}}</dd></dl>
@@ -2803,7 +2803,7 @@ See Starting Position Configuration below for more details.
 <a href="#lambda__python" style="color: inherit; text-decoration: inherit;">lambda_</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsprocessingconfigurationlambda">Analytics<wbr>Application<wbr>Inputs<wbr>Processing<wbr>Configuration<wbr>Lambda<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsprocessingconfigurationlambda">Analytics<wbr>Application<wbr>Inputs<wbr>Processing<wbr>Configuration<wbr>Lambda</a></span>
     </dt>
     <dd>{{% md %}}The Lambda function configuration. See Lambda below for more details.
 {{% /md %}}</dd></dl>
@@ -2908,7 +2908,7 @@ See Starting Position Configuration below for more details.
 <a href="#recordcolumns_csharp" style="color: inherit; text-decoration: inherit;">Record<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordcolumn">List&lt;Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Column<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordcolumn">List&lt;Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Column&gt;</a></span>
     </dt>
     <dd>{{% md %}}The Record Column mapping for the streaming source data element.
 See Record Columns below for more details.
@@ -2918,7 +2918,7 @@ See Record Columns below for more details.
 <a href="#recordformat_csharp" style="color: inherit; text-decoration: inherit;">Record<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformat">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformat">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}The Record Format and mapping information to schematize a record.
 See Record Format below for more details.
@@ -2974,7 +2974,7 @@ See Record Format below for more details.
 <a href="#recordcolumns_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordcolumn">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Column<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordcolumn">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Column[]</a></span>
     </dt>
     <dd>{{% md %}}The Record Column mapping for the streaming source data element.
 See Record Columns below for more details.
@@ -2984,7 +2984,7 @@ See Record Columns below for more details.
 <a href="#recordformat_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformat">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformat">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}The Record Format and mapping information to schematize a record.
 See Record Format below for more details.
@@ -3007,7 +3007,7 @@ See Record Format below for more details.
 <a href="#record_columns_python" style="color: inherit; text-decoration: inherit;">record_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordcolumn">Sequence[Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Column<wbr>Args]</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordcolumn">Sequence[Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Column]</a></span>
     </dt>
     <dd>{{% md %}}The Record Column mapping for the streaming source data element.
 See Record Columns below for more details.
@@ -3017,7 +3017,7 @@ See Record Columns below for more details.
 <a href="#record_format_python" style="color: inherit; text-decoration: inherit;">record_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformat">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformat">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}The Record Format and mapping information to schematize a record.
 See Record Format below for more details.
@@ -3168,7 +3168,7 @@ See Record Format below for more details.
 <a href="#mappingparameters_csharp" style="color: inherit; text-decoration: inherit;">Mapping<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformatmappingparameters">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformatmappingparameters">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The Mapping Information for the record format.
 See Mapping Parameters below for more details.
@@ -3214,7 +3214,7 @@ See Mapping Parameters below for more details.
 <a href="#mappingparameters_nodejs" style="color: inherit; text-decoration: inherit;">mapping<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformatmappingparameters">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformatmappingparameters">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The Mapping Information for the record format.
 See Mapping Parameters below for more details.
@@ -3237,7 +3237,7 @@ See Mapping Parameters below for more details.
 <a href="#mapping_parameters_python" style="color: inherit; text-decoration: inherit;">mapping_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformatmappingparameters">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformatmappingparameters">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The Mapping Information for the record format.
 See Mapping Parameters below for more details.
@@ -3262,7 +3262,7 @@ See Mapping Parameters below for more details.
 <a href="#csv_csharp" style="color: inherit; text-decoration: inherit;">Csv</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformatmappingparameterscsv">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformatmappingparameterscsv">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv</a></span>
     </dt>
     <dd>{{% md %}}Mapping information when the record format uses delimiters.
 See CSV Mapping Parameters below for more details.
@@ -3272,7 +3272,7 @@ See CSV Mapping Parameters below for more details.
 <a href="#json_csharp" style="color: inherit; text-decoration: inherit;">Json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformatmappingparametersjson">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformatmappingparametersjson">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json</a></span>
     </dt>
     <dd>{{% md %}}Mapping information when JSON is the record format on the streaming source.
 See JSON Mapping Parameters below for more details.
@@ -3310,7 +3310,7 @@ See JSON Mapping Parameters below for more details.
 <a href="#csv_nodejs" style="color: inherit; text-decoration: inherit;">csv</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformatmappingparameterscsv">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformatmappingparameterscsv">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv</a></span>
     </dt>
     <dd>{{% md %}}Mapping information when the record format uses delimiters.
 See CSV Mapping Parameters below for more details.
@@ -3320,7 +3320,7 @@ See CSV Mapping Parameters below for more details.
 <a href="#json_nodejs" style="color: inherit; text-decoration: inherit;">json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformatmappingparametersjson">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformatmappingparametersjson">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json</a></span>
     </dt>
     <dd>{{% md %}}Mapping information when JSON is the record format on the streaming source.
 See JSON Mapping Parameters below for more details.
@@ -3334,7 +3334,7 @@ See JSON Mapping Parameters below for more details.
 <a href="#csv_python" style="color: inherit; text-decoration: inherit;">csv</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformatmappingparameterscsv">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformatmappingparameterscsv">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv</a></span>
     </dt>
     <dd>{{% md %}}Mapping information when the record format uses delimiters.
 See CSV Mapping Parameters below for more details.
@@ -3344,7 +3344,7 @@ See CSV Mapping Parameters below for more details.
 <a href="#json_python" style="color: inherit; text-decoration: inherit;">json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformatmappingparametersjson">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformatmappingparametersjson">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json</a></span>
     </dt>
     <dd>{{% md %}}Mapping information when JSON is the record format on the streaming source.
 See JSON Mapping Parameters below for more details.
@@ -3567,7 +3567,7 @@ See JSON Mapping Parameters below for more details.
 <a href="#schema_csharp" style="color: inherit; text-decoration: inherit;">Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationoutputschema">Analytics<wbr>Application<wbr>Output<wbr>Schema<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationoutputschema">Analytics<wbr>Application<wbr>Output<wbr>Schema</a></span>
     </dt>
     <dd>{{% md %}}The Schema format of the data written to the destination. See Destination Schema below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3585,7 +3585,7 @@ See JSON Mapping Parameters below for more details.
 <a href="#kinesisfirehose_csharp" style="color: inherit; text-decoration: inherit;">Kinesis<wbr>Firehose</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationoutputkinesisfirehose">Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Firehose<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationoutputkinesisfirehose">Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Firehose</a></span>
     </dt>
     <dd>{{% md %}}The Kinesis Firehose configuration for the destination stream. Conflicts with `kinesis_stream`.
 See Kinesis Firehose below for more details.
@@ -3595,7 +3595,7 @@ See Kinesis Firehose below for more details.
 <a href="#kinesisstream_csharp" style="color: inherit; text-decoration: inherit;">Kinesis<wbr>Stream</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationoutputkinesisstream">Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Stream<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationoutputkinesisstream">Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Stream</a></span>
     </dt>
     <dd>{{% md %}}The Kinesis Stream configuration for the destination stream. Conflicts with `kinesis_firehose`.
 See Kinesis Stream below for more details.
@@ -3605,7 +3605,7 @@ See Kinesis Stream below for more details.
 <a href="#lambda_csharp" style="color: inherit; text-decoration: inherit;">Lambda</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationoutputlambda">Analytics<wbr>Application<wbr>Output<wbr>Lambda<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationoutputlambda">Analytics<wbr>Application<wbr>Output<wbr>Lambda</a></span>
     </dt>
     <dd>{{% md %}}The Lambda function destination. See Lambda below for more details.
 {{% /md %}}</dd></dl>
@@ -3687,7 +3687,7 @@ See Kinesis Stream below for more details.
 <a href="#schema_nodejs" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationoutputschema">Analytics<wbr>Application<wbr>Output<wbr>Schema<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationoutputschema">Analytics<wbr>Application<wbr>Output<wbr>Schema</a></span>
     </dt>
     <dd>{{% md %}}The Schema format of the data written to the destination. See Destination Schema below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3705,7 +3705,7 @@ See Kinesis Stream below for more details.
 <a href="#kinesisfirehose_nodejs" style="color: inherit; text-decoration: inherit;">kinesis<wbr>Firehose</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationoutputkinesisfirehose">Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Firehose<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationoutputkinesisfirehose">Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Firehose</a></span>
     </dt>
     <dd>{{% md %}}The Kinesis Firehose configuration for the destination stream. Conflicts with `kinesis_stream`.
 See Kinesis Firehose below for more details.
@@ -3715,7 +3715,7 @@ See Kinesis Firehose below for more details.
 <a href="#kinesisstream_nodejs" style="color: inherit; text-decoration: inherit;">kinesis<wbr>Stream</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationoutputkinesisstream">Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Stream<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationoutputkinesisstream">Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Stream</a></span>
     </dt>
     <dd>{{% md %}}The Kinesis Stream configuration for the destination stream. Conflicts with `kinesis_firehose`.
 See Kinesis Stream below for more details.
@@ -3725,7 +3725,7 @@ See Kinesis Stream below for more details.
 <a href="#lambda_nodejs" style="color: inherit; text-decoration: inherit;">lambda</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationoutputlambda">Analytics<wbr>Application<wbr>Output<wbr>Lambda<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationoutputlambda">Analytics<wbr>Application<wbr>Output<wbr>Lambda</a></span>
     </dt>
     <dd>{{% md %}}The Lambda function destination. See Lambda below for more details.
 {{% /md %}}</dd></dl>
@@ -3747,7 +3747,7 @@ See Kinesis Stream below for more details.
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationoutputschema">Analytics<wbr>Application<wbr>Output<wbr>Schema<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationoutputschema">Analytics<wbr>Application<wbr>Output<wbr>Schema</a></span>
     </dt>
     <dd>{{% md %}}The Schema format of the data written to the destination. See Destination Schema below for more details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3765,7 +3765,7 @@ See Kinesis Stream below for more details.
 <a href="#kinesis_firehose_python" style="color: inherit; text-decoration: inherit;">kinesis_<wbr>firehose</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationoutputkinesisfirehose">Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Firehose<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationoutputkinesisfirehose">Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Firehose</a></span>
     </dt>
     <dd>{{% md %}}The Kinesis Firehose configuration for the destination stream. Conflicts with `kinesis_stream`.
 See Kinesis Firehose below for more details.
@@ -3775,7 +3775,7 @@ See Kinesis Firehose below for more details.
 <a href="#kinesis_stream_python" style="color: inherit; text-decoration: inherit;">kinesis_<wbr>stream</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationoutputkinesisstream">Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Stream<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationoutputkinesisstream">Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Stream</a></span>
     </dt>
     <dd>{{% md %}}The Kinesis Stream configuration for the destination stream. Conflicts with `kinesis_firehose`.
 See Kinesis Stream below for more details.
@@ -3785,7 +3785,7 @@ See Kinesis Stream below for more details.
 <a href="#lambda__python" style="color: inherit; text-decoration: inherit;">lambda_</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationoutputlambda">Analytics<wbr>Application<wbr>Output<wbr>Lambda<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationoutputlambda">Analytics<wbr>Application<wbr>Output<wbr>Lambda</a></span>
     </dt>
     <dd>{{% md %}}The Lambda function destination. See Lambda below for more details.
 {{% /md %}}</dd></dl>
@@ -4124,7 +4124,7 @@ See Kinesis Stream below for more details.
 <a href="#s3_csharp" style="color: inherit; text-decoration: inherit;">S3</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcess3">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>S3Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcess3">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>S3</a></span>
     </dt>
     <dd>{{% md %}}The S3 configuration for the reference data source. See S3 Reference below for more details.
 {{% /md %}}</dd><dt class="property-required"
@@ -4133,7 +4133,7 @@ See Kinesis Stream below for more details.
 <a href="#schema_csharp" style="color: inherit; text-decoration: inherit;">Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschema">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschema">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema</a></span>
     </dt>
     <dd>{{% md %}}The Schema format of the data in the streaming source. See Source Schema below for more details.
 {{% /md %}}</dd><dt class="property-required"
@@ -4204,7 +4204,7 @@ See Kinesis Stream below for more details.
 <a href="#s3_nodejs" style="color: inherit; text-decoration: inherit;">s3</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcess3">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>S3Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcess3">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>S3</a></span>
     </dt>
     <dd>{{% md %}}The S3 configuration for the reference data source. See S3 Reference below for more details.
 {{% /md %}}</dd><dt class="property-required"
@@ -4213,7 +4213,7 @@ See Kinesis Stream below for more details.
 <a href="#schema_nodejs" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschema">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschema">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema</a></span>
     </dt>
     <dd>{{% md %}}The Schema format of the data in the streaming source. See Source Schema below for more details.
 {{% /md %}}</dd><dt class="property-required"
@@ -4244,7 +4244,7 @@ See Kinesis Stream below for more details.
 <a href="#s3_python" style="color: inherit; text-decoration: inherit;">s3</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcess3">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>S3Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcess3">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>S3</a></span>
     </dt>
     <dd>{{% md %}}The S3 configuration for the reference data source. See S3 Reference below for more details.
 {{% /md %}}</dd><dt class="property-required"
@@ -4253,7 +4253,7 @@ See Kinesis Stream below for more details.
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschema">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschema">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema</a></span>
     </dt>
     <dd>{{% md %}}The Schema format of the data in the streaming source. See Source Schema below for more details.
 {{% /md %}}</dd><dt class="property-required"
@@ -4412,7 +4412,7 @@ See Kinesis Stream below for more details.
 <a href="#recordcolumns_csharp" style="color: inherit; text-decoration: inherit;">Record<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordcolumn">List&lt;Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Column<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordcolumn">List&lt;Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Column&gt;</a></span>
     </dt>
     <dd>{{% md %}}The Record Column mapping for the streaming source data element.
 See Record Columns below for more details.
@@ -4422,7 +4422,7 @@ See Record Columns below for more details.
 <a href="#recordformat_csharp" style="color: inherit; text-decoration: inherit;">Record<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformat">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformat">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}The Record Format and mapping information to schematize a record.
 See Record Format below for more details.
@@ -4478,7 +4478,7 @@ See Record Format below for more details.
 <a href="#recordcolumns_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordcolumn">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Column<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordcolumn">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Column[]</a></span>
     </dt>
     <dd>{{% md %}}The Record Column mapping for the streaming source data element.
 See Record Columns below for more details.
@@ -4488,7 +4488,7 @@ See Record Columns below for more details.
 <a href="#recordformat_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformat">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformat">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}The Record Format and mapping information to schematize a record.
 See Record Format below for more details.
@@ -4511,7 +4511,7 @@ See Record Format below for more details.
 <a href="#record_columns_python" style="color: inherit; text-decoration: inherit;">record_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordcolumn">Sequence[Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Column<wbr>Args]</a></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordcolumn">Sequence[Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Column]</a></span>
     </dt>
     <dd>{{% md %}}The Record Column mapping for the streaming source data element.
 See Record Columns below for more details.
@@ -4521,7 +4521,7 @@ See Record Columns below for more details.
 <a href="#record_format_python" style="color: inherit; text-decoration: inherit;">record_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformat">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformat">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}The Record Format and mapping information to schematize a record.
 See Record Format below for more details.
@@ -4672,7 +4672,7 @@ See Record Format below for more details.
 <a href="#mappingparameters_csharp" style="color: inherit; text-decoration: inherit;">Mapping<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameters">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameters">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The Mapping Information for the record format.
 See Mapping Parameters below for more details.
@@ -4718,7 +4718,7 @@ See Mapping Parameters below for more details.
 <a href="#mappingparameters_nodejs" style="color: inherit; text-decoration: inherit;">mapping<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameters">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameters">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The Mapping Information for the record format.
 See Mapping Parameters below for more details.
@@ -4741,7 +4741,7 @@ See Mapping Parameters below for more details.
 <a href="#mapping_parameters_python" style="color: inherit; text-decoration: inherit;">mapping_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameters">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameters">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The Mapping Information for the record format.
 See Mapping Parameters below for more details.
@@ -4766,7 +4766,7 @@ See Mapping Parameters below for more details.
 <a href="#csv_csharp" style="color: inherit; text-decoration: inherit;">Csv</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameterscsv">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameterscsv">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv</a></span>
     </dt>
     <dd>{{% md %}}Mapping information when the record format uses delimiters.
 See CSV Mapping Parameters below for more details.
@@ -4776,7 +4776,7 @@ See CSV Mapping Parameters below for more details.
 <a href="#json_csharp" style="color: inherit; text-decoration: inherit;">Json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparametersjson">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparametersjson">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json</a></span>
     </dt>
     <dd>{{% md %}}Mapping information when JSON is the record format on the streaming source.
 See JSON Mapping Parameters below for more details.
@@ -4814,7 +4814,7 @@ See JSON Mapping Parameters below for more details.
 <a href="#csv_nodejs" style="color: inherit; text-decoration: inherit;">csv</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameterscsv">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameterscsv">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv</a></span>
     </dt>
     <dd>{{% md %}}Mapping information when the record format uses delimiters.
 See CSV Mapping Parameters below for more details.
@@ -4824,7 +4824,7 @@ See CSV Mapping Parameters below for more details.
 <a href="#json_nodejs" style="color: inherit; text-decoration: inherit;">json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparametersjson">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparametersjson">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json</a></span>
     </dt>
     <dd>{{% md %}}Mapping information when JSON is the record format on the streaming source.
 See JSON Mapping Parameters below for more details.
@@ -4838,7 +4838,7 @@ See JSON Mapping Parameters below for more details.
 <a href="#csv_python" style="color: inherit; text-decoration: inherit;">csv</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameterscsv">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameterscsv">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv</a></span>
     </dt>
     <dd>{{% md %}}Mapping information when the record format uses delimiters.
 See CSV Mapping Parameters below for more details.
@@ -4848,7 +4848,7 @@ See CSV Mapping Parameters below for more details.
 <a href="#json_python" style="color: inherit; text-decoration: inherit;">json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparametersjson">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json<wbr>Args</a></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparametersjson">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json</a></span>
     </dt>
     <dd>{{% md %}}Mapping information when JSON is the record format on the streaming source.
 See JSON Mapping Parameters below for more details.

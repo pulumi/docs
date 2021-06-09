@@ -243,7 +243,7 @@ The UsagePlan resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#apistages_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Stages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usageplanapistage">[]Usage<wbr>Plan<wbr>Api<wbr>Stage</a></span>
+        <span class="property-type"><a href="#usageplanapistage">[]Usage<wbr>Plan<wbr>Api<wbr>Stage<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The associated API stages of the usage plan.
 {{% /md %}}</dd><dt class="property-optional"
@@ -279,7 +279,7 @@ The UsagePlan resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#quotasettings_go" style="color: inherit; text-decoration: inherit;">Quota<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usageplanquotasettings">Usage<wbr>Plan<wbr>Quota<wbr>Settings</a></span>
+        <span class="property-type"><a href="#usageplanquotasettings">Usage<wbr>Plan<wbr>Quota<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The quota settings of the usage plan.
 {{% /md %}}</dd><dt class="property-optional"
@@ -306,7 +306,7 @@ The UsagePlan resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#throttlesettings_go" style="color: inherit; text-decoration: inherit;">Throttle<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usageplanthrottlesettings">Usage<wbr>Plan<wbr>Throttle<wbr>Settings</a></span>
+        <span class="property-type"><a href="#usageplanthrottlesettings">Usage<wbr>Plan<wbr>Throttle<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The throttling limits of the usage plan.
 {{% /md %}}</dd></dl>
@@ -781,7 +781,7 @@ The following state arguments are supported:
 <a href="#state_apistages_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Stages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usageplanapistage">[]Usage<wbr>Plan<wbr>Api<wbr>Stage</a></span>
+        <span class="property-type"><a href="#usageplanapistage">[]Usage<wbr>Plan<wbr>Api<wbr>Stage<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The associated API stages of the usage plan.
 {{% /md %}}</dd><dt class="property-optional"
@@ -826,7 +826,7 @@ The following state arguments are supported:
 <a href="#state_quotasettings_go" style="color: inherit; text-decoration: inherit;">Quota<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usageplanquotasettings">Usage<wbr>Plan<wbr>Quota<wbr>Settings</a></span>
+        <span class="property-type"><a href="#usageplanquotasettings">Usage<wbr>Plan<wbr>Quota<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The quota settings of the usage plan.
 {{% /md %}}</dd><dt class="property-optional"
@@ -853,7 +853,7 @@ The following state arguments are supported:
 <a href="#state_throttlesettings_go" style="color: inherit; text-decoration: inherit;">Throttle<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usageplanthrottlesettings">Usage<wbr>Plan<wbr>Throttle<wbr>Settings</a></span>
+        <span class="property-type"><a href="#usageplanthrottlesettings">Usage<wbr>Plan<wbr>Throttle<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The throttling limits of the usage plan.
 {{% /md %}}</dd></dl>

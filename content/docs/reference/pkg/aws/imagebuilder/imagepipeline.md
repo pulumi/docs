@@ -431,7 +431,7 @@ The ImagePipeline resource accepts the following [input]({{< relref "/docs/intro
 <a href="#imagetestsconfiguration_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Tests<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagepipelineimagetestsconfiguration">Image<wbr>Pipeline<wbr>Image<wbr>Tests<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#imagepipelineimagetestsconfiguration">Image<wbr>Pipeline<wbr>Image<wbr>Tests<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with image tests configuration. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -449,7 +449,7 @@ The ImagePipeline resource accepts the following [input]({{< relref "/docs/intro
 <a href="#schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagepipelineschedule">Image<wbr>Pipeline<wbr>Schedule</a></span>
+        <span class="property-type"><a href="#imagepipelineschedule">Image<wbr>Pipeline<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with schedule settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1346,7 +1346,7 @@ The following state arguments are supported:
 <a href="#state_imagetestsconfiguration_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Tests<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagepipelineimagetestsconfiguration">Image<wbr>Pipeline<wbr>Image<wbr>Tests<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#imagepipelineimagetestsconfiguration">Image<wbr>Pipeline<wbr>Image<wbr>Tests<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with image tests configuration. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1382,7 +1382,7 @@ The following state arguments are supported:
 <a href="#state_schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagepipelineschedule">Image<wbr>Pipeline<wbr>Schedule</a></span>
+        <span class="property-type"><a href="#imagepipelineschedule">Image<wbr>Pipeline<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with schedule settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"

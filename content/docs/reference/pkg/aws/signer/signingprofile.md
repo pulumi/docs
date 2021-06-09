@@ -398,7 +398,7 @@ The SigningProfile resource accepts the following [input]({{< relref "/docs/intr
 <a href="#signaturevalidityperiod_go" style="color: inherit; text-decoration: inherit;">Signature<wbr>Validity<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#signingprofilesignaturevalidityperiod">Signing<wbr>Profile<wbr>Signature<wbr>Validity<wbr>Period</a></span>
+        <span class="property-type"><a href="#signingprofilesignaturevalidityperiod">Signing<wbr>Profile<wbr>Signature<wbr>Validity<wbr>Period<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The validity period for a signing job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1110,7 +1110,7 @@ The following state arguments are supported:
 <a href="#state_revocationrecords_go" style="color: inherit; text-decoration: inherit;">Revocation<wbr>Records</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#signingprofilerevocationrecord">[]Signing<wbr>Profile<wbr>Revocation<wbr>Record</a></span>
+        <span class="property-type"><a href="#signingprofilerevocationrecord">[]Signing<wbr>Profile<wbr>Revocation<wbr>Record<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Revocation information for a signing profile.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1119,7 +1119,7 @@ The following state arguments are supported:
 <a href="#state_signaturevalidityperiod_go" style="color: inherit; text-decoration: inherit;">Signature<wbr>Validity<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#signingprofilesignaturevalidityperiod">Signing<wbr>Profile<wbr>Signature<wbr>Validity<wbr>Period</a></span>
+        <span class="property-type"><a href="#signingprofilesignaturevalidityperiod">Signing<wbr>Profile<wbr>Signature<wbr>Validity<wbr>Period<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The validity period for a signing job.
 {{% /md %}}</dd><dt class="property-optional"

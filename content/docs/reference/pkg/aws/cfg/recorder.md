@@ -360,7 +360,7 @@ The Recorder resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#recordinggroup_go" style="color: inherit; text-decoration: inherit;">Recording<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recorderrecordinggroup">Recorder<wbr>Recording<wbr>Group</a></span>
+        <span class="property-type"><a href="#recorderrecordinggroup">Recorder<wbr>Recording<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Recording group - see below.
 {{% /md %}}</dd></dl>
@@ -658,7 +658,7 @@ The following state arguments are supported:
 <a href="#state_recordinggroup_go" style="color: inherit; text-decoration: inherit;">Recording<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recorderrecordinggroup">Recorder<wbr>Recording<wbr>Group</a></span>
+        <span class="property-type"><a href="#recorderrecordinggroup">Recorder<wbr>Recording<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Recording group - see below.
 {{% /md %}}</dd><dt class="property-optional"

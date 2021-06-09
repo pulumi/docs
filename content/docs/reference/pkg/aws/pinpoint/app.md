@@ -355,7 +355,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#campaignhook_go" style="color: inherit; text-decoration: inherit;">Campaign<wbr>Hook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appcampaignhook">App<wbr>Campaign<wbr>Hook</a></span>
+        <span class="property-type"><a href="#appcampaignhook">App<wbr>Campaign<wbr>Hook<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own
 {{% /md %}}</dd><dt class="property-optional"
@@ -364,7 +364,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#limits_go" style="color: inherit; text-decoration: inherit;">Limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applimits">App<wbr>Limits</a></span>
+        <span class="property-type"><a href="#applimits">App<wbr>Limits<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own
 {{% /md %}}</dd><dt class="property-optional"
@@ -391,7 +391,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#quiettime_go" style="color: inherit; text-decoration: inherit;">Quiet<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appquiettime">App<wbr>Quiet<wbr>Time</a></span>
+        <span class="property-type"><a href="#appquiettime">App<wbr>Quiet<wbr>Time<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default quiet time for the app. Each campaign for this app sends no messages during this time unless the campaign overrides the default with a quiet time of its own
 {{% /md %}}</dd><dt class="property-optional"
@@ -920,7 +920,7 @@ The following state arguments are supported:
 <a href="#state_campaignhook_go" style="color: inherit; text-decoration: inherit;">Campaign<wbr>Hook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appcampaignhook">App<wbr>Campaign<wbr>Hook</a></span>
+        <span class="property-type"><a href="#appcampaignhook">App<wbr>Campaign<wbr>Hook<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own
 {{% /md %}}</dd><dt class="property-optional"
@@ -929,7 +929,7 @@ The following state arguments are supported:
 <a href="#state_limits_go" style="color: inherit; text-decoration: inherit;">Limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applimits">App<wbr>Limits</a></span>
+        <span class="property-type"><a href="#applimits">App<wbr>Limits<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own
 {{% /md %}}</dd><dt class="property-optional"
@@ -956,7 +956,7 @@ The following state arguments are supported:
 <a href="#state_quiettime_go" style="color: inherit; text-decoration: inherit;">Quiet<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appquiettime">App<wbr>Quiet<wbr>Time</a></span>
+        <span class="property-type"><a href="#appquiettime">App<wbr>Quiet<wbr>Time<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default quiet time for the app. Each campaign for this app sends no messages during this time unless the campaign overrides the default with a quiet time of its own
 {{% /md %}}</dd><dt class="property-optional"
