@@ -36,6 +36,7 @@ class MyStack : Stack
         var instance = new AzureNative.DeviceUpdate.Instance("instance", new AzureNative.DeviceUpdate.InstanceArgs
         {
             AccountName = "contoso",
+            EnableDiagnostics = false,
             InstanceName = "blue",
             IotHubs = 
             {
@@ -73,8 +74,9 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := deviceupdate.NewInstance(ctx, "instance", &deviceupdate.InstanceArgs{
-			AccountName:  pulumi.String("contoso"),
-			InstanceName: pulumi.String("blue"),
+			AccountName:       pulumi.String("contoso"),
+			EnableDiagnostics: pulumi.Bool(false),
+			InstanceName:      pulumi.String("blue"),
 			IotHubs: deviceupdate.IotHubSettingsArray{
 				&deviceupdate.IotHubSettingsArgs{
 					EventHubConnectionString: pulumi.String("string"),
@@ -107,6 +109,7 @@ import pulumi_azure_native as azure_native
 
 instance = azure_native.deviceupdate.Instance("instance",
     account_name="contoso",
+    enable_diagnostics=False,
     instance_name="blue",
     iot_hubs=[azure_native.deviceupdate.IotHubSettingsArgs(
         event_hub_connection_string="string",
@@ -131,6 +134,7 @@ import * as azure_native from "@pulumi/azure-native";
 
 const instance = new azure_native.deviceupdate.Instance("instance", {
     accountName: "contoso",
+    enableDiagnostics: false,
     instanceName: "blue",
     iotHubs: [{
         eventHubConnectionString: "string",
@@ -168,6 +172,7 @@ const instance = new azure_native.deviceupdate.Instance("instance", {
 <span class="k">def </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
              <span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">enable_diagnostics</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">iot_hubs</span><span class="p">:</span> <span class="nx">Optional[Sequence[IotHubSettingsArgs]]</span> = None<span class="p">,</span>
              <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -318,6 +323,14 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="enablediagnostics_csharp">
+<a href="#enablediagnostics_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Diagnostics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables or Disables the diagnostic logs collection{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="instancename_csharp">
 <a href="#instancename_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Name</a>
 </span>
@@ -369,6 +382,14 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enablediagnostics_go">
+<a href="#enablediagnostics_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Diagnostics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables or Disables the diagnostic logs collection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancename_go">
 <a href="#instancename_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Name</a>
@@ -422,6 +443,14 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="enablediagnostics_nodejs">
+<a href="#enablediagnostics_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Diagnostics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enables or Disables the diagnostic logs collection{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="instancename_nodejs">
 <a href="#instancename_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Name</a>
 </span>
@@ -473,6 +502,14 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enable_diagnostics_python">
+<a href="#enable_diagnostics_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>diagnostics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables or Disables the diagnostic logs collection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_name_python">
 <a href="#instance_name_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>name</a>

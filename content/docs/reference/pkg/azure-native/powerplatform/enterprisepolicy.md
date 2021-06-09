@@ -40,6 +40,7 @@ class MyStack : Stack
             {
                 Type = "SystemAssigned",
             },
+            Kind = "Lockbox",
             Location = "East US",
             ResourceGroupName = "resourceGroup",
             Tags = 
@@ -75,6 +76,7 @@ func main() {
 			Identity: &powerplatform.EnterprisePolicyIdentityArgs{
 				Type: "SystemAssigned",
 			},
+			Kind:              pulumi.String("Lockbox"),
 			Location:          pulumi.String("East US"),
 			ResourceGroupName: pulumi.String("resourceGroup"),
 			Tags: pulumi.StringMap{
@@ -106,6 +108,7 @@ enterprise_policy = azure_native.powerplatform.EnterprisePolicy("enterprisePolic
     identity=azure_native.powerplatform.EnterprisePolicyIdentityArgs(
         type="SystemAssigned",
     ),
+    kind="Lockbox",
     location="East US",
     resource_group_name="resourceGroup",
     tags={
@@ -130,6 +133,7 @@ const enterprisePolicy = new azure_native.powerplatform.EnterprisePolicy("enterp
     identity: {
         type: "SystemAssigned",
     },
+    kind: "Lockbox",
     location: "East US",
     resourceGroupName: "resourceGroup",
     tags: {
@@ -166,6 +170,7 @@ const enterprisePolicy = new azure_native.powerplatform.EnterprisePolicy("enterp
                      <span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[PropertiesEncryptionArgs]</span> = None<span class="p">,</span>
                      <span class="nx">enterprise_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[EnterprisePolicyIdentityArgs]</span> = None<span class="p">,</span>
+                     <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, EnterprisePolicyKind]]</span> = None<span class="p">,</span>
                      <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">lockbox</span><span class="p">:</span> <span class="nx">Optional[PropertiesLockboxArgs]</span> = None<span class="p">,</span>
                      <span class="nx">network_injection</span><span class="p">:</span> <span class="nx">Optional[PropertiesNetworkInjectionArgs]</span> = None<span class="p">,</span>
@@ -300,6 +305,14 @@ The EnterprisePolicy resource accepts the following [input]({{< relref "/docs/in
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="kind_csharp">
+<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#enterprisepolicykind">Pulumi.<wbr>Azure<wbr>Native.<wbr>Power<wbr>Platform.<wbr>Enterprise<wbr>Policy<wbr>Kind</a></span>
+    </dt>
+    <dd>{{% md %}}The kind (type) of Enterprise Policy.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -367,6 +380,14 @@ The EnterprisePolicy resource accepts the following [input]({{< relref "/docs/in
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="kind_go">
+<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#enterprisepolicykind">Enterprise<wbr>Policy<wbr>Kind</a></span>
+    </dt>
+    <dd>{{% md %}}The kind (type) of Enterprise Policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -436,6 +457,14 @@ The EnterprisePolicy resource accepts the following [input]({{< relref "/docs/in
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="kind_nodejs">
+<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#enterprisepolicykind">Enterprise<wbr>Policy<wbr>Kind</a></span>
+    </dt>
+    <dd>{{% md %}}The kind (type) of Enterprise Policy.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
@@ -503,6 +532,14 @@ The EnterprisePolicy resource accepts the following [input]({{< relref "/docs/in
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="kind_python">
+<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#enterprisepolicykind">Enterprise<wbr>Policy<wbr>Kind</a></span>
+    </dt>
+    <dd>{{% md %}}The kind (type) of Enterprise Policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -892,6 +929,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the EnterprisePolicy. Currently, the only supported type is 'SystemAssigned', which implicitly creates an identity.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="enterprisepolicykind">Enterprise<wbr>Policy<wbr>Kind</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Lockbox</dt>
+    <dd>Lockbox</dd><dt>Private<wbr>Endpoint</dt>
+    <dd>PrivateEndpoint</dd><dt>Encryption</dt>
+    <dd>Encryption</dd><dt>Network<wbr>Injection</dt>
+    <dd>NetworkInjection</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Enterprise<wbr>Policy<wbr>Kind<wbr>Lockbox</dt>
+    <dd>Lockbox</dd><dt>Enterprise<wbr>Policy<wbr>Kind<wbr>Private<wbr>Endpoint</dt>
+    <dd>PrivateEndpoint</dd><dt>Enterprise<wbr>Policy<wbr>Kind<wbr>Encryption</dt>
+    <dd>Encryption</dd><dt>Enterprise<wbr>Policy<wbr>Kind<wbr>Network<wbr>Injection</dt>
+    <dd>NetworkInjection</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Lockbox</dt>
+    <dd>Lockbox</dd><dt>Private<wbr>Endpoint</dt>
+    <dd>PrivateEndpoint</dd><dt>Encryption</dt>
+    <dd>Encryption</dd><dt>Network<wbr>Injection</dt>
+    <dd>NetworkInjection</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>LOCKBOX</dt>
+    <dd>Lockbox</dd><dt>PRIVATE_ENDPOINT</dt>
+    <dd>PrivateEndpoint</dd><dt>ENCRYPTION</dt>
+    <dd>Encryption</dd><dt>NETWORK_INJECTION</dt>
+    <dd>NetworkInjection</dd></dl>
 {{% /choosable %}}
 
 <h4 id="keyproperties">Key<wbr>Properties</h4>
@@ -2039,6 +2110,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="nextlink_csharp">
+<a href="#nextlink_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Link</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Next page link if any.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
 </span>
@@ -2050,6 +2129,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="nextlink_go">
+<a href="#nextlink_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Link</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Next page link if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -2063,6 +2150,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="nextlink_nodejs">
+<a href="#nextlink_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Link</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Next page link if any.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
@@ -2074,6 +2169,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="next_link_python">
+<a href="#next_link_python" style="color: inherit; text-decoration: inherit;">next_<wbr>link</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Next page link if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2089,6 +2192,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="nextlink_csharp">
+<a href="#nextlink_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Link</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Next page link if any.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
 </span>
@@ -2100,6 +2211,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="nextlink_go">
+<a href="#nextlink_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Link</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Next page link if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -2113,6 +2232,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="nextlink_nodejs">
+<a href="#nextlink_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Link</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Next page link if any.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
@@ -2124,6 +2251,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="next_link_python">
+<a href="#next_link_python" style="color: inherit; text-decoration: inherit;">next_<wbr>link</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Next page link if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>

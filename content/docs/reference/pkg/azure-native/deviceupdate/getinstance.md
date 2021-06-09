@@ -233,6 +233,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="enablediagnostics_csharp">
+<a href="#enablediagnostics_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Diagnostics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables or Disables the diagnostic logs collection{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="iothubs_csharp">
 <a href="#iothubs_csharp" style="color: inherit; text-decoration: inherit;">Iot<wbr>Hubs</a>
 </span>
@@ -308,6 +316,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="enablediagnostics_go">
+<a href="#enablediagnostics_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Diagnostics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables or Disables the diagnostic logs collection{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="iothubs_go">
 <a href="#iothubs_go" style="color: inherit; text-decoration: inherit;">Iot<wbr>Hubs</a>
@@ -385,6 +401,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="enablediagnostics_nodejs">
+<a href="#enablediagnostics_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Diagnostics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enables or Disables the diagnostic logs collection{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="iothubs_nodejs">
 <a href="#iothubs_nodejs" style="color: inherit; text-decoration: inherit;">iot<wbr>Hubs</a>
 </span>
@@ -460,6 +484,14 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="enable_diagnostics_python">
+<a href="#enable_diagnostics_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>diagnostics</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables or Disables the diagnostic logs collection{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="iot_hubs_python">
 <a href="#iot_hubs_python" style="color: inherit; text-decoration: inherit;">iot_<wbr>hubs</a>
