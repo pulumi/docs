@@ -175,8 +175,24 @@ The BucketAccessControl resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the bucket.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}The name of the bucket.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="domain_csharp">
+<a href="#domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The domain associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="email_csharp">
+<a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The email address associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="entity_csharp">
 <a href="#entity_csharp" style="color: inherit; text-decoration: inherit;">Entity</a>
 </span>
@@ -195,22 +211,6 @@ The BucketAccessControl resource accepts the following [input]({{< relref "/docs
 - The user liz@example.com would be user-liz@example.com. 
 - The group example@googlegroups.com would be group-example@googlegroups.com. 
 - To refer to all members of the Google Apps for Business domain example.com, the entity would be domain-example.com.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="domain_csharp">
-<a href="#domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The domain associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="email_csharp">
-<a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The email address associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entityid_csharp">
 <a href="#entityid_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Id</a>
@@ -294,8 +294,24 @@ The BucketAccessControl resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the bucket.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}The name of the bucket.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="domain_go">
+<a href="#domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The domain associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="email_go">
+<a href="#email_go" style="color: inherit; text-decoration: inherit;">Email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The email address associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="entity_go">
 <a href="#entity_go" style="color: inherit; text-decoration: inherit;">Entity</a>
 </span>
@@ -314,22 +330,6 @@ The BucketAccessControl resource accepts the following [input]({{< relref "/docs
 - The user liz@example.com would be user-liz@example.com. 
 - The group example@googlegroups.com would be group-example@googlegroups.com. 
 - To refer to all members of the Google Apps for Business domain example.com, the entity would be domain-example.com.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="domain_go">
-<a href="#domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The domain associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="email_go">
-<a href="#email_go" style="color: inherit; text-decoration: inherit;">Email</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The email address associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entityid_go">
 <a href="#entityid_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Id</a>
@@ -413,8 +413,24 @@ The BucketAccessControl resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the bucket.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}The name of the bucket.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="domain_nodejs">
+<a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The domain associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="email_nodejs">
+<a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The email address associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="entity_nodejs">
 <a href="#entity_nodejs" style="color: inherit; text-decoration: inherit;">entity</a>
 </span>
@@ -433,22 +449,6 @@ The BucketAccessControl resource accepts the following [input]({{< relref "/docs
 - The user liz@example.com would be user-liz@example.com. 
 - The group example@googlegroups.com would be group-example@googlegroups.com. 
 - To refer to all members of the Google Apps for Business domain example.com, the entity would be domain-example.com.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="domain_nodejs">
-<a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The domain associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="email_nodejs">
-<a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The email address associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entityid_nodejs">
 <a href="#entityid_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Id</a>
@@ -532,8 +532,24 @@ The BucketAccessControl resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the bucket.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}The name of the bucket.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="domain_python">
+<a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The domain associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="email_python">
+<a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The email address associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="entity_python">
 <a href="#entity_python" style="color: inherit; text-decoration: inherit;">entity</a>
 </span>
@@ -552,22 +568,6 @@ The BucketAccessControl resource accepts the following [input]({{< relref "/docs
 - The user liz@example.com would be user-liz@example.com. 
 - The group example@googlegroups.com would be group-example@googlegroups.com. 
 - To refer to all members of the Google Apps for Business domain example.com, the entity would be domain-example.com.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="domain_python">
-<a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The domain associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="email_python">
-<a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The email address associated with the entity, if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entity_id_python">
 <a href="#entity_id_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>id</a>

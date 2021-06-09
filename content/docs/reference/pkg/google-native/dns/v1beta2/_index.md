@@ -13,10 +13,10 @@ Explore the resources and functions of the google-native.dns/v1beta2 module.
 <ul class="api">
     <li><a href="change" title="Change"><span class="symbol resource"></span>Change</a></li>
     <li><a href="managedzone" title="ManagedZone"><span class="symbol resource"></span>ManagedZone</a></li>
-    <li><a href="managedzonerrset" title="ManagedZoneRrset"><span class="symbol resource"></span>ManagedZoneRrset</a></li>
     <li><a href="policy" title="Policy"><span class="symbol resource"></span>Policy</a></li>
     <li><a href="responsepolicy" title="ResponsePolicy"><span class="symbol resource"></span>ResponsePolicy</a></li>
     <li><a href="responsepolicyrule" title="ResponsePolicyRule"><span class="symbol resource"></span>ResponsePolicyRule</a></li>
+    <li><a href="rrset" title="Rrset"><span class="symbol resource"></span>Rrset</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -26,6 +26,6 @@ Explore the resources and functions of the google-native.dns/v1beta2 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.0</dd>
+	<dd>0.3.0</dd>
 </dl>
 

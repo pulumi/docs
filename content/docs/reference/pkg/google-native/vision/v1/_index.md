@@ -12,8 +12,8 @@ Explore the resources and functions of the google-native.vision/v1 module.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="product" title="Product"><span class="symbol resource"></span>Product</a></li>
-    <li><a href="productreferenceimage" title="ProductReferenceImage"><span class="symbol resource"></span>ProductReferenceImage</a></li>
     <li><a href="productset" title="ProductSet"><span class="symbol resource"></span>ProductSet</a></li>
+    <li><a href="referenceimage" title="ReferenceImage"><span class="symbol resource"></span>ReferenceImage</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -23,6 +23,6 @@ Explore the resources and functions of the google-native.vision/v1 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.0</dd>
+	<dd>0.3.0</dd>
 </dl>
 

@@ -15,9 +15,9 @@ Explore the resources and functions of the google-native.ml/v1 module.
     <li><a href="jobiampolicy" title="JobIamPolicy"><span class="symbol resource"></span>JobIamPolicy</a></li>
     <li><a href="model" title="Model"><span class="symbol resource"></span>Model</a></li>
     <li><a href="modeliampolicy" title="ModelIamPolicy"><span class="symbol resource"></span>ModelIamPolicy</a></li>
-    <li><a href="modelversion" title="ModelVersion"><span class="symbol resource"></span>ModelVersion</a></li>
     <li><a href="study" title="Study"><span class="symbol resource"></span>Study</a></li>
-    <li><a href="studytrial" title="StudyTrial"><span class="symbol resource"></span>StudyTrial</a></li>
+    <li><a href="trial" title="Trial"><span class="symbol resource"></span>Trial</a></li>
+    <li><a href="version" title="Version"><span class="symbol resource"></span>Version</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -27,6 +27,6 @@ Explore the resources and functions of the google-native.ml/v1 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.0</dd>
+	<dd>0.3.0</dd>
 </dl>
 

@@ -15,7 +15,6 @@ Explore the resources and functions of the google-native.containeranalysis/v1alp
     <li><a href="noteiampolicy" title="NoteIamPolicy"><span class="symbol resource"></span>NoteIamPolicy</a></li>
     <li><a href="occurrence" title="Occurrence"><span class="symbol resource"></span>Occurrence</a></li>
     <li><a href="occurrenceiampolicy" title="OccurrenceIamPolicy"><span class="symbol resource"></span>OccurrenceIamPolicy</a></li>
-    <li><a href="providernote" title="ProviderNote"><span class="symbol resource"></span>ProviderNote</a></li>
     <li><a href="providernoteiampolicy" title="ProviderNoteIamPolicy"><span class="symbol resource"></span>ProviderNoteIamPolicy</a></li>
 </ul>
 
@@ -26,6 +25,6 @@ Explore the resources and functions of the google-native.containeranalysis/v1alp
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.0</dd>
+	<dd>0.3.0</dd>
 </dl>
 

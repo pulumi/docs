@@ -38,8 +38,7 @@ Creates a new occurrence.
                <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">note_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">occurrences_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">remediation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">resource</span><span class="p">:</span> <span class="nx">Optional[_containeranalysis_v1beta1.ResourceArgs]</span> = None<span class="p">,</span>
                <span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -173,16 +172,8 @@ The Occurrence resource accepts the following [input]({{< relref "/docs/intro/co
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="occurrencesid_csharp">
-<a href="#occurrencesid_csharp" style="color: inherit; text-decoration: inherit;">Occurrences<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="projectsid_csharp">
-<a href="#projectsid_csharp" style="color: inherit; text-decoration: inherit;">Projects<wbr>Id</a>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -313,16 +304,8 @@ The Occurrence resource accepts the following [input]({{< relref "/docs/intro/co
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="occurrencesid_go">
-<a href="#occurrencesid_go" style="color: inherit; text-decoration: inherit;">Occurrences<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="projectsid_go">
-<a href="#projectsid_go" style="color: inherit; text-decoration: inherit;">Projects<wbr>Id</a>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -453,16 +436,8 @@ The Occurrence resource accepts the following [input]({{< relref "/docs/intro/co
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="occurrencesid_nodejs">
-<a href="#occurrencesid_nodejs" style="color: inherit; text-decoration: inherit;">occurrences<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="projectsid_nodejs">
-<a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -593,16 +568,8 @@ The Occurrence resource accepts the following [input]({{< relref "/docs/intro/co
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="occurrences_id_python">
-<a href="#occurrences_id_python" style="color: inherit; text-decoration: inherit;">occurrences_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="projects_id_python">
-<a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1496,8 +1463,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}URI where any logs for this provenance were written.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="projectid_csharp">
-<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1604,8 +1571,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}URI where any logs for this provenance were written.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="projectid_go">
-<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1712,8 +1679,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}URI where any logs for this provenance were written.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="projectid_nodejs">
-<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1820,8 +1787,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}URI where any logs for this provenance were written.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="project_id_python">
-<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1922,8 +1889,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}URI where any logs for this provenance were written.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projectid_csharp">
-<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2022,8 +1989,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}URI where any logs for this provenance were written.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projectid_go">
-<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2122,8 +2089,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}URI where any logs for this provenance were written.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projectid_nodejs">
-<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2222,8 +2189,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}URI where any logs for this provenance were written.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="project_id_python">
-<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -3874,15 +3841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Whether the resource is continuously analyzed.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="lastanalysistime_csharp">
-<a href="#lastanalysistime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Analysis<wbr>Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The last time continuous analysis was done for this resource. Deprecated, do not use.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Whether the resource is continuously analyzed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3910,15 +3869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Whether the resource is continuously analyzed.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="lastanalysistime_go">
-<a href="#lastanalysistime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Analysis<wbr>Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The last time continuous analysis was done for this resource. Deprecated, do not use.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Whether the resource is continuously analyzed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3946,15 +3897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Whether the resource is continuously analyzed.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="lastanalysistime_nodejs">
-<a href="#lastanalysistime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Analysis<wbr>Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The last time continuous analysis was done for this resource. Deprecated, do not use.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Whether the resource is continuously analyzed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -3982,15 +3925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Whether the resource is continuously analyzed.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="last_analysis_time_python">
-<a href="#last_analysis_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>analysis_<wbr>time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The last time continuous analysis was done for this resource. Deprecated, do not use.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Whether the resource is continuously analyzed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="discoveredresponse">Discovered<wbr>Response</h4>
@@ -4020,15 +3955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Whether the resource is continuously analyzed.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="lastanalysistime_csharp">
-<a href="#lastanalysistime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Analysis<wbr>Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The last time continuous analysis was done for this resource. Deprecated, do not use.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Whether the resource is continuously analyzed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -4056,15 +3983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Whether the resource is continuously analyzed.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="lastanalysistime_go">
-<a href="#lastanalysistime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Analysis<wbr>Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The last time continuous analysis was done for this resource. Deprecated, do not use.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Whether the resource is continuously analyzed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4092,15 +4011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Whether the resource is continuously analyzed.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="lastanalysistime_nodejs">
-<a href="#lastanalysistime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Analysis<wbr>Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The last time continuous analysis was done for this resource. Deprecated, do not use.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Whether the resource is continuously analyzed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -4128,15 +4039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Whether the resource is continuously analyzed.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="last_analysis_time_python">
-<a href="#last_analysis_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>analysis_<wbr>time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The last time continuous analysis was done for this resource. Deprecated, do not use.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Whether the resource is continuously analyzed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="environment">Environment</h4>
@@ -6755,170 +6658,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The type of package; whether native or non native(ruby gems, node.js packages etc){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="hash">Hash</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Required. The type of hash that was performed.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="value_csharp">
-<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Required. The hash value.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Required. The type of hash that was performed.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="value_go">
-<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Required. The hash value.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Required. The type of hash that was performed.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="value_nodejs">
-<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Required. The hash value.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Required. The type of hash that was performed.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="value_python">
-<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Required. The hash value.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="hashresponse">Hash<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Required. The type of hash that was performed.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="value_csharp">
-<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Required. The hash value.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Required. The type of hash that was performed.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="value_go">
-<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Required. The hash value.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Required. The type of hash that was performed.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="value_nodejs">
-<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Required. The hash value.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Required. The type of hash that was performed.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="value_python">
-<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Required. The hash value.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
 <h4 id="installation">Installation</h4>
 
 {{% choosable language csharp %}}
@@ -7850,15 +7589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vulnerabilitylocation">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Beta1.<wbr>Inputs.<wbr>Vulnerability<wbr>Location<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The location of the available fix for vulnerability.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="severityname_csharp">
-<a href="#severityname_csharp" style="color: inherit; text-decoration: inherit;">Severity<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Deprecated, use Details.effective_severity instead The severity (e.g., distro assigned severity) for this vulnerability.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The location of the available fix for vulnerability.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -7878,15 +7609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vulnerabilitylocation">Vulnerability<wbr>Location</a></span>
     </dt>
-    <dd>{{% md %}}The location of the available fix for vulnerability.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="severityname_go">
-<a href="#severityname_go" style="color: inherit; text-decoration: inherit;">Severity<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Deprecated, use Details.effective_severity instead The severity (e.g., distro assigned severity) for this vulnerability.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The location of the available fix for vulnerability.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -7906,15 +7629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vulnerabilitylocation">Vulnerability<wbr>Location<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The location of the available fix for vulnerability.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="severityname_nodejs">
-<a href="#severityname_nodejs" style="color: inherit; text-decoration: inherit;">severity<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Deprecated, use Details.effective_severity instead The severity (e.g., distro assigned severity) for this vulnerability.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The location of the available fix for vulnerability.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -7934,15 +7649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vulnerabilitylocation">Vulnerability<wbr>Location<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The location of the available fix for vulnerability.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="severity_name_python">
-<a href="#severity_name_python" style="color: inherit; text-decoration: inherit;">severity_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Deprecated, use Details.effective_severity instead The severity (e.g., distro assigned severity) for this vulnerability.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The location of the available fix for vulnerability.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="packageissueresponse">Package<wbr>Issue<wbr>Response</h4>
@@ -7964,15 +7671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vulnerabilitylocationresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Beta1.<wbr>Inputs.<wbr>Vulnerability<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The location of the available fix for vulnerability.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="severityname_csharp">
-<a href="#severityname_csharp" style="color: inherit; text-decoration: inherit;">Severity<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Deprecated, use Details.effective_severity instead The severity (e.g., distro assigned severity) for this vulnerability.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The location of the available fix for vulnerability.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -7992,15 +7691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vulnerabilitylocationresponse">Vulnerability<wbr>Location<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The location of the available fix for vulnerability.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="severityname_go">
-<a href="#severityname_go" style="color: inherit; text-decoration: inherit;">Severity<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Deprecated, use Details.effective_severity instead The severity (e.g., distro assigned severity) for this vulnerability.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The location of the available fix for vulnerability.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -8020,15 +7711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vulnerabilitylocationresponse">Vulnerability<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The location of the available fix for vulnerability.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="severityname_nodejs">
-<a href="#severityname_nodejs" style="color: inherit; text-decoration: inherit;">severity<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Deprecated, use Details.effective_severity instead The severity (e.g., distro assigned severity) for this vulnerability.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The location of the available fix for vulnerability.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -8048,15 +7731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vulnerabilitylocationresponse">Vulnerability<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The location of the available fix for vulnerability.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="severity_name_python">
-<a href="#severity_name_python" style="color: inherit; text-decoration: inherit;">severity_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Deprecated, use Details.effective_severity instead The severity (e.g., distro assigned severity) for this vulnerability.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The location of the available fix for vulnerability.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="pgpsignedattestation">Pgp<wbr>Signed<wbr>Attestation</h4>
@@ -8292,8 +7967,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="projectid_csharp">
-<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -8312,8 +7987,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="projectid_go">
-<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -8332,8 +8007,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="projectid_nodejs">
-<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -8352,8 +8027,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="project_id_python">
-<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -8374,8 +8049,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="projectid_csharp">
-<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -8394,8 +8069,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="projectid_go">
-<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -8414,8 +8089,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="projectid_nodejs">
-<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -8434,8 +8109,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="project_id_python">
-<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -8784,22 +8459,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="contenthash_csharp">
-<a href="#contenthash_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Hash</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hash">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Beta1.<wbr>Inputs.<wbr>Hash<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Deprecated, do not use. Use uri instead. The hash of the resource content. For example, the Docker digest.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Deprecated, do not use. Use uri instead. The name of the resource. For example, the name of a Docker image - "Debian".{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="uri_csharp">
 <a href="#uri_csharp" style="color: inherit; text-decoration: inherit;">Uri</a>
 </span>
@@ -8811,22 +8470,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="contenthash_go">
-<a href="#contenthash_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Hash</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hash">Hash</a></span>
-    </dt>
-    <dd>{{% md %}}Deprecated, do not use. Use uri instead. The hash of the resource content. For example, the Docker digest.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Deprecated, do not use. Use uri instead. The name of the resource. For example, the name of a Docker image - "Debian".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uri_go">
 <a href="#uri_go" style="color: inherit; text-decoration: inherit;">Uri</a>
@@ -8840,22 +8483,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="contenthash_nodejs">
-<a href="#contenthash_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Hash</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hash">Hash<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Deprecated, do not use. Use uri instead. The hash of the resource content. For example, the Docker digest.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Deprecated, do not use. Use uri instead. The name of the resource. For example, the name of a Docker image - "Debian".{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="uri_nodejs">
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
@@ -8867,22 +8494,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="content_hash_python">
-<a href="#content_hash_python" style="color: inherit; text-decoration: inherit;">content_<wbr>hash</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hash">Hash<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Deprecated, do not use. Use uri instead. The hash of the resource content. For example, the Docker digest.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Deprecated, do not use. Use uri instead. The name of the resource. For example, the name of a Docker image - "Debian".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uri_python">
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
@@ -8898,22 +8509,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="contenthash_csharp">
-<a href="#contenthash_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Hash</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hashresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Container<wbr>Analysis.<wbr>V1Beta1.<wbr>Inputs.<wbr>Hash<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Deprecated, do not use. Use uri instead. The hash of the resource content. For example, the Docker digest.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Deprecated, do not use. Use uri instead. The name of the resource. For example, the name of a Docker image - "Debian".{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="uri_csharp">
 <a href="#uri_csharp" style="color: inherit; text-decoration: inherit;">Uri</a>
 </span>
@@ -8925,22 +8520,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="contenthash_go">
-<a href="#contenthash_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Hash</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hashresponse">Hash<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Deprecated, do not use. Use uri instead. The hash of the resource content. For example, the Docker digest.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Deprecated, do not use. Use uri instead. The name of the resource. For example, the name of a Docker image - "Debian".{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uri_go">
 <a href="#uri_go" style="color: inherit; text-decoration: inherit;">Uri</a>
@@ -8954,22 +8533,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="contenthash_nodejs">
-<a href="#contenthash_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Hash</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hashresponse">Hash<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Deprecated, do not use. Use uri instead. The hash of the resource content. For example, the Docker digest.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Deprecated, do not use. Use uri instead. The name of the resource. For example, the name of a Docker image - "Debian".{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="uri_nodejs">
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
@@ -8981,22 +8544,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="content_hash_python">
-<a href="#content_hash_python" style="color: inherit; text-decoration: inherit;">content_<wbr>hash</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hashresponse">Hash<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Deprecated, do not use. Use uri instead. The hash of the resource content. For example, the Docker digest.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Deprecated, do not use. Use uri instead. The name of the resource. For example, the name of a Docker image - "Debian".{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uri_python">
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>

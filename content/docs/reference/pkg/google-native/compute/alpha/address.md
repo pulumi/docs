@@ -178,14 +178,6 @@ The Address resource accepts the following [input]({{< relref "/docs/intro/conce
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="address_csharp">
-<a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The static IP address represented by this resource.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -201,6 +193,14 @@ The Address resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The URL of the region where a regional address resides. For regional addresses, you must specify the region as a path parameter in the HTTP request URL. This field is not applicable to global addresses.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="address_csharp">
+<a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The static IP address represented by this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addresstype_csharp">
 <a href="#addresstype_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Type</a>
@@ -367,14 +367,6 @@ If this field is not specified, it is assumed to be PREMIUM.{{% /md %}}</dd><dt 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="address_go">
-<a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The static IP address represented by this resource.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -390,6 +382,14 @@ If this field is not specified, it is assumed to be PREMIUM.{{% /md %}}</dd><dt 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The URL of the region where a regional address resides. For regional addresses, you must specify the region as a path parameter in the HTTP request URL. This field is not applicable to global addresses.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="address_go">
+<a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The static IP address represented by this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addresstype_go">
 <a href="#addresstype_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Type</a>
@@ -556,14 +556,6 @@ If this field is not specified, it is assumed to be PREMIUM.{{% /md %}}</dd><dt 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="address_nodejs">
-<a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The static IP address represented by this resource.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -579,6 +571,14 @@ If this field is not specified, it is assumed to be PREMIUM.{{% /md %}}</dd><dt 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The URL of the region where a regional address resides. For regional addresses, you must specify the region as a path parameter in the HTTP request URL. This field is not applicable to global addresses.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="address_nodejs">
+<a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The static IP address represented by this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addresstype_nodejs">
 <a href="#addresstype_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Type</a>
@@ -745,14 +745,6 @@ If this field is not specified, it is assumed to be PREMIUM.{{% /md %}}</dd><dt 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="address_python">
-<a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The static IP address represented by this resource.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -768,6 +760,14 @@ If this field is not specified, it is assumed to be PREMIUM.{{% /md %}}</dd><dt 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The URL of the region where a regional address resides. For regional addresses, you must specify the region as a path parameter in the HTTP request URL. This field is not applicable to global addresses.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="address_python">
+<a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The static IP address represented by this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="address_type_python">
 <a href="#address_type_python" style="color: inherit; text-decoration: inherit;">address_<wbr>type</a>

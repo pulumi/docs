@@ -12,7 +12,7 @@ Explore the resources and functions of the google-native.iap/v1 module.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="brand" title="Brand"><span class="symbol resource"></span>Brand</a></li>
-    <li><a href="brandidentityawareproxyclient" title="BrandIdentityAwareProxyClient"><span class="symbol resource"></span>BrandIdentityAwareProxyClient</a></li>
+    <li><a href="identityawareproxyclient" title="IdentityAwareProxyClient"><span class="symbol resource"></span>IdentityAwareProxyClient</a></li>
     <li><a href="v1iampolicy" title="V1IamPolicy"><span class="symbol resource"></span>V1IamPolicy</a></li>
 </ul>
 
@@ -23,6 +23,6 @@ Explore the resources and functions of the google-native.iap/v1 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.0</dd>
+	<dd>0.3.0</dd>
 </dl>
 

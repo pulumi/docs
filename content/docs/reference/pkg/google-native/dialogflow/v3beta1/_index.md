@@ -12,19 +12,18 @@ Explore the resources and functions of the google-native.dialogflow/v3beta1 modu
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="agent" title="Agent"><span class="symbol resource"></span>Agent</a></li>
-    <li><a href="agententitytype" title="AgentEntityType"><span class="symbol resource"></span>AgentEntityType</a></li>
-    <li><a href="agentenvironment" title="AgentEnvironment"><span class="symbol resource"></span>AgentEnvironment</a></li>
-    <li><a href="agentenvironmentexperiment" title="AgentEnvironmentExperiment"><span class="symbol resource"></span>AgentEnvironmentExperiment</a></li>
-    <li><a href="agentenvironmentsessionentitytype" title="AgentEnvironmentSessionEntityType"><span class="symbol resource"></span>AgentEnvironmentSessionEntityType</a></li>
-    <li><a href="agentflow" title="AgentFlow"><span class="symbol resource"></span>AgentFlow</a></li>
-    <li><a href="agentflowpage" title="AgentFlowPage"><span class="symbol resource"></span>AgentFlowPage</a></li>
-    <li><a href="agentflowtransitionroutegroup" title="AgentFlowTransitionRouteGroup"><span class="symbol resource"></span>AgentFlowTransitionRouteGroup</a></li>
-    <li><a href="agentflowversion" title="AgentFlowVersion"><span class="symbol resource"></span>AgentFlowVersion</a></li>
-    <li><a href="agentintent" title="AgentIntent"><span class="symbol resource"></span>AgentIntent</a></li>
-    <li><a href="agentsessionentitytype" title="AgentSessionEntityType"><span class="symbol resource"></span>AgentSessionEntityType</a></li>
-    <li><a href="agenttestcase" title="AgentTestCase"><span class="symbol resource"></span>AgentTestCase</a></li>
-    <li><a href="agentwebhook" title="AgentWebhook"><span class="symbol resource"></span>AgentWebhook</a></li>
+    <li><a href="entitytype" title="EntityType"><span class="symbol resource"></span>EntityType</a></li>
+    <li><a href="environment" title="Environment"><span class="symbol resource"></span>Environment</a></li>
+    <li><a href="experiment" title="Experiment"><span class="symbol resource"></span>Experiment</a></li>
+    <li><a href="flow" title="Flow"><span class="symbol resource"></span>Flow</a></li>
+    <li><a href="intent" title="Intent"><span class="symbol resource"></span>Intent</a></li>
+    <li><a href="page" title="Page"><span class="symbol resource"></span>Page</a></li>
     <li><a href="securitysetting" title="SecuritySetting"><span class="symbol resource"></span>SecuritySetting</a></li>
+    <li><a href="sessionentitytype" title="SessionEntityType"><span class="symbol resource"></span>SessionEntityType</a></li>
+    <li><a href="testcase" title="TestCase"><span class="symbol resource"></span>TestCase</a></li>
+    <li><a href="transitionroutegroup" title="TransitionRouteGroup"><span class="symbol resource"></span>TransitionRouteGroup</a></li>
+    <li><a href="version" title="Version"><span class="symbol resource"></span>Version</a></li>
+    <li><a href="webhook" title="Webhook"><span class="symbol resource"></span>Webhook</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -34,6 +33,6 @@ Explore the resources and functions of the google-native.dialogflow/v3beta1 modu
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.0</dd>
+	<dd>0.3.0</dd>
 </dl>
 

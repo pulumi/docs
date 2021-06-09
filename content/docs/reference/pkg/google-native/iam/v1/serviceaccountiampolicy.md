@@ -30,8 +30,8 @@ Sets the IAM policy that is attached to a ServiceAccount. Use this method to gra
                             <span class="nx">audit_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[_iam_v1.AuditConfigArgs]]</span> = None<span class="p">,</span>
                             <span class="nx">bindings</span><span class="p">:</span> <span class="nx">Optional[Sequence[_iam_v1.BindingArgs]]</span> = None<span class="p">,</span>
                             <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                            <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                            <span class="nx">service_accounts_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                            <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                            <span class="nx">service_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                             <span class="nx">update_mask</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                             <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -163,16 +163,16 @@ The ServiceAccountIamPolicy resource accepts the following [input]({{< relref "/
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="projectsid_csharp">
-<a href="#projectsid_csharp" style="color: inherit; text-decoration: inherit;">Projects<wbr>Id</a>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="serviceaccountsid_csharp">
-<a href="#serviceaccountsid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Accounts<wbr>Id</a>
+        <span id="serviceaccountid_csharp">
+<a href="#serviceaccountid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -223,16 +223,16 @@ The ServiceAccountIamPolicy resource accepts the following [input]({{< relref "/
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="projectsid_go">
-<a href="#projectsid_go" style="color: inherit; text-decoration: inherit;">Projects<wbr>Id</a>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="serviceaccountsid_go">
-<a href="#serviceaccountsid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Accounts<wbr>Id</a>
+        <span id="serviceaccountid_go">
+<a href="#serviceaccountid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -283,16 +283,16 @@ The ServiceAccountIamPolicy resource accepts the following [input]({{< relref "/
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="projectsid_nodejs">
-<a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="serviceaccountsid_nodejs">
-<a href="#serviceaccountsid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Accounts<wbr>Id</a>
+        <span id="serviceaccountid_nodejs">
+<a href="#serviceaccountid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -343,16 +343,16 @@ The ServiceAccountIamPolicy resource accepts the following [input]({{< relref "/
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="projects_id_python">
-<a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="service_accounts_id_python">
-<a href="#service_accounts_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>accounts_<wbr>id</a>
+        <span id="service_account_id_python">
+<a href="#service_account_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

@@ -33,7 +33,6 @@ Creates a feed in a parent project/folder/organization to listen to its asset up
          <span class="nx">content_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">feed_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">feed_output_config</span><span class="p">:</span> <span class="nx">Optional[_cloudasset_v1.FeedOutputConfigArgs]</span> = None<span class="p">,</span>
-         <span class="nx">feeds_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">v1_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">v1_id1</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
@@ -166,14 +165,6 @@ The Feed resource accepts the following [input]({{< relref "/docs/intro/concepts
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="feedsid_csharp">
-<a href="#feedsid_csharp" style="color: inherit; text-decoration: inherit;">Feeds<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="v1id_csharp">
 <a href="#v1id_csharp" style="color: inherit; text-decoration: inherit;">V1Id</a>
 </span>
@@ -249,14 +240,6 @@ The Feed resource accepts the following [input]({{< relref "/docs/intro/concepts
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="feedsid_go">
-<a href="#feedsid_go" style="color: inherit; text-decoration: inherit;">Feeds<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="v1id_go">
 <a href="#v1id_go" style="color: inherit; text-decoration: inherit;">V1Id</a>
@@ -334,14 +317,6 @@ The Feed resource accepts the following [input]({{< relref "/docs/intro/concepts
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="feedsid_nodejs">
-<a href="#feedsid_nodejs" style="color: inherit; text-decoration: inherit;">feeds<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="v1id_nodejs">
 <a href="#v1id_nodejs" style="color: inherit; text-decoration: inherit;">v1Id</a>
 </span>
@@ -417,14 +392,6 @@ The Feed resource accepts the following [input]({{< relref "/docs/intro/concepts
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="feeds_id_python">
-<a href="#feeds_id_python" style="color: inherit; text-decoration: inherit;">feeds_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="v1_id_python">
 <a href="#v1_id_python" style="color: inherit; text-decoration: inherit;">v1_<wbr>id</a>

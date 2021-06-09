@@ -38,7 +38,6 @@ Creates a NodeGroup resource in the specified project using the data included in
               <span class="nx">maintenance_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">maintenance_window</span><span class="p">:</span> <span class="nx">Optional[_compute_v1.NodeGroupMaintenanceWindowArgs]</span> = None<span class="p">,</span>
               <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-              <span class="nx">node_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">node_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -177,14 +176,6 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
             title="Required">
         <span id="initialnodecount_csharp">
 <a href="#initialnodecount_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Node<wbr>Count</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="nodegroup_csharp">
-<a href="#nodegroup_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -339,14 +330,6 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="nodegroup_go">
-<a href="#nodegroup_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Group</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -495,14 +478,6 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="nodegroup_nodejs">
-<a href="#nodegroup_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Group</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -645,14 +620,6 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
             title="Required">
         <span id="initial_node_count_python">
 <a href="#initial_node_count_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>node_<wbr>count</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="node_group_python">
-<a href="#node_group_python" style="color: inherit; text-decoration: inherit;">node_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

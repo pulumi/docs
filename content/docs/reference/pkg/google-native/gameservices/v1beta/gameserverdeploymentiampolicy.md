@@ -30,10 +30,10 @@ Sets the access control policy on the specified resource. Replaces any existing 
                                   <span class="nx">audit_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[_gameservices_v1beta.AuditConfigArgs]]</span> = None<span class="p">,</span>
                                   <span class="nx">bindings</span><span class="p">:</span> <span class="nx">Optional[Sequence[_gameservices_v1beta.BindingArgs]]</span> = None<span class="p">,</span>
                                   <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                  <span class="nx">game_server_deployments_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                  <span class="nx">game_server_deployment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                   <span class="nx">iam_owned</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-                                  <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                  <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                  <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                  <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                   <span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[_gameservices_v1beta.RuleArgs]]</span> = None<span class="p">,</span>
                                   <span class="nx">update_mask</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                   <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span>
@@ -166,24 +166,24 @@ The GameServerDeploymentIamPolicy resource accepts the following [input]({{< rel
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="gameserverdeploymentsid_csharp">
-<a href="#gameserverdeploymentsid_csharp" style="color: inherit; text-decoration: inherit;">Game<wbr>Server<wbr>Deployments<wbr>Id</a>
+        <span id="gameserverdeploymentid_csharp">
+<a href="#gameserverdeploymentid_csharp" style="color: inherit; text-decoration: inherit;">Game<wbr>Server<wbr>Deployment<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="locationsid_csharp">
-<a href="#locationsid_csharp" style="color: inherit; text-decoration: inherit;">Locations<wbr>Id</a>
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projectsid_csharp">
-<a href="#projectsid_csharp" style="color: inherit; text-decoration: inherit;">Projects<wbr>Id</a>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -250,24 +250,24 @@ The GameServerDeploymentIamPolicy resource accepts the following [input]({{< rel
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="gameserverdeploymentsid_go">
-<a href="#gameserverdeploymentsid_go" style="color: inherit; text-decoration: inherit;">Game<wbr>Server<wbr>Deployments<wbr>Id</a>
+        <span id="gameserverdeploymentid_go">
+<a href="#gameserverdeploymentid_go" style="color: inherit; text-decoration: inherit;">Game<wbr>Server<wbr>Deployment<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="locationsid_go">
-<a href="#locationsid_go" style="color: inherit; text-decoration: inherit;">Locations<wbr>Id</a>
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projectsid_go">
-<a href="#projectsid_go" style="color: inherit; text-decoration: inherit;">Projects<wbr>Id</a>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -334,24 +334,24 @@ The GameServerDeploymentIamPolicy resource accepts the following [input]({{< rel
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="gameserverdeploymentsid_nodejs">
-<a href="#gameserverdeploymentsid_nodejs" style="color: inherit; text-decoration: inherit;">game<wbr>Server<wbr>Deployments<wbr>Id</a>
+        <span id="gameserverdeploymentid_nodejs">
+<a href="#gameserverdeploymentid_nodejs" style="color: inherit; text-decoration: inherit;">game<wbr>Server<wbr>Deployment<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="locationsid_nodejs">
-<a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projectsid_nodejs">
-<a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -418,24 +418,24 @@ The GameServerDeploymentIamPolicy resource accepts the following [input]({{< rel
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="game_server_deployments_id_python">
-<a href="#game_server_deployments_id_python" style="color: inherit; text-decoration: inherit;">game_<wbr>server_<wbr>deployments_<wbr>id</a>
+        <span id="game_server_deployment_id_python">
+<a href="#game_server_deployment_id_python" style="color: inherit; text-decoration: inherit;">game_<wbr>server_<wbr>deployment_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="locations_id_python">
-<a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projects_id_python">
-<a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

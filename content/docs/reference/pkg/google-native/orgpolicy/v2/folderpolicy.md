@@ -27,9 +27,8 @@ Creates a Policy. Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND`
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">FolderPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                 <span class="nx">folders_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">folder_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                 <span class="nx">policies_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[_orgpolicy_v2.GoogleCloudOrgpolicyV2PolicySpecArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">FolderPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -160,16 +159,8 @@ The FolderPolicy resource accepts the following [input]({{< relref "/docs/intro/
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="foldersid_csharp">
-<a href="#foldersid_csharp" style="color: inherit; text-decoration: inherit;">Folders<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="policiesid_csharp">
-<a href="#policiesid_csharp" style="color: inherit; text-decoration: inherit;">Policies<wbr>Id</a>
+        <span id="folderid_csharp">
+<a href="#folderid_csharp" style="color: inherit; text-decoration: inherit;">Folder<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -196,16 +187,8 @@ The FolderPolicy resource accepts the following [input]({{< relref "/docs/intro/
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="foldersid_go">
-<a href="#foldersid_go" style="color: inherit; text-decoration: inherit;">Folders<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="policiesid_go">
-<a href="#policiesid_go" style="color: inherit; text-decoration: inherit;">Policies<wbr>Id</a>
+        <span id="folderid_go">
+<a href="#folderid_go" style="color: inherit; text-decoration: inherit;">Folder<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -232,16 +215,8 @@ The FolderPolicy resource accepts the following [input]({{< relref "/docs/intro/
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="foldersid_nodejs">
-<a href="#foldersid_nodejs" style="color: inherit; text-decoration: inherit;">folders<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="policiesid_nodejs">
-<a href="#policiesid_nodejs" style="color: inherit; text-decoration: inherit;">policies<wbr>Id</a>
+        <span id="folderid_nodejs">
+<a href="#folderid_nodejs" style="color: inherit; text-decoration: inherit;">folder<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -268,16 +243,8 @@ The FolderPolicy resource accepts the following [input]({{< relref "/docs/intro/
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="folders_id_python">
-<a href="#folders_id_python" style="color: inherit; text-decoration: inherit;">folders_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="policies_id_python">
-<a href="#policies_id_python" style="color: inherit; text-decoration: inherit;">policies_<wbr>id</a>
+        <span id="folder_id_python">
+<a href="#folder_id_python" style="color: inherit; text-decoration: inherit;">folder_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

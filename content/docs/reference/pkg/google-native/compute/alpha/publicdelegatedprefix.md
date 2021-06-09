@@ -37,7 +37,6 @@ Creates a PublicDelegatedPrefix in the specified project in the given region usi
                           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                           <span class="nx">parent_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                           <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                          <span class="nx">public_delegated_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                           <span class="nx">public_delegated_sub_prefixs</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_alpha.PublicDelegatedPrefixPublicDelegatedSubPrefixArgs]]</span> = None<span class="p">,</span>
                           <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                           <span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -181,14 +180,6 @@ The PublicDelegatedPrefix resource accepts the following [input]({{< relref "/do
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="publicdelegatedprefix_csharp">
-<a href="#publicdelegatedprefix_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Delegated<wbr>Prefix</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
 </span>
@@ -317,14 +308,6 @@ To see the latest fingerprint, make a get() request to retrieve a PublicDelegate
             title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="publicdelegatedprefix_go">
-<a href="#publicdelegatedprefix_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Delegated<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -465,14 +448,6 @@ To see the latest fingerprint, make a get() request to retrieve a PublicDelegate
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="publicdelegatedprefix_nodejs">
-<a href="#publicdelegatedprefix_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Delegated<wbr>Prefix</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
@@ -601,14 +576,6 @@ To see the latest fingerprint, make a get() request to retrieve a PublicDelegate
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="public_delegated_prefix_python">
-<a href="#public_delegated_prefix_python" style="color: inherit; text-decoration: inherit;">public_<wbr>delegated_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

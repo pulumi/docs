@@ -43,7 +43,6 @@ Creates a TargetHttpsProxy resource in the specified project using the data incl
                      <span class="nx">server_tls_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">ssl_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                      <span class="nx">ssl_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                     <span class="nx">target_https_proxy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">url_map</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">TargetHttpsProxy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -176,14 +175,6 @@ The TargetHttpsProxy resource accepts the following [input]({{< relref "/docs/in
             title="Required">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="targethttpsproxy_csharp">
-<a href="#targethttpsproxy_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Https<wbr>Proxy</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -345,14 +336,6 @@ Note: This field currently has no impact.{{% /md %}}</dd><dt class="property-opt
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="targethttpsproxy_go">
-<a href="#targethttpsproxy_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Https<wbr>Proxy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizationpolicy_go">
@@ -510,14 +493,6 @@ Note: This field currently has no impact.{{% /md %}}</dd><dt class="property-opt
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="targethttpsproxy_nodejs">
-<a href="#targethttpsproxy_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Https<wbr>Proxy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizationpolicy_nodejs">
@@ -671,14 +646,6 @@ Note: This field currently has no impact.{{% /md %}}</dd><dt class="property-opt
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="target_https_proxy_python">
-<a href="#target_https_proxy_python" style="color: inherit; text-decoration: inherit;">target_<wbr>https_<wbr>proxy</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

@@ -13,7 +13,7 @@ Explore the resources and functions of the google-native.cloudidentity/v1 module
 <ul class="api">
     <li><a href="device" title="Device"><span class="symbol resource"></span>Device</a></li>
     <li><a href="group" title="Group"><span class="symbol resource"></span>Group</a></li>
-    <li><a href="groupmembership" title="GroupMembership"><span class="symbol resource"></span>GroupMembership</a></li>
+    <li><a href="membership" title="Membership"><span class="symbol resource"></span>Membership</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -23,6 +23,6 @@ Explore the resources and functions of the google-native.cloudidentity/v1 module
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.0</dd>
+	<dd>0.3.0</dd>
 </dl>
 

@@ -11,13 +11,13 @@ Explore the resources and functions of the google-native.spanner/v1 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="backup" title="Backup"><span class="symbol resource"></span>Backup</a></li>
+    <li><a href="database" title="Database"><span class="symbol resource"></span>Database</a></li>
     <li><a href="instance" title="Instance"><span class="symbol resource"></span>Instance</a></li>
-    <li><a href="instancebackup" title="InstanceBackup"><span class="symbol resource"></span>InstanceBackup</a></li>
     <li><a href="instancebackupiampolicy" title="InstanceBackupIamPolicy"><span class="symbol resource"></span>InstanceBackupIamPolicy</a></li>
-    <li><a href="instancedatabase" title="InstanceDatabase"><span class="symbol resource"></span>InstanceDatabase</a></li>
     <li><a href="instancedatabaseiampolicy" title="InstanceDatabaseIamPolicy"><span class="symbol resource"></span>InstanceDatabaseIamPolicy</a></li>
-    <li><a href="instancedatabasesession" title="InstanceDatabaseSession"><span class="symbol resource"></span>InstanceDatabaseSession</a></li>
     <li><a href="instanceiampolicy" title="InstanceIamPolicy"><span class="symbol resource"></span>InstanceIamPolicy</a></li>
+    <li><a href="session" title="Session"><span class="symbol resource"></span>Session</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -27,6 +27,6 @@ Explore the resources and functions of the google-native.spanner/v1 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.0</dd>
+	<dd>0.3.0</dd>
 </dl>
 

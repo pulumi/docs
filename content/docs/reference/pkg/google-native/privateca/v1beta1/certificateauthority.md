@@ -27,7 +27,6 @@ Create a new CertificateAuthority in a given Project and Location.
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">CertificateAuthority</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                         <span class="nx">certificate_authorities_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">certificate_authority_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">certificate_policy</span><span class="p">:</span> <span class="nx">Optional[_privateca_v1beta1.CertificateAuthorityPolicyArgs]</span> = None<span class="p">,</span>
                          <span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[_privateca_v1beta1.CertificateConfigArgs]</span> = None<span class="p">,</span>
@@ -36,8 +35,8 @@ Create a new CertificateAuthority in a given Project and Location.
                          <span class="nx">key_spec</span><span class="p">:</span> <span class="nx">Optional[_privateca_v1beta1.KeyVersionSpecArgs]</span> = None<span class="p">,</span>
                          <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
                          <span class="nx">lifetime</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                         <span class="nx">locations_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                         <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">subordinate_config</span><span class="p">:</span> <span class="nx">Optional[_privateca_v1beta1.SubordinateConfigArgs]</span> = None<span class="p">,</span>
                          <span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -171,14 +170,6 @@ The CertificateAuthority resource accepts the following [input]({{< relref "/doc
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="certificateauthoritiesid_csharp">
-<a href="#certificateauthoritiesid_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Authorities<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="certificateauthorityid_csharp">
 <a href="#certificateauthorityid_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Authority<wbr>Id</a>
 </span>
@@ -187,16 +178,16 @@ The CertificateAuthority resource accepts the following [input]({{< relref "/doc
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="locationsid_csharp">
-<a href="#locationsid_csharp" style="color: inherit; text-decoration: inherit;">Locations<wbr>Id</a>
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projectsid_csharp">
-<a href="#projectsid_csharp" style="color: inherit; text-decoration: inherit;">Projects<wbr>Id</a>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -295,14 +286,6 @@ The CertificateAuthority resource accepts the following [input]({{< relref "/doc
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="certificateauthoritiesid_go">
-<a href="#certificateauthoritiesid_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Authorities<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="certificateauthorityid_go">
 <a href="#certificateauthorityid_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Authority<wbr>Id</a>
 </span>
@@ -311,16 +294,16 @@ The CertificateAuthority resource accepts the following [input]({{< relref "/doc
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="locationsid_go">
-<a href="#locationsid_go" style="color: inherit; text-decoration: inherit;">Locations<wbr>Id</a>
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projectsid_go">
-<a href="#projectsid_go" style="color: inherit; text-decoration: inherit;">Projects<wbr>Id</a>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -419,14 +402,6 @@ The CertificateAuthority resource accepts the following [input]({{< relref "/doc
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="certificateauthoritiesid_nodejs">
-<a href="#certificateauthoritiesid_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Authorities<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="certificateauthorityid_nodejs">
 <a href="#certificateauthorityid_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Authority<wbr>Id</a>
 </span>
@@ -435,16 +410,16 @@ The CertificateAuthority resource accepts the following [input]({{< relref "/doc
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="locationsid_nodejs">
-<a href="#locationsid_nodejs" style="color: inherit; text-decoration: inherit;">locations<wbr>Id</a>
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projectsid_nodejs">
-<a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -543,14 +518,6 @@ The CertificateAuthority resource accepts the following [input]({{< relref "/doc
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="certificate_authorities_id_python">
-<a href="#certificate_authorities_id_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>authorities_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="certificate_authority_id_python">
 <a href="#certificate_authority_id_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>authority_<wbr>id</a>
 </span>
@@ -559,16 +526,16 @@ The CertificateAuthority resource accepts the following [input]({{< relref "/doc
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="locations_id_python">
-<a href="#locations_id_python" style="color: inherit; text-decoration: inherit;">locations_<wbr>id</a>
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projects_id_python">
-<a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

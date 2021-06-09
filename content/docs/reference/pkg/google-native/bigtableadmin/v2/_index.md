@@ -11,14 +11,14 @@ Explore the resources and functions of the google-native.bigtableadmin/v2 module
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="appprofile" title="AppProfile"><span class="symbol resource"></span>AppProfile</a></li>
+    <li><a href="backup" title="Backup"><span class="symbol resource"></span>Backup</a></li>
+    <li><a href="cluster" title="Cluster"><span class="symbol resource"></span>Cluster</a></li>
     <li><a href="instance" title="Instance"><span class="symbol resource"></span>Instance</a></li>
-    <li><a href="instanceappprofile" title="InstanceAppProfile"><span class="symbol resource"></span>InstanceAppProfile</a></li>
-    <li><a href="instancecluster" title="InstanceCluster"><span class="symbol resource"></span>InstanceCluster</a></li>
-    <li><a href="instanceclusterbackup" title="InstanceClusterBackup"><span class="symbol resource"></span>InstanceClusterBackup</a></li>
     <li><a href="instanceclusterbackupiampolicy" title="InstanceClusterBackupIamPolicy"><span class="symbol resource"></span>InstanceClusterBackupIamPolicy</a></li>
     <li><a href="instanceiampolicy" title="InstanceIamPolicy"><span class="symbol resource"></span>InstanceIamPolicy</a></li>
-    <li><a href="instancetable" title="InstanceTable"><span class="symbol resource"></span>InstanceTable</a></li>
     <li><a href="instancetableiampolicy" title="InstanceTableIamPolicy"><span class="symbol resource"></span>InstanceTableIamPolicy</a></li>
+    <li><a href="table" title="Table"><span class="symbol resource"></span>Table</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -28,6 +28,6 @@ Explore the resources and functions of the google-native.bigtableadmin/v2 module
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.0</dd>
+	<dd>0.3.0</dd>
 </dl>
 

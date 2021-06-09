@@ -38,7 +38,6 @@ Creates a TargetHttpProxy resource in the specified project using the data inclu
                     <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                    <span class="nx">target_http_proxy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">url_map</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">TargetHttpProxy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -175,14 +174,6 @@ The TargetHttpProxy resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="targethttpproxy_csharp">
-<a href="#targethttpproxy_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Http<wbr>Proxy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creationtimestamp_csharp">
@@ -283,14 +274,6 @@ The default is false.{{% /md %}}</dd><dt class="property-optional"
             title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="targethttpproxy_go">
-<a href="#targethttpproxy_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Http<wbr>Proxy</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -399,14 +382,6 @@ The default is false.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="targethttpproxy_nodejs">
-<a href="#targethttpproxy_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Http<wbr>Proxy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creationtimestamp_nodejs">
@@ -507,14 +482,6 @@ The default is false.{{% /md %}}</dd><dt class="property-optional"
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="target_http_proxy_python">
-<a href="#target_http_proxy_python" style="color: inherit; text-decoration: inherit;">target_<wbr>http_<wbr>proxy</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

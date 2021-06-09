@@ -29,11 +29,11 @@ Sets the access control policy on the specified resource. Replaces any existing 
                              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                              <span class="nx">audit_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[_bigquery_v2.AuditConfigArgs]]</span> = None<span class="p">,</span>
                              <span class="nx">bindings</span><span class="p">:</span> <span class="nx">Optional[Sequence[_bigquery_v2.BindingArgs]]</span> = None<span class="p">,</span>
-                             <span class="nx">datasets_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                             <span class="nx">dataset_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                              <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                             <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                             <span class="nx">row_access_policies_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                             <span class="nx">tables_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                             <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                             <span class="nx">row_access_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                             <span class="nx">table_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                              <span class="nx">update_mask</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                              <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -165,32 +165,32 @@ The RowAccessPolicyIamPolicy resource accepts the following [input]({{< relref "
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="datasetsid_csharp">
-<a href="#datasetsid_csharp" style="color: inherit; text-decoration: inherit;">Datasets<wbr>Id</a>
+        <span id="datasetid_csharp">
+<a href="#datasetid_csharp" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projectsid_csharp">
-<a href="#projectsid_csharp" style="color: inherit; text-decoration: inherit;">Projects<wbr>Id</a>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="rowaccesspoliciesid_csharp">
-<a href="#rowaccesspoliciesid_csharp" style="color: inherit; text-decoration: inherit;">Row<wbr>Access<wbr>Policies<wbr>Id</a>
+        <span id="rowaccesspolicyid_csharp">
+<a href="#rowaccesspolicyid_csharp" style="color: inherit; text-decoration: inherit;">Row<wbr>Access<wbr>Policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="tablesid_csharp">
-<a href="#tablesid_csharp" style="color: inherit; text-decoration: inherit;">Tables<wbr>Id</a>
+        <span id="tableid_csharp">
+<a href="#tableid_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -241,32 +241,32 @@ The RowAccessPolicyIamPolicy resource accepts the following [input]({{< relref "
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="datasetsid_go">
-<a href="#datasetsid_go" style="color: inherit; text-decoration: inherit;">Datasets<wbr>Id</a>
+        <span id="datasetid_go">
+<a href="#datasetid_go" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projectsid_go">
-<a href="#projectsid_go" style="color: inherit; text-decoration: inherit;">Projects<wbr>Id</a>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="rowaccesspoliciesid_go">
-<a href="#rowaccesspoliciesid_go" style="color: inherit; text-decoration: inherit;">Row<wbr>Access<wbr>Policies<wbr>Id</a>
+        <span id="rowaccesspolicyid_go">
+<a href="#rowaccesspolicyid_go" style="color: inherit; text-decoration: inherit;">Row<wbr>Access<wbr>Policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="tablesid_go">
-<a href="#tablesid_go" style="color: inherit; text-decoration: inherit;">Tables<wbr>Id</a>
+        <span id="tableid_go">
+<a href="#tableid_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -317,32 +317,32 @@ The RowAccessPolicyIamPolicy resource accepts the following [input]({{< relref "
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="datasetsid_nodejs">
-<a href="#datasetsid_nodejs" style="color: inherit; text-decoration: inherit;">datasets<wbr>Id</a>
+        <span id="datasetid_nodejs">
+<a href="#datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projectsid_nodejs">
-<a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="rowaccesspoliciesid_nodejs">
-<a href="#rowaccesspoliciesid_nodejs" style="color: inherit; text-decoration: inherit;">row<wbr>Access<wbr>Policies<wbr>Id</a>
+        <span id="rowaccesspolicyid_nodejs">
+<a href="#rowaccesspolicyid_nodejs" style="color: inherit; text-decoration: inherit;">row<wbr>Access<wbr>Policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="tablesid_nodejs">
-<a href="#tablesid_nodejs" style="color: inherit; text-decoration: inherit;">tables<wbr>Id</a>
+        <span id="tableid_nodejs">
+<a href="#tableid_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -393,32 +393,32 @@ The RowAccessPolicyIamPolicy resource accepts the following [input]({{< relref "
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="datasets_id_python">
-<a href="#datasets_id_python" style="color: inherit; text-decoration: inherit;">datasets_<wbr>id</a>
+        <span id="dataset_id_python">
+<a href="#dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="projects_id_python">
-<a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="row_access_policies_id_python">
-<a href="#row_access_policies_id_python" style="color: inherit; text-decoration: inherit;">row_<wbr>access_<wbr>policies_<wbr>id</a>
+        <span id="row_access_policy_id_python">
+<a href="#row_access_policy_id_python" style="color: inherit; text-decoration: inherit;">row_<wbr>access_<wbr>policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="tables_id_python">
-<a href="#tables_id_python" style="color: inherit; text-decoration: inherit;">tables_<wbr>id</a>
+        <span id="table_id_python">
+<a href="#table_id_python" style="color: inherit; text-decoration: inherit;">table_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

@@ -34,7 +34,6 @@ Creates a new Response Policy
                    <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[Sequence[_dns_v1beta2.ResponsePolicyNetworkArgs]]</span> = None<span class="p">,</span>
                    <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                   <span class="nx">response_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">response_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">ResponsePolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -171,14 +170,6 @@ The ResponsePolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="responsepolicy_csharp">
-<a href="#responsepolicy_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Policy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientoperationid_csharp">
@@ -243,14 +234,6 @@ The ResponsePolicy resource accepts the following [input]({{< relref "/docs/intr
             title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="responsepolicy_go">
-<a href="#responsepolicy_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -323,14 +306,6 @@ The ResponsePolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="responsepolicy_nodejs">
-<a href="#responsepolicy_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Policy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientoperationid_nodejs">
@@ -395,14 +370,6 @@ The ResponsePolicy resource accepts the following [input]({{< relref "/docs/intr
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="response_policy_python">
-<a href="#response_policy_python" style="color: inherit; text-decoration: inherit;">response_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

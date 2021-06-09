@@ -33,13 +33,10 @@ Creates a new Cloud SQL instance.
              <span class="nx">database_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">disk_encryption_configuration</span><span class="p">:</span> <span class="nx">Optional[_sqladmin_v1beta4.DiskEncryptionConfigurationArgs]</span> = None<span class="p">,</span>
              <span class="nx">disk_encryption_status</span><span class="p">:</span> <span class="nx">Optional[_sqladmin_v1beta4.DiskEncryptionStatusArgs]</span> = None<span class="p">,</span>
-             <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">failover_replica</span><span class="p">:</span> <span class="nx">Optional[_sqladmin_v1beta4.InstanceFailoverReplicaArgs]</span> = None<span class="p">,</span>
              <span class="nx">gce_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-             <span class="nx">instance</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">ip_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[_sqladmin_v1beta4.IpMappingArgs]]</span> = None<span class="p">,</span>
-             <span class="nx">ipv6_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">master_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">max_disk_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -189,14 +186,6 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="instance_csharp">
-<a href="#instance_csharp" style="color: inherit; text-decoration: inherit;">Instance</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -253,14 +242,6 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}Disk encryption status specific to an instance. Applies only to Second Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="etag_csharp">
-<a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}This field is deprecated and will be removed from a future version of the API. Use the *settings.settingsVersion* field instead.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="failoverreplica_csharp">
 <a href="#failoverreplica_csharp" style="color: inherit; text-decoration: inherit;">Failover<wbr>Replica</a>
 </span>
@@ -292,14 +273,6 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#ipmapping">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>SQLAdmin.<wbr>V1Beta4.<wbr>Inputs.<wbr>Ip<wbr>Mapping<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The assigned IP addresses for the instance.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="ipv6address_csharp">
-<a href="#ipv6address_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Address</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The IPv6 address assigned to the instance. (Deprecated) This property was applicable only to First Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -457,14 +430,6 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="instance_go">
-<a href="#instance_go" style="color: inherit; text-decoration: inherit;">Instance</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -521,14 +486,6 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}Disk encryption status specific to an instance. Applies only to Second Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="etag_go">
-<a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}This field is deprecated and will be removed from a future version of the API. Use the *settings.settingsVersion* field instead.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="failoverreplica_go">
 <a href="#failoverreplica_go" style="color: inherit; text-decoration: inherit;">Failover<wbr>Replica</a>
 </span>
@@ -560,14 +517,6 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#ipmapping">[]Ip<wbr>Mapping</a></span>
     </dt>
     <dd>{{% md %}}The assigned IP addresses for the instance.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="ipv6address_go">
-<a href="#ipv6address_go" style="color: inherit; text-decoration: inherit;">Ipv6Address</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The IPv6 address assigned to the instance. (Deprecated) This property was applicable only to First Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -725,14 +674,6 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="instance_nodejs">
-<a href="#instance_nodejs" style="color: inherit; text-decoration: inherit;">instance</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -789,14 +730,6 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}Disk encryption status specific to an instance. Applies only to Second Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="etag_nodejs">
-<a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}This field is deprecated and will be removed from a future version of the API. Use the *settings.settingsVersion* field instead.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="failoverreplica_nodejs">
 <a href="#failoverreplica_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>Replica</a>
 </span>
@@ -828,14 +761,6 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#ipmapping">Ip<wbr>Mapping<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}The assigned IP addresses for the instance.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="ipv6address_nodejs">
-<a href="#ipv6address_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Address</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The IPv6 address assigned to the instance. (Deprecated) This property was applicable only to First Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -993,14 +918,6 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="instance_python">
-<a href="#instance_python" style="color: inherit; text-decoration: inherit;">instance</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -1057,14 +974,6 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}Disk encryption status specific to an instance. Applies only to Second Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="etag_python">
-<a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}This field is deprecated and will be removed from a future version of the API. Use the *settings.settingsVersion* field instead.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="failover_replica_python">
 <a href="#failover_replica_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>replica</a>
 </span>
@@ -1096,14 +1005,6 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#ipmapping">Ip<wbr>Mapping<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The assigned IP addresses for the instance.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="ipv6_address_python">
-<a href="#ipv6_address_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>address</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The IPv6 address assigned to the instance. (Deprecated) This property was applicable only to First Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -6208,14 +6109,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Active Directory configuration, relevant only for Cloud SQL for SQL Server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="authorizedgaeapplications_csharp">
-<a href="#authorizedgaeapplications_csharp" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Gae<wbr>Applications</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}The App Engine app IDs that can access this instance. (Deprecated) Applied to First Generation instances only.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="availabilitytype_csharp">
 <a href="#availabilitytype_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Type</a>
 </span>
@@ -6336,14 +6229,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The pricing plan for this instance. This can be either *PER_USE* or *PACKAGE*. Only *PER_USE* is supported for Second Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="replicationtype_csharp">
-<a href="#replicationtype_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of replication this instance uses. This can be either *ASYNCHRONOUS* or *SYNCHRONOUS*. (Deprecated_ This property was only applicable to First Generation instances.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="settingsversion_csharp">
 <a href="#settingsversion_csharp" style="color: inherit; text-decoration: inherit;">Settings<wbr>Version</a>
 </span>
@@ -6403,14 +6288,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#sqlactivedirectoryconfig">Sql<wbr>Active<wbr>Directory<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Active Directory configuration, relevant only for Cloud SQL for SQL Server.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="authorizedgaeapplications_go">
-<a href="#authorizedgaeapplications_go" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Gae<wbr>Applications</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The App Engine app IDs that can access this instance. (Deprecated) Applied to First Generation instances only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilitytype_go">
 <a href="#availabilitytype_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Type</a>
@@ -6532,14 +6409,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The pricing plan for this instance. This can be either *PER_USE* or *PACKAGE*. Only *PER_USE* is supported for Second Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="replicationtype_go">
-<a href="#replicationtype_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of replication this instance uses. This can be either *ASYNCHRONOUS* or *SYNCHRONOUS*. (Deprecated_ This property was only applicable to First Generation instances.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="settingsversion_go">
 <a href="#settingsversion_go" style="color: inherit; text-decoration: inherit;">Settings<wbr>Version</a>
 </span>
@@ -6599,14 +6468,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#sqlactivedirectoryconfig">Sql<wbr>Active<wbr>Directory<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Active Directory configuration, relevant only for Cloud SQL for SQL Server.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="authorizedgaeapplications_nodejs">
-<a href="#authorizedgaeapplications_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Gae<wbr>Applications</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}The App Engine app IDs that can access this instance. (Deprecated) Applied to First Generation instances only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilitytype_nodejs">
 <a href="#availabilitytype_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Type</a>
@@ -6728,14 +6589,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The pricing plan for this instance. This can be either *PER_USE* or *PACKAGE*. Only *PER_USE* is supported for Second Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="replicationtype_nodejs">
-<a href="#replicationtype_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of replication this instance uses. This can be either *ASYNCHRONOUS* or *SYNCHRONOUS*. (Deprecated_ This property was only applicable to First Generation instances.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="settingsversion_nodejs">
 <a href="#settingsversion_nodejs" style="color: inherit; text-decoration: inherit;">settings<wbr>Version</a>
 </span>
@@ -6795,14 +6648,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#sqlactivedirectoryconfig">Sql<wbr>Active<wbr>Directory<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Active Directory configuration, relevant only for Cloud SQL for SQL Server.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="authorized_gae_applications_python">
-<a href="#authorized_gae_applications_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>gae_<wbr>applications</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}The App Engine app IDs that can access this instance. (Deprecated) Applied to First Generation instances only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availability_type_python">
 <a href="#availability_type_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>type</a>
@@ -6924,14 +6769,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The pricing plan for this instance. This can be either *PER_USE* or *PACKAGE*. Only *PER_USE* is supported for Second Generation instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="replication_type_python">
-<a href="#replication_type_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of replication this instance uses. This can be either *ASYNCHRONOUS* or *SYNCHRONOUS*. (Deprecated_ This property was only applicable to First Generation instances.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="settings_version_python">
 <a href="#settings_version_python" style="color: inherit; text-decoration: inherit;">settings_<wbr>version</a>
 </span>
@@ -6993,14 +6830,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#sqlactivedirectoryconfigresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>SQLAdmin.<wbr>V1Beta4.<wbr>Inputs.<wbr>Sql<wbr>Active<wbr>Directory<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Active Directory configuration, relevant only for Cloud SQL for SQL Server.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="authorizedgaeapplications_csharp">
-<a href="#authorizedgaeapplications_csharp" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Gae<wbr>Applications</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}The App Engine app IDs that can access this instance. (Deprecated) Applied to First Generation instances only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="availabilitytype_csharp">
 <a href="#availabilitytype_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Type</a>
@@ -7122,14 +6951,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The pricing plan for this instance. This can be either *PER_USE* or *PACKAGE*. Only *PER_USE* is supported for Second Generation instances.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="replicationtype_csharp">
-<a href="#replicationtype_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of replication this instance uses. This can be either *ASYNCHRONOUS* or *SYNCHRONOUS*. (Deprecated_ This property was only applicable to First Generation instances.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="settingsversion_csharp">
 <a href="#settingsversion_csharp" style="color: inherit; text-decoration: inherit;">Settings<wbr>Version</a>
 </span>
@@ -7189,14 +7010,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#sqlactivedirectoryconfigresponse">Sql<wbr>Active<wbr>Directory<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Active Directory configuration, relevant only for Cloud SQL for SQL Server.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="authorizedgaeapplications_go">
-<a href="#authorizedgaeapplications_go" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Gae<wbr>Applications</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The App Engine app IDs that can access this instance. (Deprecated) Applied to First Generation instances only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="availabilitytype_go">
 <a href="#availabilitytype_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Type</a>
@@ -7318,14 +7131,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The pricing plan for this instance. This can be either *PER_USE* or *PACKAGE*. Only *PER_USE* is supported for Second Generation instances.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="replicationtype_go">
-<a href="#replicationtype_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of replication this instance uses. This can be either *ASYNCHRONOUS* or *SYNCHRONOUS*. (Deprecated_ This property was only applicable to First Generation instances.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="settingsversion_go">
 <a href="#settingsversion_go" style="color: inherit; text-decoration: inherit;">Settings<wbr>Version</a>
 </span>
@@ -7385,14 +7190,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#sqlactivedirectoryconfigresponse">Sql<wbr>Active<wbr>Directory<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Active Directory configuration, relevant only for Cloud SQL for SQL Server.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="authorizedgaeapplications_nodejs">
-<a href="#authorizedgaeapplications_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Gae<wbr>Applications</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}The App Engine app IDs that can access this instance. (Deprecated) Applied to First Generation instances only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="availabilitytype_nodejs">
 <a href="#availabilitytype_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Type</a>
@@ -7514,14 +7311,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The pricing plan for this instance. This can be either *PER_USE* or *PACKAGE*. Only *PER_USE* is supported for Second Generation instances.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="replicationtype_nodejs">
-<a href="#replicationtype_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of replication this instance uses. This can be either *ASYNCHRONOUS* or *SYNCHRONOUS*. (Deprecated_ This property was only applicable to First Generation instances.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="settingsversion_nodejs">
 <a href="#settingsversion_nodejs" style="color: inherit; text-decoration: inherit;">settings<wbr>Version</a>
 </span>
@@ -7581,14 +7370,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#sqlactivedirectoryconfigresponse">Sql<wbr>Active<wbr>Directory<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Active Directory configuration, relevant only for Cloud SQL for SQL Server.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="authorized_gae_applications_python">
-<a href="#authorized_gae_applications_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>gae_<wbr>applications</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}The App Engine app IDs that can access this instance. (Deprecated) Applied to First Generation instances only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="availability_type_python">
 <a href="#availability_type_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>type</a>
@@ -7709,14 +7490,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The pricing plan for this instance. This can be either *PER_USE* or *PACKAGE*. Only *PER_USE* is supported for Second Generation instances.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="replication_type_python">
-<a href="#replication_type_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of replication this instance uses. This can be either *ASYNCHRONOUS* or *SYNCHRONOUS*. (Deprecated_ This property was only applicable to First Generation instances.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="settings_version_python">
 <a href="#settings_version_python" style="color: inherit; text-decoration: inherit;">settings_<wbr>version</a>

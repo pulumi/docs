@@ -37,7 +37,6 @@ Creates a PacketMirroring resource in the specified project and region using the
                     <span class="nx">mirrored_resources</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.PacketMirroringMirroredResourceInfoArgs]</span> = None<span class="p">,</span>
                     <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.PacketMirroringNetworkInfoArgs]</span> = None<span class="p">,</span>
-                    <span class="nx">packet_mirroring</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                     <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -172,14 +171,6 @@ The PacketMirroring resource accepts the following [input]({{< relref "/docs/int
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="packetmirroring_csharp">
-<a href="#packetmirroring_csharp" style="color: inherit; text-decoration: inherit;">Packet<wbr>Mirroring</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -317,14 +308,6 @@ Default value is 1000. Valid range is 0 through 65535.{{% /md %}}</dd><dt class=
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="packetmirroring_go">
-<a href="#packetmirroring_go" style="color: inherit; text-decoration: inherit;">Packet<wbr>Mirroring</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -461,14 +444,6 @@ Default value is 1000. Valid range is 0 through 65535.{{% /md %}}</dd><dt class=
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="packetmirroring_nodejs">
-<a href="#packetmirroring_nodejs" style="color: inherit; text-decoration: inherit;">packet<wbr>Mirroring</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -604,14 +579,6 @@ Default value is 1000. Valid range is 0 through 65535.{{% /md %}}</dd><dt class=
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="packet_mirroring_python">
-<a href="#packet_mirroring_python" style="color: inherit; text-decoration: inherit;">packet_<wbr>mirroring</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>

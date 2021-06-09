@@ -11,8 +11,8 @@ Explore the resources and functions of the google-native.privateca/v1beta1 modul
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="certificate" title="Certificate"><span class="symbol resource"></span>Certificate</a></li>
     <li><a href="certificateauthority" title="CertificateAuthority"><span class="symbol resource"></span>CertificateAuthority</a></li>
-    <li><a href="certificateauthoritycertificate" title="CertificateAuthorityCertificate"><span class="symbol resource"></span>CertificateAuthorityCertificate</a></li>
     <li><a href="certificateauthoritycertificaterevocationlistiampolicy" title="CertificateAuthorityCertificateRevocationListIamPolicy"><span class="symbol resource"></span>CertificateAuthorityCertificateRevocationListIamPolicy</a></li>
     <li><a href="certificateauthorityiampolicy" title="CertificateAuthorityIamPolicy"><span class="symbol resource"></span>CertificateAuthorityIamPolicy</a></li>
     <li><a href="reusableconfigiampolicy" title="ReusableConfigIamPolicy"><span class="symbol resource"></span>ReusableConfigIamPolicy</a></li>
@@ -25,6 +25,6 @@ Explore the resources and functions of the google-native.privateca/v1beta1 modul
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.0</dd>
+	<dd>0.3.0</dd>
 </dl>
 

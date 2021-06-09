@@ -11,13 +11,13 @@ Explore the resources and functions of the google-native.iam/v1 module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="key" title="Key"><span class="symbol resource"></span>Key</a></li>
     <li><a href="organizationrole" title="OrganizationRole"><span class="symbol resource"></span>OrganizationRole</a></li>
+    <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="role" title="Role"><span class="symbol resource"></span>Role</a></li>
     <li><a href="serviceaccount" title="ServiceAccount"><span class="symbol resource"></span>ServiceAccount</a></li>
     <li><a href="serviceaccountiampolicy" title="ServiceAccountIamPolicy"><span class="symbol resource"></span>ServiceAccountIamPolicy</a></li>
-    <li><a href="serviceaccountkey" title="ServiceAccountKey"><span class="symbol resource"></span>ServiceAccountKey</a></li>
     <li><a href="workloadidentitypool" title="WorkloadIdentityPool"><span class="symbol resource"></span>WorkloadIdentityPool</a></li>
-    <li><a href="workloadidentitypoolprovider" title="WorkloadIdentityPoolProvider"><span class="symbol resource"></span>WorkloadIdentityPoolProvider</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -27,6 +27,6 @@ Explore the resources and functions of the google-native.iam/v1 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.0</dd>
+	<dd>0.3.0</dd>
 </dl>
 

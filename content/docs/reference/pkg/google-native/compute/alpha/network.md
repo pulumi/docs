@@ -27,7 +27,6 @@ Creates a network in the specified project using the data included in the reques
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Network</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-            <span class="nx">i_pv4_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">auto_create_subnetworks</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
             <span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -37,7 +36,6 @@ Creates a network in the specified project using the data included in the reques
             <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">mtu</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-            <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">peerings</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_alpha.NetworkPeeringArgs]]</span> = None<span class="p">,</span>
             <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -174,14 +172,6 @@ The Network resource accepts the following [input]({{< relref "/docs/intro/conce
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="network_csharp">
-<a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -235,14 +225,6 @@ For custom mode VPC networks, you can add subnets using the subnetworks insert m
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The gateway address for default routing out of the network, selected by GCP.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="ipv4range_csharp">
-<a href="#ipv4range_csharp" style="color: inherit; text-decoration: inherit;">IPv4Range</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Deprecated in favor of subnet mode networks. The range of internal addresses that are legal on this network. This range is a CIDR specification, for example: 192.168.0.0/16. Provided by the client when the network is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -328,14 +310,6 @@ For custom mode VPC networks, you can add subnets using the subnetworks insert m
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="network_go">
-<a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -389,14 +363,6 @@ For custom mode VPC networks, you can add subnets using the subnetworks insert m
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The gateway address for default routing out of the network, selected by GCP.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="ipv4range_go">
-<a href="#ipv4range_go" style="color: inherit; text-decoration: inherit;">IPv4Range</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Deprecated in favor of subnet mode networks. The range of internal addresses that are legal on this network. This range is a CIDR specification, for example: 192.168.0.0/16. Provided by the client when the network is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -482,14 +448,6 @@ For custom mode VPC networks, you can add subnets using the subnetworks insert m
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="network_nodejs">
-<a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -497,14 +455,6 @@ For custom mode VPC networks, you can add subnets using the subnetworks insert m
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="ipv4range_nodejs">
-<a href="#ipv4range_nodejs" style="color: inherit; text-decoration: inherit;">IPv4Range</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Deprecated in favor of subnet mode networks. The range of internal addresses that are legal on this network. This range is a CIDR specification, for example: 192.168.0.0/16. Provided by the client when the network is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autocreatesubnetworks_nodejs">
 <a href="#autocreatesubnetworks_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Create<wbr>Subnetworks</a>
@@ -636,14 +586,6 @@ For custom mode VPC networks, you can add subnets using the subnetworks insert m
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="network_python">
-<a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -697,14 +639,6 @@ For custom mode VPC networks, you can add subnets using the subnetworks insert m
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The gateway address for default routing out of the network, selected by GCP.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="i_pv4_range_python">
-<a href="#i_pv4_range_python" style="color: inherit; text-decoration: inherit;">i_<wbr>pv4_<wbr>range</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Deprecated in favor of subnet mode networks. The range of internal addresses that are legal on this network. This range is a CIDR specification, for example: 192.168.0.0/16. Provided by the client when the network is created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>

@@ -11,7 +11,7 @@ Explore the resources and functions of the google-native.firestore/v1beta2 modul
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="databasecollectiongroupindex" title="DatabaseCollectionGroupIndex"><span class="symbol resource"></span>DatabaseCollectionGroupIndex</a></li>
+    <li><a href="index" title="Index"><span class="symbol resource"></span>Index</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -21,6 +21,6 @@ Explore the resources and functions of the google-native.firestore/v1beta2 modul
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.0</dd>
+	<dd>0.3.0</dd>
 </dl>
 

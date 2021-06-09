@@ -11,10 +11,10 @@ Explore the resources and functions of the google-native.metastore/v1alpha modul
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="backup" title="Backup"><span class="symbol resource"></span>Backup</a></li>
+    <li><a href="metadataimport" title="MetadataImport"><span class="symbol resource"></span>MetadataImport</a></li>
     <li><a href="service" title="Service"><span class="symbol resource"></span>Service</a></li>
-    <li><a href="servicebackup" title="ServiceBackup"><span class="symbol resource"></span>ServiceBackup</a></li>
     <li><a href="serviceiampolicy" title="ServiceIamPolicy"><span class="symbol resource"></span>ServiceIamPolicy</a></li>
-    <li><a href="servicemetadataimport" title="ServiceMetadataImport"><span class="symbol resource"></span>ServiceMetadataImport</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -24,6 +24,6 @@ Explore the resources and functions of the google-native.metastore/v1alpha modul
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.0</dd>
+	<dd>0.3.0</dd>
 </dl>
 

@@ -36,7 +36,6 @@ Creates a NodeTemplate resource in the specified project using the data included
                  <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">node_affinity_labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
-                 <span class="nx">node_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">node_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">node_type_flexibility</span><span class="p">:</span> <span class="nx">Optional[_compute_v1.NodeTemplateNodeTypeFlexibilityArgs]</span> = None<span class="p">,</span>
                  <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -174,14 +173,6 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="nodetemplate_csharp">
-<a href="#nodetemplate_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Template</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -337,14 +328,6 @@ See Sole-tenant node options for more information.{{% /md %}}</dd><dt class="pro
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="nodetemplate_go">
-<a href="#nodetemplate_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Template</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -499,14 +482,6 @@ See Sole-tenant node options for more information.{{% /md %}}</dd><dt class="pro
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="nodetemplate_nodejs">
-<a href="#nodetemplate_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Template</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -660,14 +635,6 @@ See Sole-tenant node options for more information.{{% /md %}}</dd><dt class="pro
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="node_template_python">
-<a href="#node_template_python" style="color: inherit; text-decoration: inherit;">node_<wbr>template</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>

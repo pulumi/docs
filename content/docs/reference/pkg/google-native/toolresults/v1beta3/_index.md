@@ -11,10 +11,10 @@ Explore the resources and functions of the google-native.toolresults/v1beta3 mod
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="execution" title="Execution"><span class="symbol resource"></span>Execution</a></li>
     <li><a href="history" title="History"><span class="symbol resource"></span>History</a></li>
-    <li><a href="historyexecution" title="HistoryExecution"><span class="symbol resource"></span>HistoryExecution</a></li>
-    <li><a href="historyexecutionstep" title="HistoryExecutionStep"><span class="symbol resource"></span>HistoryExecutionStep</a></li>
-    <li><a href="historyexecutionstepperfsampleseries" title="HistoryExecutionStepPerfSampleSeries"><span class="symbol resource"></span>HistoryExecutionStepPerfSampleSeries</a></li>
+    <li><a href="perfsampleseries" title="PerfSampleSeries"><span class="symbol resource"></span>PerfSampleSeries</a></li>
+    <li><a href="step" title="Step"><span class="symbol resource"></span>Step</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -24,6 +24,6 @@ Explore the resources and functions of the google-native.toolresults/v1beta3 mod
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.0</dd>
+	<dd>0.3.0</dd>
 </dl>
 

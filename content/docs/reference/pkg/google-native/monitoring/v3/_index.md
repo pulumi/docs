@@ -16,7 +16,7 @@ Explore the resources and functions of the google-native.monitoring/v3 module.
     <li><a href="metricdescriptor" title="MetricDescriptor"><span class="symbol resource"></span>MetricDescriptor</a></li>
     <li><a href="notificationchannel" title="NotificationChannel"><span class="symbol resource"></span>NotificationChannel</a></li>
     <li><a href="service" title="Service"><span class="symbol resource"></span>Service</a></li>
-    <li><a href="serviceservicelevelobjective" title="ServiceServiceLevelObjective"><span class="symbol resource"></span>ServiceServiceLevelObjective</a></li>
+    <li><a href="servicelevelobjective" title="ServiceLevelObjective"><span class="symbol resource"></span>ServiceLevelObjective</a></li>
     <li><a href="uptimecheckconfig" title="UptimeCheckConfig"><span class="symbol resource"></span>UptimeCheckConfig</a></li>
 </ul>
 
@@ -27,6 +27,6 @@ Explore the resources and functions of the google-native.monitoring/v3 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.0</dd>
+	<dd>0.3.0</dd>
 </dl>
 

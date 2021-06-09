@@ -42,7 +42,6 @@ Creates a SslCertificate resource in the specified project and region using the 
                          <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">self_link_with_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">self_managed</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.SslCertificateSelfManagedSslCertificateArgs]</span> = None<span class="p">,</span>
-                         <span class="nx">ssl_certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">subject_alternative_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                          <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -188,15 +187,7 @@ The RegionSslCertificate resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}[Output Only] URL of the region where the regional SSL Certificate resides. This field is not applicable to global SSL Certificate.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="sslcertificate_csharp">
-<a href="#sslcertificate_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Certificate</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}[Output Only] URL of the region where the regional SSL Certificate resides. This field is not applicable to global SSL Certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_csharp">
 <a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -336,15 +327,7 @@ The RegionSslCertificate resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}[Output Only] URL of the region where the regional SSL Certificate resides. This field is not applicable to global SSL Certificate.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="sslcertificate_go">
-<a href="#sslcertificate_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Certificate</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}[Output Only] URL of the region where the regional SSL Certificate resides. This field is not applicable to global SSL Certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_go">
 <a href="#certificate_go" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -484,15 +467,7 @@ The RegionSslCertificate resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}[Output Only] URL of the region where the regional SSL Certificate resides. This field is not applicable to global SSL Certificate.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="sslcertificate_nodejs">
-<a href="#sslcertificate_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Certificate</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}[Output Only] URL of the region where the regional SSL Certificate resides. This field is not applicable to global SSL Certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_nodejs">
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -632,15 +607,7 @@ The RegionSslCertificate resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}[Output Only] URL of the region where the regional SSL Certificate resides. This field is not applicable to global SSL Certificate.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="ssl_certificate_python">
-<a href="#ssl_certificate_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>certificate</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}[Output Only] URL of the region where the regional SSL Certificate resides. This field is not applicable to global SSL Certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_python">
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>

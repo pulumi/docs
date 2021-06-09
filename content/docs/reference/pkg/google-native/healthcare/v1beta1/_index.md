@@ -11,25 +11,24 @@ Explore the resources and functions of the google-native.healthcare/v1beta1 modu
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="annotation" title="Annotation"><span class="symbol resource"></span>Annotation</a></li>
+    <li><a href="annotationstore" title="AnnotationStore"><span class="symbol resource"></span>AnnotationStore</a></li>
+    <li><a href="attributedefinition" title="AttributeDefinition"><span class="symbol resource"></span>AttributeDefinition</a></li>
+    <li><a href="consent" title="Consent"><span class="symbol resource"></span>Consent</a></li>
+    <li><a href="consentartifact" title="ConsentArtifact"><span class="symbol resource"></span>ConsentArtifact</a></li>
+    <li><a href="consentstore" title="ConsentStore"><span class="symbol resource"></span>ConsentStore</a></li>
     <li><a href="dataset" title="Dataset"><span class="symbol resource"></span>Dataset</a></li>
-    <li><a href="datasetannotationstore" title="DatasetAnnotationStore"><span class="symbol resource"></span>DatasetAnnotationStore</a></li>
-    <li><a href="datasetannotationstoreannotation" title="DatasetAnnotationStoreAnnotation"><span class="symbol resource"></span>DatasetAnnotationStoreAnnotation</a></li>
     <li><a href="datasetannotationstoreiampolicy" title="DatasetAnnotationStoreIamPolicy"><span class="symbol resource"></span>DatasetAnnotationStoreIamPolicy</a></li>
-    <li><a href="datasetconsentstore" title="DatasetConsentStore"><span class="symbol resource"></span>DatasetConsentStore</a></li>
-    <li><a href="datasetconsentstoreattributedefinition" title="DatasetConsentStoreAttributeDefinition"><span class="symbol resource"></span>DatasetConsentStoreAttributeDefinition</a></li>
-    <li><a href="datasetconsentstoreconsent" title="DatasetConsentStoreConsent"><span class="symbol resource"></span>DatasetConsentStoreConsent</a></li>
-    <li><a href="datasetconsentstoreconsentartifact" title="DatasetConsentStoreConsentArtifact"><span class="symbol resource"></span>DatasetConsentStoreConsentArtifact</a></li>
     <li><a href="datasetconsentstoreiampolicy" title="DatasetConsentStoreIamPolicy"><span class="symbol resource"></span>DatasetConsentStoreIamPolicy</a></li>
-    <li><a href="datasetconsentstoreuserdatamapping" title="DatasetConsentStoreUserDataMapping"><span class="symbol resource"></span>DatasetConsentStoreUserDataMapping</a></li>
-    <li><a href="datasetdicomstore" title="DatasetDicomStore"><span class="symbol resource"></span>DatasetDicomStore</a></li>
     <li><a href="datasetdicomstoreiampolicy" title="DatasetDicomStoreIamPolicy"><span class="symbol resource"></span>DatasetDicomStoreIamPolicy</a></li>
-    <li><a href="datasetfhirstore" title="DatasetFhirStore"><span class="symbol resource"></span>DatasetFhirStore</a></li>
-    <li><a href="datasetfhirstorefhir" title="DatasetFhirStoreFhir"><span class="symbol resource"></span>DatasetFhirStoreFhir</a></li>
     <li><a href="datasetfhirstoreiampolicy" title="DatasetFhirStoreIamPolicy"><span class="symbol resource"></span>DatasetFhirStoreIamPolicy</a></li>
-    <li><a href="datasethl7v2store" title="DatasetHl7V2Store"><span class="symbol resource"></span>DatasetHl7V2Store</a></li>
     <li><a href="datasethl7v2storeiampolicy" title="DatasetHl7V2StoreIamPolicy"><span class="symbol resource"></span>DatasetHl7V2StoreIamPolicy</a></li>
-    <li><a href="datasethl7v2storemessage" title="DatasetHl7V2StoreMessage"><span class="symbol resource"></span>DatasetHl7V2StoreMessage</a></li>
     <li><a href="datasetiampolicy" title="DatasetIamPolicy"><span class="symbol resource"></span>DatasetIamPolicy</a></li>
+    <li><a href="dicomstore" title="DicomStore"><span class="symbol resource"></span>DicomStore</a></li>
+    <li><a href="fhirstore" title="FhirStore"><span class="symbol resource"></span>FhirStore</a></li>
+    <li><a href="hl7v2store" title="Hl7V2Store"><span class="symbol resource"></span>Hl7V2Store</a></li>
+    <li><a href="message" title="Message"><span class="symbol resource"></span>Message</a></li>
+    <li><a href="userdatamapping" title="UserDataMapping"><span class="symbol resource"></span>UserDataMapping</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -39,6 +38,6 @@ Explore the resources and functions of the google-native.healthcare/v1beta1 modu
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.0</dd>
+	<dd>0.3.0</dd>
 </dl>
 

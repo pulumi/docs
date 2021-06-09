@@ -28,7 +28,6 @@ Creates a regional BackendService resource in the specified project using the da
 <span class="k">def </span><span class="nx">RegionBackendService</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                          <span class="nx">affinity_cookie_ttl_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
-                         <span class="nx">backend_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">backends</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_beta.BackendArgs]]</span> = None<span class="p">,</span>
                          <span class="nx">cdn_policy</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.BackendServiceCdnPolicyArgs]</span> = None<span class="p">,</span>
                          <span class="nx">circuit_breakers</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.CircuitBreakersArgs]</span> = None<span class="p">,</span>
@@ -53,7 +52,6 @@ Creates a regional BackendService resource in the specified project using the da
                          <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">outlier_detection</span><span class="p">:</span> <span class="nx">Optional[_compute_beta.OutlierDetectionArgs]</span> = None<span class="p">,</span>
-                         <span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                          <span class="nx">port_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -193,14 +191,6 @@ The RegionBackendService resource accepts the following [input]({{< relref "/doc
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="backendservice_csharp">
-<a href="#backendservice_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Service</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -458,16 +448,6 @@ This field is applicable to either:
 
 Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="port_csharp">
-<a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Deprecated in favor of portName. The TCP port to connect on the backend. The default value is 80.
-
-Backend services for Internal TCP/UDP Load Balancing and Network Load Balancing require you omit port.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="portname_csharp">
 <a href="#portname_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Name</a>
 </span>
@@ -561,14 +541,6 @@ Not supported when the backend service is referenced by a URL map that is bound 
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="backendservice_go">
-<a href="#backendservice_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Service</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -826,16 +798,6 @@ This field is applicable to either:
 
 Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="port_go">
-<a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Deprecated in favor of portName. The TCP port to connect on the backend. The default value is 80.
-
-Backend services for Internal TCP/UDP Load Balancing and Network Load Balancing require you omit port.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="portname_go">
 <a href="#portname_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Name</a>
 </span>
@@ -929,14 +891,6 @@ Not supported when the backend service is referenced by a URL map that is bound 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="backendservice_nodejs">
-<a href="#backendservice_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Service</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1194,16 +1148,6 @@ This field is applicable to either:
 
 Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="port_nodejs">
-<a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Deprecated in favor of portName. The TCP port to connect on the backend. The default value is 80.
-
-Backend services for Internal TCP/UDP Load Balancing and Network Load Balancing require you omit port.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="portname_nodejs">
 <a href="#portname_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Name</a>
 </span>
@@ -1297,14 +1241,6 @@ Not supported when the backend service is referenced by a URL map that is bound 
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="backend_service_python">
-<a href="#backend_service_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>service</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1561,16 +1497,6 @@ This field is applicable to either:
 - A global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.  
 
 Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="port_python">
-<a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Deprecated in favor of portName. The TCP port to connect on the backend. The default value is 80.
-
-Backend services for Internal TCP/UDP Load Balancing and Network Load Balancing require you omit port.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_name_python">
 <a href="#port_name_python" style="color: inherit; text-decoration: inherit;">port_<wbr>name</a>
@@ -7185,14 +7111,6 @@ The default is false.{{% /md %}}</dd><dt class="property-required"
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="authentication_csharp">
-<a href="#authentication_csharp" style="color: inherit; text-decoration: inherit;">Authentication</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] Use clientTlsPolicy instead.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="clienttlspolicy_csharp">
 <a href="#clienttlspolicy_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Tls<wbr>Policy</a>
 </span>
@@ -7218,14 +7136,6 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="authentication_go">
-<a href="#authentication_go" style="color: inherit; text-decoration: inherit;">Authentication</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] Use clientTlsPolicy instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clienttlspolicy_go">
 <a href="#clienttlspolicy_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Tls<wbr>Policy</a>
@@ -7253,14 +7163,6 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="authentication_nodejs">
-<a href="#authentication_nodejs" style="color: inherit; text-decoration: inherit;">authentication</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] Use clientTlsPolicy instead.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="clienttlspolicy_nodejs">
 <a href="#clienttlspolicy_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Tls<wbr>Policy</a>
 </span>
@@ -7286,14 +7188,6 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="authentication_python">
-<a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] Use clientTlsPolicy instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_tls_policy_python">
 <a href="#client_tls_policy_python" style="color: inherit; text-decoration: inherit;">client_<wbr>tls_<wbr>policy</a>
@@ -7323,14 +7217,6 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="authentication_csharp">
-<a href="#authentication_csharp" style="color: inherit; text-decoration: inherit;">Authentication</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] Use clientTlsPolicy instead.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="clienttlspolicy_csharp">
 <a href="#clienttlspolicy_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Tls<wbr>Policy</a>
 </span>
@@ -7356,14 +7242,6 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="authentication_go">
-<a href="#authentication_go" style="color: inherit; text-decoration: inherit;">Authentication</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] Use clientTlsPolicy instead.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clienttlspolicy_go">
 <a href="#clienttlspolicy_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Tls<wbr>Policy</a>
@@ -7391,14 +7269,6 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="authentication_nodejs">
-<a href="#authentication_nodejs" style="color: inherit; text-decoration: inherit;">authentication</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] Use clientTlsPolicy instead.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="clienttlspolicy_nodejs">
 <a href="#clienttlspolicy_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Tls<wbr>Policy</a>
 </span>
@@ -7424,14 +7294,6 @@ Note: This field currently has no impact.{{% /md %}}</dd></dl>
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="authentication_python">
-<a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] Use clientTlsPolicy instead.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="client_tls_policy_python">
 <a href="#client_tls_policy_python" style="color: inherit; text-decoration: inherit;">client_<wbr>tls_<wbr>policy</a>

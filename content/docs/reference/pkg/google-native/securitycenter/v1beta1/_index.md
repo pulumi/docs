@@ -11,8 +11,8 @@ Explore the resources and functions of the google-native.securitycenter/v1beta1 
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="organizationsource" title="OrganizationSource"><span class="symbol resource"></span>OrganizationSource</a></li>
     <li><a href="organizationsourceiampolicy" title="OrganizationSourceIamPolicy"><span class="symbol resource"></span>OrganizationSourceIamPolicy</a></li>
+    <li><a href="source" title="Source"><span class="symbol resource"></span>Source</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -22,6 +22,6 @@ Explore the resources and functions of the google-native.securitycenter/v1beta1 
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.0</dd>
+	<dd>0.3.0</dd>
 </dl>
 

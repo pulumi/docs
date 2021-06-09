@@ -13,7 +13,7 @@ Explore the resources and functions of the google-native.cloudtasks/v2 module.
 <ul class="api">
     <li><a href="queue" title="Queue"><span class="symbol resource"></span>Queue</a></li>
     <li><a href="queueiampolicy" title="QueueIamPolicy"><span class="symbol resource"></span>QueueIamPolicy</a></li>
-    <li><a href="queuetask" title="QueueTask"><span class="symbol resource"></span>QueueTask</a></li>
+    <li><a href="task" title="Task"><span class="symbol resource"></span>Task</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -23,6 +23,6 @@ Explore the resources and functions of the google-native.cloudtasks/v2 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.0</dd>
+	<dd>0.3.0</dd>
 </dl>
 

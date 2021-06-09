@@ -28,11 +28,10 @@ Creates a `WorkerPool` to run the builds, and returns the new worker pool.
 <span class="k">def </span><span class="nx">WorkerPool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                <span class="nx">network_config</span><span class="p">:</span> <span class="nx">Optional[_cloudbuild_v1alpha2.NetworkConfigArgs]</span> = None<span class="p">,</span>
-               <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">worker_config</span><span class="p">:</span> <span class="nx">Optional[_cloudbuild_v1alpha2.WorkerConfigArgs]</span> = None<span class="p">,</span>
-               <span class="nx">worker_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">worker_pools_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+               <span class="nx">worker_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">WorkerPool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WorkerPoolArgs</a></span><span class="p">,</span>
@@ -162,8 +161,8 @@ The WorkerPool resource accepts the following [input]({{< relref "/docs/intro/co
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="projectsid_csharp">
-<a href="#projectsid_csharp" style="color: inherit; text-decoration: inherit;">Projects<wbr>Id</a>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -172,14 +171,6 @@ The WorkerPool resource accepts the following [input]({{< relref "/docs/intro/co
             title="Required">
         <span id="workerpoolid_csharp">
 <a href="#workerpoolid_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Pool<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="workerpoolsid_csharp">
-<a href="#workerpoolsid_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Pools<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -214,8 +205,8 @@ The WorkerPool resource accepts the following [input]({{< relref "/docs/intro/co
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="projectsid_go">
-<a href="#projectsid_go" style="color: inherit; text-decoration: inherit;">Projects<wbr>Id</a>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -224,14 +215,6 @@ The WorkerPool resource accepts the following [input]({{< relref "/docs/intro/co
             title="Required">
         <span id="workerpoolid_go">
 <a href="#workerpoolid_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Pool<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="workerpoolsid_go">
-<a href="#workerpoolsid_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Pools<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -266,8 +249,8 @@ The WorkerPool resource accepts the following [input]({{< relref "/docs/intro/co
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="projectsid_nodejs">
-<a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -276,14 +259,6 @@ The WorkerPool resource accepts the following [input]({{< relref "/docs/intro/co
             title="Required">
         <span id="workerpoolid_nodejs">
 <a href="#workerpoolid_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Pool<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="workerpoolsid_nodejs">
-<a href="#workerpoolsid_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Pools<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -318,8 +293,8 @@ The WorkerPool resource accepts the following [input]({{< relref "/docs/intro/co
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="projects_id_python">
-<a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -328,14 +303,6 @@ The WorkerPool resource accepts the following [input]({{< relref "/docs/intro/co
             title="Required">
         <span id="worker_pool_id_python">
 <a href="#worker_pool_id_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>pool_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="worker_pools_id_python">
-<a href="#worker_pools_id_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>pools_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

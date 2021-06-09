@@ -41,7 +41,6 @@ Returns the specified SSL policy resource. Gets a list of available SSL policies
               <span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">self_link_with_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-              <span class="nx">ssl_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">tls_settings</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.ServerTlsSettingsArgs]</span> = None<span class="p">,</span>
               <span class="nx">warnings</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_alpha.SslPolicyWarningsItemArgs]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -175,14 +174,6 @@ The SslPolicy resource accepts the following [input]({{< relref "/docs/intro/con
             title="Required">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="sslpolicy_csharp">
-<a href="#sslpolicy_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -322,14 +313,6 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="sslpolicy_go">
-<a href="#sslpolicy_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Policy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creationtimestamp_go">
@@ -465,14 +448,6 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="sslpolicy_nodejs">
-<a href="#sslpolicy_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Policy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creationtimestamp_nodejs">
@@ -604,14 +579,6 @@ To see the latest fingerprint, make a get() request to retrieve an SslPolicy.{{%
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="ssl_policy_python">
-<a href="#ssl_policy_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

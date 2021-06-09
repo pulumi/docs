@@ -11,14 +11,14 @@ Explore the resources and functions of the google-native.datacatalog/v1beta1 mod
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="entry" title="Entry"><span class="symbol resource"></span>Entry</a></li>
     <li><a href="entrygroup" title="EntryGroup"><span class="symbol resource"></span>EntryGroup</a></li>
-    <li><a href="entrygroupentry" title="EntryGroupEntry"><span class="symbol resource"></span>EntryGroupEntry</a></li>
     <li><a href="entrygroupiampolicy" title="EntryGroupIamPolicy"><span class="symbol resource"></span>EntryGroupIamPolicy</a></li>
+    <li><a href="policytag" title="PolicyTag"><span class="symbol resource"></span>PolicyTag</a></li>
     <li><a href="tagtemplate" title="TagTemplate"><span class="symbol resource"></span>TagTemplate</a></li>
     <li><a href="tagtemplateiampolicy" title="TagTemplateIamPolicy"><span class="symbol resource"></span>TagTemplateIamPolicy</a></li>
     <li><a href="taxonomy" title="Taxonomy"><span class="symbol resource"></span>Taxonomy</a></li>
     <li><a href="taxonomyiampolicy" title="TaxonomyIamPolicy"><span class="symbol resource"></span>TaxonomyIamPolicy</a></li>
-    <li><a href="taxonomypolicytag" title="TaxonomyPolicyTag"><span class="symbol resource"></span>TaxonomyPolicyTag</a></li>
     <li><a href="taxonomypolicytagiampolicy" title="TaxonomyPolicyTagIamPolicy"><span class="symbol resource"></span>TaxonomyPolicyTagIamPolicy</a></li>
 </ul>
 
@@ -29,6 +29,6 @@ Explore the resources and functions of the google-native.datacatalog/v1beta1 mod
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.0</dd>
+	<dd>0.3.0</dd>
 </dl>
 

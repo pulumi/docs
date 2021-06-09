@@ -30,7 +30,7 @@ Sets the access control policy on a TagKey, replacing any existing policy. The `
                     <span class="nx">audit_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[_cloudresourcemanager_v3.AuditConfigArgs]]</span> = None<span class="p">,</span>
                     <span class="nx">bindings</span><span class="p">:</span> <span class="nx">Optional[Sequence[_cloudresourcemanager_v3.BindingArgs]]</span> = None<span class="p">,</span>
                     <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                    <span class="nx">tag_keys_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">tag_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">update_mask</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -162,8 +162,8 @@ The TagKeyIamPolicy resource accepts the following [input]({{< relref "/docs/int
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="tagkeysid_csharp">
-<a href="#tagkeysid_csharp" style="color: inherit; text-decoration: inherit;">Tag<wbr>Keys<wbr>Id</a>
+        <span id="tagkeyid_csharp">
+<a href="#tagkeyid_csharp" style="color: inherit; text-decoration: inherit;">Tag<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -214,8 +214,8 @@ The TagKeyIamPolicy resource accepts the following [input]({{< relref "/docs/int
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="tagkeysid_go">
-<a href="#tagkeysid_go" style="color: inherit; text-decoration: inherit;">Tag<wbr>Keys<wbr>Id</a>
+        <span id="tagkeyid_go">
+<a href="#tagkeyid_go" style="color: inherit; text-decoration: inherit;">Tag<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -266,8 +266,8 @@ The TagKeyIamPolicy resource accepts the following [input]({{< relref "/docs/int
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="tagkeysid_nodejs">
-<a href="#tagkeysid_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Keys<wbr>Id</a>
+        <span id="tagkeyid_nodejs">
+<a href="#tagkeyid_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -318,8 +318,8 @@ The TagKeyIamPolicy resource accepts the following [input]({{< relref "/docs/int
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="tag_keys_id_python">
-<a href="#tag_keys_id_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>keys_<wbr>id</a>
+        <span id="tag_key_id_python">
+<a href="#tag_key_id_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

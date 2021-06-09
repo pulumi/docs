@@ -11,7 +11,7 @@ Explore the resources and functions of the google-native.assuredworkloads/v1 mod
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
-    <li><a href="organizationworkload" title="OrganizationWorkload"><span class="symbol resource"></span>OrganizationWorkload</a></li>
+    <li><a href="workload" title="Workload"><span class="symbol resource"></span>Workload</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -21,6 +21,6 @@ Explore the resources and functions of the google-native.assuredworkloads/v1 mod
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.0</dd>
+	<dd>0.3.0</dd>
 </dl>
 

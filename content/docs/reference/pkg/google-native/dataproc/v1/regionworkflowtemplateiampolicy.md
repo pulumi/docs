@@ -29,10 +29,10 @@ Sets the access control policy on the specified resource. Replaces any existing 
                                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                                     <span class="nx">bindings</span><span class="p">:</span> <span class="nx">Optional[Sequence[_dataproc_v1.BindingArgs]]</span> = None<span class="p">,</span>
                                     <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                    <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                    <span class="nx">regions_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                    <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                    <span class="nx">region_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                     <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
-                                    <span class="nx">workflow_templates_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+                                    <span class="nx">workflow_template_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">RegionWorkflowTemplateIamPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                                     <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RegionWorkflowTemplateIamPolicyArgs</a></span><span class="p">,</span>
@@ -162,24 +162,24 @@ The RegionWorkflowTemplateIamPolicy resource accepts the following [input]({{< r
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="projectsid_csharp">
-<a href="#projectsid_csharp" style="color: inherit; text-decoration: inherit;">Projects<wbr>Id</a>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="regionsid_csharp">
-<a href="#regionsid_csharp" style="color: inherit; text-decoration: inherit;">Regions<wbr>Id</a>
+        <span id="regionid_csharp">
+<a href="#regionid_csharp" style="color: inherit; text-decoration: inherit;">Region<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="workflowtemplatesid_csharp">
-<a href="#workflowtemplatesid_csharp" style="color: inherit; text-decoration: inherit;">Workflow<wbr>Templates<wbr>Id</a>
+        <span id="workflowtemplateid_csharp">
+<a href="#workflowtemplateid_csharp" style="color: inherit; text-decoration: inherit;">Workflow<wbr>Template<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -214,24 +214,24 @@ The RegionWorkflowTemplateIamPolicy resource accepts the following [input]({{< r
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="projectsid_go">
-<a href="#projectsid_go" style="color: inherit; text-decoration: inherit;">Projects<wbr>Id</a>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="regionsid_go">
-<a href="#regionsid_go" style="color: inherit; text-decoration: inherit;">Regions<wbr>Id</a>
+        <span id="regionid_go">
+<a href="#regionid_go" style="color: inherit; text-decoration: inherit;">Region<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="workflowtemplatesid_go">
-<a href="#workflowtemplatesid_go" style="color: inherit; text-decoration: inherit;">Workflow<wbr>Templates<wbr>Id</a>
+        <span id="workflowtemplateid_go">
+<a href="#workflowtemplateid_go" style="color: inherit; text-decoration: inherit;">Workflow<wbr>Template<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -266,24 +266,24 @@ The RegionWorkflowTemplateIamPolicy resource accepts the following [input]({{< r
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="projectsid_nodejs">
-<a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="regionsid_nodejs">
-<a href="#regionsid_nodejs" style="color: inherit; text-decoration: inherit;">regions<wbr>Id</a>
+        <span id="regionid_nodejs">
+<a href="#regionid_nodejs" style="color: inherit; text-decoration: inherit;">region<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="workflowtemplatesid_nodejs">
-<a href="#workflowtemplatesid_nodejs" style="color: inherit; text-decoration: inherit;">workflow<wbr>Templates<wbr>Id</a>
+        <span id="workflowtemplateid_nodejs">
+<a href="#workflowtemplateid_nodejs" style="color: inherit; text-decoration: inherit;">workflow<wbr>Template<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -318,24 +318,24 @@ The RegionWorkflowTemplateIamPolicy resource accepts the following [input]({{< r
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="projects_id_python">
-<a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="regions_id_python">
-<a href="#regions_id_python" style="color: inherit; text-decoration: inherit;">regions_<wbr>id</a>
+        <span id="region_id_python">
+<a href="#region_id_python" style="color: inherit; text-decoration: inherit;">region_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="workflow_templates_id_python">
-<a href="#workflow_templates_id_python" style="color: inherit; text-decoration: inherit;">workflow_<wbr>templates_<wbr>id</a>
+        <span id="workflow_template_id_python">
+<a href="#workflow_template_id_python" style="color: inherit; text-decoration: inherit;">workflow_<wbr>template_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

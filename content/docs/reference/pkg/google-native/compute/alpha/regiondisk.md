@@ -29,7 +29,6 @@ Creates a persistent regional disk in the specified project using the data inclu
                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                <span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">disk</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">disk_encryption_key</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.CustomerEncryptionKeyArgs]</span> = None<span class="p">,</span>
                <span class="nx">erase_windows_vss_signature</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                <span class="nx">guest_os_features</span><span class="p">:</span> <span class="nx">Optional[Sequence[_compute_alpha.GuestOsFeatureArgs]]</span> = None<span class="p">,</span>
@@ -62,8 +61,6 @@ Creates a persistent regional disk in the specified project using the data inclu
                <span class="nx">source_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">source_image_encryption_key</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.CustomerEncryptionKeyArgs]</span> = None<span class="p">,</span>
                <span class="nx">source_image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">source_in_place_snapshot</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">source_in_place_snapshot_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">source_instant_snapshot</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">source_instant_snapshot_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">source_snapshot</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -71,7 +68,6 @@ Creates a persistent regional disk in the specified project using the data inclu
                <span class="nx">source_snapshot_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">source_storage_object</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">storage_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">user_licenses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                <span class="nx">users</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
@@ -204,14 +200,6 @@ The RegionDisk resource accepts the following [input]({{< relref "/docs/intro/co
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="disk_csharp">
-<a href="#disk_csharp" style="color: inherit; text-decoration: inherit;">Disk</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -516,25 +504,6 @@ global/images/family/my-image-family{{% /md %}}</dd><dt class="property-optional
     </dt>
     <dd>{{% md %}}[Output Only] The ID value of the image used to create this disk. This value identifies the exact image that was used to create this persistent disk. For example, if you created the persistent disk from an image that was later deleted and recreated under the same name, the source image ID would identify the exact version of the image that was used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="sourceinplacesnapshot_csharp">
-<a href="#sourceinplacesnapshot_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>In<wbr>Place<wbr>Snapshot</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] The source in-place snapshot used to create this disk. You can provide this as a partial or full URL to the resource. For example, the following are valid values:  
-- https://www.googleapis.com/compute/v1/projects/project/global/inPlaceSnapshots/inPlaceSnapshots 
-- projects/project/global/inPlaceSnapshots/inPlaceSnapshots 
-- global/inPlaceSnapshots/inPlaceSnapshots{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sourceinplacesnapshotid_csharp">
-<a href="#sourceinplacesnapshotid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>In<wbr>Place<wbr>Snapshot<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] [Output Only] The unique ID of the in-place snapshot used to create this disk. This value identifies the exact in-place snapshot that was used to create this persistent disk. For example, if you created the persistent disk from an in-place snapshot that was later deleted and recreated under the same name, the source in-place snapshot ID would identify the exact version of the in-place snapshot that was used.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="sourceinstantsnapshot_csharp">
 <a href="#sourceinstantsnapshot_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Instant<wbr>Snapshot</a>
 </span>
@@ -602,14 +571,6 @@ global/images/family/my-image-family{{% /md %}}</dd><dt class="property-optional
 - READY: Disk is ready for use. 
 - DELETING: Disk is deleting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="storagetype_csharp">
-<a href="#storagetype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] Storage type of the persistent disk.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -646,14 +607,6 @@ https://www.googleapis.com/compute/v1/projects/debian-cloud/global/licenses/debi
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="disk_go">
-<a href="#disk_go" style="color: inherit; text-decoration: inherit;">Disk</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -958,25 +911,6 @@ global/images/family/my-image-family{{% /md %}}</dd><dt class="property-optional
     </dt>
     <dd>{{% md %}}[Output Only] The ID value of the image used to create this disk. This value identifies the exact image that was used to create this persistent disk. For example, if you created the persistent disk from an image that was later deleted and recreated under the same name, the source image ID would identify the exact version of the image that was used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="sourceinplacesnapshot_go">
-<a href="#sourceinplacesnapshot_go" style="color: inherit; text-decoration: inherit;">Source<wbr>In<wbr>Place<wbr>Snapshot</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] The source in-place snapshot used to create this disk. You can provide this as a partial or full URL to the resource. For example, the following are valid values:  
-- https://www.googleapis.com/compute/v1/projects/project/global/inPlaceSnapshots/inPlaceSnapshots 
-- projects/project/global/inPlaceSnapshots/inPlaceSnapshots 
-- global/inPlaceSnapshots/inPlaceSnapshots{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sourceinplacesnapshotid_go">
-<a href="#sourceinplacesnapshotid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>In<wbr>Place<wbr>Snapshot<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] [Output Only] The unique ID of the in-place snapshot used to create this disk. This value identifies the exact in-place snapshot that was used to create this persistent disk. For example, if you created the persistent disk from an in-place snapshot that was later deleted and recreated under the same name, the source in-place snapshot ID would identify the exact version of the in-place snapshot that was used.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="sourceinstantsnapshot_go">
 <a href="#sourceinstantsnapshot_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Instant<wbr>Snapshot</a>
 </span>
@@ -1044,14 +978,6 @@ global/images/family/my-image-family{{% /md %}}</dd><dt class="property-optional
 - READY: Disk is ready for use. 
 - DELETING: Disk is deleting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="storagetype_go">
-<a href="#storagetype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] Storage type of the persistent disk.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -1088,14 +1014,6 @@ https://www.googleapis.com/compute/v1/projects/debian-cloud/global/licenses/debi
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="disk_nodejs">
-<a href="#disk_nodejs" style="color: inherit; text-decoration: inherit;">disk</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1400,25 +1318,6 @@ global/images/family/my-image-family{{% /md %}}</dd><dt class="property-optional
     </dt>
     <dd>{{% md %}}[Output Only] The ID value of the image used to create this disk. This value identifies the exact image that was used to create this persistent disk. For example, if you created the persistent disk from an image that was later deleted and recreated under the same name, the source image ID would identify the exact version of the image that was used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="sourceinplacesnapshot_nodejs">
-<a href="#sourceinplacesnapshot_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>In<wbr>Place<wbr>Snapshot</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] The source in-place snapshot used to create this disk. You can provide this as a partial or full URL to the resource. For example, the following are valid values:  
-- https://www.googleapis.com/compute/v1/projects/project/global/inPlaceSnapshots/inPlaceSnapshots 
-- projects/project/global/inPlaceSnapshots/inPlaceSnapshots 
-- global/inPlaceSnapshots/inPlaceSnapshots{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sourceinplacesnapshotid_nodejs">
-<a href="#sourceinplacesnapshotid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>In<wbr>Place<wbr>Snapshot<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] [Output Only] The unique ID of the in-place snapshot used to create this disk. This value identifies the exact in-place snapshot that was used to create this persistent disk. For example, if you created the persistent disk from an in-place snapshot that was later deleted and recreated under the same name, the source in-place snapshot ID would identify the exact version of the in-place snapshot that was used.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="sourceinstantsnapshot_nodejs">
 <a href="#sourceinstantsnapshot_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Instant<wbr>Snapshot</a>
 </span>
@@ -1486,14 +1385,6 @@ global/images/family/my-image-family{{% /md %}}</dd><dt class="property-optional
 - READY: Disk is ready for use. 
 - DELETING: Disk is deleting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="storagetype_nodejs">
-<a href="#storagetype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] Storage type of the persistent disk.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -1530,14 +1421,6 @@ https://www.googleapis.com/compute/v1/projects/debian-cloud/global/licenses/debi
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="disk_python">
-<a href="#disk_python" style="color: inherit; text-decoration: inherit;">disk</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1842,25 +1725,6 @@ global/images/family/my-image-family{{% /md %}}</dd><dt class="property-optional
     </dt>
     <dd>{{% md %}}[Output Only] The ID value of the image used to create this disk. This value identifies the exact image that was used to create this persistent disk. For example, if you created the persistent disk from an image that was later deleted and recreated under the same name, the source image ID would identify the exact version of the image that was used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="source_in_place_snapshot_python">
-<a href="#source_in_place_snapshot_python" style="color: inherit; text-decoration: inherit;">source_<wbr>in_<wbr>place_<wbr>snapshot</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] The source in-place snapshot used to create this disk. You can provide this as a partial or full URL to the resource. For example, the following are valid values:  
-- https://www.googleapis.com/compute/v1/projects/project/global/inPlaceSnapshots/inPlaceSnapshots 
-- projects/project/global/inPlaceSnapshots/inPlaceSnapshots 
-- global/inPlaceSnapshots/inPlaceSnapshots{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="source_in_place_snapshot_id_python">
-<a href="#source_in_place_snapshot_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>in_<wbr>place_<wbr>snapshot_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] [Output Only] The unique ID of the in-place snapshot used to create this disk. This value identifies the exact in-place snapshot that was used to create this persistent disk. For example, if you created the persistent disk from an in-place snapshot that was later deleted and recreated under the same name, the source in-place snapshot ID would identify the exact version of the in-place snapshot that was used.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="source_instant_snapshot_python">
 <a href="#source_instant_snapshot_python" style="color: inherit; text-decoration: inherit;">source_<wbr>instant_<wbr>snapshot</a>
 </span>
@@ -1927,14 +1791,6 @@ global/images/family/my-image-family{{% /md %}}</dd><dt class="property-optional
 - FAILED: Disk creation failed. 
 - READY: Disk is ready for use. 
 - DELETING: Disk is deleting.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="storage_type_python">
-<a href="#storage_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] Storage type of the persistent disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>

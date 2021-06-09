@@ -34,8 +34,7 @@ Create an OS Config patch deployment.
                     <span class="nx">one_time_schedule</span><span class="p">:</span> <span class="nx">Optional[_osconfig_v1beta.OneTimeScheduleArgs]</span> = None<span class="p">,</span>
                     <span class="nx">patch_config</span><span class="p">:</span> <span class="nx">Optional[_osconfig_v1beta.PatchConfigArgs]</span> = None<span class="p">,</span>
                     <span class="nx">patch_deployment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                    <span class="nx">patch_deployments_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                    <span class="nx">projects_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">recurring_schedule</span><span class="p">:</span> <span class="nx">Optional[_osconfig_v1beta.RecurringScheduleArgs]</span> = None<span class="p">,</span>
                     <span class="nx">rollout</span><span class="p">:</span> <span class="nx">Optional[_osconfig_v1beta.PatchRolloutArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -175,16 +174,8 @@ The PatchDeployment resource accepts the following [input]({{< relref "/docs/int
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="patchdeploymentsid_csharp">
-<a href="#patchdeploymentsid_csharp" style="color: inherit; text-decoration: inherit;">Patch<wbr>Deployments<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="projectsid_csharp">
-<a href="#projectsid_csharp" style="color: inherit; text-decoration: inherit;">Projects<wbr>Id</a>
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -267,16 +258,8 @@ The PatchDeployment resource accepts the following [input]({{< relref "/docs/int
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="patchdeploymentsid_go">
-<a href="#patchdeploymentsid_go" style="color: inherit; text-decoration: inherit;">Patch<wbr>Deployments<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="projectsid_go">
-<a href="#projectsid_go" style="color: inherit; text-decoration: inherit;">Projects<wbr>Id</a>
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -359,16 +342,8 @@ The PatchDeployment resource accepts the following [input]({{< relref "/docs/int
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="patchdeploymentsid_nodejs">
-<a href="#patchdeploymentsid_nodejs" style="color: inherit; text-decoration: inherit;">patch<wbr>Deployments<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="projectsid_nodejs">
-<a href="#projectsid_nodejs" style="color: inherit; text-decoration: inherit;">projects<wbr>Id</a>
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -451,16 +426,8 @@ The PatchDeployment resource accepts the following [input]({{< relref "/docs/int
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="patch_deployments_id_python">
-<a href="#patch_deployments_id_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>deployments_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="projects_id_python">
-<a href="#projects_id_python" style="color: inherit; text-decoration: inherit;">projects_<wbr>id</a>
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

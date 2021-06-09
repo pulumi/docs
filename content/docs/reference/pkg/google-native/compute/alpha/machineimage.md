@@ -32,7 +32,6 @@ Creates a machine image in the specified project using the data that is included
                  <span class="nx">guest_flush</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                  <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                 <span class="nx">machine_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">machine_image_encryption_key</span><span class="p">:</span> <span class="nx">Optional[_compute_alpha.CustomerEncryptionKeyArgs]</span> = None<span class="p">,</span>
                  <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -174,14 +173,6 @@ The MachineImage resource accepts the following [input]({{< relref "/docs/intro/
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="machineimage_csharp">
-<a href="#machineimage_csharp" style="color: inherit; text-decoration: inherit;">Machine<wbr>Image</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -339,14 +330,6 @@ If you do not provide an encryption key when creating the machine image, then th
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="machineimage_go">
-<a href="#machineimage_go" style="color: inherit; text-decoration: inherit;">Machine<wbr>Image</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -503,14 +486,6 @@ If you do not provide an encryption key when creating the machine image, then th
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="machineimage_nodejs">
-<a href="#machineimage_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Image</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -666,14 +641,6 @@ If you do not provide an encryption key when creating the machine image, then th
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="machine_image_python">
-<a href="#machine_image_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>image</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -2489,7 +2456,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
     <dd>{{% md %}}The ID of a supported feature. Read  Enabling guest operating system features to see a list of available options.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="instancetemplateitemsitem">Instance<wbr>Template<wbr>Items<wbr>Item</h4>
+<h4 id="instanceitemsitem">Instance<wbr>Items<wbr>Item</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
@@ -2571,7 +2538,7 @@ https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem{{% /md 
     <dd>{{% md %}}Value for the metadata entry. These are free-form strings, and only have meaning as interpreted by the image running in the instance. The only restriction placed on values is that their size must be less than or equal to 262144 bytes (256 KiB).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="instancetemplateitemsitemresponse">Instance<wbr>Template<wbr>Items<wbr>Item<wbr>Response</h4>
+<h4 id="instanceitemsitemresponse">Instance<wbr>Items<wbr>Item<wbr>Response</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
@@ -2672,7 +2639,7 @@ To see the latest fingerprint, make a get() request to retrieve the resource.{{%
 <a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplateitemsitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Inputs.<wbr>Instance<wbr>Template<wbr>Items<wbr>Item<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#instanceitemsitem">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Inputs.<wbr>Instance<wbr>Items<wbr>Item<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of key/value pairs. The total size of all keys and values must be less than 512 KB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2702,7 +2669,7 @@ To see the latest fingerprint, make a get() request to retrieve the resource.{{%
 <a href="#items_go" style="color: inherit; text-decoration: inherit;">Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplateitemsitem">[]Instance<wbr>Template<wbr>Items<wbr>Item</a></span>
+        <span class="property-type"><a href="#instanceitemsitem">[]Instance<wbr>Items<wbr>Item</a></span>
     </dt>
     <dd>{{% md %}}Array of key/value pairs. The total size of all keys and values must be less than 512 KB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2732,7 +2699,7 @@ To see the latest fingerprint, make a get() request to retrieve the resource.{{%
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplateitemsitem">Instance<wbr>Template<wbr>Items<wbr>Item<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#instanceitemsitem">Instance<wbr>Items<wbr>Item<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Array of key/value pairs. The total size of all keys and values must be less than 512 KB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2762,7 +2729,7 @@ To see the latest fingerprint, make a get() request to retrieve the resource.{{%
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplateitemsitem">Instance<wbr>Template<wbr>Items<wbr>Item<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instanceitemsitem">Instance<wbr>Items<wbr>Item<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of key/value pairs. The total size of all keys and values must be less than 512 KB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2794,7 +2761,7 @@ To see the latest fingerprint, make a get() request to retrieve the resource.{{%
 <a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplateitemsitemresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Inputs.<wbr>Instance<wbr>Template<wbr>Items<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#instanceitemsitemresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Inputs.<wbr>Instance<wbr>Items<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of key/value pairs. The total size of all keys and values must be less than 512 KB.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2824,7 +2791,7 @@ To see the latest fingerprint, make a get() request to retrieve the resource.{{%
 <a href="#items_go" style="color: inherit; text-decoration: inherit;">Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplateitemsitemresponse">[]Instance<wbr>Template<wbr>Items<wbr>Item<wbr>Response</a></span>
+        <span class="property-type"><a href="#instanceitemsitemresponse">[]Instance<wbr>Items<wbr>Item<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Array of key/value pairs. The total size of all keys and values must be less than 512 KB.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2854,7 +2821,7 @@ To see the latest fingerprint, make a get() request to retrieve the resource.{{%
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplateitemsitemresponse">Instance<wbr>Template<wbr>Items<wbr>Item<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#instanceitemsitemresponse">Instance<wbr>Items<wbr>Item<wbr>Response<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Array of key/value pairs. The total size of all keys and values must be less than 512 KB.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2884,7 +2851,7 @@ To see the latest fingerprint, make a get() request to retrieve the resource.{{%
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplateitemsitemresponse">Instance<wbr>Template<wbr>Items<wbr>Item<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instanceitemsitemresponse">Instance<wbr>Items<wbr>Item<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of key/value pairs. The total size of all keys and values must be less than 512 KB.{{% /md %}}</dd><dt class="property-required"
             title="Required">

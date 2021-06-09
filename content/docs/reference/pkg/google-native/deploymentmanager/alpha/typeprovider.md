@@ -39,8 +39,7 @@ Creates a type provider.
                  <span class="nx">operation</span><span class="p">:</span> <span class="nx">Optional[_deploymentmanager_alpha.OperationArgs]</span> = None<span class="p">,</span>
                  <span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[_deploymentmanager_alpha.OptionsArgs]</span> = None<span class="p">,</span>
                  <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                 <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                 <span class="nx">type_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+                 <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">TypeProvider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                  <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TypeProviderArgs</a></span><span class="p">,</span>
@@ -176,14 +175,6 @@ The TypeProvider resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="typeprovider_csharp">
-<a href="#typeprovider_csharp" style="color: inherit; text-decoration: inherit;">Type<wbr>Provider</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="collectionoverrides_csharp">
@@ -288,14 +279,6 @@ The TypeProvider resource accepts the following [input]({{< relref "/docs/intro/
             title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="typeprovider_go">
-<a href="#typeprovider_go" style="color: inherit; text-decoration: inherit;">Type<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -408,14 +391,6 @@ The TypeProvider resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="typeprovider_nodejs">
-<a href="#typeprovider_nodejs" style="color: inherit; text-decoration: inherit;">type<wbr>Provider</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="collectionoverrides_nodejs">
@@ -520,14 +495,6 @@ The TypeProvider resource accepts the following [input]({{< relref "/docs/intro/
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_provider_python">
-<a href="#type_provider_python" style="color: inherit; text-decoration: inherit;">type_<wbr>provider</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -3025,14 +2992,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Output Only] The value of `requestId` if you provided it in the request. Not present otherwise.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="creationtimestamp_csharp">
-<a href="#creationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] This field is deprecated.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -3220,14 +3179,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The value of `requestId` if you provided it in the request. Not present otherwise.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="creationtimestamp_go">
-<a href="#creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] This field is deprecated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -3417,14 +3368,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Output Only] The value of `requestId` if you provided it in the request. Not present otherwise.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="creationtimestamp_nodejs">
-<a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] This field is deprecated.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -3612,14 +3555,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The value of `requestId` if you provided it in the request. Not present otherwise.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="creation_timestamp_python">
-<a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] This field is deprecated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -3811,14 +3746,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Output Only] The value of `requestId` if you provided it in the request. Not present otherwise.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="creationtimestamp_csharp">
-<a href="#creationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] This field is deprecated.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -3998,14 +3925,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The value of `requestId` if you provided it in the request. Not present otherwise.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="creationtimestamp_go">
-<a href="#creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] This field is deprecated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -4187,14 +4106,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}[Output Only] The value of `requestId` if you provided it in the request. Not present otherwise.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="creationtimestamp_nodejs">
-<a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] This field is deprecated.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -4374,14 +4285,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The value of `requestId` if you provided it in the request. Not present otherwise.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="creation_timestamp_python">
-<a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] This field is deprecated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>

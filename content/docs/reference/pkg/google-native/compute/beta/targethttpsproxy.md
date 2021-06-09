@@ -27,8 +27,6 @@ Creates a TargetHttpsProxy resource in the specified project using the data incl
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">TargetHttpsProxy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                     <span class="nx">authentication</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                     <span class="nx">authorization</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">authorization_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -46,7 +44,6 @@ Creates a TargetHttpsProxy resource in the specified project using the data incl
                      <span class="nx">server_tls_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">ssl_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                      <span class="nx">ssl_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                     <span class="nx">target_https_proxy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">url_map</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">TargetHttpsProxy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -183,31 +180,7 @@ The TargetHttpsProxy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="targethttpsproxy_csharp">
-<a href="#targethttpsproxy_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Https<wbr>Proxy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="authentication_csharp">
-<a href="#authentication_csharp" style="color: inherit; text-decoration: inherit;">Authentication</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] Use serverTlsPolicy instead.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="authorization_csharp">
-<a href="#authorization_csharp" style="color: inherit; text-decoration: inherit;">Authorization</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] Use authorizationPolicy instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizationpolicy_csharp">
 <a href="#authorizationpolicy_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Policy</a>
@@ -373,31 +346,7 @@ Note: This field currently has no impact.{{% /md %}}</dd><dt class="property-opt
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="targethttpsproxy_go">
-<a href="#targethttpsproxy_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Https<wbr>Proxy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="authentication_go">
-<a href="#authentication_go" style="color: inherit; text-decoration: inherit;">Authentication</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] Use serverTlsPolicy instead.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="authorization_go">
-<a href="#authorization_go" style="color: inherit; text-decoration: inherit;">Authorization</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] Use authorizationPolicy instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizationpolicy_go">
 <a href="#authorizationpolicy_go" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Policy</a>
@@ -563,31 +512,7 @@ Note: This field currently has no impact.{{% /md %}}</dd><dt class="property-opt
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="targethttpsproxy_nodejs">
-<a href="#targethttpsproxy_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Https<wbr>Proxy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="authentication_nodejs">
-<a href="#authentication_nodejs" style="color: inherit; text-decoration: inherit;">authentication</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] Use serverTlsPolicy instead.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="authorization_nodejs">
-<a href="#authorization_nodejs" style="color: inherit; text-decoration: inherit;">authorization</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] Use authorizationPolicy instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizationpolicy_nodejs">
 <a href="#authorizationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Policy</a>
@@ -753,31 +678,7 @@ Note: This field currently has no impact.{{% /md %}}</dd><dt class="property-opt
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="target_https_proxy_python">
-<a href="#target_https_proxy_python" style="color: inherit; text-decoration: inherit;">target_<wbr>https_<wbr>proxy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="authentication_python">
-<a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] Use serverTlsPolicy instead.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="authorization_python">
-<a href="#authorization_python" style="color: inherit; text-decoration: inherit;">authorization</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}[Deprecated] Use authorizationPolicy instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorization_policy_python">
 <a href="#authorization_policy_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>policy</a>

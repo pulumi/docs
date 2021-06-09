@@ -35,7 +35,6 @@ Creates a new reservation. For more information, read Reserving zonal resources.
                 <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                <span class="nx">reservation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">satisfies_pzs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                 <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">specific_reservation</span><span class="p">:</span> <span class="nx">Optional[_compute_v1.AllocationSpecificSKUReservationArgs]</span> = None<span class="p">,</span>
@@ -179,14 +178,6 @@ The Reservation resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="reservation_csharp">
-<a href="#reservation_csharp" style="color: inherit; text-decoration: inherit;">Reservation</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="zone_csharp">
 <a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
 </span>
@@ -297,14 +288,6 @@ The Reservation resource accepts the following [input]({{< relref "/docs/intro/c
             title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="reservation_go">
-<a href="#reservation_go" style="color: inherit; text-decoration: inherit;">Reservation</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -427,14 +410,6 @@ The Reservation resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="reservation_nodejs">
-<a href="#reservation_nodejs" style="color: inherit; text-decoration: inherit;">reservation</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="zone_nodejs">
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
@@ -545,14 +520,6 @@ The Reservation resource accepts the following [input]({{< relref "/docs/intro/c
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="reservation_python">
-<a href="#reservation_python" style="color: inherit; text-decoration: inherit;">reservation</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

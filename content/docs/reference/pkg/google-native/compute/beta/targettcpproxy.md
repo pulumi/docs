@@ -37,8 +37,7 @@ Creates a TargetTcpProxy resource in the specified project using the data includ
                    <span class="nx">proxy_header</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                   <span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                   <span class="nx">target_tcp_proxy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+                   <span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">TargetTcpProxy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                    <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TargetTcpProxyArgs</a></span><span class="p">,</span>
@@ -174,14 +173,6 @@ The TargetTcpProxy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="targettcpproxy_csharp">
-<a href="#targettcpproxy_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Tcp<wbr>Proxy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creationtimestamp_csharp">
@@ -274,14 +265,6 @@ The default is false.{{% /md %}}</dd><dt class="property-optional"
             title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="targettcpproxy_go">
-<a href="#targettcpproxy_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Tcp<wbr>Proxy</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -382,14 +365,6 @@ The default is false.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="targettcpproxy_nodejs">
-<a href="#targettcpproxy_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Tcp<wbr>Proxy</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creationtimestamp_nodejs">
@@ -482,14 +457,6 @@ The default is false.{{% /md %}}</dd><dt class="property-optional"
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="target_tcp_proxy_python">
-<a href="#target_tcp_proxy_python" style="color: inherit; text-decoration: inherit;">target_<wbr>tcp_<wbr>proxy</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
