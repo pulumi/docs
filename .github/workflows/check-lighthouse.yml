@@ -9,14 +9,16 @@ jobs:
     name: Lighthouse
     runs-on: ubuntu-20.04
     steps:
-      - uses: cobraz/parse-sitemap@v1
-        id: parse-sitemap
-        with:
-          sitemap-url: https://www.pulumi.com/sitemap.xml
       - name: Run Lighthouse
         uses: treosh/lighthouse-ci-action@v7
         with:
-          urls: ${{ steps.parse-sitemap.outputs.urls }}
+          urls: |
+            https://www.pulumi.com/
+            https://www.pulumi.com/product/
+            https://www.pulumi.com/pricing/
+            https://www.pulumi.com/docs/get-started/
+            https://www.pulumi.com/docs/intro/concepts/resources/
+            https://www.pulumi.com/docs/reference/pkg/aws/s3/bucket/
           uploadArtifacts: true
           temporaryPublicStorage: true
 
