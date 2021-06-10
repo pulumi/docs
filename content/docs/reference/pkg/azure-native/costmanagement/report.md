@@ -173,15 +173,15 @@ import pulumi
 import pulumi_azure_native as azure_native
 
 report = azure_native.costmanagement.Report("report",
-    definition=azure_native.costmanagement.ReportDefinitionArgs(
-        dataset=azure_native.costmanagement.ReportDatasetArgs(
-            aggregation={
+    definition={
+        "dataset": {
+            "aggregation": {
                 "costSum": azure_native.costmanagement.ReportAggregationArgs(
                     function="Sum",
                     name="PreTaxCost",
                 ),
             },
-            configuration=azure_native.costmanagement.ReportDatasetConfigurationArgs(
+            "configuration": azure_native.costmanagement.ReportDatasetConfigurationArgs(
                 columns=[
                     "Date",
                     "MeterId",
@@ -190,8 +190,8 @@ report = azure_native.costmanagement.Report("report",
                     "PreTaxCost",
                 ],
             ),
-            filter=azure_native.costmanagement.ReportFilterArgs(
-                and_=[
+            "filter": {
+                "and": [
                     {
                         "or": [
                             azure_native.costmanagement.ReportFilterArgs(
@@ -224,9 +224,9 @@ report = azure_native.costmanagement.Report("report",
                         ),
                     ),
                 ],
-            ),
-            granularity="Daily",
-            grouping=[
+            },
+            "granularity": "Daily",
+            "grouping": [
                 azure_native.costmanagement.ReportGroupingArgs(
                     name="SubscriptionName",
                     type="Dimension",
@@ -236,10 +236,10 @@ report = azure_native.costmanagement.Report("report",
                     type="Tag",
                 ),
             ],
-        ),
-        timeframe="MonthToDate",
-        type="Usage",
-    ),
+        },
+        "timeframe": "MonthToDate",
+        "type": "Usage",
+    },
     delivery_info=azure_native.costmanagement.ReportDeliveryInfoArgs(
         destination=azure_native.costmanagement.ReportDeliveryDestinationArgs(
             container="reports",
