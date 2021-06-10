@@ -33,7 +33,7 @@ EndpointSlice represents a subset of the endpoints that implement a service. For
                   <span class="nx">ports</span><span class="p">:</span> <span class="nx">Optional[Sequence[_discovery_k8s_io_v1beta1.EndpointPortArgs]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">EndpointSlice</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                  <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EndpointSliceArgs</a></span><span class="p">,</span>
+                  <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EndpointSliceInitArgs</a></span><span class="p">,</span>
                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
@@ -81,7 +81,7 @@ EndpointSlice represents a subset of the endpoints that implement a service. For
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">EndpointSliceArgs</a></span>
+        <span class="property-type"><a href="#inputs">EndpointSliceInitArgs</a></span>
     </dt>
     <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">

@@ -37,7 +37,7 @@ This API can be used to request client certificates to authenticate to kube-apis
                               <span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[_certificates_k8s_io_v1.CertificateSigningRequestSpecArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">CertificateSigningRequest</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CertificateSigningRequestArgs</a></span><span class="p">,</span>
+                              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CertificateSigningRequestInitArgs</a></span><span class="p">,</span>
                               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
@@ -85,7 +85,7 @@ This API can be used to request client certificates to authenticate to kube-apis
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">CertificateSigningRequestArgs</a></span>
+        <span class="property-type"><a href="#inputs">CertificateSigningRequestInitArgs</a></span>
     </dt>
     <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">

@@ -31,7 +31,7 @@ ResourceQuota sets aggregate quota restrictions enforced per namespace
                   <span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[_core_v1.ResourceQuotaSpecArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">ResourceQuota</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                  <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[ResourceQuotaArgs]</a></span> = None<span class="p">,</span>
+                  <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[ResourceQuotaInitArgs]</a></span> = None<span class="p">,</span>
                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
@@ -79,7 +79,7 @@ ResourceQuota sets aggregate quota restrictions enforced per namespace
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">ResourceQuotaArgs</a></span>
+        <span class="property-type"><a href="#inputs">ResourceQuotaInitArgs</a></span>
     </dt>
     <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">

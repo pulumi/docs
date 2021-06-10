@@ -31,7 +31,7 @@ PodDisruptionBudget is an object to define the max disruption that can be caused
                         <span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[_policy_v1.PodDisruptionBudgetSpecArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">PodDisruptionBudget</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[PodDisruptionBudgetArgs]</a></span> = None<span class="p">,</span>
+                        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[PodDisruptionBudgetInitArgs]</a></span> = None<span class="p">,</span>
                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
@@ -79,7 +79,7 @@ PodDisruptionBudget is an object to define the max disruption that can be caused
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">PodDisruptionBudgetArgs</a></span>
+        <span class="property-type"><a href="#inputs">PodDisruptionBudgetInitArgs</a></span>
     </dt>
     <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">

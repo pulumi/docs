@@ -32,7 +32,7 @@ ClusterRoleBinding references a ClusterRole, but not contain it.  It can referen
                        <span class="nx">subjects</span><span class="p">:</span> <span class="nx">Optional[Sequence[_rbac_authorization_k8s_io_v1.SubjectArgs]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">ClusterRoleBinding</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                       <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterRoleBindingArgs</a></span><span class="p">,</span>
+                       <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterRoleBindingInitArgs</a></span><span class="p">,</span>
                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
@@ -80,7 +80,7 @@ ClusterRoleBinding references a ClusterRole, but not contain it.  It can referen
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">ClusterRoleBindingArgs</a></span>
+        <span class="property-type"><a href="#inputs">ClusterRoleBindingInitArgs</a></span>
     </dt>
     <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
