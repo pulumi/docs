@@ -155,14 +155,27 @@
                 </div>
             </pulumi-choosable>
         </pulumi-chooser>
-        <h2 class="mb-2 lg:mb-8 order-first">
-            {{ .Params.personas.title }} <span class="rainbow-text">
-                <span class="developers hidden">for Developers</span>
-                <span class="devops hidden">for DevOps & Infra Teams</span>
-                <span class="security hidden">for Security Engineers</span>
-                <span class="leader hidden">for Engineering Leaders</span>
-            </span>
-        </h2>
+        <div class="mb-2 lg:mb-8 order-first">
+            <h2>
+                <span class="inline-block">
+                    {{ .Params.personas.title }}
+                </span>
+                <span class="rainbow-text inline-block">
+                    <pulumi-choosable type="persona" value="developer">
+                        <span>for Developers</span>
+                    </pulumi-choosable>
+                    <pulumi-choosable type="persona" value="devops">
+                        <span>for DevOps & Infra Teams</span>
+                    </pulumi-choosable>
+                    <pulumi-choosable type="persona" value="security">
+                        <span>for Security Engineers</span>
+                    </pulumi-choosable>
+                    <pulumi-choosable type="persona" value="leader">
+                        <span>for Engineering Leaders</span>
+                    </pulumi-choosable>
+                </span>
+            </h2>
+        </div>
     </section>
 
     <section class="container mx-auto my-12 md:my-24 p-6 lg:p-0">
