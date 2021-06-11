@@ -51,6 +51,14 @@ $(function() {
         * @param {string} answer The value of the button the user clicked when giving feedback.
         */
     function showAdditionalCommentSection(answer) {
+
+        // Temporarily reparent the overlay and dialog (to the end of the body), so it
+        // doesn't have to compete for proper z-index positioning.
+        // TODO: Make a proper dialog component for this.
+        var feedbackLongForm = $("#feedbackLongForm");
+        var feedbackLongFormParent = feedbackLongForm.parent();
+        $("body").append(feedbackLongForm);
+
         // Add a click handler to the submit button.
         $("#docsSubmitFeedback").on("click", function() {
             // Grab the values of the comments and email inputs.
@@ -82,6 +90,9 @@ $(function() {
             $("#feedbackButtons").addClass("hidden");
             $("#feedbackLongForm").addClass("hidden");
             $("#feedbackThankYou").removeClass("hidden");
+
+            // Return the overlay to its original position.
+            feedbackLongFormParent.append(feedbackLongForm);
         });
 
         $(window).on("beforeunload", function() {
