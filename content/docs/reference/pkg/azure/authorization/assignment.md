@@ -656,6 +656,7 @@ const exampleAssignment = new azure.authorization.Assignment("exampleAssignment"
                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                <span class="nx">condition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">condition_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">delegated_managed_identity_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">principal_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -828,6 +829,15 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}The version of the condition. Possible values are `1.0` or `2.0`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="delegatedmanagedidentityresourceid_csharp">
+<a href="#delegatedmanagedidentityresourceid_csharp" style="color: inherit; text-decoration: inherit;">Delegated<wbr>Managed<wbr>Identity<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The delegated Azure Resource Id which contains a Managed Identity. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -911,6 +921,15 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the condition. Possible values are `1.0` or `2.0`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="delegatedmanagedidentityresourceid_go">
+<a href="#delegatedmanagedidentityresourceid_go" style="color: inherit; text-decoration: inherit;">Delegated<wbr>Managed<wbr>Identity<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The delegated Azure Resource Id which contains a Managed Identity. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
@@ -998,6 +1017,15 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}The version of the condition. Possible values are `1.0` or `2.0`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="delegatedmanagedidentityresourceid_nodejs">
+<a href="#delegatedmanagedidentityresourceid_nodejs" style="color: inherit; text-decoration: inherit;">delegated<wbr>Managed<wbr>Identity<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The delegated Azure Resource Id which contains a Managed Identity. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -1081,6 +1109,15 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the condition. Possible values are `1.0` or `2.0`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="delegated_managed_identity_resource_id_python">
+<a href="#delegated_managed_identity_resource_id_python" style="color: inherit; text-decoration: inherit;">delegated_<wbr>managed_<wbr>identity_<wbr>resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The delegated Azure Resource Id which contains a Managed Identity. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
@@ -1238,6 +1275,7 @@ Get an existing Assignment resource's state with the given name, ID, and optiona
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">condition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">condition_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">delegated_managed_identity_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">principal_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1376,6 +1414,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The version of the condition. Possible values are `1.0` or `2.0`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_delegatedmanagedidentityresourceid_csharp">
+<a href="#state_delegatedmanagedidentityresourceid_csharp" style="color: inherit; text-decoration: inherit;">Delegated<wbr>Managed<wbr>Identity<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The delegated Azure Resource Id which contains a Managed Identity. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -1468,6 +1515,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the condition. Possible values are `1.0` or `2.0`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_delegatedmanagedidentityresourceid_go">
+<a href="#state_delegatedmanagedidentityresourceid_go" style="color: inherit; text-decoration: inherit;">Delegated<wbr>Managed<wbr>Identity<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The delegated Azure Resource Id which contains a Managed Identity. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
@@ -1564,6 +1620,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The version of the condition. Possible values are `1.0` or `2.0`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_delegatedmanagedidentityresourceid_nodejs">
+<a href="#state_delegatedmanagedidentityresourceid_nodejs" style="color: inherit; text-decoration: inherit;">delegated<wbr>Managed<wbr>Identity<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The delegated Azure Resource Id which contains a Managed Identity. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -1658,6 +1723,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The version of the condition. Possible values are `1.0` or `2.0`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_delegated_managed_identity_resource_id_python">
+<a href="#state_delegated_managed_identity_resource_id_python" style="color: inherit; text-decoration: inherit;">delegated_<wbr>managed_<wbr>identity_<wbr>resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The delegated Azure Resource Id which contains a Managed Identity. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -1744,7 +1818,7 @@ Role Assignments can be imported using the `resource id`, e.g.
  $ pulumi import azure:authorization/assignment:Assignment example /subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Authorization/roleAssignments/00000000-0000-0000-0000-000000000000
 ```
 
- - for scope `Subscription`, the id format is `/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Authorization/roleAssignments/00000000-0000-0000-0000-000000000000` - for scope `Resource Group`, the id format is `/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.Authorization/roleAssignments/00000000-0000-0000-0000-000000000000`
+ - for scope `Subscription`, the id format is `/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Authorization/roleAssignments/00000000-0000-0000-0000-000000000000` - for scope `Resource Group`, the id format is `/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.Authorization/roleAssignments/00000000-0000-0000-0000-000000000000` /subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Authorization/roleAssignments/00000000-0000-0000-0000-000000000000|00000000-0000-0000-0000-000000000000
 
 
 

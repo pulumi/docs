@@ -717,7 +717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Instrumentation Key for this Application Insights component.
+    <dd>{{% md %}}The Instrumentation Key for this Application Insights component. (Sensitive)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -756,7 +756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Instrumentation Key for this Application Insights component.
+    <dd>{{% md %}}The Instrumentation Key for this Application Insights component. (Sensitive)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -795,7 +795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Instrumentation Key for this Application Insights component.
+    <dd>{{% md %}}The Instrumentation Key for this Application Insights component. (Sensitive)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -834,7 +834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Instrumentation Key for this Application Insights component.
+    <dd>{{% md %}}The Instrumentation Key for this Application Insights component. (Sensitive)
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1039,7 +1039,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Instrumentation Key for this Application Insights component.
+    <dd>{{% md %}}The Instrumentation Key for this Application Insights component. (Sensitive)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
@@ -1162,7 +1162,7 @@ create the Application Insights component.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Instrumentation Key for this Application Insights component.
+    <dd>{{% md %}}The Instrumentation Key for this Application Insights component. (Sensitive)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
@@ -1285,7 +1285,7 @@ create the Application Insights component.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Instrumentation Key for this Application Insights component.
+    <dd>{{% md %}}The Instrumentation Key for this Application Insights component. (Sensitive)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
@@ -1408,7 +1408,7 @@ create the Application Insights component.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Instrumentation Key for this Application Insights component.
+    <dd>{{% md %}}The Instrumentation Key for this Application Insights component. (Sensitive)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">

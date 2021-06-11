@@ -42,6 +42,7 @@ class MyStack : Stack
             ResourceGroupName = exampleResourceGroup.Name,
             FriendlyName = "pooleddepthfirst",
             ValidateEnvironment = true,
+            StartVmOnConnect = true,
             CustomRdpProperties = "audiocapturemode:i:1;audiomode:i:0;",
             Description = "Acceptance Test: A pooled host pool - pooleddepthfirst",
             Type = "Pooled",
@@ -81,6 +82,7 @@ func main() {
 			ResourceGroupName:      exampleResourceGroup.Name,
 			FriendlyName:           pulumi.String("pooleddepthfirst"),
 			ValidateEnvironment:    pulumi.Bool(true),
+			StartVmOnConnect:       pulumi.Bool(true),
 			CustomRdpProperties:    pulumi.String("audiocapturemode:i:1;audiomode:i:0;"),
 			Description:            pulumi.String("Acceptance Test: A pooled host pool - pooleddepthfirst"),
 			Type:                   pulumi.String("Pooled"),
@@ -111,6 +113,7 @@ example_host_pool = azure.desktopvirtualization.HostPool("exampleHostPool",
     resource_group_name=example_resource_group.name,
     friendly_name="pooleddepthfirst",
     validate_environment=True,
+    start_vm_on_connect=True,
     custom_rdp_properties="audiocapturemode:i:1;audiomode:i:0;",
     description="Acceptance Test: A pooled host pool - pooleddepthfirst",
     type="Pooled",
@@ -135,6 +138,7 @@ const exampleHostPool = new azure.desktopvirtualization.HostPool("exampleHostPoo
     resourceGroupName: exampleResourceGroup.name,
     friendlyName: "pooleddepthfirst",
     validateEnvironment: true,
+    startVmOnConnect: true,
     customRdpProperties: "audiocapturemode:i:1;audiomode:i:0;",
     description: "Acceptance Test: A pooled host pool - pooleddepthfirst",
     type: "Pooled",
@@ -178,6 +182,7 @@ const exampleHostPool = new azure.desktopvirtualization.HostPool("exampleHostPoo
              <span class="nx">preferred_app_group_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">registration_info</span><span class="p">:</span> <span class="nx">Optional[HostPoolRegistrationInfoArgs]</span> = None<span class="p">,</span>
              <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">start_vm_on_connect</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
              <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">validate_environment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span>
@@ -428,6 +433,15 @@ Valid options are `None`, `Desktop` or `RailApplications`. Default is `None`.
     <dd>{{% md %}}A `registration_info` block which is documented below. Specifies configuration on the registration information of the Virtual Desktop Host Pool.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="startvmonconnect_csharp">
+<a href="#startvmonconnect_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Vm<wbr>On<wbr>Connect</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables or disables the Start VM on Connection Feature. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -566,6 +580,15 @@ Valid options are `None`, `Desktop` or `RailApplications`. Default is `None`.
         <span class="property-type"><a href="#hostpoolregistrationinfo">Host<wbr>Pool<wbr>Registration<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}A `registration_info` block which is documented below. Specifies configuration on the registration information of the Virtual Desktop Host Pool.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="startvmonconnect_go">
+<a href="#startvmonconnect_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Vm<wbr>On<wbr>Connect</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables or disables the Start VM on Connection Feature. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -708,6 +731,15 @@ Valid options are `None`, `Desktop` or `RailApplications`. Default is `None`.
     <dd>{{% md %}}A `registration_info` block which is documented below. Specifies configuration on the registration information of the Virtual Desktop Host Pool.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="startvmonconnect_nodejs">
+<a href="#startvmonconnect_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Vm<wbr>On<wbr>Connect</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enables or disables the Start VM on Connection Feature. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -848,6 +880,15 @@ Valid options are `None`, `Desktop` or `RailApplications`. Default is `None`.
     <dd>{{% md %}}A `registration_info` block which is documented below. Specifies configuration on the registration information of the Virtual Desktop Host Pool.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="start_vm_on_connect_python">
+<a href="#start_vm_on_connect_python" style="color: inherit; text-decoration: inherit;">start_<wbr>vm_<wbr>on_<wbr>connect</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables or disables the Start VM on Connection Feature. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -949,6 +990,7 @@ Get an existing HostPool resource's state with the given name, ID, and optional 
         <span class="nx">preferred_app_group_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">registration_info</span><span class="p">:</span> <span class="nx">Optional[HostPoolRegistrationInfoArgs]</span> = None<span class="p">,</span>
         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">start_vm_on_connect</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">validate_environment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> HostPool</code></pre></div>
@@ -1172,6 +1214,15 @@ create the Virtual Desktop Host Pool. Changing the resource group name forces
 a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_startvmonconnect_csharp">
+<a href="#state_startvmonconnect_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Vm<wbr>On<wbr>Connect</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables or disables the Start VM on Connection Feature. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -1310,6 +1361,15 @@ Valid options are `None`, `Desktop` or `RailApplications`. Default is `None`.
     <dd>{{% md %}}The name of the resource group in which to
 create the Virtual Desktop Host Pool. Changing the resource group name forces
 a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_startvmonconnect_go">
+<a href="#state_startvmonconnect_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Vm<wbr>On<wbr>Connect</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables or disables the Start VM on Connection Feature. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
@@ -1452,6 +1512,15 @@ create the Virtual Desktop Host Pool. Changing the resource group name forces
 a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_startvmonconnect_nodejs">
+<a href="#state_startvmonconnect_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Vm<wbr>On<wbr>Connect</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enables or disables the Start VM on Connection Feature. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -1590,6 +1659,15 @@ Valid options are `None`, `Desktop` or `RailApplications`. Default is `None`.
     <dd>{{% md %}}The name of the resource group in which to
 create the Virtual Desktop Host Pool. Changing the resource group name forces
 a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_start_vm_on_connect_python">
+<a href="#state_start_vm_on_connect_python" style="color: inherit; text-decoration: inherit;">start_<wbr>vm_<wbr>on_<wbr>connect</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables or disables the Start VM on Connection Feature. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">

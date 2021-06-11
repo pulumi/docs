@@ -24,21 +24,347 @@ Applies a Configuration Policy to a Virtual Machine.
 
 {{< example csharp >}}
 
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleVirtualNetwork = new Azure.Network.VirtualNetwork("exampleVirtualNetwork", new Azure.Network.VirtualNetworkArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            AddressSpaces = 
+            {
+                "10.0.0.0/16",
+            },
+        });
+        var exampleSubnet = new Azure.Network.Subnet("exampleSubnet", new Azure.Network.SubnetArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            VirtualNetworkName = exampleVirtualNetwork.Name,
+            AddressPrefixes = 
+            {
+                "10.0.2.0/24",
+            },
+        });
+        var exampleNetworkInterface = new Azure.Network.NetworkInterface("exampleNetworkInterface", new Azure.Network.NetworkInterfaceArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            IpConfigurations = 
+            {
+                new Azure.Network.Inputs.NetworkInterfaceIpConfigurationArgs
+                {
+                    Name = "internal",
+                    SubnetId = exampleSubnet.Id,
+                    PrivateIpAddressAllocation = "Dynamic",
+                },
+            },
+        });
+        var exampleWindowsVirtualMachine = new Azure.Compute.WindowsVirtualMachine("exampleWindowsVirtualMachine", new Azure.Compute.WindowsVirtualMachineArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            Size = "Standard_F2",
+            AdminUsername = "adminuser",
+            AdminPassword = "P@$$w0rd1234!",
+            NetworkInterfaceIds = 
+            {
+                exampleNetworkInterface.Id,
+            },
+            Identity = new Azure.Compute.Inputs.WindowsVirtualMachineIdentityArgs
+            {
+                Type = "SystemAssigned",
+            },
+            OsDisk = new Azure.Compute.Inputs.WindowsVirtualMachineOsDiskArgs
+            {
+                Caching = "ReadWrite",
+                StorageAccountType = "Standard_LRS",
+            },
+            SourceImageReference = new Azure.Compute.Inputs.WindowsVirtualMachineSourceImageReferenceArgs
+            {
+                Publisher = "MicrosoftWindowsServer",
+                Offer = "WindowsServer",
+                Sku = "2019-Datacenter",
+                Version = "latest",
+            },
+        });
+        var exampleExtension = new Azure.Compute.Extension("exampleExtension", new Azure.Compute.ExtensionArgs
+        {
+            VirtualMachineId = exampleWindowsVirtualMachine.Id,
+            Publisher = "Microsoft.GuestConfiguration",
+            Type = "ConfigurationforWindows",
+            TypeHandlerVersion = "1.0",
+            AutoUpgradeMinorVersion = true,
+        });
+        var exampleConfigurationPolicyAssignment = new Azure.Compute.ConfigurationPolicyAssignment("exampleConfigurationPolicyAssignment", new Azure.Compute.ConfigurationPolicyAssignmentArgs
+        {
+            Location = exampleWindowsVirtualMachine.Location,
+            VirtualMachineId = exampleWindowsVirtualMachine.Id,
+            Configuration = new Azure.Compute.Inputs.ConfigurationPolicyAssignmentConfigurationArgs
+            {
+                Name = "AzureWindowsBaseline",
+                Version = "1.*",
+                Parameters = 
+                {
+                    new Azure.Compute.Inputs.ConfigurationPolicyAssignmentConfigurationParameterArgs
+                    {
+                        Name = "Minimum Password Length;ExpectedValue",
+                        Value = "16",
+                    },
+                    new Azure.Compute.Inputs.ConfigurationPolicyAssignmentConfigurationParameterArgs
+                    {
+                        Name = "Minimum Password Age;ExpectedValue",
+                        Value = "0",
+                    },
+                    new Azure.Compute.Inputs.ConfigurationPolicyAssignmentConfigurationParameterArgs
+                    {
+                        Name = "Maximum Password Age;ExpectedValue",
+                        Value = "30,45",
+                    },
+                    new Azure.Compute.Inputs.ConfigurationPolicyAssignmentConfigurationParameterArgs
+                    {
+                        Name = "Enforce Password History;ExpectedValue",
+                        Value = "10",
+                    },
+                    new Azure.Compute.Inputs.ConfigurationPolicyAssignmentConfigurationParameterArgs
+                    {
+                        Name = "Password Must Meet Complexity Requirements;ExpectedValue",
+                        Value = "1",
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+
 
 {{< /example >}}
 
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/compute"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleVirtualNetwork, err := network.NewVirtualNetwork(ctx, "exampleVirtualNetwork", &network.VirtualNetworkArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			AddressSpaces: pulumi.StringArray{
+				pulumi.String("10.0.0.0/16"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleSubnet, err := network.NewSubnet(ctx, "exampleSubnet", &network.SubnetArgs{
+			ResourceGroupName:  exampleResourceGroup.Name,
+			VirtualNetworkName: exampleVirtualNetwork.Name,
+			AddressPrefixes: pulumi.StringArray{
+				pulumi.String("10.0.2.0/24"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleNetworkInterface, err := network.NewNetworkInterface(ctx, "exampleNetworkInterface", &network.NetworkInterfaceArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			Location:          exampleResourceGroup.Location,
+			IpConfigurations: network.NetworkInterfaceIpConfigurationArray{
+				&network.NetworkInterfaceIpConfigurationArgs{
+					Name:                       pulumi.String("internal"),
+					SubnetId:                   exampleSubnet.ID(),
+					PrivateIpAddressAllocation: pulumi.String("Dynamic"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleWindowsVirtualMachine, err := compute.NewWindowsVirtualMachine(ctx, "exampleWindowsVirtualMachine", &compute.WindowsVirtualMachineArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			Location:          exampleResourceGroup.Location,
+			Size:              pulumi.String("Standard_F2"),
+			AdminUsername:     pulumi.String("adminuser"),
+			AdminPassword:     pulumi.String(fmt.Sprintf("%v%v%v%v", "P@", "$", "$", "w0rd1234!")),
+			NetworkInterfaceIds: pulumi.StringArray{
+				exampleNetworkInterface.ID(),
+			},
+			Identity: &compute.WindowsVirtualMachineIdentityArgs{
+				Type: pulumi.String("SystemAssigned"),
+			},
+			OsDisk: &compute.WindowsVirtualMachineOsDiskArgs{
+				Caching:            pulumi.String("ReadWrite"),
+				StorageAccountType: pulumi.String("Standard_LRS"),
+			},
+			SourceImageReference: &compute.WindowsVirtualMachineSourceImageReferenceArgs{
+				Publisher: pulumi.String("MicrosoftWindowsServer"),
+				Offer:     pulumi.String("WindowsServer"),
+				Sku:       pulumi.String("2019-Datacenter"),
+				Version:   pulumi.String("latest"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewExtension(ctx, "exampleExtension", &compute.ExtensionArgs{
+			VirtualMachineId:        exampleWindowsVirtualMachine.ID(),
+			Publisher:               pulumi.String("Microsoft.GuestConfiguration"),
+			Type:                    pulumi.String("ConfigurationforWindows"),
+			TypeHandlerVersion:      pulumi.String("1.0"),
+			AutoUpgradeMinorVersion: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewConfigurationPolicyAssignment(ctx, "exampleConfigurationPolicyAssignment", &compute.ConfigurationPolicyAssignmentArgs{
+			Location:         exampleWindowsVirtualMachine.Location,
+			VirtualMachineId: exampleWindowsVirtualMachine.ID(),
+			Configuration: &compute.ConfigurationPolicyAssignmentConfigurationArgs{
+				Name:    pulumi.String("AzureWindowsBaseline"),
+				Version: pulumi.String("1.*"),
+				Parameters: compute.ConfigurationPolicyAssignmentConfigurationParameterArray{
+					&compute.ConfigurationPolicyAssignmentConfigurationParameterArgs{
+						Name:  pulumi.String("Minimum Password Length;ExpectedValue"),
+						Value: pulumi.String("16"),
+					},
+					&compute.ConfigurationPolicyAssignmentConfigurationParameterArgs{
+						Name:  pulumi.String("Minimum Password Age;ExpectedValue"),
+						Value: pulumi.String("0"),
+					},
+					&compute.ConfigurationPolicyAssignmentConfigurationParameterArgs{
+						Name:  pulumi.String("Maximum Password Age;ExpectedValue"),
+						Value: pulumi.String("30,45"),
+					},
+					&compute.ConfigurationPolicyAssignmentConfigurationParameterArgs{
+						Name:  pulumi.String("Enforce Password History;ExpectedValue"),
+						Value: pulumi.String("10"),
+					},
+					&compute.ConfigurationPolicyAssignmentConfigurationParameterArgs{
+						Name:  pulumi.String("Password Must Meet Complexity Requirements;ExpectedValue"),
+						Value: pulumi.String("1"),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 
 
 {{< example python >}}
 
-Coming soon!
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    address_spaces=["10.0.0.0/16"])
+example_subnet = azure.network.Subnet("exampleSubnet",
+    resource_group_name=example_resource_group.name,
+    virtual_network_name=example_virtual_network.name,
+    address_prefixes=["10.0.2.0/24"])
+example_network_interface = azure.network.NetworkInterface("exampleNetworkInterface",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    ip_configurations=[azure.network.NetworkInterfaceIpConfigurationArgs(
+        name="internal",
+        subnet_id=example_subnet.id,
+        private_ip_address_allocation="Dynamic",
+    )])
+example_windows_virtual_machine = azure.compute.WindowsVirtualMachine("exampleWindowsVirtualMachine",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    size="Standard_F2",
+    admin_username="adminuser",
+    admin_password="P@$$w0rd1234!",
+    network_interface_ids=[example_network_interface.id],
+    identity=azure.compute.WindowsVirtualMachineIdentityArgs(
+        type="SystemAssigned",
+    ),
+    os_disk=azure.compute.WindowsVirtualMachineOsDiskArgs(
+        caching="ReadWrite",
+        storage_account_type="Standard_LRS",
+    ),
+    source_image_reference=azure.compute.WindowsVirtualMachineSourceImageReferenceArgs(
+        publisher="MicrosoftWindowsServer",
+        offer="WindowsServer",
+        sku="2019-Datacenter",
+        version="latest",
+    ))
+example_extension = azure.compute.Extension("exampleExtension",
+    virtual_machine_id=example_windows_virtual_machine.id,
+    publisher="Microsoft.GuestConfiguration",
+    type="ConfigurationforWindows",
+    type_handler_version="1.0",
+    auto_upgrade_minor_version=True)
+example_configuration_policy_assignment = azure.compute.ConfigurationPolicyAssignment("exampleConfigurationPolicyAssignment",
+    location=example_windows_virtual_machine.location,
+    virtual_machine_id=example_windows_virtual_machine.id,
+    configuration=azure.compute.ConfigurationPolicyAssignmentConfigurationArgs(
+        name="AzureWindowsBaseline",
+        version="1.*",
+        parameters=[
+            azure.compute.ConfigurationPolicyAssignmentConfigurationParameterArgs(
+                name="Minimum Password Length;ExpectedValue",
+                value="16",
+            ),
+            azure.compute.ConfigurationPolicyAssignmentConfigurationParameterArgs(
+                name="Minimum Password Age;ExpectedValue",
+                value="0",
+            ),
+            azure.compute.ConfigurationPolicyAssignmentConfigurationParameterArgs(
+                name="Maximum Password Age;ExpectedValue",
+                value="30,45",
+            ),
+            azure.compute.ConfigurationPolicyAssignmentConfigurationParameterArgs(
+                name="Enforce Password History;ExpectedValue",
+                value="10",
+            ),
+            azure.compute.ConfigurationPolicyAssignmentConfigurationParameterArgs(
+                name="Password Must Meet Complexity Requirements;ExpectedValue",
+                value="1",
+            ),
+        ],
+    ))
+```
+
 
 {{< /example >}}
 
@@ -77,6 +403,9 @@ const exampleWindowsVirtualMachine = new azure.compute.WindowsVirtualMachine("ex
     adminUsername: "adminuser",
     adminPassword: `P@$$w0rd1234!`,
     networkInterfaceIds: [exampleNetworkInterface.id],
+    identity: {
+        type: "SystemAssigned",
+    },
     osDisk: {
         caching: "ReadWrite",
         storageAccountType: "Standard_LRS",
@@ -84,21 +413,46 @@ const exampleWindowsVirtualMachine = new azure.compute.WindowsVirtualMachine("ex
     sourceImageReference: {
         publisher: "MicrosoftWindowsServer",
         offer: "WindowsServer",
-        sku: "2016-Datacenter",
+        sku: "2019-Datacenter",
         version: "latest",
     },
 });
+const exampleExtension = new azure.compute.Extension("exampleExtension", {
+    virtualMachineId: exampleWindowsVirtualMachine.id,
+    publisher: "Microsoft.GuestConfiguration",
+    type: "ConfigurationforWindows",
+    typeHandlerVersion: "1.0",
+    autoUpgradeMinorVersion: "true",
+});
 const exampleConfigurationPolicyAssignment = new azure.compute.ConfigurationPolicyAssignment("exampleConfigurationPolicyAssignment", {
-    location: azurerm_linux_virtual_machine.example.id,
-    virtualMachineId: azurerm_linux_virtual_machine.example.id,
-    guestConfiguration: [{
-        name: "WhitelistedApplication",
+    location: exampleWindowsVirtualMachine.location,
+    virtualMachineId: exampleWindowsVirtualMachine.id,
+    configuration: {
+        name: "AzureWindowsBaseline",
         version: "1.*",
-        parameter: [{
-            name: "[InstalledApplication]bwhitelistedapp;Name",
-            value: "NotePad,sql",
-        }],
-    }],
+        parameters: [
+            {
+                name: "Minimum Password Length;ExpectedValue",
+                value: "16",
+            },
+            {
+                name: "Minimum Password Age;ExpectedValue",
+                value: "0",
+            },
+            {
+                name: "Maximum Password Age;ExpectedValue",
+                value: "30,45",
+            },
+            {
+                name: "Enforce Password History;ExpectedValue",
+                value: "10",
+            },
+            {
+                name: "Password Must Meet Complexity Requirements;ExpectedValue",
+                value: "1",
+            },
+        ],
+    },
 });
 ```
 

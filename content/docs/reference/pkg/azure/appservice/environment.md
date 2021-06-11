@@ -797,6 +797,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="internalipaddress_csharp">
+<a href="#internalipaddress_csharp" style="color: inherit; text-decoration: inherit;">Internal<wbr>Ip<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}IP address of internal load balancer of the App Service Environment.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -804,6 +813,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location where the App Service Environment exists.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="outboundipaddresses_csharp">
+<a href="#outboundipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of outbound IP addresses of the App Service Environment.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="serviceipaddress_csharp">
+<a href="#serviceipaddress_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Ip<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}IP address of service endpoint of the App Service Environment.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -818,6 +845,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="internalipaddress_go">
+<a href="#internalipaddress_go" style="color: inherit; text-decoration: inherit;">Internal<wbr>Ip<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}IP address of internal load balancer of the App Service Environment.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -825,6 +861,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location where the App Service Environment exists.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="outboundipaddresses_go">
+<a href="#outboundipaddresses_go" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of outbound IP addresses of the App Service Environment.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="serviceipaddress_go">
+<a href="#serviceipaddress_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Ip<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}IP address of service endpoint of the App Service Environment.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -839,6 +893,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="internalipaddress_nodejs">
+<a href="#internalipaddress_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>Ip<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}IP address of internal load balancer of the App Service Environment.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -846,6 +909,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location where the App Service Environment exists.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="outboundipaddresses_nodejs">
+<a href="#outboundipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">outbound<wbr>Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of outbound IP addresses of the App Service Environment.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="serviceipaddress_nodejs">
+<a href="#serviceipaddress_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Ip<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}IP address of service endpoint of the App Service Environment.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -860,6 +941,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="internal_ip_address_python">
+<a href="#internal_ip_address_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>ip_<wbr>address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}IP address of internal load balancer of the App Service Environment.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -867,6 +957,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location where the App Service Environment exists.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="outbound_ip_addresses_python">
+<a href="#outbound_ip_addresses_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>ip_<wbr>addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of outbound IP addresses of the App Service Environment.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="service_ip_address_python">
+<a href="#service_ip_address_python" style="color: inherit; text-decoration: inherit;">service_<wbr>ip_<wbr>address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}IP address of service endpoint of the App Service Environment.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -889,11 +997,14 @@ Get an existing Environment resource's state with the given name, ID, and option
         <span class="nx">allowed_user_ip_cidrs</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">cluster_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[EnvironmentClusterSettingArgs]]</span> = None<span class="p">,</span>
         <span class="nx">front_end_scale_factor</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">internal_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">internal_load_balancing_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">outbound_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">pricing_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">service_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">user_whitelisted_ip_ranges</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> Environment</code></pre></div>
@@ -1036,6 +1147,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Scale factor for front end instances. Possible values are between `5` and `15`. Defaults to `15`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_internalipaddress_csharp">
+<a href="#state_internalipaddress_csharp" style="color: inherit; text-decoration: inherit;">Internal<wbr>Ip<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}IP address of internal load balancer of the App Service Environment.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_internalloadbalancingmode_csharp">
 <a href="#state_internalloadbalancingmode_csharp" style="color: inherit; text-decoration: inherit;">Internal<wbr>Load<wbr>Balancing<wbr>Mode</a>
 </span>
@@ -1063,6 +1183,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the App Service Environment. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_outboundipaddresses_csharp">
+<a href="#state_outboundipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of outbound IP addresses of the App Service Environment.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_pricingtier_csharp">
 <a href="#state_pricingtier_csharp" style="color: inherit; text-decoration: inherit;">Pricing<wbr>Tier</a>
 </span>
@@ -1079,6 +1208,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the App Service Environment exists. Defaults to the Resource Group of the Subnet (specified by `subnet_id`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_serviceipaddress_csharp">
+<a href="#state_serviceipaddress_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Ip<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}IP address of service endpoint of the App Service Environment.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetid_csharp">
@@ -1138,6 +1276,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Scale factor for front end instances. Possible values are between `5` and `15`. Defaults to `15`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_internalipaddress_go">
+<a href="#state_internalipaddress_go" style="color: inherit; text-decoration: inherit;">Internal<wbr>Ip<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}IP address of internal load balancer of the App Service Environment.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_internalloadbalancingmode_go">
 <a href="#state_internalloadbalancingmode_go" style="color: inherit; text-decoration: inherit;">Internal<wbr>Load<wbr>Balancing<wbr>Mode</a>
 </span>
@@ -1165,6 +1312,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the App Service Environment. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_outboundipaddresses_go">
+<a href="#state_outboundipaddresses_go" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of outbound IP addresses of the App Service Environment.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_pricingtier_go">
 <a href="#state_pricingtier_go" style="color: inherit; text-decoration: inherit;">Pricing<wbr>Tier</a>
 </span>
@@ -1181,6 +1337,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the App Service Environment exists. Defaults to the Resource Group of the Subnet (specified by `subnet_id`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_serviceipaddress_go">
+<a href="#state_serviceipaddress_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Ip<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}IP address of service endpoint of the App Service Environment.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetid_go">
@@ -1240,6 +1405,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Scale factor for front end instances. Possible values are between `5` and `15`. Defaults to `15`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_internalipaddress_nodejs">
+<a href="#state_internalipaddress_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>Ip<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}IP address of internal load balancer of the App Service Environment.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_internalloadbalancingmode_nodejs">
 <a href="#state_internalloadbalancingmode_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>Load<wbr>Balancing<wbr>Mode</a>
 </span>
@@ -1267,6 +1441,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the App Service Environment. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_outboundipaddresses_nodejs">
+<a href="#state_outboundipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">outbound<wbr>Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of outbound IP addresses of the App Service Environment.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_pricingtier_nodejs">
 <a href="#state_pricingtier_nodejs" style="color: inherit; text-decoration: inherit;">pricing<wbr>Tier</a>
 </span>
@@ -1283,6 +1466,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the App Service Environment exists. Defaults to the Resource Group of the Subnet (specified by `subnet_id`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_serviceipaddress_nodejs">
+<a href="#state_serviceipaddress_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Ip<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}IP address of service endpoint of the App Service Environment.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetid_nodejs">
@@ -1342,6 +1534,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Scale factor for front end instances. Possible values are between `5` and `15`. Defaults to `15`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_internal_ip_address_python">
+<a href="#state_internal_ip_address_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>ip_<wbr>address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}IP address of internal load balancer of the App Service Environment.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_internal_load_balancing_mode_python">
 <a href="#state_internal_load_balancing_mode_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>load_<wbr>balancing_<wbr>mode</a>
 </span>
@@ -1369,6 +1570,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the App Service Environment. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_outbound_ip_addresses_python">
+<a href="#state_outbound_ip_addresses_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>ip_<wbr>addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of outbound IP addresses of the App Service Environment.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_pricing_tier_python">
 <a href="#state_pricing_tier_python" style="color: inherit; text-decoration: inherit;">pricing_<wbr>tier</a>
 </span>
@@ -1385,6 +1595,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the App Service Environment exists. Defaults to the Resource Group of the Subnet (specified by `subnet_id`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_service_ip_address_python">
+<a href="#state_service_ip_address_python" style="color: inherit; text-decoration: inherit;">service_<wbr>ip_<wbr>address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}IP address of service endpoint of the App Service Environment.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnet_id_python">

@@ -368,6 +368,7 @@ const exampleLinkedServiceSqlServer = new azure.datafactory.LinkedServiceSqlServ
                            <span class="nx">data_factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">integration_runtime_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">key_vault_connection_string</span><span class="p">:</span> <span class="nx">Optional[LinkedServiceSqlServerKeyVaultConnectionStringArgs]</span> = None<span class="p">,</span>
                            <span class="nx">key_vault_password</span><span class="p">:</span> <span class="nx">Optional[LinkedServiceSqlServerKeyVaultPasswordArgs]</span> = None<span class="p">,</span>
                            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
@@ -501,15 +502,6 @@ The LinkedServiceSqlServer resource accepts the following [input]({{< relref "/d
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="connectionstring_csharp">
-<a href="#connectionstring_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The connection string in which to authenticate with the SQL Server.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="datafactoryname_csharp">
 <a href="#datafactoryname_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Factory<wbr>Name</a>
 </span>
@@ -546,6 +538,15 @@ The LinkedServiceSqlServer resource accepts the following [input]({{< relref "/d
     <dd>{{% md %}}List of tags that can be used for describing the Data Factory Linked Service SQL Server.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="connectionstring_csharp">
+<a href="#connectionstring_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The connection string in which to authenticate with the SQL Server. Exactly one of either `connection_string` or `key_vault_connection_string` is required.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -562,6 +563,15 @@ The LinkedServiceSqlServer resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration runtime reference to associate with the Data Factory Linked Service SQL Server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keyvaultconnectionstring_csharp">
+<a href="#keyvaultconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Connection<wbr>String</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicesqlserverkeyvaultconnectionstring">Linked<wbr>Service<wbr>Sql<wbr>Server<wbr>Key<wbr>Vault<wbr>Connection<wbr>String<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `key_vault_connection_string` block as defined below. Use this argument to store SQL Server connection string in an existing Key Vault. It needs an existing Key Vault Data Factory Linked Service. Exactly one of either `connection_string` or `key_vault_connection_string` is required.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultpassword_csharp">
@@ -595,15 +605,6 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="connectionstring_go">
-<a href="#connectionstring_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The connection string in which to authenticate with the SQL Server.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datafactoryname_go">
 <a href="#datafactoryname_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Factory<wbr>Name</a>
@@ -641,6 +642,15 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
     <dd>{{% md %}}List of tags that can be used for describing the Data Factory Linked Service SQL Server.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="connectionstring_go">
+<a href="#connectionstring_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The connection string in which to authenticate with the SQL Server. Exactly one of either `connection_string` or `key_vault_connection_string` is required.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -657,6 +667,15 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration runtime reference to associate with the Data Factory Linked Service SQL Server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keyvaultconnectionstring_go">
+<a href="#keyvaultconnectionstring_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Connection<wbr>String</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicesqlserverkeyvaultconnectionstring">Linked<wbr>Service<wbr>Sql<wbr>Server<wbr>Key<wbr>Vault<wbr>Connection<wbr>String</a></span>
+    </dt>
+    <dd>{{% md %}}A `key_vault_connection_string` block as defined below. Use this argument to store SQL Server connection string in an existing Key Vault. It needs an existing Key Vault Data Factory Linked Service. Exactly one of either `connection_string` or `key_vault_connection_string` is required.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultpassword_go">
@@ -690,15 +709,6 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="connectionstring_nodejs">
-<a href="#connectionstring_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The connection string in which to authenticate with the SQL Server.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datafactoryname_nodejs">
 <a href="#datafactoryname_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Factory<wbr>Name</a>
@@ -736,6 +746,15 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
     <dd>{{% md %}}List of tags that can be used for describing the Data Factory Linked Service SQL Server.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="connectionstring_nodejs">
+<a href="#connectionstring_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The connection string in which to authenticate with the SQL Server. Exactly one of either `connection_string` or `key_vault_connection_string` is required.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -752,6 +771,15 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration runtime reference to associate with the Data Factory Linked Service SQL Server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keyvaultconnectionstring_nodejs">
+<a href="#keyvaultconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Connection<wbr>String</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicesqlserverkeyvaultconnectionstring">Linked<wbr>Service<wbr>Sql<wbr>Server<wbr>Key<wbr>Vault<wbr>Connection<wbr>String<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `key_vault_connection_string` block as defined below. Use this argument to store SQL Server connection string in an existing Key Vault. It needs an existing Key Vault Data Factory Linked Service. Exactly one of either `connection_string` or `key_vault_connection_string` is required.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultpassword_nodejs">
@@ -785,15 +813,6 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="connection_string_python">
-<a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The connection string in which to authenticate with the SQL Server.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="data_factory_name_python">
 <a href="#data_factory_name_python" style="color: inherit; text-decoration: inherit;">data_<wbr>factory_<wbr>name</a>
@@ -831,6 +850,15 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
     <dd>{{% md %}}List of tags that can be used for describing the Data Factory Linked Service SQL Server.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="connection_string_python">
+<a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The connection string in which to authenticate with the SQL Server. Exactly one of either `connection_string` or `key_vault_connection_string` is required.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -847,6 +875,15 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The integration runtime reference to associate with the Data Factory Linked Service SQL Server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="key_vault_connection_string_python">
+<a href="#key_vault_connection_string_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>connection_<wbr>string</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicesqlserverkeyvaultconnectionstring">Linked<wbr>Service<wbr>Sql<wbr>Server<wbr>Key<wbr>Vault<wbr>Connection<wbr>String<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `key_vault_connection_string` block as defined below. Use this argument to store SQL Server connection string in an existing Key Vault. It needs an existing Key Vault Data Factory Linked Service. Exactly one of either `connection_string` or `key_vault_connection_string` is required.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_vault_password_python">
@@ -955,6 +992,7 @@ Get an existing LinkedServiceSqlServer resource's state with the given name, ID,
         <span class="nx">data_factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">integration_runtime_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">key_vault_connection_string</span><span class="p">:</span> <span class="nx">Optional[LinkedServiceSqlServerKeyVaultConnectionStringArgs]</span> = None<span class="p">,</span>
         <span class="nx">key_vault_password</span><span class="p">:</span> <span class="nx">Optional[LinkedServiceSqlServerKeyVaultPasswordArgs]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
@@ -1095,7 +1133,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The connection string in which to authenticate with the SQL Server.
+    <dd>{{% md %}}The connection string in which to authenticate with the SQL Server. Exactly one of either `connection_string` or `key_vault_connection_string` is required.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datafactoryname_csharp">
@@ -1123,6 +1161,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration runtime reference to associate with the Data Factory Linked Service SQL Server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_keyvaultconnectionstring_csharp">
+<a href="#state_keyvaultconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Connection<wbr>String</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicesqlserverkeyvaultconnectionstring">Linked<wbr>Service<wbr>Sql<wbr>Server<wbr>Key<wbr>Vault<wbr>Connection<wbr>String<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `key_vault_connection_string` block as defined below. Use this argument to store SQL Server connection string in an existing Key Vault. It needs an existing Key Vault Data Factory Linked Service. Exactly one of either `connection_string` or `key_vault_connection_string` is required.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyvaultpassword_csharp">
@@ -1190,7 +1237,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The connection string in which to authenticate with the SQL Server.
+    <dd>{{% md %}}The connection string in which to authenticate with the SQL Server. Exactly one of either `connection_string` or `key_vault_connection_string` is required.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datafactoryname_go">
@@ -1218,6 +1265,15 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration runtime reference to associate with the Data Factory Linked Service SQL Server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_keyvaultconnectionstring_go">
+<a href="#state_keyvaultconnectionstring_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Connection<wbr>String</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicesqlserverkeyvaultconnectionstring">Linked<wbr>Service<wbr>Sql<wbr>Server<wbr>Key<wbr>Vault<wbr>Connection<wbr>String</a></span>
+    </dt>
+    <dd>{{% md %}}A `key_vault_connection_string` block as defined below. Use this argument to store SQL Server connection string in an existing Key Vault. It needs an existing Key Vault Data Factory Linked Service. Exactly one of either `connection_string` or `key_vault_connection_string` is required.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyvaultpassword_go">
@@ -1285,7 +1341,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The connection string in which to authenticate with the SQL Server.
+    <dd>{{% md %}}The connection string in which to authenticate with the SQL Server. Exactly one of either `connection_string` or `key_vault_connection_string` is required.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datafactoryname_nodejs">
@@ -1313,6 +1369,15 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration runtime reference to associate with the Data Factory Linked Service SQL Server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_keyvaultconnectionstring_nodejs">
+<a href="#state_keyvaultconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Connection<wbr>String</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicesqlserverkeyvaultconnectionstring">Linked<wbr>Service<wbr>Sql<wbr>Server<wbr>Key<wbr>Vault<wbr>Connection<wbr>String<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `key_vault_connection_string` block as defined below. Use this argument to store SQL Server connection string in an existing Key Vault. It needs an existing Key Vault Data Factory Linked Service. Exactly one of either `connection_string` or `key_vault_connection_string` is required.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyvaultpassword_nodejs">
@@ -1380,7 +1445,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The connection string in which to authenticate with the SQL Server.
+    <dd>{{% md %}}The connection string in which to authenticate with the SQL Server. Exactly one of either `connection_string` or `key_vault_connection_string` is required.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_data_factory_name_python">
@@ -1408,6 +1473,15 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The integration runtime reference to associate with the Data Factory Linked Service SQL Server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_key_vault_connection_string_python">
+<a href="#state_key_vault_connection_string_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>connection_<wbr>string</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicesqlserverkeyvaultconnectionstring">Linked<wbr>Service<wbr>Sql<wbr>Server<wbr>Key<wbr>Vault<wbr>Connection<wbr>String<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `key_vault_connection_string` block as defined below. Use this argument to store SQL Server connection string in an existing Key Vault. It needs an existing Key Vault Data Factory Linked Service. Exactly one of either `connection_string` or `key_vault_connection_string` is required.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_key_vault_password_python">
@@ -1456,6 +1530,96 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
 ## Supporting Types
 
 
+
+<h4 id="linkedservicesqlserverkeyvaultconnectionstring">Linked<wbr>Service<wbr>Sql<wbr>Server<wbr>Key<wbr>Vault<wbr>Connection<wbr>String</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="linkedservicename_csharp">
+<a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of an existing Key Vault Data Factory Linked Service.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="secretname_csharp">
+<a href="#secretname_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the secret name in Azure Key Vault that stores SQL Server connection string.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="linkedservicename_go">
+<a href="#linkedservicename_go" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of an existing Key Vault Data Factory Linked Service.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="secretname_go">
+<a href="#secretname_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the secret name in Azure Key Vault that stores SQL Server connection string.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="linkedservicename_nodejs">
+<a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of an existing Key Vault Data Factory Linked Service.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="secretname_nodejs">
+<a href="#secretname_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the secret name in Azure Key Vault that stores SQL Server connection string.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="linked_service_name_python">
+<a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of an existing Key Vault Data Factory Linked Service.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="secret_name_python">
+<a href="#secret_name_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the secret name in Azure Key Vault that stores SQL Server connection string.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="linkedservicesqlserverkeyvaultpassword">Linked<wbr>Service<wbr>Sql<wbr>Server<wbr>Key<wbr>Vault<wbr>Password</h4>
 

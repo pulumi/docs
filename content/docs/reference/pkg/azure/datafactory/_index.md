@@ -30,11 +30,13 @@ Explore the resources and functions of the azure.datafactory module.
     <li><a href="linkedserviceazuredatabricks" title="LinkedServiceAzureDatabricks"><span class="symbol resource"></span>LinkedServiceAzureDatabricks</a></li>
     <li><a href="linkedserviceazurefilestorage" title="LinkedServiceAzureFileStorage"><span class="symbol resource"></span>LinkedServiceAzureFileStorage</a></li>
     <li><a href="linkedserviceazurefunction" title="LinkedServiceAzureFunction"><span class="symbol resource"></span>LinkedServiceAzureFunction</a></li>
+    <li><a href="linkedserviceazuresearch" title="LinkedServiceAzureSearch"><span class="symbol resource"></span>LinkedServiceAzureSearch</a></li>
     <li><a href="linkedserviceazuresqldatabase" title="LinkedServiceAzureSqlDatabase"><span class="symbol resource"></span>LinkedServiceAzureSqlDatabase</a></li>
     <li><a href="linkedserviceazuretablestorage" title="LinkedServiceAzureTableStorage"><span class="symbol resource"></span>LinkedServiceAzureTableStorage</a></li>
     <li><a href="linkedservicecosmosdb" title="LinkedServiceCosmosDb"><span class="symbol resource"></span>LinkedServiceCosmosDb</a></li>
     <li><a href="linkedservicedatalakestoragegen2" title="LinkedServiceDataLakeStorageGen2"><span class="symbol resource"></span>LinkedServiceDataLakeStorageGen2</a></li>
     <li><a href="linkedservicekeyvault" title="LinkedServiceKeyVault"><span class="symbol resource"></span>LinkedServiceKeyVault</a></li>
+    <li><a href="linkedservicekusto" title="LinkedServiceKusto"><span class="symbol resource"></span>LinkedServiceKusto</a></li>
     <li><a href="linkedservicemysql" title="LinkedServiceMysql"><span class="symbol resource"></span>LinkedServiceMysql</a></li>
     <li><a href="linkedservicepostgresql" title="LinkedServicePostgresql"><span class="symbol resource"></span>LinkedServicePostgresql</a></li>
     <li><a href="linkedservicesftp" title="LinkedServiceSftp"><span class="symbol resource"></span>LinkedServiceSftp</a></li>
@@ -60,6 +62,6 @@ Explore the resources and functions of the azure.datafactory module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.6.0</dd>
+	<dd>4.7.0</dd>
 </dl>
 

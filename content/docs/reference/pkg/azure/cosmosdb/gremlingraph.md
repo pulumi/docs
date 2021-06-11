@@ -276,6 +276,7 @@ const exampleGremlinGraph = new azure.cosmosdb.GremlinGraph("exampleGremlinGraph
                  <span class="nx">index_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[GremlinGraphIndexPolicyArgs]]</span> = None<span class="p">,</span>
                  <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">partition_key_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">partition_key_version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                  <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">throughput</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                  <span class="nx">unique_keys</span><span class="p">:</span> <span class="nx">Optional[Sequence[GremlinGraphUniqueKeyArgs]]</span> = None<span class="p">)</span>
@@ -426,15 +427,6 @@ The GremlinGraph resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}The name of the Cosmos DB Graph Database in which the Cosmos DB Gremlin Graph is created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="indexpolicies_csharp">
-<a href="#indexpolicies_csharp" style="color: inherit; text-decoration: inherit;">Index<wbr>Policies</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gremlingraphindexpolicy">List&lt;Gremlin<wbr>Graph<wbr>Index<wbr>Policy<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}The configuration of the indexing policy. One or more `index_policy` blocks as defined below. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="partitionkeypath_csharp">
 <a href="#partitionkeypath_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Key<wbr>Path</a>
 </span>
@@ -479,6 +471,15 @@ The GremlinGraph resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}The default time to live (TTL) of the Gremlin graph. If the value is missing or set to "-1", items don’t expire.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="indexpolicies_csharp">
+<a href="#indexpolicies_csharp" style="color: inherit; text-decoration: inherit;">Index<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gremlingraphindexpolicy">List&lt;Gremlin<wbr>Graph<wbr>Index<wbr>Policy<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration of the indexing policy. One or more `index_policy` blocks as defined below. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -488,13 +489,22 @@ The GremlinGraph resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}Specifies the name of the Cosmos DB Gremlin Graph. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="partitionkeyversion_csharp">
+<a href="#partitionkeyversion_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Key<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Define a partition key version. Changing this forces a new resource to be created. Possible values are `1 `and `2`. This should be set to `2` in order to use large partition keys.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="throughput_csharp">
 <a href="#throughput_csharp" style="color: inherit; text-decoration: inherit;">Throughput</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The throughput of the Gremlin graph (RU/s). Must be set in increments of `100`. The minimum value is `400`. This must be set upon database creation otherwise it cannot be updated without a manual manual destroy-apply.
+    <dd>{{% md %}}The throughput of the Gremlin graph (RU/s). Must be set in increments of `100`. The minimum value is `400`. This must be set upon database creation otherwise it cannot be updated without a manual destroy-apply.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uniquekeys_csharp">
@@ -526,15 +536,6 @@ The GremlinGraph resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Cosmos DB Graph Database in which the Cosmos DB Gremlin Graph is created. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="indexpolicies_go">
-<a href="#indexpolicies_go" style="color: inherit; text-decoration: inherit;">Index<wbr>Policies</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gremlingraphindexpolicy">[]Gremlin<wbr>Graph<wbr>Index<wbr>Policy</a></span>
-    </dt>
-    <dd>{{% md %}}The configuration of the indexing policy. One or more `index_policy` blocks as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="partitionkeypath_go">
@@ -581,6 +582,15 @@ The GremlinGraph resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}The default time to live (TTL) of the Gremlin graph. If the value is missing or set to "-1", items don’t expire.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="indexpolicies_go">
+<a href="#indexpolicies_go" style="color: inherit; text-decoration: inherit;">Index<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gremlingraphindexpolicy">[]Gremlin<wbr>Graph<wbr>Index<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration of the indexing policy. One or more `index_policy` blocks as defined below. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -590,13 +600,22 @@ The GremlinGraph resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}Specifies the name of the Cosmos DB Gremlin Graph. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="partitionkeyversion_go">
+<a href="#partitionkeyversion_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Key<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Define a partition key version. Changing this forces a new resource to be created. Possible values are `1 `and `2`. This should be set to `2` in order to use large partition keys.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="throughput_go">
 <a href="#throughput_go" style="color: inherit; text-decoration: inherit;">Throughput</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The throughput of the Gremlin graph (RU/s). Must be set in increments of `100`. The minimum value is `400`. This must be set upon database creation otherwise it cannot be updated without a manual manual destroy-apply.
+    <dd>{{% md %}}The throughput of the Gremlin graph (RU/s). Must be set in increments of `100`. The minimum value is `400`. This must be set upon database creation otherwise it cannot be updated without a manual destroy-apply.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uniquekeys_go">
@@ -628,15 +647,6 @@ The GremlinGraph resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Cosmos DB Graph Database in which the Cosmos DB Gremlin Graph is created. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="indexpolicies_nodejs">
-<a href="#indexpolicies_nodejs" style="color: inherit; text-decoration: inherit;">index<wbr>Policies</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gremlingraphindexpolicy">Gremlin<wbr>Graph<wbr>Index<wbr>Policy<wbr>Args[]</a></span>
-    </dt>
-    <dd>{{% md %}}The configuration of the indexing policy. One or more `index_policy` blocks as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="partitionkeypath_nodejs">
@@ -683,6 +693,15 @@ The GremlinGraph resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}The default time to live (TTL) of the Gremlin graph. If the value is missing or set to "-1", items don’t expire.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="indexpolicies_nodejs">
+<a href="#indexpolicies_nodejs" style="color: inherit; text-decoration: inherit;">index<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gremlingraphindexpolicy">Gremlin<wbr>Graph<wbr>Index<wbr>Policy<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration of the indexing policy. One or more `index_policy` blocks as defined below. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -692,13 +711,22 @@ The GremlinGraph resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}Specifies the name of the Cosmos DB Gremlin Graph. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="partitionkeyversion_nodejs">
+<a href="#partitionkeyversion_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Key<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Define a partition key version. Changing this forces a new resource to be created. Possible values are `1 `and `2`. This should be set to `2` in order to use large partition keys.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="throughput_nodejs">
 <a href="#throughput_nodejs" style="color: inherit; text-decoration: inherit;">throughput</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The throughput of the Gremlin graph (RU/s). Must be set in increments of `100`. The minimum value is `400`. This must be set upon database creation otherwise it cannot be updated without a manual manual destroy-apply.
+    <dd>{{% md %}}The throughput of the Gremlin graph (RU/s). Must be set in increments of `100`. The minimum value is `400`. This must be set upon database creation otherwise it cannot be updated without a manual destroy-apply.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uniquekeys_nodejs">
@@ -730,15 +758,6 @@ The GremlinGraph resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Cosmos DB Graph Database in which the Cosmos DB Gremlin Graph is created. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="index_policies_python">
-<a href="#index_policies_python" style="color: inherit; text-decoration: inherit;">index_<wbr>policies</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gremlingraphindexpolicy">Sequence[Gremlin<wbr>Graph<wbr>Index<wbr>Policy<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}The configuration of the indexing policy. One or more `index_policy` blocks as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="partition_key_path_python">
@@ -785,6 +804,15 @@ The GremlinGraph resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}The default time to live (TTL) of the Gremlin graph. If the value is missing or set to "-1", items don’t expire.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="index_policies_python">
+<a href="#index_policies_python" style="color: inherit; text-decoration: inherit;">index_<wbr>policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gremlingraphindexpolicy">Sequence[Gremlin<wbr>Graph<wbr>Index<wbr>Policy<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration of the indexing policy. One or more `index_policy` blocks as defined below. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -794,13 +822,22 @@ The GremlinGraph resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}Specifies the name of the Cosmos DB Gremlin Graph. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="partition_key_version_python">
+<a href="#partition_key_version_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>key_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Define a partition key version. Changing this forces a new resource to be created. Possible values are `1 `and `2`. This should be set to `2` in order to use large partition keys.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="throughput_python">
 <a href="#throughput_python" style="color: inherit; text-decoration: inherit;">throughput</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The throughput of the Gremlin graph (RU/s). Must be set in increments of `100`. The minimum value is `400`. This must be set upon database creation otherwise it cannot be updated without a manual manual destroy-apply.
+    <dd>{{% md %}}The throughput of the Gremlin graph (RU/s). Must be set in increments of `100`. The minimum value is `400`. This must be set upon database creation otherwise it cannot be updated without a manual destroy-apply.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unique_keys_python">
@@ -892,6 +929,7 @@ Get an existing GremlinGraph resource's state with the given name, ID, and optio
         <span class="nx">index_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[GremlinGraphIndexPolicyArgs]]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">partition_key_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">partition_key_version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">throughput</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">unique_keys</span><span class="p">:</span> <span class="nx">Optional[Sequence[GremlinGraphUniqueKeyArgs]]</span> = None<span class="p">) -&gt;</span> GremlinGraph</code></pre></div>
@@ -1078,6 +1116,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Define a partition key. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_partitionkeyversion_csharp">
+<a href="#state_partitionkeyversion_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Key<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Define a partition key version. Changing this forces a new resource to be created. Possible values are `1 `and `2`. This should be set to `2` in order to use large partition keys.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -1093,7 +1140,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The throughput of the Gremlin graph (RU/s). Must be set in increments of `100`. The minimum value is `400`. This must be set upon database creation otherwise it cannot be updated without a manual manual destroy-apply.
+    <dd>{{% md %}}The throughput of the Gremlin graph (RU/s). Must be set in increments of `100`. The minimum value is `400`. This must be set upon database creation otherwise it cannot be updated without a manual destroy-apply.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_uniquekeys_csharp">
@@ -1180,6 +1227,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Define a partition key. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_partitionkeyversion_go">
+<a href="#state_partitionkeyversion_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Key<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Define a partition key version. Changing this forces a new resource to be created. Possible values are `1 `and `2`. This should be set to `2` in order to use large partition keys.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -1195,7 +1251,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The throughput of the Gremlin graph (RU/s). Must be set in increments of `100`. The minimum value is `400`. This must be set upon database creation otherwise it cannot be updated without a manual manual destroy-apply.
+    <dd>{{% md %}}The throughput of the Gremlin graph (RU/s). Must be set in increments of `100`. The minimum value is `400`. This must be set upon database creation otherwise it cannot be updated without a manual destroy-apply.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_uniquekeys_go">
@@ -1282,6 +1338,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Define a partition key. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_partitionkeyversion_nodejs">
+<a href="#state_partitionkeyversion_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Key<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Define a partition key version. Changing this forces a new resource to be created. Possible values are `1 `and `2`. This should be set to `2` in order to use large partition keys.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
@@ -1297,7 +1362,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The throughput of the Gremlin graph (RU/s). Must be set in increments of `100`. The minimum value is `400`. This must be set upon database creation otherwise it cannot be updated without a manual manual destroy-apply.
+    <dd>{{% md %}}The throughput of the Gremlin graph (RU/s). Must be set in increments of `100`. The minimum value is `400`. This must be set upon database creation otherwise it cannot be updated without a manual destroy-apply.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_uniquekeys_nodejs">
@@ -1384,6 +1449,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Define a partition key. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_partition_key_version_python">
+<a href="#state_partition_key_version_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>key_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Define a partition key version. Changing this forces a new resource to be created. Possible values are `1 `and `2`. This should be set to `2` in order to use large partition keys.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
@@ -1399,7 +1473,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The throughput of the Gremlin graph (RU/s). Must be set in increments of `100`. The minimum value is `400`. This must be set upon database creation otherwise it cannot be updated without a manual manual destroy-apply.
+    <dd>{{% md %}}The throughput of the Gremlin graph (RU/s). Must be set in increments of `100`. The minimum value is `400`. This must be set upon database creation otherwise it cannot be updated without a manual destroy-apply.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_unique_keys_python">
@@ -1624,6 +1698,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Indicates if the indexing policy is automatic. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="compositeindices_csharp">
+<a href="#compositeindices_csharp" style="color: inherit; text-decoration: inherit;">Composite<wbr>Indices</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gremlingraphindexpolicycompositeindex">List&lt;Gremlin<wbr>Graph<wbr>Index<wbr>Policy<wbr>Composite<wbr>Index<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `composite_index` blocks as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="excludedpaths_csharp">
 <a href="#excludedpaths_csharp" style="color: inherit; text-decoration: inherit;">Excluded<wbr>Paths</a>
 </span>
@@ -1662,6 +1745,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if the indexing policy is automatic. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="compositeindices_go">
+<a href="#compositeindices_go" style="color: inherit; text-decoration: inherit;">Composite<wbr>Indices</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gremlingraphindexpolicycompositeindex">[]Gremlin<wbr>Graph<wbr>Index<wbr>Policy<wbr>Composite<wbr>Index</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `composite_index` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludedpaths_go">
@@ -1704,6 +1796,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Indicates if the indexing policy is automatic. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="compositeindices_nodejs">
+<a href="#compositeindices_nodejs" style="color: inherit; text-decoration: inherit;">composite<wbr>Indices</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gremlingraphindexpolicycompositeindex">Gremlin<wbr>Graph<wbr>Index<wbr>Policy<wbr>Composite<wbr>Index<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `composite_index` blocks as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="excludedpaths_nodejs">
 <a href="#excludedpaths_nodejs" style="color: inherit; text-decoration: inherit;">excluded<wbr>Paths</a>
 </span>
@@ -1744,6 +1845,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Indicates if the indexing policy is automatic. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="composite_indices_python">
+<a href="#composite_indices_python" style="color: inherit; text-decoration: inherit;">composite_<wbr>indices</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gremlingraphindexpolicycompositeindex">Sequence[Gremlin<wbr>Graph<wbr>Index<wbr>Policy<wbr>Composite<wbr>Index<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `composite_index` blocks as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="excluded_paths_python">
 <a href="#excluded_paths_python" style="color: inherit; text-decoration: inherit;">excluded_<wbr>paths</a>
 </span>
@@ -1760,6 +1870,150 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of paths to include in the indexing. Required if `indexing_mode` is `Consistent` or `Lazy`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="gremlingraphindexpolicycompositeindex">Gremlin<wbr>Graph<wbr>Index<wbr>Policy<wbr>Composite<wbr>Index</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="indices_csharp">
+<a href="#indices_csharp" style="color: inherit; text-decoration: inherit;">Indices</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gremlingraphindexpolicycompositeindexindex">List&lt;Gremlin<wbr>Graph<wbr>Index<wbr>Policy<wbr>Composite<wbr>Index<wbr>Index<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `index` blocks as defined below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="indices_go">
+<a href="#indices_go" style="color: inherit; text-decoration: inherit;">Indices</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gremlingraphindexpolicycompositeindexindex">[]Gremlin<wbr>Graph<wbr>Index<wbr>Policy<wbr>Composite<wbr>Index<wbr>Index</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `index` blocks as defined below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="indices_nodejs">
+<a href="#indices_nodejs" style="color: inherit; text-decoration: inherit;">indices</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gremlingraphindexpolicycompositeindexindex">Gremlin<wbr>Graph<wbr>Index<wbr>Policy<wbr>Composite<wbr>Index<wbr>Index<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `index` blocks as defined below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="indices_python">
+<a href="#indices_python" style="color: inherit; text-decoration: inherit;">indices</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gremlingraphindexpolicycompositeindexindex">Sequence[Gremlin<wbr>Graph<wbr>Index<wbr>Policy<wbr>Composite<wbr>Index<wbr>Index<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `index` blocks as defined below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="gremlingraphindexpolicycompositeindexindex">Gremlin<wbr>Graph<wbr>Index<wbr>Policy<wbr>Composite<wbr>Index<wbr>Index</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="order_csharp">
+<a href="#order_csharp" style="color: inherit; text-decoration: inherit;">Order</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Order of the index. Possible values are `Ascending` or `Descending`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Path for which the indexing behaviour applies to.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="order_go">
+<a href="#order_go" style="color: inherit; text-decoration: inherit;">Order</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Order of the index. Possible values are `Ascending` or `Descending`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Path for which the indexing behaviour applies to.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="order_nodejs">
+<a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Order of the index. Possible values are `Ascending` or `Descending`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Path for which the indexing behaviour applies to.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="order_python">
+<a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Order of the index. Possible values are `Ascending` or `Descending`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Path for which the indexing behaviour applies to.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

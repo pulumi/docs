@@ -6870,7 +6870,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriteruleurl">Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Url<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One `url` block as defined above
----
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6929,7 +6928,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriteruleurl">Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Url</a></span>
     </dt>
     <dd>{{% md %}}One `url` block as defined above
----
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6988,7 +6986,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriteruleurl">Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Url<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One `url` block as defined above
----
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -7047,7 +7044,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriteruleurl">Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Url<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One `url` block as defined above
----
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
